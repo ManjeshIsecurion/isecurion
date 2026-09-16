@@ -11,11 +11,11 @@ interface AnimationProps {
 function Animation({ delay = 0, children }: AnimationProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 70 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         delay,
-        duration: 0.9,
+        duration: 1,
       }}
       viewport={{ once: true }}
     >

@@ -1,26 +1,31 @@
 "use client";
 import React, { useState } from "react";
-import isecurionLogo from "../../assets/home/isecurion_logo.png";
+import isecurionLogo from "../../assets/home/isecurrionwhite_logo.svg";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 function Navbar() {
   const [open, setIsOpen] = useState(false);
   return (
-    <div className="w-full bg-[#F5F5F5] border border-[#F5F5F5] sticky top-0 z-50">
+    <div className="w-full bg-[#161B2F]  sticky top-0 z-50">
       <div className="max-w-7xl mx-auto  h-[68px]  flex items-center justify-between px-6 sm:px-10">
         <div>
           <img
             src={isecurionLogo.src}
             alt="isecurion Logo"
-            className="w-[165px] h-[42.86px] cursor-pointer"
+            className="w-[160px] h-[40px] cursor-pointer"
           />
         </div>
         <div className="hidden md:block">
-          <ul className="flex gap-7 text-[#202123] text-sm font-medium">
+          <ul className="flex gap-7 text-[#FFFFFF] text-sm font-medium">
             <li>
               <Link href="/">Home</Link>
             </li>
-            <li>Company</li>
+            <li className="flex items-center gap-1 cursor-pointer">
+              Company{" "}
+              <span>
+                <Icon icon="mingcute:down-line" />
+              </span>{" "}
+            </li>
             <li>Services</li>
             <li>
               <Link href="/company/about">About</Link>
@@ -37,13 +42,12 @@ function Navbar() {
         </div>
         <div className="block md:hidden">
           <button
-            className="cursor-pointer px-3 rounded-xl bg-gradient-to-l from-[#3477C5] to-[#3A84DA] text-[#FFFFFF]"
+            className="cursor-pointer px-2 py-2 rounded-xl bg-gradient-to-l from-[#3477C5] to-[#3A84DA] text-[#FFFFFF]"
             onClick={() => setIsOpen(!open)}
           >
             <Icon
-              // icon={open ? "material-symbols:menu-rounded" : "at-icons:cross"}
               icon={open ? "at-icons:cross" : "material-symbols:menu-rounded"}
-              className="w-[30px] h-[48px]"
+              className="w-[20px] h-[20px]"
             />
           </button>
           <div

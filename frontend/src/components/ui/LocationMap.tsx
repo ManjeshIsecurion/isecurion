@@ -1,4 +1,5 @@
 "use client";
+
 import {
   MapContainer,
   TileLayer,
@@ -50,7 +51,12 @@ const customIcon = L.divIcon({
         </div>
       </div>
 
-      <svg width="34" height="46" viewBox="0 0 34 46" style="filter: drop-shadow(0 3px 4px rgba(0,0,0,0.3));">
+      <svg
+        width="34"
+        height="46"
+        viewBox="0 0 34 46"
+        style="filter: drop-shadow(0 3px 4px rgba(0,0,0,0.3));"
+      >
         <path
           d="M17 0C7.6 0 0 7.6 0 17c0 12.75 17 29 17 29s17-16.25 17-29C34 7.6 26.4 0 17 0z"
           fill="#7D70F0"
