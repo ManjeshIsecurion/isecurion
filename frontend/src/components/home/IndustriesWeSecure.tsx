@@ -9,30 +9,42 @@ import Animation from "../ui/Animation";
 
 function IndustriesWeSecure() {
   return (
-    <div className="w-full py-14">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10">
+    <div className="w-full bg-[black]">
+      <div className="mx-auto w-full max-w-7xl bg-[#060D1B] ">
         {/* heading  */}
         <Animation>
-          <div className="flex">
-            <h2 className="text-4xl font-medium leading-12">
-              Security expertise across the industries that{" "}
-              <span className="bg-linear-to-l to-[#0F66EA] from-[#0C3172] bg-clip-text text-transparent">
-                matters.
-              </span>
-            </h2>
-            <div className="space-y-2">
-              <p className="text-base  font-medium  text-[#0F66EA]">
-                INDUSTRIES WE SECURE
-              </p>
-              <p className="text-lg font-medium leading-8 text-[#8F90AB]">
-                We understand the unique challenges of your industry and deliver
-                solutions that protect what matters most.
-              </p>
+          <div className="px-10 pt-24 pb-16">
+            <div className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-20">
+
+              {/* Left */}
+              <div className="flex-1">
+                <h2 className="text-2xl sm:text-3xl sm:text-4xl font-medium lg:leading-12 text-white">
+                  Security expertise across <br />
+                  the industries that{" "}
+                  <span className="text-[#0F66EA]">
+                    matters.
+                  </span>
+                </h2>
+
+                <div className="mt-4 h-[3px] w-[100px] bg-[#0F66EA]" />
+              </div>
+
+              {/* Right */}
+              <div className="lg:w-[45%]">
+                <p className="text-base font-medium text-[#0F66EA]">
+                  INDUSTRIES WE SECURE
+                </p>
+
+                <p className="text-base font-medium leading-7 text-[#D1D1D1]">
+                  We understand the unique challenges of your industry and deliver
+                  solutions that protect what matters most.
+                </p>
+              </div>
             </div>
           </div>
         </Animation>
 
-        <div className="mt-10">
+        <div className="mt-2">
           {/* 1 */}
           <Animation>
             <div className="flex flex-col lg:flex-row">

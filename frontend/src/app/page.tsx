@@ -1,12 +1,14 @@
 "use client";
 import { Icon } from "@iconify/react";
-import herobackground from "../assets/home/homehero.png";
+// import herobackground from "../assets/home/homeBg.svg";
+import herobackground from "../assets/home/heroBg.svg";
 import tokenvalut from "../assets/home/client/tokenvalut.png";
 import bookmyshow from "../assets/home/client/bookmyshow.png";
-import bosch from "../assets/home/client/bosch.png";
+// import bosch from "../assets/home/client/bosch.png";
 import indegence from "../assets/home/client/indegence.png";
 import allianz from "../assets/home/client/allianz.png";
 import shellinfo from "../assets/home/client/shellinfo.png";
+import bosch from "../assets/home/client/Bosch_logo.png"
 
 import indentifyrisk from "../assets/home/indentifyrisk.jpg";
 import continuousvalidation from "../assets/home/continuousvalidattion.png";
@@ -35,6 +37,8 @@ import cisa from "../assets/home/auditorcertifications/cisa.svg";
 import Animation from "../components/ui/Animation";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import healthcare from "../assets/home/health-care.png";
+import manufacturing from "../assets/home/manufacturingRight.png";
 
 const containerVariants = {
   hidden: {},
@@ -93,11 +97,13 @@ const ourExpertise = [
       "Web, Mobile & API Security",
       "Red Teaming",
     ],
-    iconColor: "text-[#0F66EA]",
-    bgColor: "#FFFFFF",
-    descriptionColor: "text-[#90A1B9]",
-    headingColor: "text-[#0F172B]",
-    listColor: "text-[#232942]",
+    iconColor: "text-white",
+    bgColor: "#E24B4A52",
+    hoverFrom: "#3E0302",
+    hoverTo: "#000000",
+    descriptionColor: "text-[#D1D1D1]",
+    headingColor: "text-[#E24B4A]",
+    listColor: "text-[#A8A8A8]",
   },
   {
     Icon: "lucide:monitor-cog",
@@ -105,11 +111,13 @@ const ourExpertise = [
     description:
       "Monitor, detect, and respond to cyber threats with managed security operations.",
     services: ["Managed SOC", "Threat Hunting", "Incident Response", "MDR"],
-    iconColor: "text-[#0C3172]",
-    bgColor: "#A2FFB82B",
-    descriptionColor: "text-[#919292]",
-    headingColor: "text-[#0F172B]",
-    listColor: "text-[#0C3172]",
+    iconColor: "text-white",
+    bgColor: "#001233",
+    hoverFrom: "#3477C5",
+    hoverTo: "#002E65",
+    descriptionColor: "text-[#D1D1D1]",
+    headingColor: "text-[#0F66EA]",
+    listColor: "text-[#A8A8A8]",
   },
   {
     Icon: "gridicons:cloud-outline",
@@ -122,11 +130,13 @@ const ourExpertise = [
       "Identity Security",
       "Infrastructure Hardening",
     ],
-    iconColor: "text-[#F5F3FEAD]",
-    bgColor: "#17366E",
-    descriptionColor: "text-[#7780A4]",
-    headingColor: "text-[#FFFFFF]",
-    listColor: "text-[#FFFFFF]",
+    iconColor: "text-white",
+    bgColor: "#00031C",
+    hoverFrom: "#000000",
+    hoverTo: "#002E65",
+    descriptionColor: "text-[#D1D1D1]",
+    headingColor: "text-[#0F66EA]",
+    listColor: "text-[#A8A8A8]",
   },
   {
     Icon: "charm:notes-tick",
@@ -134,11 +144,13 @@ const ourExpertise = [
     description:
       "Build a compliant and resilient organization with governance frameworks & regulatory expertise.",
     services: ["ISO 27001", "SOC 2", "DPDP", "Risk Assessments"],
-    iconColor: "text-[#ABB5D2]",
-    bgColor: "#17366E",
-    descriptionColor: "text-[#7780A4]",
-    headingColor: "text-[#FFFFFF]",
-    listColor: "text-[#FFFFFF]",
+    iconColor: "text-white",
+    bgColor: "#00031C",
+    hoverFrom: "#000000",
+    hoverTo: "#002E65",
+    descriptionColor: "text-[#D1D1D1]",
+    headingColor: "text-[#0F66EA]",
+    listColor: "text-[#A8A8A8]",
   },
   {
     Icon: "lucide:users-round",
@@ -151,11 +163,13 @@ const ourExpertise = [
       "Risk Management",
       "Security Consulting",
     ],
-    iconColor: "text-[#0455EB]",
-    bgColor: "#FDF3F3D4",
-    descriptionColor: "text-[#919292]",
-    headingColor: "text-[#0F172B]",
-    listColor: "text-[#232942]",
+    iconColor: "text-white",
+    bgColor: "#001233",
+    hoverFrom: "#3477C5",
+    hoverTo: "#002E65",
+    descriptionColor: "text-[#D1D1D1]",
+    headingColor: "text-[#0F66EA]",
+    listColor: "text-[#A8A8A8]",
   },
   {
     Icon: "material-symbols:warning-outline-rounded",
@@ -168,11 +182,13 @@ const ourExpertise = [
       "Human Risk Assessment",
       "Cybersecurity Workshops",
     ],
-    iconColor: "text-[#E24B4A]",
-    bgColor: "#FFFFFF",
-    descriptionColor: "text-[#90A1B9]",
-    headingColor: "text-[#0F172B]",
-    listColor: "text-[#232942]",
+    iconColor: "text-white",
+    bgColor: "#4F242F",
+    hoverFrom: "#3E0302",
+    hoverTo: "#000000",
+    descriptionColor: "text-[#D1D1D1]",
+    headingColor: "text-[#E24B4A]",
+    listColor: "text-[#A8A8A8]",
   },
 ];
 
@@ -200,245 +216,286 @@ const auditorCertificates = [
   },
 ];
 
+const trustedCompanies = [
+  {
+    src: tokenvalut.src,
+    alt: "Tokenvalut",
+    className: "h-10 w-35",
+  },
+  {
+    src: bookmyshow.src,
+    alt: "Bookmyshow",
+    className: "h-10 w-35",
+  },
+  {
+    src: bosch.src,
+    alt: "Bosch",
+    className: "h-8 w-35",
+  },
+  {
+    src: indegence.src,
+    alt: "Indegence",
+    className: "h-7 w-35",
+  },
+  {
+    src: allianz.src,
+    alt: "Allianz",
+    className: "h-8 w-35",
+  },
+  {
+    src: shellinfo.src,
+    alt: "ShellInfo",
+    className: "h-10 w-35",
+  },
+];
+
+const impactCards = [
+  {
+    category: "GOVERNMENT",
+    categoryBg: "#B78A27",
+    bgColor: "#D9A235",
+    title: "Strengthening Public Sector Cyber Resilience.",
+    description:
+      "Enhanced security posture and compliance readiness through continuous assessment and proactive threat validation.",
+    linkColor: "#000000",
+  },
+  {
+    category: "TELECOM",
+    categoryBg: "#164D48",
+    bgColor: "#080E1B",
+    title: "Securing Critical Network Infrastructure.",
+    description:
+      "Validated security controls across distributed environments and strengthened defenses against advanced threats.",
+    linkColor: "#3B9E6A",
+  },
+  {
+    category: "FINANCIAL SERVICES",
+    categoryBg: "#541A2A",
+    bgColor: "#080E1B",
+    title: "Preventing Credential Compromise in a Financial Institution.",
+    description:
+      "Strengthened identity security through phishing simulations and targeted awareness that closed critical gaps.",
+    linkColor: "#E24B4A",
+  },
+];
+
 export default function Home() {
   return (
-    <div className="w-full bg-[#FCFCFC]">
+    <div className="w-full min-h-screen bg-black">
       {/* hero section  */}
       <div
         style={{ backgroundImage: `url(${herobackground.src})` }}
-        className="w-full bg-cover bg-center"
+        className="bg-center bg-no-repeat"
       >
-        <div className="max-w-7xl mx-auto  px-10 flex flex-col min-h-screen 2xl:min-h-[60vh] py-15">
+        <div className="max-w-7xl mx-auto  px-10 flex flex-col 2xl:min-h-[60vh] py-15 ">
           <div className="flex-1 flex items-center  justify-between">
-            <div className="space-y-8">
-              <p className="text-base font-semibold text-[#0F66EA]">
+            <div className="space-y-5">
+              <p className="font-medium text-[#0F66EA] text-[11px] sm:text-[12px] tracking-[1px]">
                 SECURING MODERN ENTERPRISES
               </p>
-              <h1 className=" font-semibold text-[#162033]">
-                Built for Trust. <br /> Designed for{" "}
-                <span className="text-[#0F66EA] ">Resilience.</span>
+              <h1 className="font-medium text-[26px] md:text-[36px] text-[white] md:leading-[45px]">
+                Build for Trust <br />
+                Designed for Cyber Resilience.
               </h1>
-              <p className="text-lg font-medium text-[#8F90AB] max-w-xl">
+              <p className="text-[14px] sm:text-[18px] font-medium text-[#ACAFEE] max-w-[435px] sm:leading-[32px]">
                 Helping organizations anticipate threats, reduce cyber risk, and
                 build lasting resilience through expert cybersecurity
                 consulting, continuous validation, and intelligent security
                 platforms.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer rounded-lg text-[#FFFFFF] bg-linear-to-l from-[#3A84DA] to-[#3477C5]">
-                  Explore Our Services{" "}
+              <div className="flex flex-col sm:flex-row gap-3 py-4">
+                <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer rounded-[10px] text-[#FFFFFF] bg-linear-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70]">
+                  Schedule a Consultation {" "}
                   <span>
                     <Icon icon="mdi:arrow-right" width={20} />
                   </span>
                 </button>
-                <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer text-[#31435C] rounded-lg border border-[#D8E4EF]">
+                <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer text-white rounded-lg border border-[#FFFFFF29]">
                   <span>
-                    <Icon
-                      icon="iconamoon:eye"
-                      width={20}
-                      className="text-[#31435C]"
-                    />
                   </span>
-                  Explore Platform
+                  Explore services ›
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="bg-[#FFFDFD] py-5 rounded-xl  flex flex-col md:flex-row justify-between w-full max-w-6xl mx-auto shadow-xl shadow-[#00000005] mt-10 px-10">
-            <div className="space-y-1">
-              <h4 className="text-lg font-semibold text-[#0F66EA]">1K+</h4>
-              <p className="text-base font-medium text-[#262D3D]">
-                Security Engagements
-              </p>
-              <p className="text-base font-medium text-[#787891]">
-                Across industries worldwide
-              </p>
-            </div>
-            <div className="space-y-1">
-              <h4 className="text-lg font-semibold text-[#0F66EA]">20+</h4>
-              <p className="text-base font-medium text-[#262D3D]">
-                Industry Verticals
-              </p>
-              <p className="text-base font-medium text-[#787891]">
-                Deep domain expertise
-              </p>
-            </div>
-            <div className="space-y-1">
-              <h4 className="text-lg font-semibold text-[#0F66EA]">15+</h4>
-              <p className="text-base font-medium text-[#262D3D]">
-                Years of Cybersecurity Excellence
-              </p>
-              <p className="text-base font-medium text-[#787891]">
-                Proven track record
-              </p>
-            </div>
-            <div className="space-y-1">
-              <h4 className="text-lg font-semibold text-[#0F66EA]">99%</h4>
-              <p className="text-base font-medium text-[#262D3D]">
-                Client Satisfaction
-              </p>
-              <p className="text-base font-medium text-[#787891]">
-                Long-term partnerships built on trust
-              </p>
-            </div>
-          </div>
+
         </div>
       </div>
 
-      {/* about CERT-In Empanelled and ISO  */}
-      <div className="bg-linear-to-t from-[#FFFFFF] to-[#FBFBFB]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 py-14 ">
-          <Animation>
-            <p className="text-base sm:text-lg max-w-3xl mx-auto leading-[27px] sm:leading-[30px] text-center font-medium text-[#787891]">
-              <span className="text-[#0F66EA]">ISECURION</span> is a{" "}
-              <span className="text-[#020218]">
-                CERT-In Empanelled and ISO 27001:2022 certified
-              </span>{" "}
-              information security consulting company providing out-most service
-              quality, innovation and research in the field of Information
-              Security and Technology. We provide a unique blend of services to
-              our customers catering to the current information security
-              landscape.
-            </p>
-          </Animation>
-          <div className="flex mt-10 gap-5 md:gap-10 flex-col md:flex-row">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
-            >
-              {capabilities.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={cardVariants}
-                  className=" flex flex-col items-center space-y-3 "
-                >
-                  <div className="h-[48px] w-[48px] shrink-0 flex items-center justify-center rounded-xl bg-linear-to-b from-[#D6E9FD] to-[#FFFFFF]">
-                    <Icon
-                      icon={item.icon}
-                      className="text-[#000000] w-[24px] h-[27px]"
+      {/* STATS SECTION */}
+      <section className="w-full bg-[black]">
+
+        {/* 7XL Stats Box */}
+        <div className="mx-auto max-w-7xl bg-[#01060E] shadow-[0_0_45px_rgba(15,102,234,0.20)]">
+
+          <div className="px-6 py-10 sm:px-8 lg:px-10">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+              {/* Stat 1 */}
+              <div className="relative px-0 py-6 md:px-8 lg:px-10 lg:py-0">
+                <div>
+                  <p className="text-[24px] font-semibold leading-[45px] text-[#0F66EA]">
+                    1K+
+                  </p>
+
+                  <p className="mt-1 text-[18px] font-medium leading-[30px] text-[#999999]">
+                    Security Engagements
+                  </p>
+
+                  <p className="mt-2 text-[16px] font-medium leading-[27px] text-white">
+                    Across industries worldwide
+                  </p>
+                </div>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="relative border-t border-white/20 px-0 py-6 md:px-8 sm:border-t-0 lg:px-12 lg:py-0">
+
+                {/* Desktop Divider */}
+                <div className="absolute left-0 top-1/2 hidden h-[106px] w-px -translate-y-1/2 bg-[#4F5051] lg:block" />
+
+                <div>
+                  <p className="text-[24px] font-semibold leading-[45px] text-[#0F66EA]">
+                    20+
+                  </p>
+
+                  <p className="mt-1 text-[18px] font-medium leading-[30px] text-[#999999]">
+                    Industry Verticals
+                  </p>
+
+                  <p className="mt-2 text-[16px] font-medium leading-[27px] text-white">
+                    Deep domain expertise
+                  </p>
+                </div>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="relative border-t border-white/20 px-0 py-6 md:px-8 sm:border-t-0 lg:px-12 lg:py-0">
+
+                {/* Desktop Divider */}
+                <div className="absolute left-0 top-1/2 hidden h-[106px] w-px -translate-y-1/2 bg-[#4F5051] lg:block" />
+
+                <div>
+                  <p className="text-[24px] font-semibold leading-[45px] text-[#0F66EA]">
+                    15+
+                  </p>
+
+                  <p className="mt-1 text-[18px] font-medium leading-[30px] text-[#999999]">
+                    Years of Cybersecurity Excellence
+                  </p>
+
+                  <p className="mt-2 text-[16px] font-medium leading-[27px] text-white">
+                    Proven track record
+                  </p>
+                </div>
+              </div>
+
+              {/* Stat 4 */}
+              <div className="relative border-t border-white/20 px-0 py-6 md:border-t-0 md:px-8 lg:px-12 lg:py-0">
+
+                {/* Desktop Divider */}
+                <div className="absolute left-0 top-1/2 hidden h-[106px] w-px -translate-y-1/2 bg-[#4F5051] lg:block" />
+
+                <div>
+                  <p className="text-[24px] font-semibold leading-[45px] text-[#0F66EA]">
+                    99%
+                  </p>
+
+                  <p className="mt-1 text-[18px] font-medium leading-[30px] text-[#999999]">
+                    Client Satisfaction
+                  </p>
+
+                  <p className="mt-2 text-[16px] font-medium leading-[27px] text-white">
+                    Long-term partnerships
+                    <br />
+                    built on trust
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      {/* TRUSTED BY LEADING ORGANIZATIONS */}
+      <div className="bg-black ">
+        <div className="mx-auto max-w-7xl bg-[#070D1A] py-14">
+
+          {/* Heading */}
+          <div className="px-6 sm:px-10 ">
+            <Animation>
+              <h2 className="text-center text-[20px] font-medium leading-[27px] tracking-[1.3px] text-[#7E93B4]">
+                TRUSTED BY LEADING ORGANIZATIONS
+              </h2>
+            </Animation>
+          </div>
+
+          {/*logos */}
+          <div className="mt-12 overflow-hidden">
+
+            <div className="flex w-max animate-[marquee_25s_linear_infinite]">
+
+              {/* First set */}
+              <div className="flex shrink-0 items-center gap-16 pr-16">
+                {trustedCompanies.map((company, index) => (
+                  <div
+                    key={index}
+                    className="flex h-12 w-35 shrink-0 items-center justify-center">
+                    <img
+                      src={company.src}
+                      alt={company.alt}
+                      className={`${company.className} object-contain brightness-0 invert opacity-80 transition-all duration-500 hover:brightness-100 hover:invert-0 hover:opacity-100`}
+                    />
+
+                  </div>
+                ))}
+              </div>
+
+              {/* Duplicate set */}
+              <div className="flex shrink-0 items-center gap-16 pr-16">
+                {trustedCompanies.map((company, index) => (
+                  <div
+                    key={`duplicate-${index}`}
+                    className="flex h-12 w-35 shrink-0 items-center justify-center">
+                    <img
+                      src={company.src}
+                      alt={company.alt}
+                      className={`${company.className} object-contain brightness-0 invert opacity-80 transition-all duration-500 hover:brightness-100 hover:invert-0 hover:opacity-100`}
                     />
                   </div>
-
-                  <h3 className=" text-base sm:text-lg font-semibold text-[#1A1A1A] text-center">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm sm:text-base font-medium text-[#6E7A84] text-center">
-                    {item.description}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </div>
-      {/* TRUSTED BY LEADING ORGANIZATIONS  */}
-      <div className="py-14">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
-          {/* heading  */}
-          <Animation>
-            <div className="mx-auto flex max-w-6xl items-center">
-              <div className="hidden sm:block h-[1px] flex-1 bg-[#D8D8D8] bg-linear-to-l from-[#0F66EA] to-[#F1F6FF]"></div>
-              <span className="hidden sm:block h-3 w-3 rounded-full bg-[#7C87FF]"></span>
-
-              <div className="mx-6 flex items-center gap-4">
-                <h2 className="text-lg sm:text-xl font-semibold text-center text-[#0F66EA]">
-                  TRUSTED BY LEADING ORGANIZATIONS
-                </h2>
+                ))}
               </div>
 
-              <span className="hidden sm:block h-3 w-3 rounded-full bg-[#7C87FF]"></span>
-              <div className="hidden sm:block h-[1px] flex-1 bg-[#D8D8D8] bg-linear-to-l to-[#0F66EA] from-[#F1F6FF]"></div>
             </div>
-          </Animation>
-          {/* all industries  */}
-          <div>
-            <Animation>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4 py-3 mt-5">
-                <div className="text-sm sm:text-base font-medium flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-[#0F66EA] bg-[#53C1DE1C]">
-                  <Icon icon="hugeicons:menu-square" />
-                  All Industries
-                </div>
-                <div className="text-sm sm:text-base font-medium  flex items-center justify-center gap-2 px-2 py-2.5 border border-[#EBEBEB] rounded-lg text-[#787891]">
-                  <Icon icon="mage:heart-health" />
-                  Healthcare
-                </div>
-                <div className="text-sm sm:text-base font-medium flex items-center justify-center gap-2 px-2 py-2.5 border border-[#EBEBEB] rounded-lg text-[#787891]">
-                  <Icon icon="ion:wallet-outline" />
-                  FinTech
-                </div>
-                <div className="text-sm sm:text-base font-medium flex items-center justify-center gap-2 px-2 py-2.5 border border-[#EBEBEB] rounded-lg text-[#787891]">
-                  <Icon icon="hugeicons:nano-technology" />
-                  Technology
-                </div>
-                <div className="text-sm sm:text-base font-medium flex items-center gap-2 justify-center px-2 py-2.5 border border-[#EBEBEB] rounded-lg text-[#787891]">
-                  <Icon icon="mage:heart-health" />
-                  Manufacturing
-                </div>
-                <div className="text-sm sm:text-base font-medium flex items-center gap-2 justify-center px-2 py-2.5 border border-[#EBEBEB] rounded-lg text-[#787891]">
-                  <Icon icon="mage:heart-health" />
-                  Education
-                </div>
-                <div className="text-sm sm:text-base font-medium flex items-center gap-2 justify-center px-2 py-2.5 border border-[#EBEBEB] rounded-lg text-[#787891]">
-                  <Icon icon="ri:government-line" />
-                  Government
-                </div>
-              </div>
-            </Animation>
-            <Animation>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-items-center gap-6 py-3">
-                <img
-                  src={tokenvalut.src}
-                  alt="Tokenvalut"
-                  className="h-10 w-35"
-                />
-                <img
-                  src={bookmyshow.src}
-                  alt="Bookmyshow"
-                  className="h-10 w-35"
-                />
-                <img src={bosch.src} alt="Bosch" className="h-10 w-35" />
-                <img
-                  src={indegence.src}
-                  alt="Indegence"
-                  className="h-10 w-35"
-                />
-                <img src={allianz.src} alt="Allianz" className="h-10 w-35" />
-                <img
-                  src={shellinfo.src}
-                  alt="ShellInfo"
-                  className="h-10 w-35"
-                />
-              </div>
-            </Animation>
           </div>
         </div>
       </div>
 
       {/* WHY ORGANIZATIONS CHOOSE ISECURION */}
-      <div className="py-14 ">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
+      <div className="bg-[black]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A] py-10">
           <Animation>
             <p className="flex items-center gap-2">
               <span className="block h-6 w-[2px] bg-[#0F66EA]"></span>
 
-              <span className="text-sm sm:text-base font-semibold uppercase text-[#0F66EA] sectionheading">
+              <span className="text-sm sm:text-base font-semibold uppercase text-[#0F66EA] sectionheading tracking-[2px]">
                 WHY ORGANIZATIONS CHOOSE ISECURION
               </span>
             </p>
-            <div className="flex flex-col lg:flex-row items-center justify-between mt-3 gap-5">
-              <h2 className="text-2xl sm:text-[38px] text-center lg:text-left font-medium  text-[#202123]">
-                Security is more than protection. It's the foundation of{" "}
+            <div className="flex flex-col lg:flex-row items-center justify-between mt-6 gap-5">
+              <h2 className="text-2xl sm:text-[38px] text-center lg:text-left font-medium  text-white">
+                Security is more than <br />protection. <br /> It's the foundation of{" "}<br />
                 <span className="text-[#0F66EA]">confident business.</span>
               </h2>
-              <p className="text-base font-medium  lg:max-w-lg text-center lg:text-left text-[#8F90AB] leading-7">
+              <p className="text-base font-medium  lg:max-w-lg text-center lg:text-left text-[#D1D1D1] leading-7">
                 Organizations rely on applications, cloud infrastructure,
-                digital identities, and connected systems to operate.{" "}
-                <span className="text-[#455F6D]">ISECURION</span> helps validate
+                digital identities, and connected systems to operate.
+                ISECURION helps validate
                 security continuously, reduce risk proactively, and build
                 long-term cyber resilience.
               </p>
@@ -452,28 +509,33 @@ export default function Home() {
                     <Image
                       src={indentifyrisk}
                       alt="indentifyrisk"
-                      className="h-full  object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 "
+                      className="h-full  object-cover transition-transform duration-800 ease-in-out group-hover:scale-115 "
                     />
                   </div>
-                  <div className="relative z-10 flex max-w-md rounded-md bg-white p-4 ">
+                  <div className="relative z-10 flex max-w-[360px] rounded-[5px] bg-linear-to-r from-[#002A69] to-[#000000] p-4 ">
                     <div className="w-full">
-                      <h3 className="mb-3 text-base font-medium h-[20px] text-[#080808]">
+                      <h3 className="mb-3 text-base font-medium h-[20px] text-white">
                         Identify Risk
                       </h3>
 
                       <div className="flex items-center gap-3 h-[70px] ">
-                        <p className=" transition-all duration-300 group-hover:hidden text-sm font-medium text-[#5A5C76]">
+                        <p className=" transition-all duration-300 group-hover:hidden text-[11px] sm:text-sm font-medium text-[#ACACAC] max-w-[252px] ">
                           Uncover exploitable vulnerabilities before they become
                           business disruptions.
                         </p>
 
-                        <button className="ml-auto flex w-auto items-center justify-center rounded-lg bg-[#0F66EA] px-4 py-2.5 text-white transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
-                          <span className="hidden whitespace-nowrap group-hover:block">
+                        <button
+                          className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between"
+                        >
+                          <span
+                            className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100"
+                          >
                             Explore Risk Identification
                           </span>
+
                           <Icon
-                            icon="bitcoin-icons:arrow-up-filled"
-                            className=""
+                            icon="akar-icons:arrow-up-right"
+                            className="shrink-0"
                           />
                         </button>
                       </div>
@@ -485,28 +547,30 @@ export default function Home() {
                     <Image
                       src={continuousvalidation}
                       alt="continuousvalidation"
-                      className="h-full object-cover group-hover:scale-105 transition-all duration-500 ease-in-out"
+                      className="h-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
                     />
                   </div>
-                  <div className="relative z-10 flex max-w-md rounded-md bg-white p-4 ">
+                  <div className="relative z-10 flex max-w-md rounded-[5px] bg-linear-to-r from-[#002A69] to-[#000000] p-4 ">
                     <div className="w-full">
-                      <h3 className="mb-3 text-base font-medium h-[20px] text-[#080808]">
+                      <h3 className="mb-3 text-base font-medium h-[20px] text-white">
                         Validate Continuously
                       </h3>
 
                       <div className="flex items-center gap-3 h-[70px]">
-                        <p className=" transition-all duration-300 group-hover:hidden text-sm font-medium text-[#5A5C76]">
+                        <p className=" transition-all duration-300 group-hover:hidden text-[11px] sm:text-sm font-medium max-w-[282px] text-[#ACACAC] lg:leading-[21px]">
                           Continuously test security across applications, cloud,
                           identities and infrastructure.
                         </p>
 
-                        <button className="ml-auto flex w-auto items-center justify-center rounded-lg bg-[#0F66EA] px-4 py-2.5 text-white transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
-                          <span className="hidden whitespace-nowrap group-hover:block">
+                        <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
+                          <span
+                            className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
                             Explore Continuous Validation
                           </span>
+
                           <Icon
-                            icon="bitcoin-icons:arrow-up-filled"
-                            className=""
+                            icon="akar-icons:arrow-up-right"
+                            className="shrink-0"
                           />
                         </button>
                       </div>
@@ -522,26 +586,31 @@ export default function Home() {
                     <Image
                       src={defence}
                       alt="defence"
-                      className="h-full object-cover group-hover:scale-105 transition-all duration-500 ease-in-out"
+                      className="h-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
                     />
                   </div>
-                  <div className="relative z-10 flex max-w-md rounded-md bg-white p-4 ">
+                  <div className="relative z-10 flex max-w-md rounded-md bg-linear-to-r from-[#002A69] to-[#000000] p-4 ">
                     <div className="w-full">
-                      <h3 className="mb-3 text-base font-medium h-[20px] text-[#080808]">
+                      <h3 className="mb-4 text-base font-medium h-[20px] text-white">
                         Strengthen Defenses
                       </h3>
 
-                      <div className="flex items-center gap-3 h-[70px]">
-                        <p className=" transition-all duration-300 group-hover:hidden text-sm font-medium text-[#5A5C76]">
+                      <div className="flex items-center gap-3 h-[60px]">
+                        <p className=" transition-all duration-300 group-hover:hidden text-[11px] sm:text-sm max-w-[235px] font-medium text-[#ACACAC] lg:leading-[21px]">
                           Offensive security that transforms findings into
                           measurable resilience.
                         </p>
 
-                        <button className="ml-auto flex w-auto items-center justify-center rounded-lg bg-[#0F66EA] px-4 py-2.5 text-white transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
-                          <span className="hidden whitespace-nowrap group-hover:block">
+                        <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
+                          <span
+                            className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
                             Explore Offensive Security
                           </span>
-                          <Icon icon="ep:top-right" className="" />
+
+                          <Icon
+                            icon="akar-icons:arrow-up-right"
+                            className="shrink-0"
+                          />
                         </button>
                       </div>
                     </div>
@@ -552,26 +621,32 @@ export default function Home() {
                     <Image
                       src={buildtrust}
                       alt="buildtrust"
-                      className="h-full object-cover group-hover:scale-105 transition-all duration-500 ease-in-out"
+                      className="h-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
                     />
                   </div>
-                  <div className="relative z-10 flex max-w-md rounded-md bg-white p-4 ">
+                  <div className="relative z-10 flex max-w-[370px] rounded-md bg-linear-to-l to-[#002A69] from-[#000000] p-4 ">
                     <div className="w-full">
-                      <h3 className="mb-3 text-base font-medium h-[20px] text-[#080808]">
+                      <h3 className="mb-3 text-base font-medium h-[20px] text-white">
                         Build Trust
                       </h3>
 
-                      <div className="flex items-center gap-3 h-[70px]">
-                        <p className=" transition-all duration-300 group-hover:hidden text-sm font-medium text-[#5A5C76]">
+                      <div className="flex items-center gap-3 h-[60px]">
+                        <p className=" transition-all duration-300 group-hover:hidden text-[11px] sm:text-sm  font-medium text-[#ACACAC] lg:leading-[21px] max-w-[282px]">
                           Protect business continuity while strengthening
                           customer trust and confidence.
                         </p>
 
-                        <button className="ml-auto flex w-auto items-center justify-center rounded-lg bg-[#0F66EA] px-4 py-2.5 text-white transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
-                          <span className="hidden whitespace-nowrap group-hover:block">
+                        <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
+                          <span
+                            className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100"
+                          >
                             Explore Compliance & Trust
                           </span>
-                          <Icon icon="ep:top-right" className="" />
+
+                          <Icon
+                            icon="akar-icons:arrow-up-right"
+                            className="shrink-0"
+                          />
                         </button>
                       </div>
                     </div>
@@ -584,24 +659,24 @@ export default function Home() {
       </div>
 
       {/* Capabilities  */}
-      <div className="py-14">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
+      <div className="bg-[black]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A] py-10">
           <Animation>
             <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
               <div>
-                <h2 className="text-4xl font-medium lg:max-w-md text-center lg:text-left text-[#131210] leading-11">
+                <h2 className="text-2xl sm:text-4xl font-medium lg:max-w-md text-center lg:text-left text-white sm:leading-11">
                   Capabilities that strengthen{" "}
-                  <span className="bg-linear-to-l to-[#0F66EA] from-[#17366E] bg-clip-text text-transparent">
+                  <span className="text-[#0F66EA]">
                     every layer
                   </span>{" "}
                   of your organization.
                 </h2>
               </div>
-              <div className="lg:max-w-md space-y-2">
-                <p className="hidden lg:block  text-base font-semibold text-[#0F66EA] sectionheading">
+              <div className="lg:max-w-[550px] space-y-2">
+                <p className="hidden lg:block  text-base font-semibold text-[#0F66EA] sectionheading tracking-[0.5px]">
                   OUR EXPERTISE
                 </p>
-                <p className="text-center lg:text-left text-base font-medium leading-8 text-[#8F90AB]">
+                <p className="text-center lg:text-left font-medium leading-7 text-white">
                   A comprehensive portfolio of services and platforms built to
                   reduce risk, improve resilience, and enable secure growth.
                 </p>
@@ -620,19 +695,25 @@ export default function Home() {
               <motion.div
                 key={index}
                 variants={cardVariants}
-                className="relative overflow-hidden flex flex-col justify-between rounded-xl border border-[#E9E9E973] p-5 cursor-pointer group  hover:bg-linear-to-b from-[#3477C5] to-[#3A84DA] transition-all duration-500"
+                className="relative z-10 overflow-hidden flex flex-col justify-between rounded-[14px] p-5 cursor-pointer group transition-all duration-500"
                 style={{ backgroundColor: item.bgColor }}
               >
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background: `linear-gradient(to bottom, ${item.hoverFrom}, ${item.hoverTo})`,
+                  }}
+                />
                 <Icon
                   icon={item.Icon}
-                  className="absolute -right-8 top-1/2 h-40 w-40 -translate-y-1/2 text-[#62748E0D] group-hover:top-1/3 group-hover:-translate-x-1/2 group-hover:text-[#FFFFFF2B] transition-all duration-500"
+                  className="absolute -right-8 top-1/2 h-40 w-40 -translate-y-1/2 text-[#62748E1C] group-hover:top-1/3 group-hover:right-[20%] group-hover:text-[#FFFFFF2B] transition-all duration-500"
                 />
 
                 <div className="relative z-10">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
                     <Icon
                       icon={item.Icon}
-                      className={`h-6 w-6 ${item.iconColor} group-hover:text-white transition-colors duration-300`}
+                      className={`h-8 w-8 ${item.iconColor} group-hover:text-white transition-colors duration-300`}
                     />
                   </div>
 
@@ -643,13 +724,13 @@ export default function Home() {
                   </h3>
 
                   <p
-                    className={`text-sm font-medium leading-6 ${item.descriptionColor} group-hover:text-white transition-colors duration-300`}
+                    className={`text-sm font-medium leading-6 ${item.descriptionColor} group-hover:text-white transition-colors duration-300 max-w-[237px]`}
                   >
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-4">
+                <div className="relative z-10 mt-4">
                   <ul className="space-y-2">
                     {item.services.map((service, serviceIndex) => (
                       <li
@@ -668,7 +749,7 @@ export default function Home() {
                   </ul>
                 </div>
 
-                <button className="mt-5 flex cursor-pointer items-center text-[15px] font-medium text-[#0F66EA] transition-colors duration-300 group-hover:text-white">
+                <button className="relative z-10 mt-5 flex cursor-pointer items-center text-[15px] font-medium text-[#0F66EA] transition-colors duration-300 group-hover:text-white">
                   View Services
                   <span className="ml-1">
                     <Icon icon="solar:arrow-right-bold" />
@@ -681,27 +762,26 @@ export default function Home() {
       </div>
 
       {/* Our platform  */}
-
-      <div className="py-14">
-        <div className="container px-6 sm:px-10">
-          <div className="space-y-3  lg:max-w-xl flex flex-col items-center lg:items-start text-center lg:text-left">
+      <div className="bg-[black]">
+        <div className="container px-6 sm:px-10 bg-[#070D1A] py-14">
+          <div className="space-y-3 lg:max-w-xl flex flex-col items-center lg:items-start text-center lg:text-left">
             <Animation>
               <p className="flex items-center gap-2 sectionheading">
                 <span className="block h-6 w-[2px] bg-[#0F66EA]"></span>
 
-                <span className="text-base font-semibold uppercase text-[#0F66EA]">
+                <span className="text-base font-semibold uppercase text-[#0F66EA] tracking-[1px]">
                   OUR PLATFORMS
                 </span>
               </p>
             </Animation>
             <Animation>
-              <h2 className="text-4xl font-medium  text-[#131210]">
+              <h2 className="text-2xl sm:text-4xl font-medium text-white mt-2">
                 Intelligent platforms for{" "}
                 <span className="text-[#0F66EA]">continuous</span> security.
               </h2>
             </Animation>
             <Animation>
-              <p className="text-lg font-medium leading-7 text-[#8F90AB]">
+              <p className="text-[16px] font-medium leading-7 text-[#D1D1D1] ">
                 Purpose-built platforms that help organizations validate
                 security continuously, strengthen cyber resilience, and make
                 informed decisions.
@@ -714,63 +794,63 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row items-center gap-10">
                 <div className="flex-1 space-y-4">
                   <div className="flex flex-col">
-                    <h3 className="text-2xl font-medium text-[#1A1A1A]">
+                    <h3 className="text-xl sm:text-2xl font-medium text-[#4ADE80]">
                       Vulnytics
                     </h3>
-                    <span className="bg-[#3B9E6A] w-15 h-0.5"></span>
+                    <span className="mt-2 bg-[#818181] w-15 h-0.5"></span>
                   </div>
-                  <h3 className="text-3xl font-semibold text-center lg:text-left lg:max-w-md  text-[#1A1A1A]">
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-center lg:text-left lg:max-w-md  text-white py-2">
                     Continuous Vulnerability{" "}
-                    <span className="text-[#3B9E6A]">Intelligence</span>.{" "}
+                    <span className="text-[#4ADE80]">Intelligence.</span>
                   </h3>
-                  <p className="text-base font-medium lg:max-w-md text-center lg:text-left leading-[25px] tracking-[-0.34px] text-[#8F90AB]">
+                  <p className="font-medium max-w-[408px] text-center lg:text-left leading-[25px] tracking-[-0.34px] text-[#8F90AB]">
                     Discover, prioritize, and remediate vulnerabilities across
                     your digital assets with actionable insights and real-time
                     visibility.
                   </p>
                   <ul className="space-y-1">
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Continuous Scanning</span>
                     </li>
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Risk Prioritization</span>
                     </li>
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Executive Reporting</span>
                     </li>
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Seamless Integrations</span>
                     </li>
                   </ul>
-                  <button className="flex items-center gap-1 text-base font-medium cursor-pointer text-[#3B9E6A]">
+                  <button className="flex items-center gap-1 text-sm font-medium cursor-pointer text-[#3B9E6A]">
                     Learn More{" "}
                     <span>
                       <Icon icon="ep:right" />
                     </span>
                   </button>
                 </div>
-                <div className="flex-1   overflow-hidden group">
-                  <div className="bg-[#ADF20047] max-h-[400px] rounded-4xl">
+                <div className="flex-1 group">
+                  <div className="bg-linear-to-b from-[#0B241B] to-[#2A8A67] max-h-[500px] rounded-4xl overflow-hidden">
                     <img
                       src={vulnytics.src}
                       alt="vulnytics"
-                      className="w-full translate-x-[8%] translate-y-[8%] transition-all duration-500 ease-in-out group-hover:translate-x-[3%] group-hover:translate-y-[3%]"
+                      className="w-full translate-x-[8%] translate-y-[8%] rounded-none transition-all duration-700 ease-in-out group-hover:translate-x-[3%] group-hover:translate-y-[2%] group-hover:rounded-4xl"
                     />
                   </div>
                 </div>
@@ -781,64 +861,64 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row items-center gap-10">
                 <div className="flex-1 space-y-4">
                   <div className="flex flex-col">
-                    <h3 className="text-2xl font-medium text-[#1A1A1A]">
+                    <h3 className="text-xl sm:text-2xl font-medium text-[#7D70F0]">
                       Drosera Phishing
                     </h3>
-                    <span className="bg-[#0F66EA] w-15 h-0.5"></span>
+                    <span className="bg-[#818181] w-15 h-0.5 mt-2"></span>
                   </div>
-                  <h3 className="text-3xl font-semibold max-w-md  leading-[40px]">
+                  <h3 className="text-2xl sm:text-3xl font-semibold max-w-md text-white lg:leading-[40px] py-2">
                     Security Awareness that actually{" "}
-                    <span className="text-[#0F66EA]">
+                    <span className="text-[#7D70F0]">
                       changes behavior.
                     </span>{" "}
                   </h3>
-                  <p className="text-base font-medium max-w-md leading-[25px] tracking-[-0.34px] text-[#8F90AB]">
+                  <p className="text-base font-medium max-w-[400px] leading-[25px] tracking-[-0.34px] text-[#8F90AB]">
                     Run realistic phishing simulations, track user behavior, and
                     build a security-aware culture across your organization.
                   </p>
                   <ul className="space-y-1">
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Phishing Simulations</span>
                     </li>
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Campaign Management</span>
                     </li>
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Awareness Training</span>
                     </li>
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Advanced Reporting</span>
                     </li>
                   </ul>
-                  <button className="flex items-center gap-1 text-sm font-medium cursor-pointer text-[#0F66EA]">
+                  <button className="flex items-center gap-1 text-sm font-medium cursor-pointer text-[#7D70F0]">
                     Learn More{" "}
                     <span>
                       <Icon icon="ep:right" />
                     </span>
                   </button>
                 </div>
-                <div className="flex-1   overflow-hidden group">
-                  <div className="bg-[#DDF1FA80] max-h-[400px] rounded-4xl">
+                <div className="flex-1 group">
+                  <div className="bg-linear-to-b from-[#6F6C90] to-[#8B5CF6] max-h-[500px] rounded-4xl overflow-hidden">
                     <img
                       src={drosera.src}
                       alt="vulnytics"
-                      className="w-full translate-x-[8%] translate-y-[8%] transition-all duration-500 ease-in-out group-hover:translate-x-[3%] group-hover:translate-y-[3%]"
+                      className="w-full translate-x-[8%] translate-y-[8%] rounded-none transition-all duration-700 ease-in-out group-hover:translate-x-[3%] group-hover:translate-y-[2%] group-hover:rounded-4xl"
                     />
                   </div>
                 </div>
@@ -849,63 +929,63 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row items-center gap-10">
                 <div className="flex-1 space-y-5">
                   <div className="flex flex-col">
-                    <h3 className="text-2xl font-medium text-[#1A1A1A]">
+                    <h3 className="text-xl sm:text-2xl font-medium text-[#38BDF8]">
                       Learning Management System (LMS)
                     </h3>
-                    <span className="bg-[#7D70F0] w-15 h-0.5"></span>
+                    <span className="bg-[#818181] w-15 h-0.5 mt-2"></span>
                   </div>
-                  <h3 className="text-3xl font-semibold max-w-md  leading-[40px] text-[#1A1A1A]">
+                  <h3 className="text-2xl sm:text-3xl font-semibold max-w-md  lg:leading-[40px] text-white">
                     Security{" "}
-                    <span className="text-[#7D70F0]">Learning & Awareness</span>
+                    <span className="text-[#38BDF8]">Learning & Awareness</span>
                     .{" "}
                   </h3>
-                  <p className="text-base font-medium max-w-md leading-[25px] tracking-[-0.34px] text-[#8F90AB]">
+                  <p className="text-base font-medium max-w-[400px] leading-[25px] tracking-[-0.34px] text-[#8F90AB]">
                     Deliver engaging training, validate knowledge, and empower
                     your teams with role-based learning journeys.
                   </p>
                   <ul className="space-y-1">
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Role-based Learning</span>
                     </li>
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Assessments & Quizzes</span>
                     </li>
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Learning Analytics</span>
                     </li>
-                    <li className="flex items-center text-sm font-medium text-[#44697D] gap-2">
+                    <li className="flex items-center text-sm font-medium text-[#A8A8A8] gap-2">
                       <Icon
-                        icon="teenyicons:tick-circle-solid"
-                        className="text-[#C3C3C3] w-[14px] h-[14px]"
+                        icon="mdi:tick-circle"
+                        className="text-[#C3C3C3] w-[16px] h-[16px]"
                       />
                       <span>Mobile Learning</span>
                     </li>
                   </ul>
-                  <button className="flex items-center gap-1 text-sm font-medium cursor-pointer text-[#7D70F0]">
+                  <button className="flex items-center gap-1 text-sm font-medium cursor-pointer text-[#38BDF8]">
                     Learn More{" "}
                     <span>
                       <Icon icon="ep:right" />
                     </span>
                   </button>
                 </div>
-                <div className="flex-1  overflow-hidden group">
-                  <div className="bg-[#7D70F042] max-h-[400px]  rounded-4xl">
+                <div className="flex-1 group">
+                  <div className="bg-linear-to-b from-[#38BDF8] to-[#38BDF8] max-h-[500px] rounded-4xl overflow-hidden">
                     <img
                       src={lms.src}
                       alt="vulnytics"
-                      className="w-full h-full translate-x-[8%] translate-y-[8%] transition-all duration-500 ease-in-out group-hover:translate-x-[3%] group-hover:translate-y-[3%]"
+                      className="w-full translate-x-[8%] translate-y-[8%] rounded-none transition-all duration-700 ease-in-out group-hover:translate-x-[3%] group-hover:translate-y-[2%] group-hover:rounded-4xl"
                     />
                   </div>
                 </div>
@@ -915,112 +995,352 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-14 bg-linear-to-l to-[#071C41] from-[#092E70]">
-        <div className="container px-6 sm:px-10 ">
+      {/* Stats Section */}
+      <div className="bg-black">
+
+        <div className="mx-auto max-w-7xl bg-linear-to-l from-[#092E70] to-[#071C41] px-6 py-10 sm:px-10">
+
+          {/* Quote */}
           <Animation>
-            <div className="flex items-center max-w-5xl mx-auto gap-5">
-              <div>
+            <div className="mx-auto flex max-w-5xl items-center gap-5">
+
+              <div className="shrink-0">
                 <img
                   src={right.src}
                   alt="right"
-                  className="w-[70px] h-[75px]"
+                  className="h-[50px] sm:h-[75px] w-[50px] sm:w-[70px]"
                 />
               </div>
+
               <div>
-                <p className="text-center text-[22px] font-medium text-[#EBEBEB]">
+                <p className="text-center text-sm sm:text-[22px] font-medium text-[#EBEBEB]">
                   ISECURION helps organizations strengthen their security
                   posture with expert-led services, advanced technology, and a
                   relentless focus on results.
                 </p>
               </div>
-              <div>
-                <img src={left.src} alt="left" className="w-[70px] h-[75px]" />
+
+              <div className="shrink-0">
+                <img
+                  src={left.src}
+                  alt="left"
+                  className="h-[50px] sm:h-[75px] w-[50px] sm:w-[70px]"
+                />
               </div>
+
             </div>
           </Animation>
+
+          {/* Stats */}
           <Animation>
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+            <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+
               {[
                 { value: "50+", label: "Enterprise Customers" },
                 { value: "1K+", label: "Projects Completed" },
-                { value: "500+", label: "Startup Companies" },
+                { value: "500+", label: "Start Up Companies" },
                 { value: "5", label: "of the Top 10 Global Tech Companies" },
                 { value: "40+", label: "Fintech & Healthcare Companies" },
               ].map((item, index) => (
                 <div
                   key={index}
-                  className={`flex-1 px-6 text-center ${index !== 4 ? " sm:border-r border-[#888888]" : ""}`}
+                  className={`px-6 text-center ${index !== 4
+                    ? "lg:border-r lg:border-[#888888]"
+                    : ""
+                    }`}
                 >
-                  <h3 className="text-3xl font-medium text-[#FFFFFF]">
+                  <h3 className="text-[16px] sm:text-3xl font-medium text-white">
                     {item.value}
                   </h3>
 
-                  <p className="mt-3 text-base font-medium leading-6 text-[#C5C5C5]">
+                  <p className="text-[14px] mt-3 text-base font-medium leading-6 text-[#C5C5C5]">
                     {item.label}
                   </p>
                 </div>
               ))}
+
             </div>
           </Animation>
+
         </div>
       </div>
+
       {/* INDUSTRIES WE SECURE  */}
-      <div>
-        <IndustriesWeSecure />
-      </div>
 
-      <div className="py-14 bg-[#FCFCFC]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
-          <Animation>
-            <div className="flex flex-col  gap-8 lg:flex-row justify-between items-center text-center lg:text-left">
-              <h2 className="text-4xl font-semibold  lg:max-w-md leading-12 text-[#162033]">
-                Proven Impact. Trusted by Enterprises{" "}
-                <span className="text-[#0F66EA] flex flex-col">
-                  Worldwide.
-                  <span className="hidden lg:block h-1 w-[100px] bg-[#1A56DB]"></span>
-                </span>
-              </h2>
+      <IndustriesWeSecure />
 
-              <div className="relative flex items-center">
-                <img
-                  src={iso27001.src}
-                  alt="ISO 27001"
-                  className="relative z-10 w-[80px] sm:w-[150px]"
-                />
 
-                <Icon
-                  icon="line-md:star-twotone"
-                  className="absolute left-1/2 top-1/2 z-20 h-[150px] w-[80px] sm:w-[150px] -translate-x-1/2 -translate-y-1/2 text-[#0F66EA33]"
-                />
+      <div className="w-full bg-black">
 
-                <img
-                  src={iso90001.src}
-                  alt="ISO 9001"
-                  className="relative z-10 ml-16 w-[80px] sm:w-[150px]"
-                />
+        <div className="mx-auto max-w-7xl">
+
+          {/* Proven Impact */}
+          <section className="bg-[#070F20] px-6 py-14 sm:px-10">
+
+            <Animation>
+              <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
+
+                {/* Left Content */}
+                <div className="w-full lg:w-1/2">
+                  <h2 className="text-center text-2xl sm:text-3xl font-medium leading-[1.3] text-white sm:text-4xl lg:text-left">
+                    Proven Impact. Trusted by Enterprises{" "}
+                    <span className="text-[#0F66EA]">
+                      Worldwide.
+                    </span>
+                  </h2>
+
+                  <div className="mx-auto mt-5 h-[3px] w-[100px] bg-[#1A56DB] lg:mx-0" />
+                </div>
+
+
+                {/* ISO Certifications */}
+                <div className="relative flex w-full items-center justify-center lg:w-1/2">
+
+                  <img
+                    src={iso27001.src}
+                    alt="ISO 27001"
+                    className="relative z-10 w-[120px] sm:w-[150px]"
+                  />
+
+                  <Icon
+                    icon="line-md:star-twotone"
+                    className="absolute left-1/2 top-1/2 z-20 h-[100px] w-[100px] -translate-x-1/2 -translate-y-1/2 text-[#0F66EA33] sm:h-[150px] sm:w-[150px]"
+                  />
+
+                  <img
+                    src={iso90001.src}
+                    alt="ISO 9001"
+                    className="relative z-10 ml-10 w-[120px] sm:ml-16 sm:w-[150px]"
+                  />
+
+                </div>
+
               </div>
-            </div>
-          </Animation>
-          <Animation>
-            <div className="bg-linear-to-l p-4 mt-10 from-[#092E70] to-[#000000]">
-              <h3 className="text-[22px] font-semibold text-center text-[#FFFFFF]">
-                Auditors certifications
+            </Animation>
+
+          </section>
+
+
+          {/* Auditor Certifications */}
+          <section className="bg-gradient-to-r from-[#000000] via-[#071C41] to-[#092E70] px-6 py-8 sm:px-10">
+
+            <Animation>
+
+              <h3 className="text-center text-[20px] font-semibold uppercase text-white sm:text-[22px]">
+                Auditors Certifications
               </h3>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 justify-items-center py-2 mt-10">
+              <div className="mt-8 grid grid-cols-2 items-center justify-items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
+
                 {auditorCertificates.map((item, index) => (
                   <img
                     key={index}
                     src={item.img.src}
                     alt=""
-                    className="w-[80px] h-[80px]"
+                    className="h-[80px] w-[80px] object-contain"
                   />
                 ))}
+
               </div>
+
+            </Animation>
+
+          </section>
+
+        </div>
+
+      </div>
+
+
+      <div className="bg-black ">
+        <div className="mx-auto max-w-7xl px-6 py-16 sm:px-4 lg:px-10 bg-[#060D1B]">
+
+          {/* Header */}
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-16 ">
+
+            {/* Left heading */}
+            <div className="flex-1">
+              <h2 className="text-3xl sm:text-[30px] font-medium leading-[1.3] text-white tracking-[0.3px]">
+                Security outcomes that{" "} <br />
+                <span className="text-[#0F66EA]">
+                  speak
+                </span>{" "}
+                for themselves.
+              </h2>
+
+              <div className="mt-4 h-[3px] w-[70px] bg-[#0F66EA]" />
+            </div>
+
+            {/* Right description */}
+            <div className="flex-1 lg:max-w-[505px]">
+              <p className="text-[14px] font-medium text-[#0F66EA] tracking-[0.2px]">
+                REAL-WORLD IMPACT
+              </p>
+
+              <p className="mt-2 text-sm font-medium leading-6 text-[#D1D1D1] max-w-[500px]">
+                Explore how organizations strengthened cyber resilience,
+                mitigated critical risks, and achieved measurable security
+                outcomes with ISECURION.
+              </p>
+            </div>
+
+          </div>
+
+          {/* Case studies */}
+          <Animation>
+            {/* Healthcare Case Study */}
+            <div className="mt-8 rounded-[12px] bg-[#00453A] p-4 sm:p-5">
+
+              {/* Category */}
+              <span className="inline-flex items-center rounded-full bg-[#00BE9F70] px-3 py-1.5 text-[9px] font-medium text-white">
+                HEALTHCARE
+              </span>
+
+              {/* Title */}
+              <h3 className="mt-3 text-lg sm:text-xl font-medium text-white tracking-[0.1px]">
+                Ransomware Recovery for a Multi-Speciality Hospital
+              </h3>
+
+              {/* Description */}
+              <p className="mt-2 text-[11px] sm:text-xs font-medium leading-5 text-[#D1D1D1] tracking-[0.2px]">
+                Rapid-response and digital forensics enabled critical systems recovery
+                while restoring operations with minimal disruption.
+              </p>
+
+              {/* Image */}
+              <div className="relative mt-3 overflow-hidden rounded-md group">
+                <div className="mt-4 overflow-hidden rounded-[12px]">
+                  <img
+                    src={healthcare.src}
+                    alt="Ransomware Recovery for a Multi-Speciality Hospital"
+                    className="w-full h-auto object-cover transition-transform duration-500 hover:scale-[1.02]"
+                  />
+
+                  <div
+                    className="absolute left-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/30 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100">
+                    <Icon
+                      icon="akar-icons:arrow-up-right"
+                      className="h-12 w-12 text-white"
+                    />
+                  </div>
+
+                </div>
+              </div>
+
             </div>
           </Animation>
+
+
+          {/* Manufacturing Case Study */}
+          <Animation>
+            <div className="mt-6 flex flex-col lg:flex-row items-center gap-6 rounded-lg bg-[#111827] px-5 py-4">
+
+              {/* Left Content */}
+              <div className="w-full lg:w-[55%]">
+
+                {/* Category */}
+                <span className="inline-flex rounded-full bg-[#087E70] px-3 py-1.5 text-[10px] font-medium text-white">
+                  MANUFACTURING
+                </span>
+
+                {/* Title */}
+                <h3 className="mt-6 text-2xl font-medium leading-8 text-white">
+                  OT Security Assessment for
+                  <br />
+                  Manufacturing Operations
+                </h3>
+
+                {/* Description */}
+                <p className="mt-3 max-w-[450px] text-[14px] font-medium leading-6 text-[#D1D1D1]">
+                  Identified critical vulnerabilities across OT and IT
+                  environments before they impacted production and
+                  operations.
+                </p>
+
+                {/* Read Case Study */}
+                <button className="mt-4 flex w-fit cursor-pointer items-center gap-1 text-[14px] font-medium text-white transition-colors duration-300 hover:text-[#0F66EA]">
+                  Read Case Study
+                  <Icon icon="ep:right" />
+                </button>
+
+              </div>
+
+              {/* Right Image */}
+              <div className="w-full lg:flex-1 overflow-hidden rounded-lg px-8 pt-4">
+
+                <img
+                  src={manufacturing.src}
+                  alt="OT Security Assessment for Manufacturing Operations"
+                  className="w-full rounded-md object-cover transition-transform duration-500 "
+                />
+
+              </div>
+
+            </div>
+          </Animation>
+
+
+
+          {/* Bottom Impact Cards */}
+          <Animation>
+            <div className="mt-4 grid grid-cols-1 gap-5 py-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+
+              {impactCards.map((card, index) => (
+                <div
+                  key={index}
+                  className={`flex h-full min-h-[320px] flex-col rounded-[12px] border px-5 py-6
+                    sm:min-h-[350px] sm:px-6 sm:py-7
+                    lg:min-h-[370px] lg:px-8 lg:py-8
+                    ${index === 2 ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.625rem)] lg:col-span-1 lg:w-full" : ""}
+                    ${index === 0
+                      ? "border-none"
+                      : "border-[#66666691]"
+                    }`}
+                  style={{ backgroundColor: card.bgColor }}
+                >
+
+                  {/* Category */}
+                  <span
+                    className="w-fit rounded-full px-3 py-1.5 text-[11px] font-medium text-white sm:text-xs"
+                    style={{ backgroundColor: card.categoryBg }}
+                  >
+                    {card.category}
+                  </span>
+
+                  {/* Title */}
+                  <h3
+                    className={`mt-4 max-w-[280px] text-[20px] font-medium leading-7 sm:text-[22px] sm:leading-8 lg:text-[24px] ${index === 0 ? "text-[#29263D]" : "text-white"
+                      }`}
+                  >
+                    {card.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    className={`mt-5 max-w-[320px] pb-4 text-[14px] font-medium leading-6 sm:mt-6 sm:text-[15px] ${index === 0 ? "text-white" : "text-[#D1D1D1]"
+                      }`}
+                  >
+                    {card.description}
+                  </p>
+
+                  {/* Link */}
+                  <button
+                    className="mt-auto flex w-fit cursor-pointer items-center gap-1 pt-4 text-[13px] font-medium sm:text-sm"
+                    style={{ color: card.linkColor }}
+                  >
+                    Read Case Study
+                    <Icon icon="ep:right" />
+                  </button>
+
+                </div>
+              ))}
+
+            </div>
+          </Animation>
+
         </div>
       </div>
+
     </div>
   );
 }

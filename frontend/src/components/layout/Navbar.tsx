@@ -1,72 +1,115 @@
 "use client";
-import React, { useState } from "react";
-import isecurionLogo from "../../assets/home/isecurrionwhite_logo.svg";
-import { Icon } from "@iconify/react";
+
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { Icon } from "@iconify/react";
+
+import isecurionLogo from "../../assets/home/isecurion_logo.png";
+
+const navItems = [
+  { label: "Products", href: "/products" },
+  { label: "Services", href: "/services" },
+  { label: "Company", href: "/company" },
+];
+
 function Navbar() {
-  const [open, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <div className="w-full bg-[#161B2F]  sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto  h-[68px]  flex items-center justify-between px-6 sm:px-10">
-        <div>
-          <img
-            src={isecurionLogo.src}
-            alt="isecurion Logo"
-            className="w-[160px] h-[40px] cursor-pointer"
+    <header className="sticky top-0 z-50 w-full bg-black">
+      <div className="mx-auto max-w-7xl bg-[#020E1C]">
+      <div className="relative max-w-7xl mx-auto flex h-[80px]  items-center justify-between px-6 sm:px-8 lg:px-10">
+
+        {/* Logo */}
+        <Link href="/" onClick={closeMenu} className="shrink-0">
+          <Image
+            src={isecurionLogo}
+            alt="Isecurion"
+            width={165}
+            height={40}
+            priority
+            className="h-auto w-[150px] sm:w-[165px] lg:w-[175px]"
           />
-        </div>
-        <div className="hidden md:block">
-          <ul className="flex gap-7 text-[#FFFFFF] text-sm font-medium">
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li className="flex items-center gap-1 cursor-pointer">
-              Company{" "}
-              <span>
-                <Icon icon="mingcute:down-line" />
-              </span>{" "}
-            </li>
-            <li>Services</li>
-            <li>
-              <Link href="/company/about">About</Link>
-            </li>
-            <li>
-              <Link href="/company/contact">Contact</Link>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 lg:block">
+          <ul className="flex items-center gap-14">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  className="text-[16px] font-medium text-white transition-opacity duration-200 hover:opacity-75"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Desktop Contact Button */}
+        <Link
+          href="/company/contact"
+          className="hidden lg:flex h-[45px] w-[150px] items-center justify-center rounded-[10px] border-[2px] border-[#3263B1] bg-gradient-to-r from-[#3263B1] to-[#1C3D70] text-[16px] font-semibold text-white shadow-[0_6px_20px_rgba(45,100,180,0.25)] transition-all duration-200 "
+        >
+          Contact Us
+        </Link>
+
+        {/* Mobile Menu Button */}
+        <button
+          type="button"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="flex h-11 w-11 items-center justify-center rounded-lg text-white lg:hidden"
+        >
+          <Icon
+            icon={isOpen ? "material-symbols:close-rounded" : "material-symbols:menu-rounded"}
+            className="h-8 w-8"
+          />
+        </button>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div
+        className={`overflow-hidden bg-[#020E1C] transition-all duration-300 lg:hidden ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+      >
+        <nav className="border-t border-white/10 px-6 py-6 sm:px-8">
+          <ul className="flex flex-col gap-5">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  onClick={closeMenu}
+                  className="block py-1 text-[16px] font-medium text-white transition-opacity hover:opacity-75"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+
+            <li className="pt-2">
+              <Link
+                href="/company/contact"
+                onClick={closeMenu}
+                className="flex h-[50px] w-full items-center justify-center rounded-lg bg-gradient-to-b from-[#3D73BA] to-[#285899] text-[16px] font-semibold text-white 
+                hover:shadow-[0_10px_28px_rgba(45,100,180,0.40)]"
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
-        </div>
-        <div className="hidden md:block">
-          <button className="px-5 py-2.5 text-base font-medium cursor-pointer rounded-lg bg-gradient-to-l from-[#3477C5] to-[#3A84DA] text-[#FFFFFF] hover:bg-none hover:bg-[#DDF4FA] hover:text-[#234AA6] transition-all">
-            Contact Us
-          </button>
-        </div>
-        <div className="block md:hidden">
-          <button
-            className="cursor-pointer px-2 py-2 rounded-xl bg-gradient-to-l from-[#3477C5] to-[#3A84DA] text-[#FFFFFF]"
-            onClick={() => setIsOpen(!open)}
-          >
-            <Icon
-              icon={open ? "at-icons:cross" : "material-symbols:menu-rounded"}
-              className="w-[20px] h-[20px]"
-            />
-          </button>
-          <div
-            className={`absolute left-0 top-full w-full bg-white shadow-lg transition-all duration-500 ease-in-out px-6 ${
-              open
-                ? "translate-y-0 opacity-100"
-                : "-translate-y-5 opacity-0 pointer-events-none"
-            }`}
-          >
-            <ul className="flex flex-col gap-5 p-6">
-              <li>Home</li>
-              <li>About</li>
-              <li>Services</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-        </div>
+        </nav>
       </div>
-    </div>
+      </div>
+    </header>
   );
 }
 

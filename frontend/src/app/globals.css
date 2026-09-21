@@ -42,3 +42,13 @@ html {
     font-size: 16px;
     font-weight: 500;
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

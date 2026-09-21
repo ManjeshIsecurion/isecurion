@@ -20,7 +20,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className=" flex flex-col ">
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
