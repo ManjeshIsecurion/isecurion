@@ -16,7 +16,7 @@ function Footer() {
 
           {/* CTA */}
           <div className="relative z-10 space-y-5">
-            <h3 className="max-w-md font-semibold leading-[45px] text-white sm:text-[32px]">
+            <h3 className="max-w-md font-semibold lg:leading-[45px] text-white sm:text-[32px]">
               Ready to strengthen your security posture?
             </h3>
 

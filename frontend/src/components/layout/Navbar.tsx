@@ -56,7 +56,7 @@ function Navbar() {
         {/* Desktop Contact Button */}
         <Link
           href="/company/contact"
-          className="hidden lg:flex h-[45px] w-[150px] items-center justify-center rounded-[10px] border-[2px] border-[#3263B1] bg-gradient-to-r from-[#3263B1] to-[#1C3D70] text-[16px] font-semibold text-white shadow-[0_6px_20px_rgba(45,100,180,0.25)] transition-all duration-200 "
+          className="hidden lg:flex h-[45px] w-[150px] items-center justify-center rounded-[10px] border-[2px] border-[#3263B1] bg-gradient-to-r from-[#3263B1] to-[#1C3D70] text-[16px] font-semibold text-white shadow-[0_6px_20px_rgba(45,100,180,0.25)] transition-all duration-200 hover:brightness-110"
         >
           Contact Us
         </Link>
@@ -99,8 +99,7 @@ function Navbar() {
               <Link
                 href="/company/contact"
                 onClick={closeMenu}
-                className="flex h-[50px] w-full items-center justify-center rounded-lg bg-gradient-to-b from-[#3D73BA] to-[#285899] text-[16px] font-semibold text-white 
-                hover:shadow-[0_10px_28px_rgba(45,100,180,0.40)]"
+                className="flex h-[50px] w-full items-center justify-center rounded-lg bg-gradient-to-b from-[#3D73BA] to-[#285899] text-[16px] font-semibold text-white"
               >
                 Contact Us
               </Link>
