@@ -8,12 +8,9 @@ import Link from "next/link";
 function Footer() {
   return (
     <footer className="bg-black">
-
       {/* MAIN FOOTER */}
       <div className="mx-auto max-w-7xl bg-[#060D1B]">
-
         <div className="relative overflow-hidden rounded-t-[42px] bg-[#121828] px-6 py-10 sm:px-8 sm:py-12 lg:px-10">
-
           {/* CTA */}
           <div className="relative z-10 space-y-5">
             <h3 className="max-w-md font-semibold leading-[45px] text-white sm:text-[32px]">
@@ -38,10 +35,8 @@ function Footer() {
 
           {/* FOOTER CONTENT */}
           <div className="relative z-10 mt-8 flex flex-col gap-10 py-8 lg:flex-row lg:gap-8">
-
             {/* LEFT - LOGO */}
             <div className="w-full lg:w-[27%]">
-
               <Image
                 src={isecurion_logo}
                 alt="Isecurion"
@@ -70,14 +65,11 @@ function Footer() {
                   <Icon icon="ri:linkedin-line" width={18} />
                 </div>
               </div>
-
             </div>
 
             {/* CENTER - LINKS + CONTACT */}
             <div className="w-full lg:w-[43%]">
-
               <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-
                 {/* Company */}
                 <div>
                   <h3 className="mb-5 text-sm font-semibold text-white">
@@ -124,12 +116,10 @@ function Footer() {
                     <li>LMS</li>
                   </ul>
                 </div>
-
               </div>
 
               {/* CONTACT CARD */}
               <div className="mt-10 flex flex-col gap-4 rounded-xl bg-[#1E2433] px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5">
-
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white">
                     <Icon
@@ -159,20 +149,16 @@ function Footer() {
                     +91 88612 01570
                   </span>
                 </div>
-
               </div>
-
             </div>
 
             {/* RIGHT - GLOBAL PRESENCE */}
             <div className="w-full lg:flex-1">
-
               <h3 className="mb-5 text-sm font-semibold text-white">
                 Global Presence
               </h3>
 
               <ul className="space-y-3 text-sm text-[#BFBFBF]">
-
                 <li className="flex items-center gap-3">
                   <span className="h-2 w-2 shrink-0 rounded-full bg-[#0D2D7E]"></span>
                   Bangalore (HQ)
@@ -180,8 +166,8 @@ function Footer() {
 
                 <p className="ml-5 leading-5">
                   #670, 2nd Floor, 6th Main Road, RBI Layout, Opposite Elita
-                  Promenade, J P Nagar 7th Phase, Bengaluru - 560078,
-                  Karnataka, INDIA
+                  Promenade, J P Nagar 7th Phase, Bengaluru - 560078, Karnataka,
+                  INDIA
                 </p>
 
                 <li className="flex items-center gap-3">
@@ -203,11 +189,8 @@ function Footer() {
                   <span className="h-2 w-2 shrink-0 rounded-full bg-[#0D2D7E]"></span>
                   United States
                 </li>
-
               </ul>
-
             </div>
-
           </div>
 
           {/* LOCK IMAGE */}
@@ -216,12 +199,10 @@ function Footer() {
             alt="Lock"
             className="pointer-events-none absolute -bottom-24 -right-40 z-0 hidden h-[350px] w-[380px] lg:block"
           />
-
         </div>
 
         {/* COPYRIGHT BAR */}
         <div className="flex flex-col gap-3 bg-[#262D3D] px-6 py-4 text-[13px] text-white sm:flex-row sm:items-center sm:justify-between sm:px-10">
-
           <div className="flex flex-wrap gap-3">
             <p>Copyright ©2026 Isecurion</p>
 
@@ -241,11 +222,8 @@ function Footer() {
 
             <Link href="">Terms of Use</Link>
           </div>
-
         </div>
-
       </div>
-
     </footer>
   );
 }

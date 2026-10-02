@@ -1,5 +1,6 @@
-import Navbar from "../components/layout/Navbar";
 import "./globals.css";
+import Navbar from "../components/layout/Navbar";
+
 import type { ReactNode } from "react";
 import Footer from "../components/layout/Footer";
 import type { Metadata } from "next";
@@ -15,7 +16,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={` h-full antialiased`}>
+    <html className={` h-full `}>
       <head />
       <body className=" flex flex-col ">
         <Navbar />

@@ -8,7 +8,7 @@ import bookmyshow from "../assets/home/client/bookmyshow.png";
 import indegence from "../assets/home/client/indegence.png";
 import allianz from "../assets/home/client/allianz.png";
 import shellinfo from "../assets/home/client/shellinfo.png";
-import bosch from "../assets/home/client/Bosch_logo.png"
+import bosch from "../assets/home/client/Bosch_logo.png";
 
 import indentifyrisk from "../assets/home/indentifyrisk.jpg";
 import continuousvalidation from "../assets/home/continuousvalidattion.png";
@@ -34,7 +34,7 @@ import mobile from "../assets/home/auditorcertifications/mobile.svg";
 import cism from "../assets/home/auditorcertifications/cism.svg";
 import cissp from "../assets/home/auditorcertifications/cissp.svg";
 import cisa from "../assets/home/auditorcertifications/cisa.svg";
-import Animation from "../components/ui/Animation";
+import { Animation, AnimatedHeading } from "../components/ui/Animation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import healthcare from "../assets/home/health-care.png";
@@ -305,34 +305,27 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 py-4">
                 <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer rounded-[10px] text-[#FFFFFF] bg-linear-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70]">
-                  Schedule a Consultation {" "}
+                  Schedule a Consultation{" "}
                   <span>
                     <Icon icon="mdi:arrow-right" width={20} />
                   </span>
                 </button>
                 <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer text-white rounded-lg border border-[#FFFFFF29]">
-                  <span>
-                  </span>
+                  <span></span>
                   Explore services ›
                 </button>
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
 
       {/* STATS SECTION */}
       <section className="w-full bg-[black]">
-
         {/* 7XL Stats Box */}
         <div className="mx-auto max-w-7xl bg-[#01060E] shadow-[0_0_45px_rgba(15,102,234,0.20)]">
-
           <div className="px-6 py-10 sm:px-8 lg:px-10">
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-
               {/* Stat 1 */}
               <div className="relative px-0 py-6 md:px-8 lg:px-10 lg:py-0">
                 <div>
@@ -352,7 +345,6 @@ export default function Home() {
 
               {/* Stat 2 */}
               <div className="relative border-t border-white/20 px-0 py-6 md:px-8 sm:border-t-0 lg:px-12 lg:py-0">
-
                 {/* Desktop Divider */}
                 <div className="absolute left-0 top-1/2 hidden h-[106px] w-px -translate-y-1/2 bg-[#4F5051] lg:block" />
 
@@ -373,7 +365,6 @@ export default function Home() {
 
               {/* Stat 3 */}
               <div className="relative border-t border-white/20 px-0 py-6 md:px-8 sm:border-t-0 lg:px-12 lg:py-0">
-
                 {/* Desktop Divider */}
                 <div className="absolute left-0 top-1/2 hidden h-[106px] w-px -translate-y-1/2 bg-[#4F5051] lg:block" />
 
@@ -394,7 +385,6 @@ export default function Home() {
 
               {/* Stat 4 */}
               <div className="relative border-t border-white/20 px-0 py-6 md:border-t-0 md:px-8 lg:px-12 lg:py-0">
-
                 {/* Desktop Divider */}
                 <div className="absolute left-0 top-1/2 hidden h-[106px] w-px -translate-y-1/2 bg-[#4F5051] lg:block" />
 
@@ -414,18 +404,14 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
-
       </section>
 
       {/* TRUSTED BY LEADING ORGANIZATIONS */}
       <div className="bg-black ">
         <div className="mx-auto max-w-7xl bg-[#070D1A] py-14">
-
           {/* Heading */}
           <div className="px-6 sm:px-10 ">
             <Animation>
@@ -437,21 +423,19 @@ export default function Home() {
 
           {/*logos */}
           <div className="mt-12 overflow-hidden">
-
             <div className="flex w-max animate-[marquee_25s_linear_infinite]">
-
               {/* First set */}
               <div className="flex shrink-0 items-center gap-16 pr-16">
                 {trustedCompanies.map((company, index) => (
                   <div
                     key={index}
-                    className="flex h-12 w-35 shrink-0 items-center justify-center">
+                    className="flex h-12 w-35 shrink-0 items-center justify-center"
+                  >
                     <img
                       src={company.src}
                       alt={company.alt}
                       className={`${company.className} object-contain brightness-0 invert opacity-80 transition-all duration-500 hover:brightness-100 hover:invert-0 hover:opacity-100`}
                     />
-
                   </div>
                 ))}
               </div>
@@ -461,7 +445,8 @@ export default function Home() {
                 {trustedCompanies.map((company, index) => (
                   <div
                     key={`duplicate-${index}`}
-                    className="flex h-12 w-35 shrink-0 items-center justify-center">
+                    className="flex h-12 w-35 shrink-0 items-center justify-center"
+                  >
                     <img
                       src={company.src}
                       alt={company.alt}
@@ -470,7 +455,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         </div>
@@ -489,15 +473,15 @@ export default function Home() {
             </p>
             <div className="flex flex-col lg:flex-row items-center justify-between mt-6 gap-5">
               <h2 className="text-2xl sm:text-[38px] text-center lg:text-left font-medium  text-white">
-                Security is more than <br />protection. <br /> It's the foundation of{" "}<br />
+                Security is more than <br />
+                protection. <br /> It's the foundation of <br />
                 <span className="text-[#0F66EA]">confident business.</span>
               </h2>
               <p className="text-base font-medium  lg:max-w-lg text-center lg:text-left text-[#D1D1D1] leading-7">
                 Organizations rely on applications, cloud infrastructure,
-                digital identities, and connected systems to operate.
-                ISECURION helps validate
-                security continuously, reduce risk proactively, and build
-                long-term cyber resilience.
+                digital identities, and connected systems to operate. ISECURION
+                helps validate security continuously, reduce risk proactively,
+                and build long-term cyber resilience.
               </p>
             </div>
           </Animation>
@@ -524,12 +508,8 @@ export default function Home() {
                           business disruptions.
                         </p>
 
-                        <button
-                          className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between"
-                        >
-                          <span
-                            className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100"
-                          >
+                        <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
+                          <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
                             Explore Risk Identification
                           </span>
 
@@ -563,8 +543,7 @@ export default function Home() {
                         </p>
 
                         <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
-                          <span
-                            className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
+                          <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
                             Explore Continuous Validation
                           </span>
 
@@ -602,8 +581,7 @@ export default function Home() {
                         </p>
 
                         <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
-                          <span
-                            className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
+                          <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
                             Explore Offensive Security
                           </span>
 
@@ -637,9 +615,7 @@ export default function Home() {
                         </p>
 
                         <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
-                          <span
-                            className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100"
-                          >
+                          <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
                             Explore Compliance & Trust
                           </span>
 
@@ -666,10 +642,8 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl sm:text-4xl font-medium lg:max-w-md text-center lg:text-left text-white sm:leading-11">
                   Capabilities that strengthen{" "}
-                  <span className="text-[#0F66EA]">
-                    every layer
-                  </span>{" "}
-                  of your organization.
+                  <span className="text-[#0F66EA]">every layer</span> of your
+                  organization.
                 </h2>
               </div>
               <div className="lg:max-w-[550px] space-y-2">
@@ -762,7 +736,7 @@ export default function Home() {
       </div>
 
       {/* Our platform  */}
-      <div className="bg-[black]">
+      <div className="">
         <div className="container px-6 sm:px-10 bg-[#070D1A] py-14">
           <div className="space-y-3 lg:max-w-xl flex flex-col items-center lg:items-start text-center lg:text-left">
             <Animation>
@@ -996,14 +970,11 @@ export default function Home() {
       </div>
 
       {/* Stats Section */}
-      <div className="bg-black">
-
+      <div className="">
         <div className="mx-auto max-w-7xl bg-linear-to-l from-[#092E70] to-[#071C41] px-6 py-10 sm:px-10">
-
           {/* Quote */}
           <Animation>
             <div className="mx-auto flex max-w-5xl items-center gap-5">
-
               <div className="shrink-0">
                 <img
                   src={right.src}
@@ -1027,14 +998,12 @@ export default function Home() {
                   className="h-[50px] sm:h-[75px] w-[50px] sm:w-[70px]"
                 />
               </div>
-
             </div>
           </Animation>
 
           {/* Stats */}
           <Animation>
             <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-
               {[
                 { value: "50+", label: "Enterprise Customers" },
                 { value: "1K+", label: "Projects Completed" },
@@ -1044,10 +1013,9 @@ export default function Home() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className={`px-6 text-center ${index !== 4
-                    ? "lg:border-r lg:border-[#888888]"
-                    : ""
-                    }`}
+                  className={`px-6 text-center ${
+                    index !== 4 ? "lg:border-r lg:border-[#888888]" : ""
+                  }`}
                 >
                   <h3 className="text-[16px] sm:text-3xl font-medium text-white">
                     {item.value}
@@ -1058,10 +1026,8 @@ export default function Home() {
                   </p>
                 </div>
               ))}
-
             </div>
           </Animation>
-
         </div>
       </div>
 
@@ -1069,33 +1035,24 @@ export default function Home() {
 
       <IndustriesWeSecure />
 
-
       <div className="w-full bg-black">
-
         <div className="mx-auto max-w-7xl">
-
           {/* Proven Impact */}
           <section className="bg-[#070F20] px-6 py-14 sm:px-10">
-
             <Animation>
               <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
-
                 {/* Left Content */}
                 <div className="w-full lg:w-1/2">
                   <h2 className="text-center text-2xl sm:text-3xl font-medium leading-[1.3] text-white sm:text-4xl lg:text-left">
                     Proven Impact. Trusted by Enterprises{" "}
-                    <span className="text-[#0F66EA]">
-                      Worldwide.
-                    </span>
+                    <span className="text-[#0F66EA]">Worldwide.</span>
                   </h2>
 
                   <div className="mx-auto mt-5 h-[3px] w-[100px] bg-[#1A56DB] lg:mx-0" />
                 </div>
 
-
                 {/* ISO Certifications */}
                 <div className="relative flex w-full items-center justify-center lg:w-1/2">
-
                   <img
                     src={iso27001.src}
                     alt="ISO 27001"
@@ -1112,26 +1069,19 @@ export default function Home() {
                     alt="ISO 9001"
                     className="relative z-10 ml-10 w-[120px] sm:ml-16 sm:w-[150px]"
                   />
-
                 </div>
-
               </div>
             </Animation>
-
           </section>
-
 
           {/* Auditor Certifications */}
           <section className="bg-gradient-to-r from-[#000000] via-[#071C41] to-[#092E70] px-6 py-8 sm:px-10">
-
             <Animation>
-
               <h3 className="text-center text-[20px] font-semibold uppercase text-white sm:text-[22px]">
                 Auditors Certifications
               </h3>
 
               <div className="mt-8 grid grid-cols-2 items-center justify-items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
-
                 {auditorCertificates.map((item, index) => (
                   <img
                     key={index}
@@ -1140,32 +1090,21 @@ export default function Home() {
                     className="h-[80px] w-[80px] object-contain"
                   />
                 ))}
-
               </div>
-
             </Animation>
-
           </section>
-
         </div>
-
       </div>
-
 
       <div className="bg-black ">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:px-4 lg:px-10 bg-[#060D1B]">
-
           {/* Header */}
           <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-16 ">
-
             {/* Left heading */}
             <div className="flex-1">
               <h2 className="text-3xl sm:text-[30px] font-medium leading-[1.3] text-white tracking-[0.3px]">
-                Security outcomes that{" "} <br />
-                <span className="text-[#0F66EA]">
-                  speak
-                </span>{" "}
-                for themselves.
+                Security outcomes that <br />
+                <span className="text-[#0F66EA]">speak</span> for themselves.
               </h2>
 
               <div className="mt-4 h-[3px] w-[70px] bg-[#0F66EA]" />
@@ -1183,14 +1122,12 @@ export default function Home() {
                 outcomes with ISECURION.
               </p>
             </div>
-
           </div>
 
           {/* Case studies */}
           <Animation>
             {/* Healthcare Case Study */}
             <div className="mt-8 rounded-[12px] bg-[#00453A] p-4 sm:p-5">
-
               {/* Category */}
               <span className="inline-flex items-center rounded-full bg-[#00BE9F70] px-3 py-1.5 text-[9px] font-medium text-white">
                 HEALTHCARE
@@ -1203,8 +1140,8 @@ export default function Home() {
 
               {/* Description */}
               <p className="mt-2 text-[11px] sm:text-xs font-medium leading-5 text-[#D1D1D1] tracking-[0.2px]">
-                Rapid-response and digital forensics enabled critical systems recovery
-                while restoring operations with minimal disruption.
+                Rapid-response and digital forensics enabled critical systems
+                recovery while restoring operations with minimal disruption.
               </p>
 
               {/* Image */}
@@ -1216,28 +1153,22 @@ export default function Home() {
                     className="w-full h-auto object-cover transition-transform duration-500 hover:scale-[1.02]"
                   />
 
-                  <div
-                    className="absolute left-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/30 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100">
+                  <div className="absolute left-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/30 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100">
                     <Icon
                       icon="akar-icons:arrow-up-right"
                       className="h-12 w-12 text-white"
                     />
                   </div>
-
                 </div>
               </div>
-
             </div>
           </Animation>
-
 
           {/* Manufacturing Case Study */}
           <Animation>
             <div className="mt-6 flex flex-col lg:flex-row items-center gap-6 rounded-lg bg-[#111827] px-5 py-4">
-
               {/* Left Content */}
               <div className="w-full lg:w-[55%]">
-
                 {/* Category */}
                 <span className="inline-flex rounded-full bg-[#087E70] px-3 py-1.5 text-[10px] font-medium text-white">
                   MANUFACTURING
@@ -1253,8 +1184,7 @@ export default function Home() {
                 {/* Description */}
                 <p className="mt-3 max-w-[450px] text-[14px] font-medium leading-6 text-[#D1D1D1]">
                   Identified critical vulnerabilities across OT and IT
-                  environments before they impacted production and
-                  operations.
+                  environments before they impacted production and operations.
                 </p>
 
                 {/* Read Case Study */}
@@ -1262,29 +1192,22 @@ export default function Home() {
                   Read Case Study
                   <Icon icon="ep:right" />
                 </button>
-
               </div>
 
               {/* Right Image */}
               <div className="w-full lg:flex-1 overflow-hidden rounded-lg px-8 pt-4">
-
                 <img
                   src={manufacturing.src}
                   alt="OT Security Assessment for Manufacturing Operations"
                   className="w-full rounded-md object-cover transition-transform duration-500 "
                 />
-
               </div>
-
             </div>
           </Animation>
-
-
 
           {/* Bottom Impact Cards */}
           <Animation>
             <div className="mt-4 grid grid-cols-1 gap-5 py-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-
               {impactCards.map((card, index) => (
                 <div
                   key={index}
@@ -1292,13 +1215,9 @@ export default function Home() {
                     sm:min-h-[350px] sm:px-6 sm:py-7
                     lg:min-h-[370px] lg:px-8 lg:py-8
                     ${index === 2 ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.625rem)] lg:col-span-1 lg:w-full" : ""}
-                    ${index === 0
-                      ? "border-none"
-                      : "border-[#66666691]"
-                    }`}
+                    ${index === 0 ? "border-none" : "border-[#66666691]"}`}
                   style={{ backgroundColor: card.bgColor }}
                 >
-
                   {/* Category */}
                   <span
                     className="w-fit rounded-full px-3 py-1.5 text-[11px] font-medium text-white sm:text-xs"
@@ -1309,16 +1228,18 @@ export default function Home() {
 
                   {/* Title */}
                   <h3
-                    className={`mt-4 max-w-[280px] text-[20px] font-medium leading-7 sm:text-[22px] sm:leading-8 lg:text-[24px] ${index === 0 ? "text-[#29263D]" : "text-white"
-                      }`}
+                    className={`mt-4 max-w-[280px] text-[20px] font-medium leading-7 sm:text-[22px] sm:leading-8 lg:text-[24px] ${
+                      index === 0 ? "text-[#29263D]" : "text-white"
+                    }`}
                   >
                     {card.title}
                   </h3>
 
                   {/* Description */}
                   <p
-                    className={`mt-5 max-w-[320px] pb-4 text-[14px] font-medium leading-6 sm:mt-6 sm:text-[15px] ${index === 0 ? "text-white" : "text-[#D1D1D1]"
-                      }`}
+                    className={`mt-5 max-w-[320px] pb-4 text-[14px] font-medium leading-6 sm:mt-6 sm:text-[15px] ${
+                      index === 0 ? "text-white" : "text-[#D1D1D1]"
+                    }`}
                   >
                     {card.description}
                   </p>
@@ -1331,16 +1252,12 @@ export default function Home() {
                     Read Case Study
                     <Icon icon="ep:right" />
                   </button>
-
                 </div>
               ))}
-
             </div>
           </Animation>
-
         </div>
       </div>
-
     </div>
   );
 }

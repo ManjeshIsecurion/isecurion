@@ -5,7 +5,7 @@ import fintech from "../../assets/home/fintech.png";
 import ecommerce from "../../assets/home/ecommerce.png";
 import education from "../../assets/home/education.png";
 import government from "../../assets/home/government.png";
-import Animation from "../ui/Animation";
+import { Animation } from "../../components/ui/Animation";
 
 function IndustriesWeSecure() {
   return (
@@ -15,15 +15,12 @@ function IndustriesWeSecure() {
         <Animation>
           <div className="px-10 pt-24 pb-16">
             <div className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-20">
-
               {/* Left */}
               <div className="flex-1">
                 <h2 className="text-2xl sm:text-3xl sm:text-4xl font-medium lg:leading-12 text-white">
                   Security expertise across <br />
                   the industries that{" "}
-                  <span className="text-[#0F66EA]">
-                    matters.
-                  </span>
+                  <span className="text-[#0F66EA]">matters.</span>
                 </h2>
 
                 <div className="mt-4 h-[3px] w-[100px] bg-[#0F66EA]" />
@@ -36,8 +33,8 @@ function IndustriesWeSecure() {
                 </p>
 
                 <p className="text-base font-medium leading-7 text-[#D1D1D1]">
-                  We understand the unique challenges of your industry and deliver
-                  solutions that protect what matters most.
+                  We understand the unique challenges of your industry and
+                  deliver solutions that protect what matters most.
                 </p>
               </div>
             </div>

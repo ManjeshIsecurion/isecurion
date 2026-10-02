@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import ceo from "../../../assets/about/ceo.png";
 import { motion } from "framer-motion";
-import Animation from "../../../components/ui/Animation";
+import { Animation, AnimatedHeading } from "../../../components/ui/Animation";
 import hacker from "../../../assets/about/abouthacker.png";
 import herobackground from "../../../assets/about/abouthero.png";
 import TimelineAnimation from "../../../components/ui/TimelineAnimation";

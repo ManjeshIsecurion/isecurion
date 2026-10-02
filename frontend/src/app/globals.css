@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&family=Lato:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Inter:wght@400;500;600&family=Lato:wght@400;500;700&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Inter&family=Lato&display=swap'); */
 @import "tailwindcss";
 
@@ -44,11 +44,16 @@ html {
 }
 
 @keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
+    from {
+        transform: translateX(0);
+    }
 
-  to {
-    transform: translateX(-50%);
-  }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+svg[style*="--icon-stroke"] *,
+svg[style*="--icon-stroke"] {
+    stroke: var(--icon-stroke);
 }
