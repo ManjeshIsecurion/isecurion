@@ -96,14 +96,14 @@ const team = [
 
 function page() {
   return (
-    <div className="min-h-screen bg-black">
+    <div >
       {/* hero section  */}
       <div
-        className="mx-auto max-w-7xl bg-cover bg-center py-16"
+        className="bg-cover bg-center py-16"
         style={{ backgroundImage: `url(${herobackground.src})` }}
       >
 
-        <div className="text-[#FFFFFF] text-center px-6 sm:px-10">
+        <div className="mx-auto max-w-7xl text-[#FFFFFF] text-center px-6 sm:px-10">
           {/* Breadcrumb Animation */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -145,10 +145,10 @@ function page() {
       </div>
 
       {/* ABOUT Company */}
-      <div className="mx-auto max-w-7xl py-14 relative overflow-hidden bg-[#070D1A]">
+      <div className=" py-14 relative overflow-hidden bg-[#070D1A]">
         <div className="absolute blur-3xl w-[200px] h-[200px] -top-20 -right-10 rounded-full bg-[#4675CE4D]"></div>
 
-        <div className="px-6 sm:px-10">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10">
           {/* heading  */}
           <Animation>
             <div className="space-y-3 flex flex-col items-center lg:items-start ">
@@ -193,8 +193,8 @@ function page() {
       </div>
 
       {/* our story  */}
-      <div className="mx-auto max-w-7xl py-14 bg-[#070D1A]">
-        <div className="px-6 sm:px-10 flex flex-col lg:flex-row gap-10">
+      <div className="py-14 bg-[#070D1A]">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10 flex flex-col lg:flex-row gap-10">
           <div className="flex-1 space-y-3 flex flex-col items-center lg:items-start text-center lg:text-left">
             <Animation>
               <div className="w-fit px-4 py-2 rounded-4xl  bg-[#161B2F]">
@@ -351,8 +351,8 @@ function page() {
       </div>
 
       {/* our journey  */}
-      <section className="relative mx-auto max-w-7xl overflow-hidden bg-gradient-to-b from-[#000B23] to-[#092E70] py-14">
-        <div className="px-6 sm:px-10">
+      <section className="relative  overflow-hidden bg-gradient-to-b from-[#000B23] to-[#092E70] py-14">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10">
 
           {/* Heading */}
           <Animation>
@@ -477,8 +477,8 @@ function page() {
       </section>
 
       {/* our team  */}
-      <section className="mx-auto max-w-7xl py-14 bg-[#070D1A]">
-        <div className="px-6 sm:px-10">
+      <section className=" py-14 bg-[#070D1A]">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10">
           <TimelineAnimation delay={0.3}>
             <div className="flex flex-col items-center space-y-4">
               <div className="w-fit px-4 py-2 rounded-4xl  bg-[#161B2F]">

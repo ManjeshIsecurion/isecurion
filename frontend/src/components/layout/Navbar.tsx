@@ -8,6 +8,7 @@ import { Icon } from "@iconify/react";
 import isecurionLogo from "../../assets/home/isecurion_logo.png";
 
 const navItems = [
+  { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
   { label: "Services", href: "/services" },
   { label: "Company", href: "/company" },
@@ -21,19 +22,19 @@ function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-black">
-      <div className="mx-auto max-w-7xl bg-[#020E1C]">
-      <div className="relative max-w-7xl mx-auto flex h-[80px]  items-center justify-between px-6 sm:px-8 lg:px-10">
+    <header className="sticky top-0 z-30 w-full bg-[#020E1C]">
+      <div className="mx-auto max-w-7xl ">
+      <div className="relative max-w-7xl mx-auto flex h-[65px]  items-center justify-between px-6 sm:px-8 lg:px-10">
 
         {/* Logo */}
         <Link href="/" onClick={closeMenu} className="shrink-0">
           <Image
             src={isecurionLogo}
             alt="Isecurion"
-            width={165}
-            height={40}
+            width={135}
+            height={20}
             priority
-            className="h-auto w-[150px] sm:w-[165px] lg:w-[175px]"
+            className="h-auto w-[130px] sm:w-[145px] lg:w-[150px]"
           />
         </Link>
 
@@ -56,7 +57,7 @@ function Navbar() {
         {/* Desktop Contact Button */}
         <Link
           href="/company/contact"
-          className="hidden lg:flex h-[45px] w-[150px] items-center justify-center rounded-[10px] border-[2px] border-[#3263B1] bg-gradient-to-r from-[#3263B1] to-[#1C3D70] text-[16px] font-semibold text-white shadow-[0_6px_20px_rgba(45,100,180,0.25)] transition-all duration-200 hover:brightness-110"
+          className="hidden lg:flex h-[40px] w-[120px] items-center justify-center rounded-[7px] border-[2px] border-[#3263B1] bg-gradient-to-r from-[#3263B1] to-[#1C3D70] text-[14px] font-semibold text-white shadow-[0_6px_20px_rgba(45,100,180,0.25)] transition-all duration-200 hover:brightness-110"
         >
           Contact Us
         </Link>

@@ -1,10 +1,8 @@
 "use client";
 import { Icon } from "@iconify/react";
-// import herobackground from "../assets/home/homeBg.svg";
 import herobackground from "../assets/home/heroBg.svg";
 import tokenvalut from "../assets/home/client/tokenvalut.png";
 import bookmyshow from "../assets/home/client/bookmyshow.png";
-// import bosch from "../assets/home/client/bosch.png";
 import indegence from "../assets/home/client/indegence.png";
 import allianz from "../assets/home/client/allianz.png";
 import shellinfo from "../assets/home/client/shellinfo.png";
@@ -31,7 +29,7 @@ import ceh from "../assets/home/auditorcertifications/ceh.svg";
 import ccna from "../assets/home/auditorcertifications/ccna.svg";
 import oscp from "../assets/home/auditorcertifications/oscp.svg";
 import mobile from "../assets/home/auditorcertifications/mobile.svg";
-import cism from "../assets/home/auditorcertifications/cism.svg";
+import cism from "../assets/home/auditorcertifications/cism.png";
 import cissp from "../assets/home/auditorcertifications/cissp.svg";
 import cisa from "../assets/home/auditorcertifications/cisa.svg";
 import Animation from "../components/ui/Animation";
@@ -39,6 +37,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import healthcare from "../assets/home/health-care.png";
 import manufacturing from "../assets/home/manufacturingRight.png";
+import rightCircle from "../assets/home/rightCircle.png"
+import HomeCTA from "../components/home/HomeCTA";
 
 const containerVariants = {
   hidden: {},
@@ -98,7 +98,7 @@ const ourExpertise = [
       "Red Teaming",
     ],
     iconColor: "text-white",
-    bgColor: "#E24B4A52",
+    bgColor: "#88010045",
     hoverFrom: "#3E0302",
     hoverTo: "#000000",
     descriptionColor: "text-[#D1D1D1]",
@@ -132,8 +132,8 @@ const ourExpertise = [
     ],
     iconColor: "text-white",
     bgColor: "#00031C",
-    hoverFrom: "#000000",
-    hoverTo: "#002E65",
+    hoverFrom: "#002E65",
+    hoverTo: "#000000",
     descriptionColor: "text-[#D1D1D1]",
     headingColor: "text-[#0F66EA]",
     listColor: "text-[#A8A8A8]",
@@ -146,8 +146,8 @@ const ourExpertise = [
     services: ["ISO 27001", "SOC 2", "DPDP", "Risk Assessments"],
     iconColor: "text-white",
     bgColor: "#00031C",
-    hoverFrom: "#000000",
-    hoverTo: "#002E65",
+    hoverFrom: "#002E65",
+    hoverTo: "#000000",
     descriptionColor: "text-[#D1D1D1]",
     headingColor: "text-[#0F66EA]",
     listColor: "text-[#A8A8A8]",
@@ -183,7 +183,7 @@ const ourExpertise = [
       "Cybersecurity Workshops",
     ],
     iconColor: "text-white",
-    bgColor: "#4F242F",
+    bgColor: "#88010045",
     hoverFrom: "#3E0302",
     hoverTo: "#000000",
     descriptionColor: "text-[#D1D1D1]",
@@ -281,50 +281,52 @@ const impactCards = [
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-black">
+    <div className="w-full min-h-screen bg-[#01070E]">
       {/* hero section  */}
-      <div
-        style={{ backgroundImage: `url(${herobackground.src})` }}
-        className="bg-center bg-no-repeat"
-      >
-        <div className="max-w-7xl mx-auto  px-10 flex flex-col 2xl:min-h-[60vh] py-15 ">
-          <div className="flex-1 flex items-center  justify-between">
-            <div className="space-y-5">
-              <p className="font-medium text-[#0F66EA] text-[11px] sm:text-[12px] tracking-[1px]">
-                SECURING MODERN ENTERPRISES
-              </p>
-              <h1 className="font-medium text-[26px] md:text-[36px] text-[white] md:leading-[45px]">
-                Build for Trust <br />
-                Designed for Cyber Resilience.
-              </h1>
-              <p className="text-[14px] sm:text-[18px] font-medium text-[#ACAFEE] max-w-[435px] sm:leading-[32px]">
-                Helping organizations anticipate threats, reduce cyber risk, and
-                build lasting resilience through expert cybersecurity
-                consulting, continuous validation, and intelligent security
-                platforms.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 py-4">
-                <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer rounded-[10px] text-[#FFFFFF] bg-linear-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70]">
-                  Schedule a Consultation {" "}
-                  <span>
-                    <Icon icon="mdi:arrow-right" width={20} />
-                  </span>
-                </button>
-                <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer text-white rounded-lg border border-[#FFFFFF29]">
-                  <span>
-                  </span>
-                  Explore services ›
-                </button>
+      <div>
+        <div
+          style={{ backgroundImage: `url(${herobackground.src})` }}
+          className="bg-center bg-no-repeat "
+        >
+          <div className="max-w-7xl mx-auto px-10 flex flex-col 2xl:min-h-[60vh] py-15 ">
+            <div className="flex-1 flex items-center  justify-between">
+              <div className="space-y-5">
+                <p className="font-medium text-[#0F66EA] text-[11px] sm:text-[12px] tracking-[1px]">
+                  SECURING MODERN ENTERPRISES
+                </p>
+                <h1 className="font-medium text-[26px] md:text-[36px] text-[white] md:leading-[45px]">
+                  Build for Trust <br />
+                  Designed for Cyber Resilience.
+                </h1>
+                <p className="text-[14px] sm:text-[18px] font-medium text-[#ACAFEE] max-w-[435px] sm:leading-[32px]">
+                  Helping organizations anticipate threats, reduce cyber risk, and
+                  build lasting resilience through expert cybersecurity
+                  consulting, continuous validation, and intelligent security
+                  platforms.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 py-4">
+                  <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer rounded-[10px] text-[#FFFFFF] bg-linear-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70]">
+                    Schedule a Consultation {" "}
+                    <span>
+                      <Icon icon="mdi:arrow-right" width={20} />
+                    </span>
+                  </button>
+                  <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer text-white rounded-lg border border-[#FFFFFF29]">
+                    <span>
+                    </span>
+                    Explore services ›
+                  </button>
+                </div>
               </div>
             </div>
+
+
           </div>
-
-
         </div>
       </div>
 
       {/* STATS SECTION */}
-      <section className="w-full bg-[black]">
+      <section className="w-full bg-[#01060E]">
 
         {/* 7XL Stats Box */}
         <div className="mx-auto max-w-7xl bg-[#01060E] shadow-[0_0_45px_rgba(15,102,234,0.20)]">
@@ -423,8 +425,8 @@ export default function Home() {
       </section>
 
       {/* TRUSTED BY LEADING ORGANIZATIONS */}
-      <div className="bg-black ">
-        <div className="mx-auto max-w-7xl bg-[#070D1A] py-14">
+      <div className="bg-[#070D1A]">
+        <div className="mx-auto max-w-7xl  py-14">
 
           {/* Heading */}
           <div className="px-6 sm:px-10 ">
@@ -435,50 +437,51 @@ export default function Home() {
             </Animation>
           </div>
 
-          {/*logos */}
-          <div className="mt-12 overflow-hidden">
 
-            <div className="flex w-max animate-[marquee_25s_linear_infinite]">
+        </div>
+        {/*logos */}
+        <div className="pb-10 overflow-hidden">
 
-              {/* First set */}
-              <div className="flex shrink-0 items-center gap-16 pr-16">
-                {trustedCompanies.map((company, index) => (
-                  <div
-                    key={index}
-                    className="flex h-12 w-35 shrink-0 items-center justify-center">
-                    <img
-                      src={company.src}
-                      alt={company.alt}
-                      className={`${company.className} object-contain brightness-0 invert opacity-80 transition-all duration-500 hover:brightness-100 hover:invert-0 hover:opacity-100`}
-                    />
+          <div className="flex w-max animate-[marquee_25s_linear_infinite]">
 
-                  </div>
-                ))}
-              </div>
+            {/* First set */}
+            <div className="flex shrink-0 items-center gap-16 pr-16">
+              {trustedCompanies.map((company, index) => (
+                <div
+                  key={index}
+                  className="flex h-12 w-35 shrink-0 items-center justify-center">
+                  <img
+                    src={company.src}
+                    alt={company.alt}
+                    className={`${company.className} object-contain brightness-0 invert opacity-80 transition-all duration-500 hover:brightness-100 hover:invert-0 hover:opacity-100`}
+                  />
 
-              {/* Duplicate set */}
-              <div className="flex shrink-0 items-center gap-16 pr-16">
-                {trustedCompanies.map((company, index) => (
-                  <div
-                    key={`duplicate-${index}`}
-                    className="flex h-12 w-35 shrink-0 items-center justify-center">
-                    <img
-                      src={company.src}
-                      alt={company.alt}
-                      className={`${company.className} object-contain brightness-0 invert opacity-80 transition-all duration-500 hover:brightness-100 hover:invert-0 hover:opacity-100`}
-                    />
-                  </div>
-                ))}
-              </div>
-
+                </div>
+              ))}
             </div>
+
+            {/* Duplicate set */}
+            <div className="flex shrink-0 items-center gap-16 pr-16">
+              {trustedCompanies.map((company, index) => (
+                <div
+                  key={`duplicate-${index}`}
+                  className="flex h-12 w-35 shrink-0 items-center justify-center">
+                  <img
+                    src={company.src}
+                    alt={company.alt}
+                    className={`${company.className} object-contain brightness-0 invert opacity-80 transition-all duration-500 hover:brightness-100 hover:invert-0 hover:opacity-100`}
+                  />
+                </div>
+              ))}
+            </div>
+
           </div>
         </div>
       </div>
 
       {/* WHY ORGANIZATIONS CHOOSE ISECURION */}
-      <div className="bg-[black]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A] py-10">
+      <div className="bg-[#070D1A]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A]  py-10">
           <Animation>
             <p className="flex items-center gap-2">
               <span className="block h-6 w-[2px] bg-[#0F66EA]"></span>
@@ -659,7 +662,7 @@ export default function Home() {
       </div>
 
       {/* Capabilities  */}
-      <div className="bg-[black]">
+      <div className="bg-[#070D1A]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A] py-10">
           <Animation>
             <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
@@ -762,7 +765,7 @@ export default function Home() {
       </div>
 
       {/* Our platform  */}
-      <div className="bg-[black]">
+      <div className="bg-[#070D1A]">
         <div className="container px-6 sm:px-10 bg-[#070D1A] py-14">
           <div className="space-y-3 lg:max-w-xl flex flex-col items-center lg:items-start text-center lg:text-left">
             <Animation>
@@ -914,7 +917,7 @@ export default function Home() {
                   </button>
                 </div>
                 <div className="flex-1 group">
-                  <div className="bg-linear-to-b from-[#6F6C90] to-[#8B5CF6] max-h-[500px] rounded-4xl overflow-hidden">
+                  <div className="bg-linear-to-b from-[#6F6C9066] to-[#8B5CF680] max-h-[500px] rounded-4xl overflow-hidden">
                     <img
                       src={drosera.src}
                       alt="vulnytics"
@@ -937,7 +940,7 @@ export default function Home() {
                   <h3 className="text-2xl sm:text-3xl font-semibold max-w-md  lg:leading-[40px] text-white">
                     Security{" "}
                     <span className="text-[#38BDF8]">Learning & Awareness</span>
-                    .{" "}
+
                   </h3>
                   <p className="text-base font-medium max-w-[400px] leading-[25px] tracking-[-0.34px] text-[#8F90AB]">
                     Deliver engaging training, validate knowledge, and empower
@@ -981,7 +984,7 @@ export default function Home() {
                   </button>
                 </div>
                 <div className="flex-1 group">
-                  <div className="bg-linear-to-b from-[#38BDF8] to-[#38BDF8] max-h-[500px] rounded-4xl overflow-hidden">
+                  <div className="bg-linear-to-b from-[#38BDF866] to-[#38BDF833] max-h-[500px] rounded-4xl overflow-hidden">
                     <img
                       src={lms.src}
                       alt="vulnytics"
@@ -996,24 +999,33 @@ export default function Home() {
       </div>
 
       {/* Stats Section */}
-      <div className="bg-black">
+      <div className="relative overflow-hidden bg-linear-to-l from-[#092E70] to-[#071C41]">
 
-        <div className="mx-auto max-w-7xl bg-linear-to-l from-[#092E70] to-[#071C41] px-6 py-10 sm:px-10">
+        {/* Right background circle */}
+        <div className="pointer-events-none absolute right-0 top-[-80px] z-0 hidden w-[500px] lg:block">
+          <Image
+            src={rightCircle}
+            alt=""
+            className="h-auto w-full"
+          />
+        </div>
+
+        {/* 7xl content */}
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-10 sm:px-10">
 
           {/* Quote */}
           <Animation>
             <div className="mx-auto flex max-w-5xl items-center gap-5">
-
               <div className="shrink-0">
                 <img
                   src={right.src}
                   alt="right"
-                  className="h-[50px] sm:h-[75px] w-[50px] sm:w-[70px]"
+                  className="h-[70px] w-[30px] sm:h-[76px] sm:w-[45px]"
                 />
               </div>
 
               <div>
-                <p className="text-center text-sm sm:text-[22px] font-medium text-[#EBEBEB]">
+                <p className="text-center text-sm font-normal text-[#EBEBEB] sm:text-[22px]">
                   ISECURION helps organizations strengthen their security
                   posture with expert-led services, advanced technology, and a
                   relentless focus on results.
@@ -1024,7 +1036,7 @@ export default function Home() {
                 <img
                   src={left.src}
                   alt="left"
-                  className="h-[50px] sm:h-[75px] w-[50px] sm:w-[70px]"
+                  className="h-[70px] w-[30px] sm:h-[76px] sm:w-[45px]"
                 />
               </div>
 
@@ -1044,16 +1056,16 @@ export default function Home() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className={`px-6 text-center ${index !== 4
-                    ? "lg:border-r lg:border-[#888888]"
-                    : ""
+                  className={`mx-auto px-14 text-center ${index !== 4
+                      ? "lg:border-r lg:border-[#888888]"
+                      : ""
                     }`}
                 >
-                  <h3 className="text-[16px] sm:text-3xl font-medium text-white">
+                  <h3 className="text-[16px] font-normal text-white sm:text-3xl">
                     {item.value}
                   </h3>
 
-                  <p className="text-[14px] mt-3 text-base font-medium leading-6 text-[#C5C5C5]">
+                  <p className="mt-3 max-w-[130px] text-[14px] font-medium leading-6 text-[#C5C5C5]">
                     {item.label}
                   </p>
                 </div>
@@ -1066,11 +1078,9 @@ export default function Home() {
       </div>
 
       {/* INDUSTRIES WE SECURE  */}
-
       <IndustriesWeSecure />
 
-
-      <div className="w-full bg-black">
+      <div className="w-full bg-[#070F20]">
 
         <div className="mx-auto max-w-7xl">
 
@@ -1120,39 +1130,38 @@ export default function Home() {
 
           </section>
 
-
-          {/* Auditor Certifications */}
-          <section className="bg-gradient-to-r from-[#000000] via-[#071C41] to-[#092E70] px-6 py-8 sm:px-10">
-
-            <Animation>
-
-              <h3 className="text-center text-[20px] font-semibold uppercase text-white sm:text-[22px]">
-                Auditors Certifications
-              </h3>
-
-              <div className="mt-8 grid grid-cols-2 items-center justify-items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
-
-                {auditorCertificates.map((item, index) => (
-                  <img
-                    key={index}
-                    src={item.img.src}
-                    alt=""
-                    className="h-[80px] w-[80px] object-contain"
-                  />
-                ))}
-
-              </div>
-
-            </Animation>
-
-          </section>
-
         </div>
 
       </div>
 
+      {/* Auditor Certifications */}
+      <section className="bg-gradient-to-r from-[#000000] via-[#071C41] to-[#092E70] px-6 py-8 sm:px-10">
 
-      <div className="bg-black ">
+        <Animation>
+          <div className="mx-auto max-w-7xl">
+
+            <h3 className="text-center text-[20px] font-semibold uppercase text-white sm:text-[22px]">
+              Auditors Certifications
+            </h3>
+
+            <div className="mt-8 grid grid-cols-2 items-center justify-items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
+
+              {auditorCertificates.map((item, index) => (
+                <img
+                  key={index}
+                  src={item.img.src}
+                  alt=""
+                  className="h-[80px] w-[80px] object-contain"
+                />
+              ))}
+
+            </div>
+          </div>
+        </Animation>
+
+      </section>
+
+      <div className="bg-[#060D1B] ">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:px-4 lg:px-10 bg-[#060D1B]">
 
           {/* Header */}
@@ -1340,7 +1349,8 @@ export default function Home() {
 
         </div>
       </div>
-
+      <HomeCTA/>
     </div>
+    
   );
 }

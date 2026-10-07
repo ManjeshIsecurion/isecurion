@@ -6,6 +6,8 @@ import contactbackground from "../../../assets/contact/contactbackground.png";
 import global from "../../../assets/contact/global.png";
 import LocationMap from "../../../components/ui/LocationMap";
 import leftBackground from "../../../assets/contact/left_background.png"
+import contactBg from "../../../assets/contact/Section.svg"
+import Animation from '../../../components/ui/Animation';
 
 const enquiredata = [
   {
@@ -71,27 +73,53 @@ const locations = [
   },
 ];
 
+const contactDots = [
+  { left: "7%", top: "8%" },
+  { left: "14%", top: "2%" },
+  { left: "16%", top: "5%" },
+  { left: "21%", top: "4%" },
+  { left: "25%", top: "8%" },
+  { left: "36%", top: "2%" },
+  { left: "43%", top: "9%" },
+  { left: "51%", top: "16%" },
+  { left: "58%", top: "36%" },
+  { left: "10%", top: "42%" },
+  { left: "18%", top: "52%" },
+  { left: "22%", top: "15%" },
+  { left: "31%", top: "7%" },
+  { left: "44%", top: "3%" },
+  { left: "30%", top: "5%" },
+
+];
+
 function page() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-gradient-to-b from-[#131331] to-[#0C2023]">
       <section
-        className="relative mx-auto max-w-7xl bg-cover py-15"
-        style={{ backgroundImage: `url(${contactbackground.src})` }}
+        className="relative mx-auto max-w-7xl bg-cover bg-center bg-repeat py-15"
+        style={{ backgroundImage: `url(${contactBg.src})` }}
       >
-        <div className="absolute inset-0 bg-linear-to-b from-[#131331] to-[#0C2023]">
-          <div className="relative z-10 px-6 py-14 sm:px-10">
-            <div className="absolute right-0 top-0 0 w-[200px]">
-              <Image src={titik} alt="titik" />
-            </div>
-          </div>
+        <div className="absolute inset-0 bg-linear-to-b from-[#131331]/10 to-[#0C2023]/10" />
+
+        {/* Small decorative dots */}
+        <div className="hidden lg:block pointer-events-none absolute inset-0 z-[1]">
+          {contactDots.map((dot, index) => (
+            <span
+              key={index}
+              className="absolute h-[4px] w-[4px] rounded-full bg-[#A7A9B5]/55"
+              style={{
+                left: dot.left,
+                top: dot.top,
+              }}
+            />
+          ))}
         </div>
-        <div className="absolute left-0 bottom-0  w-[200px]">
-          <Image src={titik} alt="titik" />
-        </div>
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 ">
           <div className="flex flex-col lg:flex-row gap-15">
             {/* left section  */}
             <div className="flex-1 space-y-4">
+              <Animation>
               <div className="space-y-4 flex flex-col  items-center lg:items-start">
                 <div className="w-fit px-4 py-1 rounded-4xl bg-[#161B2F]">
                   <p className="text-sm font-medium flex items-center gap-2 text-[#B4CAFD]">
@@ -113,6 +141,8 @@ function page() {
                   exploring ISECURION, we're happy to help.
                 </p>
               </div>
+              </Animation>
+              <Animation>
               <div className="gap-5 mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1">
                 <div className="flex items-center gap-4 p-5 rounded-lg bg-[#0F66EA29]">
                   <div className="w-[45px] h-[45px] rounded-full flex items-center justify-center bg-[#002A69]">
@@ -164,8 +194,10 @@ function page() {
                   </div>
                 </div>
               </div>
+              </Animation>
             </div>
             {/* right section form  */}
+            <Animation>
             <div className="flex-1 space-y-5 rounded-[23px] p-4 sm:p-7 bg-[#000C1C]">
               <div className="flex flex-col md:flex-row w-full items-center justify-between  gap-5">
                 <div className="w-full flex flex-col gap-2">
@@ -290,10 +322,12 @@ function page() {
                 />
               </button>
             </div>
+            </Animation>
           </div>
 
           {/* contact cards  */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-10">
+          <Animation>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 mt-10">
             {enquiredata.map((item, index) => (
               <div
                 key={index}
@@ -324,11 +358,13 @@ function page() {
               </div>
             ))}
           </div>
+          </Animation>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl bg-[#070D1A]">
-        <div className="px-6 py-14 sm:px-10 flex items-stretch gap-10 flex-col lg:flex-row">
+      <section className=" bg-[#070D1A]">
+        <Animation>
+        <div className="mx-auto max-w-7xl px-6 py-14 sm:px-10 flex items-stretch gap-10 flex-col lg:flex-row">
           <div className="flex-1 rounded-[10px] p-7 bg-[#151F4A] relative overflow-hidden">
             {/* <Image
               src={global}
@@ -336,6 +372,7 @@ function page() {
               className="absolute  h-full w-full object-contain z-0"
             /> */}
 
+            <Animation>
             <div className="relative z-10 bg-no-repeat bg-right"
               style={{ backgroundImage: `url(${leftBackground.src})` }}>
               <h2 className="text-white text-2xl">Global Presence</h2>
@@ -409,11 +446,15 @@ function page() {
                 </div>
               </div>
             </div>
+            </Animation>
           </div>
+
           <div className="flex-1">
             <LocationMap />
           </div>
+         
         </div>
+        </Animation>
       </section>
     </div>
   );

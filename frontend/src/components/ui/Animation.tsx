@@ -15,7 +15,7 @@ function Animation({ delay = 0, children }: AnimationProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         delay,
-        duration: 1,
+        duration: 1.2,
       }}
       viewport={{ once: true }}
     >
