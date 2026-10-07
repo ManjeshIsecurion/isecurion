@@ -5,34 +5,196 @@ import fintech from "../../assets/home/fintech.png";
 import ecommerce from "../../assets/home/ecommerce.png";
 import education from "../../assets/home/education.png";
 import government from "../../assets/home/government.png";
-import { Animation } from "../../components/ui/Animation";
+import { AnimatedCard, Animation } from "../../components/ui/Animation";
+import industryHoverBg from "../../assets/home/industryHoverBg.png";
+
+const industriesData = [
+  // ROW 1: Both Images on LEFT
+  {
+    id: "01",
+    title: "Telecommunications",
+    description:
+      "Ensure resilient connectivity across complex telecom environments.",
+    image: telecommunication.src || telecommunication,
+    bgColor: "bg-[#121D4A]",
+    imagePosition: "left",
+    stats: [
+      { value: "12+", label: "Customers" },
+      { value: "310+", label: "Projects Completed" },
+    ],
+  },
+  {
+    id: "02",
+    title: "Healthcare",
+    description:
+      "Protect connected medical devices, patient data, and critical healthcare operations.",
+    image: healthcare.src || healthcare,
+    bgColor: "bg-gradient-to-t from-[#4A81D3] to-[#3B9E6A]",
+    imagePosition: "left",
+    stats: [
+      { value: "18+", label: "Customers" },
+      { value: "400+", label: "Projects Completed" },
+    ],
+  },
+  // ROW 2: Both Images on RIGHT
+  {
+    id: "03",
+    title: "FinTech",
+    description:
+      "Secure digital banking, payment systems, and regulatory compliance.",
+    image: fintech.src || fintech,
+    bgColor: "bg-[#121D4A]",
+    imagePosition: "right",
+    stats: [
+      { value: "22+", label: "Customers" },
+      { value: "460+", label: "Projects Completed" },
+    ],
+  },
+  {
+    id: "04",
+    title: "E-commerce",
+    description:
+      "Safeguard payments, digital experiences, and customer information.",
+    image: ecommerce.src || ecommerce,
+    bgColor: "bg-[#1F407C]",
+    imagePosition: "right",
+    stats: [
+      { value: "9+", label: "Customers" },
+      { value: "280+", label: "Start Up Companies" },
+    ],
+  },
+  // ROW 3: Both Images on LEFT
+  {
+    id: "05",
+    title: "Education",
+    description:
+      "Safeguard educational ecosystems, research, and digital campuses.",
+    image: education.src || education,
+    bgColor: "bg-gradient-to-t from-[#4A81D3] to-[#3B9E6A]",
+    imagePosition: "left",
+    stats: [
+      { value: "2+", label: "Customers" },
+      { value: "25+", label: "Projects Completed" },
+    ],
+  },
+  {
+    id: "06",
+    title: "Government",
+    description:
+      "Strengthen cybersecurity posture and safeguard critical public infrastructure.",
+    image: government.src || government,
+    bgColor: "bg-[#1F407C]",
+    imagePosition: "left",
+    stats: [
+      { value: "8+", label: "Customers" },
+      { value: "200+", label: "Projects Completed" },
+    ],
+  },
+];
+
+function IndustryCard({ item }) {
+  const isImageLeft = item.imagePosition === "left";
+
+  // Reusable inline transition style to ensure precision & avoid Tailwind config limitations
+  const smoothTransitionStyle = {
+    transitionProperty: "width, background-color, opacity, transform",
+    transitionDuration: "1000ms",
+    transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)", // Premium smooth easing curve
+  };
+
+  const imageBlock = (
+    <div
+      className="relative w-1/2 shrink-0 overflow-hidden bg-cover bg-center group-hover:w-0"
+      style={{
+        ...smoothTransitionStyle,
+        backgroundImage: `url(${item.image})`,
+      }}
+    >
+      <p className="p-5 text-2xl font-medium text-white">{item.id}</p>
+    </div>
+  );
+
+  const contentBlock = (
+    <div
+      className={`relative flex w-1/2 shrink-0 flex-col justify-center overflow-hidden p-8 group-hover:w-full group-hover:bg-white ${item.bgColor}`}
+      style={smoothTransitionStyle}
+    >
+      {/* Background Hover Pattern Overlay */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
+        style={{
+          backgroundImage: `url(${industryHoverBg.src || industryHoverBg})`,
+        }}
+      />
+
+      {/* Default Card Content */}
+      <div className="relative z-10 w-full min-w-[260px] translate-x-0 opacity-100 transition-all duration-300 ease-out group-hover:-translate-x-6 group-hover:opacity-0">
+        <h3 className="text-2xl font-medium text-white mt-20">{item.title}</h3>
+        <p className="mt-4 text-base font-medium text-[#FFFFFFBF]">
+          {item.description}
+        </p>
+      </div>
+
+      {/* Hover Statistics Reveal (Appears smoothly after delay) */}
+      <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center gap-10 sm:gap-16 translate-x-6 opacity-0 transition-all duration-700 ease-out delay-300 group-hover:translate-x-0 group-hover:opacity-100">
+        {item.stats.map((stat, idx) => (
+          <div key={idx} className="text-left">
+            <h4 className="text-3xl sm:text-4xl font-medium text-[#0F66EA]">
+              {stat.value}
+            </h4>
+            <p className="mt-2 text-sm sm:text-base font-medium text-[#4B5563]">
+              {stat.label}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="group flex h-[280px] flex-1 overflow-hidden">
+      {isImageLeft ? (
+        <>
+          {imageBlock}
+          {contentBlock}
+        </>
+      ) : (
+        <>
+          {contentBlock}
+          {imageBlock}
+        </>
+      )}
+    </div>
+  );
+}
 
 function IndustriesWeSecure() {
+  const rows = [];
+  for (let i = 0; i < industriesData.length; i += 2) {
+    rows.push(industriesData.slice(i, i + 2));
+  }
+
   return (
-    <div className="w-full bg-[black]">
-      <div className="mx-auto w-full max-w-7xl bg-[#060D1B] ">
-        {/* heading  */}
+    <div className="w-full bg-[#060D1B]">
+      <div className="mx-auto w-full max-w-7xl bg-[#060D1B]">
+        {/* Header Section */}
         <Animation>
           <div className="px-10 pt-24 pb-16">
             <div className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-20">
-              {/* Left */}
               <div className="flex-1">
-                <h2 className="text-2xl sm:text-3xl sm:text-4xl font-medium lg:leading-12 text-white">
+                <h2 className="text-2xl sm:text-4xl font-medium lg:leading-12 text-white">
                   Security expertise across <br />
                   the industries that{" "}
                   <span className="text-[#0F66EA]">matters.</span>
                 </h2>
-
                 <div className="mt-4 h-[3px] w-[100px] bg-[#0F66EA]" />
               </div>
 
-              {/* Right */}
               <div className="lg:w-[45%]">
                 <p className="text-base font-medium text-[#0F66EA]">
                   INDUSTRIES WE SECURE
                 </p>
-
-                <p className="text-base font-medium leading-7 text-[#D1D1D1]">
+                <p className="mt-2 text-base font-medium leading-7 text-[#D1D1D1]">
                   We understand the unique challenges of your industry and
                   deliver solutions that protect what matters most.
                 </p>
@@ -41,274 +203,17 @@ function IndustriesWeSecure() {
           </div>
         </Animation>
 
-        <div className="mt-2">
-          {/* 1 */}
-          <Animation>
-            <div className="flex flex-col lg:flex-row">
-              <div className="group flex  flex-1 h-[280px] overflow-hidden ">
-                {/* Image */}
-                <div
-                  className="w-1/2 overflow-hidden transition-all duration-700 ease-in-out group-hover:w-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${telecommunication.src})` }}
-                >
-                  <p className="text-2xl font-medium text-[#FFFFFF] p-5">01</p>
-                </div>
-
-                {/* Content */}
-                <div className="flex w-1/2 flex-col justify-center bg-[#121D4A] p-8 transition-all duration-500 ease-in-out group-hover:w-full group-hover:bg-white">
-                  <div className="block group-hover:hidden">
-                    <h3 className="text-2xl font-medium text-white transition-colors duration-500">
-                      Telecommunications
-                    </h3>
-
-                    <p className="mt-4 text-base font-medium text-[#FFFFFFBF] transition-colors duration-500 ">
-                      Ensure resilient connectivity across complex telecom
-                      environments.
-                    </p>
-                  </div>
-
-                  <div className="mt-8 hidden  justify-center items-center  gap-10 w-full group-hover:flex h-full">
-                    <div>
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        12+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Customers
-                      </p>
-                    </div>
-                    <div className=" ">
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        310+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Projects Completed
-                      </p>
-                    </div>
-                  </div>
-                </div>
+        {/* Industry Cards Rows */}
+        <div className="mt-2 flex flex-col">
+          {rows.map((pair, rowIndex) => (
+            <Animation key={rowIndex}>
+              <div className="flex flex-col lg:flex-row">
+                {pair.map((item) => (
+                  <IndustryCard key={item.id} item={item} />
+                ))}
               </div>
-
-              <div className="group flex flex-1 h-[280px] overflow-hidden ">
-                <div
-                  className="w-1/2 overflow-hidden transition-all duration-700 ease-in-out group-hover:w-0 bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: `url(${healthcare.src})` }}
-                >
-                  <p className="text-2xl font-medium text-[#FFFFFF] p-5">02</p>
-                </div>
-
-                <div className="flex w-1/2 flex-col justify-center hover:bg-none bg-linear-to-t from-[#4A81D3] to-[#3B9E6A] p-8 transition-all duration-500 ease-in-out group-hover:w-full group-hover:bg-white">
-                  <div className="block group-hover:hidden">
-                    <h3 className="text-2xl font-semibold text-white transition-colors duration-500">
-                      Healthcare
-                    </h3>
-
-                    <p className="mt-4 text-[#D1D5DB] transition-colors duration-500 text-white">
-                      Protect connected medical devices, patient data, and
-                      critical healthcare operations.
-                    </p>
-                  </div>
-
-                  <div className="mt-8 hidden  justify-center gap-10 w-full group-hover:flex">
-                    <div>
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        18+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Customers
-                      </p>
-                    </div>
-
-                    <div className=" ">
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        400+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Projects Completed
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Animation>
-          {/* 2  */}
-          <Animation>
-            <div className="flex flex-col lg:flex-row">
-              <div className="group flex flex-1 h-[280px] overflow-hidden ">
-                {/* Content */}
-                <div className="flex w-1/2 flex-col justify-center hover:bg-none bg-[#121D4A] p-8 transition-all duration-500 ease-in-out group-hover:w-full group-hover:bg-white">
-                  <div className="block group-hover:hidden">
-                    <h3 className="text-2xl font-semibold text-white transition-colors duration-500">
-                      FinTech
-                    </h3>
-
-                    <p className="mt-4 text-[#FFFFFFBF] transition-colors duration-500 ">
-                      Secure digital banking, payment systems, and regulatory
-                      compliance.
-                    </p>
-                  </div>
-
-                  <div className="mt-8 hidden  justify-center gap-10 w-full group-hover:flex">
-                    <div>
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        22+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Customers
-                      </p>
-                    </div>
-
-                    <div className=" ">
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        460+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Projects Completed
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                {/* Image */}
-                <div
-                  className="w-1/2 overflow-hidden transition-all duration-700 ease-in-out group-hover:w-0"
-                  style={{ backgroundImage: `url(${fintech.src})` }}
-                >
-                  <p className="text-2xl font-medium text-[#FFFFFF] p-5">03</p>
-                </div>
-              </div>
-
-              <div className="group flex flex-1 h-[280px] overflow-hidden ">
-                <div className="flex w-1/2 flex-col justify-center bg-[#1F407C] p-8 transition-all duration-500 ease-in-out group-hover:w-full group-hover:bg-white">
-                  <div className="block group-hover:hidden">
-                    <h3 className="text-2xl font-semibold text-white transition-colors duration-500">
-                      E-commerce
-                    </h3>
-
-                    <p className="mt-4 text-[#FFFFFFBF] transition-colors duration-500 ">
-                      Safeguard payments, digital experiences, and customer
-                      information.
-                    </p>
-                  </div>
-
-                  <div className="mt-8 hidden  justify-center gap-10 w-full group-hover:flex">
-                    <div>
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        9+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Customers
-                      </p>
-                    </div>
-
-                    <div className=" ">
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        280+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Projects Completed
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="w-1/2 overflow-hidden transition-all duration-700 ease-in-out group-hover:w-0"
-                  style={{ backgroundImage: `url(${ecommerce.src})` }}
-                >
-                  <p className="text-2xl font-medium text-[#FFFFFF] p-5">04</p>
-                </div>
-              </div>
-            </div>
-          </Animation>
-          {/* 3 */}
-          <Animation>
-            <div className="flex flex-col lg:flex-row">
-              <div className="group flex flex-1 h-[280px] overflow-hidden ">
-                {/* Image */}
-                <div
-                  className="w-1/2 overflow-hidden transition-all duration-700 ease-in-out group-hover:w-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${education.src})` }}
-                >
-                  <p className="text-2xl font-medium text-[#FFFFFF] p-5">05</p>
-                </div>
-
-                {/* Content */}
-                <div className="flex w-1/2 flex-col justify-center hover:bg-none bg-linear-to-t from-[#4A81D3] to-[#3B9E6A] p-8 transition-all duration-500 ease-in-out group-hover:w-full group-hover:bg-white">
-                  <div className="block group-hover:hidden">
-                    <h3 className="text-2xl font-semibold text-white transition-colors duration-500">
-                      Education
-                    </h3>
-
-                    <p className="mt-4 text-[#FFFFFFBF] transition-colors duration-500">
-                      Ensure resilient connectivity across complex telecom
-                      environments.
-                    </p>
-                  </div>
-
-                  <div className="mt-8 hidden  justify-center gap-10 w-full group-hover:flex">
-                    <div>
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        2+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Customers
-                      </p>
-                    </div>
-
-                    <div className=" ">
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        25+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Projects Completed
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group flex flex-1 h-[280px] overflow-hidden ">
-                <div
-                  className="w-1/2 overflow-hidden transition-all duration-700 ease-in-out group-hover:w-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${government.src})` }}
-                >
-                  <p className="text-2xl font-medium text-[#FFFFFF] p-5">06</p>
-                </div>
-
-                <div className="flex w-1/2 flex-col justify-center bg-[#1F407C] p-8 transition-all duration-500 ease-in-out group-hover:w-full group-hover:bg-white">
-                  <div className="block group-hover:hidden">
-                    <h3 className="text-2xl font-semibold text-white transition-colors duration-500">
-                      Government
-                    </h3>
-
-                    <p className="mt-4 text-[#FFFFFFBF] transition-colors duration-500">
-                      Strengthen cybersecurity posture and safeguard critical
-                      public infrastructure.
-                    </p>
-                  </div>
-
-                  <div className="mt-8 hidden  justify-center gap-10 w-full group-hover:flex">
-                    <div>
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        8+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Customers
-                      </p>
-                    </div>
-
-                    <div className=" ">
-                      <h2 className="text-3xl font-medium text-[#0F66EA]">
-                        200+
-                      </h2>
-                      <p className="mt-2 text-base font-medium text-[#4B5563]">
-                        Projects Completed
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Animation>
+            </Animation>
+          ))}
         </div>
       </div>
     </div>

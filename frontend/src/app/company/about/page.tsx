@@ -96,64 +96,64 @@ const team = [
 
 function page() {
   return (
-    <div>
+    <div >
       {/* hero section  */}
       <div
-        className="py-16 bg-cover bg-center w-full z-30"
+        className="bg-cover bg-center py-16"
         style={{ backgroundImage: `url(${herobackground.src})` }}
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
-          <div className="text-[#FFFFFF] text-center">
-            {/* Breadcrumb Animation */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-              }}
-              className="space-x-1 text-base sm:text-lg font-semibold"
-            >
-              <Link href="/">HOME</Link>
-              <span>/</span>
-              <Link href="/about">ABOUT US</Link>
-            </motion.div>
 
-            {/* Heading Animation */}
-            <motion.h1
-              initial={{
-                opacity: 0,
-                y: 40,
-                filter: "blur(10px)",
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-              }}
-              transition={{
-                duration: 0.9,
-                delay: 0.2,
-                ease: "easeOut",
-              }}
-              className=" text-2xl md:text-3xl lg:text-4xl xl:text-[40px] font-semibold bg-clip-text max-w-xl mx-auto mt-3 leading-8 md:leading-12 text-transparent bg-linear-to-l from-[#2563EB] to-[#E9E9E9]"
-            >
-              Securing digital trust for a connected world.
-            </motion.h1>
-          </div>
+        <div className="mx-auto max-w-7xl text-[#FFFFFF] text-center px-6 sm:px-10">
+          {/* Breadcrumb Animation */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+            }}
+            className="space-x-1 text-base sm:text-lg font-semibold"
+          >
+            <Link href="/">HOME</Link>
+            <span>/</span>
+            <Link href="/about">ABOUT US</Link>
+          </motion.div>
+
+          {/* Heading Animation */}
+          <motion.h1
+            initial={{
+              opacity: 0,
+              y: 40,
+              filter: "blur(10px)",
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 0.9,
+              delay: 0.2,
+              ease: "easeOut",
+            }}
+            className=" text-2xl md:text-3xl lg:text-4xl xl:text-[40px] font-semibold bg-clip-text max-w-xl mx-auto mt-3 leading-8 md:leading-12 text-transparent bg-linear-to-l from-[#2563EB] to-[#E9E9E9]"
+          >
+            Securing digital trust for a connected world.
+          </motion.h1>
         </div>
+
       </div>
 
       {/* ABOUT Company */}
-      <div className="py-14 relative overflow-hidden bg-[#FCFCFC]">
+      <div className=" py-14 relative overflow-hidden bg-[#070D1A]">
         <div className="absolute blur-3xl w-[200px] h-[200px] -top-20 -right-10 rounded-full bg-[#4675CE4D]"></div>
 
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 ">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10">
           {/* heading  */}
           <Animation>
             <div className="space-y-3 flex flex-col items-center lg:items-start ">
-              <div className="w-fit px-4 py-2 rounded-4xl  bg-[#FFFFFF] border border-[#E3EAF1]">
-                <p className="text-sm font-medium flex items-center gap-2 sectionheading uppercase text-[#636977]">
+              <div className="w-fit px-4 py-2 rounded-4xl  bg-[#161B2F] ">
+                <p className="text-sm font-medium flex items-center gap-2 sectionheading uppercase text-[#B4CAFD]">
                   {" "}
                   <span>
                     <Icon
@@ -166,12 +166,12 @@ function page() {
                   ABOUT Company
                 </p>
               </div>
-              <h2 className=" font-medium mx-auto lg:mx-0 text-center lg:text-left leading-8 sm:leading-12 max-w-md  text-[#100E0E]">
+              <h2 className=" font-medium mx-auto lg:mx-0 text-center lg:text-left leading-8 sm:leading-12 max-w-md text-white mt-4">
                 Building a safer digital tomorrow, today.
               </h2>
-              <p className="text-base sm:text-base font-medium max-w-3xl mx-auto lg:mx-0 text-center lg:text-left leading-6 md:leading-7   text-[#8F90AB]">
+              <p className="text-base sm:text-base font-medium max-w-3xl mx-auto lg:mx-0 text-center lg:text-left leading-6 md:leading-7 text-[#D1D1D1] max-w-[753px]">
                 ISECURION is an{" "}
-                <span className="text-[#262D3D]">
+                <span className="text-[#9AA4BA]">
                   CERT-In Empanelled and ISO 27001:2022 certified
                 </span>{" "}
                 information security consulting company providing out-most
@@ -192,13 +192,13 @@ function page() {
         </div>
       </div>
 
-      {/* our journey  */}
-      <div className="py-14 w-full  bg-[#FCFCFC]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 flex flex-col lg:flex-row gap-10">
+      {/* our story  */}
+      <div className="py-14 bg-[#070D1A]">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10 flex flex-col lg:flex-row gap-10">
           <div className="flex-1 space-y-3 flex flex-col items-center lg:items-start text-center lg:text-left">
             <Animation>
-              <div className="w-fit px-4 py-2 rounded-4xl  bg-[#FFFFFF] border border-[#E3EAF1]">
-                <p className="text-sm font-medium flex items-center gap-2 sectionheading uppercase text-[#636977]">
+              <div className="w-fit px-4 py-2 rounded-4xl  bg-[#161B2F]">
+                <p className="text-sm font-medium flex items-center gap-2 sectionheading uppercase text-[#B4CAFD]">
                   {" "}
                   <span>
                     <Icon
@@ -211,10 +211,10 @@ function page() {
                   our story
                 </p>
               </div>
-              <h2 className="max-w-md font-semibold  leading-11.25 text-[#100E0E]">
+              <h2 className="max-w-md font-medium lg:leading-11.25 text-white mt-4">
                 Building a more secure digital future
               </h2>
-              <p className="text-lg font-medium max-w-lg leading-[28px] text-[#8F90AB]">
+              <p className="text-[16px] font-medium max-w-lg leading-[28px] text-[#D1D1D1] mt-4">
                 At ISECURION, we help organizations stay resilient against
                 evolving cyber threats through expert cybersecurity services and
                 purpose-built security solutions.
@@ -224,10 +224,10 @@ function page() {
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {data.map((item, index) => (
                   <div key={index} className="space-y-1">
-                    <h3 className="text-2xl font-medium text-[#05011C]">
+                    <h3 className="text-3xl font-medium text-white">
                       {item.number}
                     </h3>
-                    <p className="text-base font-medium text-[#8F90AB]">
+                    <p className="text-[15px] font-medium text-[#D1D1D1] mt-2 max-w-[200px] leading-6">
                       {item.description}
                     </p>
                   </div>
@@ -237,32 +237,32 @@ function page() {
           </div>
 
           <Animation>
-            <div className="flex-1 flex flex-row gap-6 justify-center">
+            <div className="flex-1 flex flex-row gap-8 justify-center">
               {/* Timeline */}
               <div className="flex flex-col items-center mt-5 ">
-                <div className="h-3 w-3 rounded-full bg-[#2563EB]"></div>
+                <div className="h-2.5 w-2.5 rounded-full bg-[#0F66EA]"></div>
 
-                <div className="h-[500px] sm:h-[230px] lg:h-[330px] xl:h-[250px] w-[8px] border border-dashed border-[#DCE5F3]"></div>
+                <div className="h-[530px] sm:h-[300px] lg:h-[300px] xl:h-[300px] w-[8px] border-l border-dashed border-[#646464]"></div>
 
-                <div className="h-3 w-3 rounded-full bg-[#2563EB]"></div>
+                <div className="h-2.5 w-2.5 rounded-full bg-[#0F66EA]"></div>
               </div>
 
               {/* Content */}
               <div className="space-y-4">
                 {/* Mission */}
                 <div>
-                  <h3 className="text-[38px] font-medium text-[#111827]">
+                  <h3 className="text-[28px] font-medium text-white">
                     Our Mission
                   </h3>
 
-                  <p className=" max-w-2xl text-base leading-[25px] text-[#636977]">
+                  <p className="text-[16px] max-w-2xl leading-[25px] text-[#D1D1D1] mt-4 max-w-[518px]">
                     Dedicated to empowering organizations in navigating today's
                     cybersecurity challenges through trusted consulting,
                     advanced technical services, and innovative security
                     platforms.
                   </p>
 
-                  <ul className="mt-2 space-y-1 text-base font-normal text-[#636977]">
+                  <ul className="mt-6 space-y-2.5 text-base font-normal text-[#D1D1D1] max-w-[520px]">
                     <li className="flex items-start gap-3">
                       <Icon
                         icon="iconoir:badge-check"
@@ -299,18 +299,18 @@ function page() {
                 </div>
 
                 {/* Vision */}
-                <div>
-                  <h3 className="text-[38px] font-medium text-[#111827]">
+                <div className="py-8">
+                  <h3 className="text-[28px] font-medium text-white">
                     Our Vision
                   </h3>
 
-                  <p className=" max-w-2xl text-base leading-[25px] text-[#636977]">
+                  <p className="text-[16px] max-w-2xl text-base leading-[25px] text-[#D1D1D1] mt-4 max-w-[518px]">
                     To become a globally trusted cybersecurity partner by
                     continuously innovating and setting new standards in
                     information security, resilience, and digital trust.
                   </p>
 
-                  <ul className="mt-2 space-y-1 text-base text-[#636977]">
+                  <ul className="mt-6 space-y-2.5 text-base text-[#D1D1D1] max-w-[520px]">
                     <li className="flex items-start gap-3">
                       <Icon
                         icon="iconoir:badge-check"
@@ -350,76 +350,138 @@ function page() {
         </div>
       </div>
 
-      <section className="relative w-full py-14 bg-gradient-to-b from-[#FFFFFF33] to-[#092E70] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
-          <div className="absolute right-0 bottom-0 w-[150px] h-[150px] rounded-full blur-md bg-linear-to-b from-[#22D1EE] to-[#566D98]"></div>
+      {/* our journey  */}
+      <section className="relative  overflow-hidden bg-gradient-to-b from-[#000B23] to-[#092E70] py-14">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10">
+
           {/* Heading */}
           <Animation>
-            <div className="relative text-center ">
-              <h2 className=" font-semibold uppercase tracking-[12px] text-[#9AA4BA] opacity-40">
+            <div className="relative flex items-center justify-center">
+              <h2 className="text-center text-[28px] font-medium uppercase tracking-[12px] text-[#17305B] sm:text-[30px]">
                 Journey Of ISECURION
               </h2>
 
-              <h3 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[32px] font-semibold uppercase tracking-[4px] text-[#111827]">
+              <h4 className="absolute text-[26px] font-medium uppercase tracking-[4px] text-white sm:text-[30px]">
                 Timeline
-              </h3>
+              </h4>
             </div>
           </Animation>
 
+
           {/* Timeline Card */}
           <Animation>
-            <div className="relative rounded-[35px] bg-white p-12 shadow-2xl mt-10">
-              <div className="absolute -left-5 top-1/4 -translate-y-1/2 h-14 w-14 rounded-full bg-gradient-to-b from-[#22D1EE] to-[#3D5AF1] z-10"></div>
+            <div className="relative hidden lg:block mt-10 rounded-[35px] border border-[#52617A] bg-[#101B35] px-6 py-10 sm:px-10 lg:px-12">
 
-              <div className="absolute left-12 right-12 top-1/2 h-[2px] -translate-y-1/2 bg-[#3D5AF1]"></div>
+              {/* Left Circle */}
+              <div className="absolute -left-[18px] top-1/4 z-20 h-14 w-14 rounded-full bg-gradient-to-b from-[#22D1EE] to-[#3D5AF1]">
+              </div>
 
+
+              {/* Horizontal Timeline Line */}
+              <div className="absolute left-14 right-14 top-1/2 h-[2px] bg-[#2563D8]" />
+
+
+              {/* Timeline Items */}
               <div
-                className="relative grid gap-6"
+                className="relative grid gap-4"
                 style={{
-                  gridTemplateColumns: `repeat(${timelineData.length}, minmax(0,1fr))`,
+                  gridTemplateColumns: `repeat(${timelineData.length}, minmax(0, 1fr))`,
                 }}
               >
                 {timelineData.map((item) => (
                   <div
                     key={item.id}
-                    className="relative flex min-h-[350px] flex-col items-center"
+                    className="relative flex min-h-[380px] flex-col items-center"
                   >
+
                     {item.position === "bottom" ? (
                       <>
-                        <h4 className="absolute bottom-1/2 mb-12 text-2xl font-semibold text-[#3D5AF1]">
+                        {/* Year - TOP */}
+                        <h4 className="absolute bottom-1/2 mb-12 text-2xl font-semibold text-[#0F66EA]">
                           {item.year}
                         </h4>
 
-                        <p className="absolute top-1/2 mt-12 max-w-[300px] text-center text-base font-medium leading-8 text-[#343434]">
+                        {/* Connector - BOTTOM */}
+                        <div className="absolute top-1/2 mt-6 h-16 w-px bg-[#D5D9E0]" />
+
+                        {/* Description - BOTTOM */}
+                        <p className="absolute top-1/2 mt-[100px] max-w-[320px] text-center text-sm font-medium leading-7 text-white">
                           {item.description}
                         </p>
                       </>
                     ) : (
                       <>
-                        <p className="absolute bottom-1/2 mb-12 max-w-[220px] text-center text-base font-medium leading-8 text-[#343434]">
+                        {/* Description - TOP */}
+                        <p className="absolute bottom-1/2 mb-[110px] max-w-[460px] text-center text-sm font-medium leading-7 text-white">
                           {item.description}
                         </p>
 
-                        <h4 className="absolute top-1/2 mt-12 text-2xl font-semibold text-[#3D5AF1]">
+                        {/* Connector - TOP */}
+                        <div className="absolute bottom-1/2 mb-6 h-16 w-[0.5px] bg-[#DCDCDC]" />
+
+                        {/* Year - BOTTOM */}
+                        <h4 className="absolute top-1/2 mt-12 text-2xl font-semibold text-[#0F66EA]">
                           {item.year}
                         </h4>
                       </>
                     )}
 
-                    <div className="absolute top-1/2 -translate-y-1/2 z-10 h-6 w-6 rounded-full border-4 border-[#55D6FF] bg-white"></div>
+                    {/* Timeline Circle */}
+                    <div className="absolute top-1/2 z-10 h-7 w-7 -translate-y-1/2 rounded-full border-[3.5px] border-[#55D6FF] bg-[#101B35]">
+                      <div className="absolute inset-[3px] rounded-full bg-[#55D6FF]" />
+                    </div>
+
                   </div>
                 ))}
               </div>
             </div>
+            <div className="relative lg:hidden mt-10">
+
+              {/* Vertical line */}
+              <div className="absolute left-[15px] top-4 bottom-4 w-[2px] bg-[#2563D8]" />
+
+              <div className="space-y-10">
+
+                {timelineData.map((item) => (
+                  <div
+                    key={item.id}
+                    className="relative flex gap-6"
+                  >
+
+                    {/* Timeline point */}
+                    <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-[4px] border-[#55D6FF] bg-[#101B35]">
+                      <div className="h-2 w-2 rounded-full bg-[#55D6FF]" />
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 pb-2">
+
+                      <h4 className="text-xl font-semibold text-[#0F66EA]">
+                        {item.year}
+                      </h4>
+
+                      <p className="mt-2 text-sm font-medium leading-6 text-white">
+                        {item.description}
+                      </p>
+
+                    </div>
+
+                  </div>
+                ))}
+
+              </div>
+            </div>
           </Animation>
+
         </div>
       </section>
 
-      <section className="w-full py-14 bg-[#FCFCFC]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
+      {/* our team  */}
+      <section className=" py-14 bg-[#070D1A]">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10">
           <TimelineAnimation delay={0.3}>
             <div className="flex flex-col items-center space-y-4">
-              <div className="w-fit px-4 py-2 rounded-4xl  bg-[#FFFFFF] border border-[#E3EAF1]">
+              <div className="w-fit px-4 py-2 rounded-4xl  bg-[#161B2F]">
                 <p className="text-sm font-medium flex items-center gap-2 sectionheading uppercase text-[#636977]">
                   {" "}
                   <span>
@@ -433,10 +495,10 @@ function page() {
                   our Team
                 </p>
               </div>
-              <h2 className="font-medium text-[#100E0E]">
+              <h2 className="font-medium text-white text-[32px] mt-3">
                 The minds behind your security
               </h2>
-              <p className="text-lg font-medium leading-7 text-center max-w-2xl text-[#8F90AB]">
+              <p className="text-[15px] leading-6 text-center max-w-2xl text-[#D1D1D1] mt-3">
                 A team of cybersecurity professionals united by passion,
                 expertise, and a commitment to protect what matters most.
               </p>

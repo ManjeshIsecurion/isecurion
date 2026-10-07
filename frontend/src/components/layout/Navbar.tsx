@@ -67,7 +67,7 @@ function Navbar() {
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((prev) => !prev)}
-            className="flex h-11 w-11 items-center justify-center rounded-lg cursor-pointer text-white lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-lg text-white lg:hidden"
           >
             <Icon
               icon={

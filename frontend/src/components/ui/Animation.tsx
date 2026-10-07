@@ -15,7 +15,7 @@ function Animation({ delay = 0, children }: AnimationProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         delay,
-        duration: 1,
+        duration: 1.2,
       }}
       viewport={{ once: true }}
     >
@@ -144,36 +144,6 @@ function RightAnimation({ children, delay = 0 }: LeftAnimationProps) {
   );
 }
 
-interface AnimatedHeadingProps {
-  text: string;
-  className?: string;
-  delay?: number;
-}
-
-export default function AnimatedHeading1({
-  text,
-  className = "",
-  delay = 0.1,
-}: AnimatedHeadingProps) {
-  return (
-    <h1 className={className}>
-      {text.split(" ").map((word, index) => (
-        <motion.span
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            delay: index * delay,
-          }}
-          className="inline-block mr-2"
-        >
-          {word}
-        </motion.span>
-      ))}
-    </h1>
-  );
-}
 import { Icon } from "@iconify/react";
 interface GradientIconProps {
   Icon?: string;
@@ -208,6 +178,5 @@ export {
   AnimatedCard,
   LeftAnimation,
   RightAnimation,
-  AnimatedHeading1,
   GradientIcon,
 };
