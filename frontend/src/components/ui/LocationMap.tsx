@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import {
   MapContainer,
   TileLayer,
@@ -132,7 +131,7 @@ export default function LocationMap() {
                 rel="noopener noreferrer"
                 className="flex mt-1 items-center gap-2 text-sm font-semibold text-[#7D70F0]"
               >
-                Get Directions
+                Get Directions {""}
                 <span>
                   <Icon icon="ep:right" />
                 </span>

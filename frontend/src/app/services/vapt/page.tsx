@@ -14,6 +14,8 @@ import {
 import attackerkey from "../../../assets/services/attackerkey.png";
 import world from "../../../assets/services/world.svg";
 import Link from "next/link";
+import FAQSection from "../../../components/sections/FAQSection";
+import VAPT_CTA from "../../../components/sections/VAPT_CTA";
 
 const vapt = [
   {
@@ -175,7 +177,7 @@ const steps = [
     number: "01",
     title: "DISCOVER",
     subheading: "Planning & Reconnaissance",
-    icon: "ant-design:search-outlined",
+    icon: "pajamas:issue-type-objective",
     description:
       "Define scope, rules of engagement, test objectives, and gather OSINT intelligence for attack surface mapping.",
   },
@@ -183,7 +185,7 @@ const steps = [
     number: "02",
     title: "ASSESS",
     subheading: "Vulnerability Assessment",
-    icon: "akar-icons:book-open",
+    icon: "flowbite:file-search-outline",
     description:
       "Automated and manual checks to identify vulnerabilities, misconfigurations, patch gaps, and insecure services across the target environment.",
   },
@@ -191,7 +193,7 @@ const steps = [
     number: "03",
     title: "VALIDATE",
     subheading: "Exploitation & Post-Exploitation",
-    icon: "boxicons:file-report",
+    icon: "boxicons:bell-check",
     description:
       "Ethically exploit identified vulnerabilities to demonstrate real-world impact, privilege escalation, lateral movement, and data access simulation.",
   },
@@ -199,7 +201,7 @@ const steps = [
     number: "04",
     title: "REMEDIATE",
     subheading: "Reporting & Remediation",
-    icon: "boxicons:bell-minus",
+    icon: "oui:app-reporting",
     description:
       "Deliver a detailed report with CVSS risk ratings, PoC evidence, compliance mapping, and step-by-step remediation guidance.",
   },
@@ -207,7 +209,7 @@ const steps = [
     number: "05",
     title: "VERIFY",
     subheading: "Re-test & Closure",
-    icon: "streamline:decent-work-and-economic-growth",
+    icon: "boxicons:badge-check",
     description:
       "Re-validate fixes through complementary re-testing, issue closure report and attestation letter for auditors and stakeholders.",
   },
@@ -262,6 +264,7 @@ const locations = [
     Icon: "tdesign:palace-1",
   },
 ];
+
 const globalLocations = [
   {
     location: "US",
@@ -469,6 +472,83 @@ const vaptServicesInIndia = [
   },
 ];
 
+const vaptFAQs = [
+  {
+    question: "What is Vulnerability Assessment and Penetration Testing (VAPT)?",
+    answer:
+      "VAPT combines vulnerability assessment (systematically identifying known weaknesses) with penetration testing (actively exploiting them to measure real-world impact). Together they provide comprehensive security coverage - breadth from the assessment and depth from the penetration test - across web applications, mobile apps, networks, cloud environments, and infrastructure.",
+  },
+  {
+    question: "Why is VAPT important for organizations in India?",
+    answer:
+      "VAPT aligns with CERT-In directives and sectoral guidelines from RBI, SEBI (CSCRF), IRDAI, UIDAI, and NPCI. It protects sensitive customer data, reduces breach likelihood, strengthens compliance posture for ISO 27001, SOC 2, PCI DSS, HIPAA, and India's Digital Personal Data Protection (DPDP) Act, and builds trust with global enterprise customers who require security attestations.",
+  },
+  {
+    question: "Which cities in India does ISECURION provide VAPT services?",
+    answer:
+      "ISECURION provides VAPT services across all major Indian cities including Bangalore, Mumbai, Hyderabad, Chennai, Pune, Kolkata, Ahmedabad, Noida, Delhi NCR, Gurgaon, Kochi, Chandigarh, Jaipur, and more. We have physical offices in Bangalore (HQ), Kolkata, Ahmedabad, and Noida for on-site engagements, and are fully remote-capable for all other locations across India.",
+  },
+  {
+    question: "What is the difference between Vulnerability Assessment and Penetration Testing?",
+    answer:
+      "A vulnerability assessment identifies and catalogues weaknesses at scale using automated scanning and manual review - providing broad coverage across your attack surface. Penetration testing goes further by actively exploiting confirmed vulnerabilities with proof-of-concept evidence, demonstrating real-world attack paths and business impact. VAPT combines both approaches for comprehensive coverage.",
+  },
+  {
+    question: "How often should VAPT be conducted?",
+    answer:
+      "At minimum, annually. Additionally, VAPT should be performed after major application releases, significant infrastructure changes, cloud migrations, new third-party integrations, organizational mergers, or whenever mandated by compliance frameworks (ISO 27001, PCI DSS v4.0, SOC 2) or customer contracts. High-risk environments like FinTech and healthcare benefit from quarterly assessments.",
+  },
+  {
+    question: "Is VAPT mandatory for ISO 27001, SOC 2, or PCI DSS compliance?",
+    answer:
+      "Yes. ISO 27001:2022 (Annex A 8.8) requires technical vulnerability management and periodic penetration testing. SOC 2 Trust Services Criteria (CC6, CC7) requires regular security testing. PCI DSS v4.0 (Requirement 11.3 and 11.4) mandates penetration testing at least annually and after significant infrastructure changes. RBI Cyber Security Framework and SEBI CSCRF also explicitly require VAPT for regulated entities.",
+  },
+  {
+    question: "What types of VAPT does ISECURION offer?",
+    answer:
+      "ISECURION offers: Web Application Penetration Testing, Mobile Application Security Testing (Android & iOS), Cloud Security Assessment (AWS, Azure, GCP), Network & Infrastructure Penetration Testing, API Security Testing, Red Team Assessment, IoT Security Testing, ICS / SCADA Security Assessment, Smart Contract Security Audit, Secure Code Review, Phishing Simulation, and DevSecOps Integration Testing.",
+  },
+  {
+    question: "Will penetration testing affect our live servers or business operations?",
+    answer:
+      "ISECURION uses safe, non-intrusive methodologies on production environments with agreed change-control procedures and rollback plans documented before testing begins. For aggressive scenarios such as DoS simulation or exploit chaining, we strongly recommend using a staging environment and obtain explicit written approval before proceeding. Our team coordinates closely with your IT operations team throughout the engagement.",
+  },
+  {
+    question: "How long does a VAPT engagement typically take?",
+    answer:
+      "A single web application or network segment typically takes 3–7 business days depending on scope complexity, number of features, API endpoints, and test depth. Mobile application testing typically takes 5–7 days. Red team engagements may span 2–4 weeks. Cloud security assessments for large environments take 5–10 days. We provide a detailed timeline estimate during initial scoping at no charge.",
+  },
+  {
+    question: "What deliverables will we receive after the VAPT?",
+    answer:
+      "You receive: an Executive Summary for management, a Detailed Technical Report with proof-of-concept evidence and reproduction steps, CVSS v3.1 risk ratings (Critical/High/Medium/Low/Informational), compliance mapping for applicable frameworks, step-by-step remediation guidance, a Re-test Report validating your fixes, and an Attestation / Closure Letter for auditors, customers, or regulators.",
+  },
+  {
+    question: "Does ISECURION provide a re-test after we fix the vulnerabilities?",
+    answer:
+      "Yes. A complimentary re-test is included within the agreed window to verify that all identified vulnerabilities have been successfully remediated. Upon successful closure, ISECURION issues a closure letter or attestation document that can be shared with auditors, customers, regulators, or as part of your ISO 27001 / SOC 2 evidence pack.",
+  },
+  {
+    question: "What frameworks and standards does ISECURION follow for VAPT?",
+    answer:
+      "ISECURION follows: OWASP (Web Top 10, Mobile Top 10, API Security Top 10), NIST SP 800-115 (Technical Guide to Information Security Testing), PTES (Penetration Testing Execution Standard), OSSTMM (Open Source Security Testing Methodology Manual), CVSS v3.1 for risk scoring, and CERT-In guidelines for India-specific compliance requirements. All testing is performed within mutually agreed rules of engagement.",
+  },
+  {
+    question: "What information is needed to start a VAPT engagement?",
+    answer:
+      "We need: defined scope (target URLs, IP ranges, application list), access model (black-box, grey-box, or white-box), preferred test window and change-freeze periods, points of contact for your technical team, test credentials for grey-box/white-box engagements, and any compliance frameworks to map in the final report (ISO 27001, SOC 2, PCI DSS, RBI, SEBI, etc.).",
+  },
+  {
+    question: "Does ISECURION provide VAPT services outside India?",
+    answer:
+      "Yes. ISECURION provides VAPT and penetration testing to clients in the USA, UK, UAE (Dubai, Abu Dhabi), Australia (Sydney, Melbourne), Qatar, and Singapore. All international engagements are fully remote, timezone-flexible, and priced significantly below local consultancies in those markets - with no compromise on quality or report standards.",
+  },
+  {
+    question: "Is ISECURION CERT-In empanelled for penetration testing?",
+    answer:
+      "Yes. ISECURION is empanelled by CERT-In (Indian Computer Emergency Response Team), India's national nodal agency for cybersecurity under the Ministry of Electronics & Information Technology (MeitY). CERT-In empanelment is the highest government-recognized credential for information security auditors in India. ISECURION is also ISO 27001:2022 certified, demonstrating that we maintain the same standards we help our clients achieve.",
+  },
+];
 function Vapt() {
   return (
     <div className="bg-[#060D1B]">
@@ -501,13 +581,13 @@ function Vapt() {
           <Animation>
             <div className="relative flex flex-wrap gap-4 items-center justify-center ">
               <button className="flex items-center gap-2.5 px-6 py-3.5 rounded-lg cursor-pointer text-base font-semibold text-white border-2 border-[#3263B1] bg-gradient-to-r from-[#29559D] to-[#1C3D70]">
-                Explore VAPT Services
+                Explore VAPT Services{''}
                 <span>
                   <Icon icon="ep:right" className="text-lg" />
                 </span>
               </button>
               <button className="flex items-center gap-2.5 px-6 py-3.5 rounded-[10px] cursor-pointer text-base font-semibold text-[#31435C] border border-[#FFFFFF29] bg-[#FFFFFF]  transition duration-200">
-                Request a Consultation
+                Request a Consultation{''}
                 <span>
                   <Icon icon="ep:right" className="text-lg" />
                 </span>
@@ -543,7 +623,7 @@ function Vapt() {
           <Animation>
             <div className="text-center lg:text-left space-y-4">
               <h2 className="font-medium text-[#FEFEFE]">What is VAPT?</h2>
-              <p className=" text-base sm:text-lg font-normal max-w-xl mx-auto lg:mx-0 leading-[31px] text-[#D1D1D1]">
+              <p className=" text-base sm:text-lg font-normal max-w-[600px] mx-auto lg:mx-0 leading-[31px] text-[#D1D1D1]">
                 Vulnerability Assessment and Penetration Testing (VAPT) is a
                 comprehensive cybersecurity approach that helps organizations
                 identify, validate and remediate security weaknesses before
@@ -552,15 +632,15 @@ function Vapt() {
               <ul className="space-y-2 mt-3">
                 <li className="text-sm sm:text-base font-normal  flex items-center gap-2 text-[#D1D1D1]">
                   <span>
-                    <Icon icon="bx:badge" className="text-[#0F66EA]" />
-                  </span>
+                    <Icon icon="boxicons:badge-check" className="text-[#0F66EA]" />
+                  </span>{''}
                   Combines automated vulnerability scanning with expert-led
                   penetration testing.
                 </li>
                 <li className="text-sm sm:text-base font-normal  flex items-center gap-2 text-[#D1D1D1]">
                   <span>
-                    <Icon icon="bx:badge" className="text-[#0F66EA]" />
-                  </span>
+                    <Icon icon="boxicons:badge-check" className="text-[#0F66EA]" />
+                  </span>{''}
                   Provides complete visibility of your security posture and
                   business risks.
                 </li>
@@ -589,8 +669,9 @@ function Vapt() {
                   expert-led penetration testing.
                 </p>
               </div>
-              <button className="text-[16px] font-semibold w-fit z-20 py-3 px-4 items-center justify-center rounded-lg cursor-pointer bg-gradient-to-r text-white  from-[#29559D] to-[#1C3D70] border-2 border-[#3263B1] ">
-                Explore Our Methodology →
+              <button className="flex gap-2 text-[16px] font-semibold w-fit z-20 py-3 px-4 items-center justify-center rounded-lg cursor-pointer bg-gradient-to-r text-white  from-[#29559D] to-[#1C3D70] border-2 border-[#3263B1] ">
+                Explore Our Methodology 
+                <span><Icon icon="ep:right" width={20}/> </span>
               </button>
             </div>
             {/* second  */}
@@ -1165,6 +1246,18 @@ function Vapt() {
           </div>
         </div>
       </section>
+      <FAQSection
+        title={
+          <>
+            Frequently Asked Questions - VAPT &
+            <br className="hidden sm:block" />
+            Penetration Testing
+          </>
+        }
+        description="Common questions from organizations across Bangalore, Mumbai, Hyderabad, Kolkata, Ahmedabad, Noida, and globally."
+        faqs={vaptFAQs}
+      />
+      <VAPT_CTA/>
     </div>
   );
 }

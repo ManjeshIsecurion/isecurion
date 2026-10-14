@@ -2,14 +2,13 @@
 import React from "react";
 import webHeroBackground from "../../../assets/services/webHeroBackground.png";
 import webAssessment from "../../../assets/services/webAssessment.png";
-import methodologyDesktop from "../../../assets/services/methodologyDesktop.png";
-import methodologyMobile from "../../../assets/services/methodologyMobile.png";
 import methodologySettings from "../../../assets/services/methodologySettings.png";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import FAQSection from "../../../components/sections/FAQSection";
 import { Animation } from "../../../components/ui/Animation";
 import { motion } from "framer-motion";
+import MethodologySection from "../../../components/sections/MethodologySection";
 
 const assessmentCards = [
   {
@@ -109,6 +108,39 @@ const webApplicationFAQs = [
   },
 ];
 
+const webAssessmentSteps = [
+  {
+    title: "Discovery",
+    description: "Understand your application, business objectives, and key risk areas.",
+    icon: <Icon icon="fluent:search-16-filled" />
+  },
+  {
+    title: "Threat Modeling",
+    description: "Identify potential threats and attack vectors based on application design and business logic.",
+    icon: <Icon icon="grommet-icons:document-threat" />
+  },
+  {
+    title: "Security Assessment",
+    description: "Evaluate critical areas such as authentication, authorization, input validation and business logic.",
+    icon: <Icon icon="iconmind:book-review-outline-regular" />
+  },
+  {
+    title: "Penetration Testing",
+    description: "Simulate real-world attacks to test your application's defenses and identify potential exploits.",
+    icon: <Icon icon="fe:target" />
+  },
+  {
+    title: "Remediation Guidance",
+    description: "Provide actionable remediation guidance to fix vulnerabilities, strengthen security, and support compliance.",
+    icon: <Icon icon="ic:outline-tips-and-updates" />
+  },
+  {
+    title: "Reporting & Deliverables",
+    description: "Deliver a comprehensive report with prioritized findings and clear mitigation steps.",
+    icon: <Icon icon="pajamas:review-checkmark" />
+  },
+];
+
 function page() {
   return (
     <main className="bg-black">
@@ -116,15 +148,15 @@ function page() {
 
       <section className="px-0">
         <div
-          className="relative mx-auto min-h-[495px]overflow-hidden bg-cover bg-center bg-no-repeat"
+          className="relative mx-auto h-auto sm:h-[80vh] 2xl:h-[60vh] bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${webHeroBackground.src})`,
           }}
         >
-          <div className="relative mx-auto z-10  max-w-7xl flex min-h-[495px] items-center px-6 py-16 sm:px-10 lg:px-12">
-            <div className="w-full lg:w-[58%]">
+          <div className="relative mx-auto z-10  max-w-7xl flex min-h-[424px] items-center px-6 py-16 sm:px-10 lg:px-12">
+            <div className="w-full lg:w-[58%] text-center md:text-left">
               <Animation>
-                <h1 className="max-w-[700px] text-3xl sm:text-4xl font-medium leading-[1.3] text-white sm:text-5xl lg:text-[48px]">
+                <h1 className="max-w-[700px] font-semibold leading-[1.3] text-white">
                   Web Application Security Assessment
                 </h1>
 
@@ -149,16 +181,17 @@ function page() {
         </div>
       </section>
 
-      <Animation>
+     
         <section className="bg-[#050C1A]">
-          <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-12 lg:py-20">
+          <Animation>
+          <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-12 lg:py-16">
             {/* Heading */}
-            <h2 className="text-2xl font-normal leading-8 sm:leading-12 text-white sm:text-4xl lg:text-[42px]">
+            <h2 className="text-2xl font-normal leading-8 sm:leading-12 text-white sm:text-[34px] lg:text-[38px] text-center md:text-left">
               What is Web Application Security Assessment?
             </h2>
 
             {/* Introduction */}
-            <p className="mt-7 max-w-[540px] text:sm leading-6 text-[#D1D1D1] sm:text-base ">
+            <p className="mt-7 max-w-[540px] text:sm leading-6 text-[#D1D1D1] sm:text-base text-center md:text-left">
               Web Application Security Assessment is a systematic evaluation of
               a web application to identify, validate, and assess security
               vulnerabilities that attackers could exploit.
@@ -237,20 +270,20 @@ function page() {
               ))}
             </div>
           </div>
+          </Animation>
         </section>
-      </Animation>
+      
 
-      <Animation>
+      
         <section className="">
-          <div className="relative overflow-hidden bg-[linear-gradient(110deg,#050B18_0%,#071321_48%,#06383C_100%)]">
+          <div className="relative overflow-hidden bg-[linear-gradient(110deg,#050B18_0%,#071321_48%,#06383C_90%)]">
             <div className="pointer-events-none absolute right-0 top-0">
               <Image src={methodologySettings} alt="" className="" />
             </div>
+
             <Animation>
               {/* Methodology Heading */}
               <div className="relative mx-auto max-w-7xl px-6 pt-16 text-center sm:px-10 lg:px-12 lg:pt-20">
-                {/* Subtle background glow */}
-
                 <div className="pointer-events-none absolute right-0 top-0 h-[280px] w-[280px] rounded-full bg-cyan-500/10 blur-[100px]" />
 
                 <h2 className="relative text-3xl font-normal leading-tight text-white sm:text-4xl lg:text-[36px]">
@@ -259,157 +292,30 @@ function page() {
 
                 <p className="relative mx-auto mt-5 max-w-[850px] text-sm leading-6 text-white/70 sm:text-base">
                   At ISECURION, we combine{" "}
-                  <span className="font-medium text-white">
-                    OWASP-aligned testing
-                  </span>
-                  ,{" "}
-                  <span className="font-medium text-white">
-                    automated tools
-                  </span>
-                  , and{" "}
-                  <span className="font-medium text-white">
-                    expert-led manual assessment
-                  </span>{" "}
+                  <span className="font-medium text-white">OWASP-aligned testing</span>,{" "}
+                  <span className="font-medium text-white">automated tools</span>, and{" "}
+                  <span className="font-medium text-white">expert-led manual assessment</span>{" "}
                   to uncover and validate web application security risks.
                 </p>
               </div>
             </Animation>
 
-            <div className="hidden px-6 pb-12 pt-10 sm:px-10 lg:block lg:px-12 lg:pb-15">
-              <Image
-                src={methodologyDesktop}
-                alt="Our Security Assessment Methodology"
-                className="mx-auto h-auto w-full max-w-[1000px]"
-              />
-            </div>
-
-            <div className="relative px-6 pb-14 pt-10 sm:px-10 lg:hidden">
-              {/* Central Graphic + Numbers */}
-              <div className="relative mx-auto w-full max-w-[430px]">
-                <Image
-                  src={methodologyMobile}
-                  alt="Web application security assessment methodology"
-                  className="h-auto w-full"
-                />
-
-                {/* 01 - Top */}
-                <span className="absolute left-1/2 top-[4%] -translate-x-1/2 text-sm font-medium text-[#3D73BA]">
-                  01
-                </span>
-
-                {/* 02 - Top Right */}
-                <span className="absolute right-[9%] top-[28%] text-sm font-medium text-[#3D73BA]">
-                  02
-                </span>
-
-                {/* 03 - Bottom Right */}
-                <span className="absolute right-[9%] bottom-[24%] text-sm font-medium text-[#3D73BA]">
-                  03
-                </span>
-
-                {/* 04 - Bottom */}
-                <span className="absolute left-1/2 bottom-[4%] -translate-x-1/2 text-sm font-medium text-[#3D73BA]">
-                  04
-                </span>
-
-                {/* 05 - Bottom Left */}
-                <span className="absolute left-[9%] bottom-[24%] text-sm font-medium text-[#3D73BA]">
-                  05
-                </span>
-
-                {/* 06 - Top Left */}
-                <span className="absolute left-[9%] top-[28%] text-sm font-medium text-[#3D73BA]">
-                  06
-                </span>
-              </div>
-
-              {/* Methodology Items */}
-              <div className="mt-10 space-y-8">
-                {/* Discovery */}
-                <div>
-                  <span className="text-sm text-[#3D73BA]">01</span>
-                  <h3 className="text-base font-medium text-white">
-                    Discovery
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-white/65">
-                    Understand your application, business objectives, and key
-                    risk areas.
-                  </p>
-                </div>
-
-                {/* Threat Modeling */}
-                <div>
-                  <span className="text-sm text-[#3D73BA]">02</span>
-                  <h3 className="text-base font-medium text-white">
-                    Threat Modeling
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-white/65">
-                    Identify potential threats and attack vectors based on
-                    application design and business logic.
-                  </p>
-                </div>
-
-                {/* Security Assessment */}
-                <div>
-                  <span className="text-sm text-[#3D73BA]">03</span>
-                  <h3 className="text-base font-medium text-white">
-                    Security Assessment
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-white/65">
-                    Evaluate critical areas such as authentication,
-                    authorization, input validation and business logic.
-                  </p>
-                </div>
-
-                {/* Penetration Testing */}
-                <div>
-                  <span className="text-sm text-[#3D73BA]">04</span>
-                  <h3 className="text-base font-medium text-white">
-                    Penetration Testing
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-white/65">
-                    Simulate real-world attacks to test your application's
-                    defenses and identify potential exploits.
-                  </p>
-                </div>
-
-                {/* Remediation Guidance */}
-                <div>
-                  <span className="text-sm text-[#3D73BA]">05</span>
-                  <h3 className="text-base font-medium text-white">
-                    Remediation Guidance
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-white/65">
-                    Provide actionable remediation guidance to fix
-                    vulnerabilities, strengthen security, and support
-                    compliance.
-                  </p>
-                </div>
-
-                {/* Reporting & Deliverables */}
-                <div>
-                  <span className="text-sm text-[#3D73BA]">06</span>
-                  <h3 className="text-base font-medium text-white">
-                    Reporting & Deliverables
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-white/65">
-                    Deliver a comprehensive report with prioritized findings and
-                    clear mitigation steps.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Animation>
+            <MethodologySection
+              embedded
+              steps={webAssessmentSteps}
+              centerTitle={["WEB APPLICATION", "SECURITY ASSESSMENT"]}
+              tagline={[
+                "A STRONGER",
+                "APPLICATION TOMORROW",
+              ]}
+            />
+            </Animation>
           </div>
         </section>
-      </Animation>
+    
 
-      <Animation>
+     
         <FAQSection
           title={
             <>
@@ -421,7 +327,7 @@ function page() {
           description="Common questions from organizations across Bangalore, Mumbai, Hyderabad, Kolkata, Ahmedabad, Noida, and globally."
           faqs={webApplicationFAQs}
         />
-      </Animation>
+      
     </main>
   );
 }

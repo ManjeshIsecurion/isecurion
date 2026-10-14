@@ -5,7 +5,7 @@ import fintech from "../../assets/home/fintech.png";
 import ecommerce from "../../assets/home/ecommerce.png";
 import education from "../../assets/home/education.png";
 import government from "../../assets/home/government.png";
-import { AnimatedCard, Animation } from "../../components/ui/Animation";
+import { Animation } from "../../components/ui/Animation";
 import industryHoverBg from "../../assets/home/industryHoverBg.png";
 
 const industriesData = [
@@ -121,14 +121,14 @@ function IndustryCard({ item }) {
     >
       {/* Background Hover Pattern Overlay */}
       <div
-        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-800 ease-out group-hover:opacity-100"
         style={{
           backgroundImage: `url(${industryHoverBg.src || industryHoverBg})`,
         }}
       />
 
       {/* Default Card Content */}
-      <div className="relative z-10 w-full min-w-[260px] translate-x-0 opacity-100 transition-all duration-300 ease-out group-hover:-translate-x-6 group-hover:opacity-0">
+      <div className="relative z-10 w-full min-w-[260px] translate-x-0 opacity-100 transition-all duration-1000 ease-out group-hover:-translate-x-6 group-hover:opacity-0">
         <h3 className="text-2xl font-medium text-white mt-20">{item.title}</h3>
         <p className="mt-4 text-base font-medium text-[#FFFFFFBF]">
           {item.description}
@@ -136,7 +136,7 @@ function IndustryCard({ item }) {
       </div>
 
       {/* Hover Statistics Reveal (Appears smoothly after delay) */}
-      <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center gap-10 sm:gap-16 translate-x-6 opacity-0 transition-all duration-700 ease-out delay-300 group-hover:translate-x-0 group-hover:opacity-100">
+      <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center gap-10 sm:gap-16 translate-x-6 opacity-0 transition-all duration-2000 ease-out delay-100 group-hover:translate-x-0 group-hover:opacity-100">
         {item.stats.map((stat, idx) => (
           <div key={idx} className="text-left">
             <h4 className="text-3xl sm:text-4xl font-medium text-[#0F66EA]">

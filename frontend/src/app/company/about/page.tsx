@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import ceo from "../../../assets/about/ceo.png";
 import { motion } from "framer-motion";
-import { Animation, AnimatedHeading } from "../../../components/ui/Animation";
+import { Animation} from "../../../components/ui/Animation";
 import hacker from "../../../assets/about/abouthacker.png";
 import herobackground from "../../../assets/about/abouthero.png";
 import TimelineAnimation from "../../../components/ui/TimelineAnimation";
@@ -197,8 +197,8 @@ function page() {
         <div className="mx-auto max-w-7xl px-6 sm:px-10 flex flex-col lg:flex-row gap-10">
           <div className="flex-1 space-y-3 flex flex-col items-center lg:items-start text-center lg:text-left">
             <Animation>
-              <div className="w-fit px-4 py-2 rounded-4xl  bg-[#161B2F]">
-                <p className="text-sm font-medium flex items-center gap-2 sectionheading uppercase text-[#B4CAFD]">
+              <div className="w-fit px-4 py-2 rounded-4xl  bg-[#161B2F] ">
+                <p className="text-sm font-medium flex items-left gap-2 sectionheading uppercase text-[#B4CAFD]">
                   {" "}
                   <span>
                     <Icon

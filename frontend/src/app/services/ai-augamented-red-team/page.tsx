@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import { Icon } from "@iconify/react";
 import { AnimatedCard, Animation } from "../../../components/ui/Animation";
 import { motion } from "framer-motion";
@@ -9,6 +9,7 @@ import whatwereceivebackground from "../../../assets/services/whatwereceive.svg"
 import airedteaming from "../../../assets/services/ai-redteaming.png";
 import benchmark from "../../../assets/services/benchmarkAi.jpg";
 import Image from "next/image";
+import FAQSection from "../../../components/sections/FAQSection";
 
 const whyRedTeamDifferent = [
   {
@@ -289,6 +290,59 @@ const ourDifferentiators = [
   },
 ];
 
+const aiRedTeamAssessmentFAQs = [
+  {
+    question: "What is AI-Augmented Red Team testing?",
+    answer:
+      "AI-Augmented Red Team testing simulates attack paths where AI systems are the target, the weapon, or both. It covers AI supply chain attack simulation against ML pipelines, LLM/agent red teaming including prompt injection and jailbreaks, deepfake-based vishing and BEC simulation, and AI-accelerated recon benchmarking - going beyond traditional network and human-focused red teaming.",
+  },
+  {
+    question: "Does ISECURION deliver AI-Augmented Red Team engagements outside India?",
+    answer:
+      "Yes. ISECURION delivers AI-Augmented Red Team engagements globally, including the United States, United Kingdom, Europe, the GCC (UAE, Saudi Arabia, Qatar), Singapore, and Australia, through a mix of remote engagement and on-site delivery, coordinated across time zones by a dedicated engagement lead.",
+  },
+  {
+    question: "How is this different from a traditional red team engagement?",
+    answer:
+      "Traditional red teams test human and network attack paths - phishing, network pivoting, physical access. AI-Augmented Red Team specifically tests AI-native attack surfaces: ML training/inference pipelines, LLM guardrails and tool-calling agents, and AI-generated social engineering like deepfake voice cloning.",
+  },
+  {
+    question: "Can we run just one module, or do we need the full suite?",
+    answer:
+      "Each of the four modules - Supply Chain Attack Simulation, LLM/Agent Red Teaming, Deepfake Vishing/BEC Simulation, and AI-Accelerated Recon Benchmark - can be scoped and priced standalone. Bundling two or more modules earns a discount, and the full suite is available at a flat package price.",
+  },
+  {
+    question: "Is the deepfake vishing simulation legal and ethical across jurisdictions?",
+    answer:
+      "Yes. Deepfake voice or video content is only created and used with documented consent from the impersonated individual, under signed rules of engagement tailored to local law in the client's jurisdiction, and destroyed after the engagement per agreed retention terms.",
+  },
+  {
+    question: "How does this align with data protection rules like GDPR or DPDP?",
+    answer:
+      "Scoping and rules of engagement are adapted to the relevant data protection framework for the client's jurisdiction - including GDPR in Europe, DPDP in India, and equivalent frameworks in the GCC, Singapore, and Australia - so that test data handling, consent, and retention comply with local requirements.",
+  },
+  {
+    question: "What is included in functional testing for this service?",
+    answer:
+      "Functional testing validates that your controls actually work as designed - guardrail response consistency, tool-call authorization enforcement, human-in-the-loop approval gates, credential scoping for processing workers, detection and alerting pipelines, escalation workflows, out-of-band verification protocols, model/dataset provenance checks, session isolation, and error handling. This runs alongside the attack simulation in every module.",
+  },
+  {
+    question: "How long does a typical Red Team Assessment take?",
+    answer:
+      "Duration varies based on scope, but most assessments take 2-4 weeks, including planning, simulation, and reporting phases.",
+  },
+  {
+    question: "How long does an AI-Augmented Red Team engagement take?",
+    answer:
+      "Standard engagements run 3-5 weeks depending on the number of modules selected and environment complexity, covering scoping, reconnaissance, execution, detection validation, and reporting - regardless of the client's location.",
+  },
+  {
+    question: "How much does an AI-Augmented Red Team engagement cost?",
+    answer:
+      "Pricing depends on the modules selected and your environment complexity, and is quoted in your local currency on request. Contact ISECURION at +91-88612 01570 or info@isecurion.com for a customized, module-by-module quote with bundling discounts available.",
+  },
+];
+
 function AiAugamentedRedTeam() {
   return (
     <div className="bg-[#060D1B]">
@@ -340,7 +394,7 @@ function AiAugamentedRedTeam() {
             </div>
           </div>
           {/* right  */}
-          <div className="w-full flex-1 rounded-3xl  p-4 bg-[#202123]">
+          <div className="w-full flex-1 rounded-3xl  px-6 py-8 bg-[#202123]">
             <div className="space-y-1">
               <h3 className="text-[22px] font-semibold text-[#FFFFFF]">
                 Request AI-Augmented Red Team Consultation
@@ -672,9 +726,8 @@ function AiAugamentedRedTeam() {
                 ].map((title, i) => (
                   <div
                     key={title}
-                    className={`bg-[#071329] border border-white/20 px-4 py-3 text-[13px] font-medium text-[#E5E5E5] ${
-                      i === 3 ? "text-center" : ""
-                    }`}
+                    className={`bg-[#071329] border border-white/20 px-4 py-3 text-[13px] font-medium text-[#E5E5E5] ${i === 3 ? "text-center" : ""
+                      }`}
                   >
                     {title}
                   </div>
@@ -860,85 +913,20 @@ function AiAugamentedRedTeam() {
         </div>
       </section>
 
-      <section>{/* here faqs */}</section>
+      <FAQSection
+        title={
+          <>
+            Frequently Asked Questions -
+            <br className="hidden sm:block" />
+            AI-Augmented Red Team 
+          </>
+        }
+        description="Common questions from security and engineering teams across the United States, Europe, GCC, Singapore, Australia, and India"
+        faqs={aiRedTeamAssessmentFAQs}
+      />
 
-      {/* Ready to Benchmark Your AI Threat Readiness - Wherever You're Based? */}
-      {/* <section className="relative w-full py-14 overflow-hidden bg-gradient-to-br from-[#050B1A] via-[#06203F] to-[#0A5C8A]">
-        <div className="absolute inset-0 ">
-          <Image src={benchmark} alt="benchmark" />
-        </div>
 
-        <div className="absolute -top-170 left-1/2 -translate-x-1/2 w-[1100px] h-[1100px] rounded-full opacity-50 bg-[#FFFFFF]/1 shadow-[inset_0_0_50px_#FFFFFF26]" />
 
-        <div className="absolute bottom-0 left-0 translate-y-1/2 w-[400px] h-[400px] rounded-full bg-[#FFFFFF03] shadow-[inset_0_0_10px_#FFFFFF26]" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10   ">
-          <div className="max-w-2xl space-y-4">
-            <h2 className="font-medium text-white">
-              Ready to Benchmark Your AI Threat Readiness - Wherever You're
-              Based?
-            </h2>
-
-            <p className="text-base sm:text-lg font-normal text-white">
-              Partner with ISECURION - CERT-In empanelled, ISO 27001:2022
-              certified - for AI-Augmented Red Team testing that goes where
-              traditional red teams don't.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <button className="text-[15px] font-medium p-4 rounded-[10px] cursor-pointer text-[#31435C] bg-white">
-                Schedule AI Red Team Engagement →
-              </button>
-              <button className="text-[15px] font-medium p-4 flex items-center gap-3 rounded-[10px] cursor-pointer text-white border border-[#FFFFFF29]">
-                <span>
-                  <Icon
-                    icon="flowbite:outgoing-call-outline"
-                    className="w-[18px] h-[18px]"
-                  />
-                </span>
-                Call India (Bangalore): +91- 8861201570
-              </button>
-              <button className="text-[15px] font-medium p-4 flex items-center gap-3 rounded-[10px] cursor-pointer text-[#FFFFFF] border border-[#FFFFFF29]">
-                <span>
-                  <Icon
-                    icon="eva:email-outline"
-                    className="w-[18px] h-[18px]"
-                  />
-                </span>{" "}
-                Email Global Team
-              </button>
-            </div>
-          </div>
-          <div className="absolute right-10   flex justify-end -bottom-0 h-[100px] ">
-            <div className="grid grid-cols-2 gap-3">
-              <div className="px-2 py-3 flex items-center gap-2 opacity-50 text-[#FFFFFF] bg-[#FFFFFF33]">
-                <span>
-                  <Icon icon="ic:round-stars" />
-                </span>
-                <p>Global Coverage</p>
-              </div>
-              <div className="px-2 py-3 flex items-center gap-2 text-[#FFFFFF] bg-[#FFFFFF33]">
-                <span>
-                  <Icon icon="ic:round-stars" />
-                </span>
-                <p>CERT-In Empanelled</p>
-              </div>
-              <div className="px-2 py-3 flex items-center gap-2 text-[#FFFFFF] bg-[#FFFFFF33]">
-                <span>
-                  <Icon icon="ic:round-stars" />
-                </span>
-                <p>Board-Ready Reports</p>
-              </div>
-              <div className="px-2 py-3 flex items-center gap-2 text-[#FFFFFF] bg-[#FFFFFF33] shadow shadow-[#FFFFFF33]">
-                <span>
-                  <Icon icon="ic:round-stars" />
-                </span>
-                <p>AI/LLM Domain Experts</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }

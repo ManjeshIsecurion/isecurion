@@ -1,4 +1,5 @@
 import React from "react";
+import { Icon } from "@iconify/react";
 
 function HomeCTA() {
   return (
@@ -18,8 +19,9 @@ function HomeCTA() {
             </p>
 
             <div className="flex flex-col gap-3 py-3 sm:flex-row">
-              <button className="flex cursor-pointer items-center justify-center rounded-lg bg-linear-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70] px-5 py-3 text-base font-semibold text-white">
-                Schedule a Consultation →
+              <button className="flex gap-2 cursor-pointer items-center justify-center rounded-lg bg-linear-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70] px-5 py-3 text-base font-semibold text-white">
+                Schedule a Consultation 
+                <span><Icon icon="ep:right" width={20}/> </span>
               </button>
 
               <button className="flex cursor-pointer items-center justify-center rounded-lg border border-[#D8E4EF] bg-white px-5 py-3 text-base font-semibold text-[#31435C]">

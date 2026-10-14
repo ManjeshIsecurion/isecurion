@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode, useState } from "react";
+import {Animation} from '../../components/ui/Animation'
 
 type FAQItem = {
     question: string;
@@ -29,20 +30,23 @@ export default function FAQSection({
             <div className="mx-auto max-w-7xl  px-6 py-16 sm:px-10 lg:px-12 lg:py-20">
 
                 {/* FAQ Header */}
+                <Animation>
                 <div className="text-center">
 
                     <h2 className="mx-auto max-w-[700px] text-3xl font-normal sm:leading-14 text-white sm:text-4xl">
                         {title}
                     </h2>
 
-                    <p className="mx-auto mt-8 max-w-[700px] text-sm leading-7 text-white/65 sm:text-base">
+                    <p className="mx-auto mt-3 max-w-[670px] text-sm leading-7 text-white/65 sm:text-base">
                         {description}
                     </p>
 
                 </div>
+                </Animation>
 
 
                 {/* FAQ List */}
+                <Animation>
                 <div className="mx-auto mt-12 max-w-[1020px] space-y-4">
 
                     {faqs.map((faq, index) => {
@@ -89,6 +93,7 @@ export default function FAQSection({
                     })}
 
                 </div>
+                </Animation>
 
             </div>
         </section>

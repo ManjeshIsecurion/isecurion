@@ -15,6 +15,7 @@ import frame3 from "../../../assets/services/Frame3.png"
 import frame4 from "../../../assets/services/Frame4.png"
 import frame5 from "../../../assets/services/Frame5.png"
 import FAQSection from "../../../components/sections/FAQSection";
+import { Animation, LeftAnimation } from "../../../components/ui/Animation";
 
 const redTeamAssessmentFAQs = [
     {
@@ -75,7 +76,9 @@ export default function RedTeamAssessmentPage() {
     return (
         <main className="min-h-screen bg-black text-white">
             {/* RED TEAM SECTION */}
+             
             <section className="mx-auto max-w-7xl bg-black">
+               
                 <div className="relative overflow-hidden px-7 py-10 sm:px-10 lg:px-8 lg:py-10 xl:px-10">
 
                     <img
@@ -86,15 +89,16 @@ export default function RedTeamAssessmentPage() {
                     />
 
                     <div className="relative z-10 grid grid-cols-1 gap-12 lg:grid-cols-[500px_minmax(0,0.9fr)] lg:items-center lg:gap-8">
-                        <div className="flex flex-col justify-center lg:py-2">
+                        <Animation>
+                        <div className="flex flex-col justify-center lg:py-2 text-center md:text-left">
 
                             {/* Eyebrow */}
-                            <p className="text-[13px] font-medium uppercase leading-none text-[#E24B4A] sm:text-sm">
+                            <p className="text-[13px] font-semibold uppercase leading-none text-[#E24B4A] sm:text-sm">
                                 Red Team Assessment
                             </p>
 
                             {/* Heading */}
-                            <h1 className="mt-5 max-w-[390px] text-[32px] font-medium leading-[1.4] tracking-[-0.02em] text-white sm:text-[36px] lg:text-[32px] xl:text-[34px]">
+                            <h1 className="mt-5 max-w-[430px] font-semibold leading-[1.4] tracking-[-0.02em] text-white ">
                                 Red Team
                                 <br />
                                 Assessment Services
@@ -158,6 +162,9 @@ export default function RedTeamAssessmentPage() {
                                 </div>
                             </div>
                         </div>
+                        </Animation>
+
+                        <Animation>
                         <div className="w-full rounded-[20px] bg-[#202123] p-[30px] shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-[32px] lg:h-[600px] lg:p-[30px] xl:p-[40px]">
                             <div>
                                 <h2 className="text-[18px] font-medium leading-[1.3] text-white sm:text-[19px]">
@@ -311,12 +318,16 @@ export default function RedTeamAssessmentPage() {
                                 </button>
                             </form>
                         </div>
+                        </Animation>
                     </div>
                 </div>
+                
             </section>
-
+           
+            
             <section className="bg-[#050B1A]">
-                <div className="mx-auto max-w-7xl px-7 py-10 sm:px-10 lg:px-8 lg:py-14 xl:px-10">
+                <Animation>
+                <div className="mx-auto max-w-7xl px-7 py-10 sm:px-10 lg:px-8 lg:py-14 xl:px-10 text-center md:text-left">
                     <h2 className="text-[30px] font-normal leading-[1.2]  text-white sm:text-[38px] lg:text-[40px]">
                         What is Red Team Assessment?
                     </h2>
@@ -332,8 +343,9 @@ export default function RedTeamAssessmentPage() {
                     </p>
 
                 </div>
-
+                </Animation>
             </section>
+            
 
             {/* RED TEAM ASSESSMENT OBJECTIVES */}
             <section className="mx-auto max-w-7xl overflow-hidden bg-black">
@@ -358,6 +370,7 @@ export default function RedTeamAssessmentPage() {
                     </div>
 
                     {/* ==================== OBJECTIVES ==================== */}
+                    <Animation>
                     <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:mt-[78px] lg:grid-cols-4">
 
                         {/* ==================== OBJECTIVE 01 ==================== */}
@@ -472,10 +485,12 @@ export default function RedTeamAssessmentPage() {
                             </span>
                         </div>
                     </div>
+                    </Animation>
                 </div>
             </section>
 
             {/* WHAT WE ASSESS */}
+            
             <section className="bg-[#050D1D]">
 
                 {/* ==================== ATTACK SURFACE ==================== */}
@@ -491,9 +506,10 @@ export default function RedTeamAssessmentPage() {
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,10,19,0.88)_0%,rgba(3,10,19,0.62)_55%,rgba(3,10,19,0.8)_100%)] lg:hidden" />
 
                     {/* Content */}
+                    <Animation>
                     <div className="mx-auto max-w-7xl overflow-hidden relative z-10 flex min-h-[385px] items-center px-7 py-14 sm:min-h-[410px] sm:px-10 sm:py-16 lg:min-h-[385px] lg:px-7 lg:py-12 xl:px-7">
 
-                        <div className="max-w-[430px]">
+                        <div className="max-w-[430px] text-center md:text-left">
 
                             {/* Eyebrow */}
                             <p className="text-[13px] font-medium uppercase text-[#E24B4A] sm:text-[15px]">
@@ -523,12 +539,14 @@ export default function RedTeamAssessmentPage() {
 
                         </div>
                     </div>
+                    </Animation>
                 </div>
 
                 {/* ==================== ASSESSMENT AREAS ==================== */}
-                <div className="relative mx-auto max-w-7xl px-7 py-14 sm:px-10 sm:py-16 lg:px-7 lg:py-[76px] xl:px-8">
+                <Animation>
+                <div className="relative mx-auto max-w-7xl px-7 py-14 sm:px-10 sm:py-16 lg:px-7 lg:py-[76px] xl:px-8 items-center ">
 
-                    <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-5 lg:gap-x-14">
+                    <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-5 lg:gap-x-14 ">
 
                         {/* ==================== OPEN SOURCE INTELLIGENCE ==================== */}
                         <div className="min-w-0">
@@ -626,7 +644,9 @@ export default function RedTeamAssessmentPage() {
                     <div className="mt-14 h-[1.2px] w-full bg-[#DADADA45] sm:mt-16 lg:mt-[72px]" />
 
                 </div>
+                </Animation>
             </section>
+           
 
             <section className="bg-black px-0">
                 <div className="relative min-h-[671px] overflow-hidden">
@@ -648,6 +668,7 @@ export default function RedTeamAssessmentPage() {
                             <div className="relative min-h-[555px]">
 
                                 {/* Left content */}
+                                <Animation>
                                 <div className="absolute left-0 top-0 w-[500px]">
 
                                     <p className="text-[15px] font-medium leading-[18px] text-[#E24B4A]">
@@ -669,9 +690,11 @@ export default function RedTeamAssessmentPage() {
                                     </p>
 
                                 </div>
+                                </Animation>
 
 
                                 {/* Card 01 */}
+                                <Animation>
                                 <div className="absolute left-[690px] top-[60px] h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[51%] px-[20px] py-[20px]">
 
                                     <div className="flex items-start justify-between">
@@ -696,9 +719,11 @@ export default function RedTeamAssessmentPage() {
                                     </div>
 
                                 </div>
+                                </Animation>
 
 
                                 {/* Card 02 */}
+                                <Animation>
                                 <div className="absolute left-[947px] top-0 h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[51%] px-[20px] py-[20px]">
 
                                     <div className="flex items-start justify-between">
@@ -723,9 +748,10 @@ export default function RedTeamAssessmentPage() {
                                     </div>
 
                                 </div>
-
+                                </Animation>
 
                                 {/* Card 03 */}
+                                <Animation>
                                 <div className="absolute left-[690px] top-[315px] h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[50%] px-[20px] py-[20px]">
 
                                     <div className="flex items-start justify-between">
@@ -751,9 +777,11 @@ export default function RedTeamAssessmentPage() {
                                     </div>
 
                                 </div>
+                                </Animation>
 
 
                                 {/* Card 04 */}
+                                <Animation>
                                 <div className="absolute left-[947px] top-[250px] h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[51%] px-[20px] py-[20px]">
 
                                     <div className="flex items-start justify-between">
@@ -778,6 +806,7 @@ export default function RedTeamAssessmentPage() {
                                     </div>
 
                                 </div>
+                                </Animation>
 
                             </div>
                         </div>
@@ -1066,6 +1095,7 @@ export default function RedTeamAssessmentPage() {
 
             <section className="bg-[#050B18] px-0">
                 <div className="mx-auto max-w-7xl overflow-hidden ">
+                    <Animation>
                     <div className="px-6 pb-0 pt-[52px] sm:px-10 lg:px-[25px] lg:pt-[51px]">
                         <div className="text-center">
                             <p className="text-[13px] font-medium uppercase  text-[#E24B4A]">WHY ISECURION?</p>
@@ -1079,7 +1109,9 @@ export default function RedTeamAssessmentPage() {
                             </p>
                         </div>
                     </div>
+                    </Animation>
 
+                    <Animation> 
                     <div className="mt-[46px] grid grid-cols-1 sm:grid-cols-3 px-16 pb-16">
                         <div className="relative min-h-[309px] bg-[#050B18] px-[25px] pb-[42px] pt-[31px] sm:px-[25px] lg:px-[30px]">
                             <div className="text-white">
@@ -1129,13 +1161,15 @@ export default function RedTeamAssessmentPage() {
                             </div>
                         </div>
                     </div>
+                    </Animation>
                 </div>
             </section>
 
             <section className="bg-[#050B18] px-0">
                 <div className="mx-auto max-w-7xl  px-6 py-[60px] sm:px-10 sm:py-[70px] lg:px-[26px] lg:py-[77px]">
                     <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr]">
-                        <div className="pb-[50px] lg:pr-[70px] lg:pb-0">
+                        <div className="pb-[50px] lg:pr-[70px] lg:pb-0 text-center md:text-left">
+                            <LeftAnimation>
                             <p className="text-[13px] font-medium uppercase leading-[0.2px] text-[#E24B4A]">WHY CHOOSE US?</p>
 
                             <h2 className="mt-[17px] max-w-[400px] text-[32px] font-normal leading-[1.42] text-white sm:text-[36px] lg:text-[34px]">
@@ -1145,8 +1179,10 @@ export default function RedTeamAssessmentPage() {
                             <p className="mt-[18px] max-w-[420px] text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px]">
                                 ISECURION is a trusted partner for organizations looking to strengthen their defenses through real-world adversary simulations.
                             </p>
+                            </LeftAnimation>
                         </div>
 
+                        <Animation>
                         <div className="border-t border-[#B1B1B114] pt-[45px] lg:border-l lg:border-t-0 lg:pl-[32px] lg:pt-0">
                             <div className="space-y-[20px]">
                                 <div className="grid grid-cols-[35px_1fr] gap-[14px]">
@@ -1200,6 +1236,7 @@ export default function RedTeamAssessmentPage() {
                                 </div>
                             </div>
                         </div>
+                        </Animation>
                     </div>
                 </div>
             </section>
@@ -1228,6 +1265,7 @@ export default function RedTeamAssessmentPage() {
 
 
                     {/* ================= DESKTOP ================= */}
+                    <Animation>
                     <div className="relative mt-[88px] hidden lg:block">
 
                         {/* Connecting line */}
@@ -1378,6 +1416,7 @@ export default function RedTeamAssessmentPage() {
 
                         </div>
                     </div>
+                    </Animation>
 
 
                     {/* ================= TABLET / MOBILE ================= */}

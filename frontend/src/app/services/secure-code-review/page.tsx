@@ -110,7 +110,7 @@ function SecureCode() {
   return (
     <div>
       {/* hero section  */}
-      <section className="relative  w-full h-auto 2xl:h-[60vh] py-14 flex items-center overflow-visible bg-[#000000]">
+      <section className="relative  w-full h-auto 2xl:h-[60vh] py-16 flex items-center overflow-visible bg-[#000000]">
         <div className="absolute w-[200px] h-[400px] md:w-[500px] md:h-[600px] left-10 md:left-20 2xl:left-70 rounded-full blur-[150px]  z-20 pointer-events-none bg-[#0FEADB47] "></div>
         <div className="max-w-7xl w-full mx-auto px-6 sm:px-10 flex flex-col lg:flex-row items-center gap-10 justify-between">
           <div className="space-y-4 flex-1 text-center lg:text-left  flex flex-col items-center lg:items-start">
@@ -163,7 +163,7 @@ function SecureCode() {
       {/* Secure code, from the start.  */}
       <section className="relative w-full py-14 overflow-hidden bg-[#060D1B]">
         <div className="absolute  top-0 w-[300px] h-[400px] rounded-full blur-2xl -right-30 bg-[#4675CE1F]"></div>
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 flex gap-6 lg:gap-15 flex-col lg:flex-row">
+        <div className="max-w-7xl mx-auto px-6 flex gap-6 lg:gap-19 flex-col lg:flex-row">
           <LeftAnimation>
             <div className="space-y-4 p-4 flex-3 text-center lg:text-left">
               <p className="text-sm sm:text-base font-semibold text-[#0F66EA]">

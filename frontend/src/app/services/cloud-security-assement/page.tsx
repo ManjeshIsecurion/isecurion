@@ -5,6 +5,7 @@ import Image from "next/image";
 import cloudsecurity from "../../../assets/services/cloudsecurity.png";
 import settings from "../../../assets/services/settingImage.png";
 import { Animation, AnimatedCard } from "../../../components/ui/Animation";
+import FAQSection from "../../../components/sections/FAQSection";
 
 const weAssess = [
   "Cloud Architecture",
@@ -98,6 +99,58 @@ const steps = [
     icon: "oui:app-reporting",
     description:
       "Deliver comprehensive reports with risk levels, missing controls, and actionable remediation guidance.",
+  },
+];
+const cloudAssessmentFAQs = [
+  {
+    question: "What is a Cloud Security Assessment?",
+    answer:
+      "A Cloud Security Assessment evaluates your cloud infrastructure for vulnerabilities, compliance gaps, and risks, ensuring secure operations and protection of sensitive data.",
+  },
+  {
+    question: "Which cloud environments are assessed?",
+    answer:
+      "Our assessment covers IaaS, PaaS, and SaaS platforms across public, private, and hybrid cloud environments.",
+  },
+  {
+    question: "How do you ensure compliance?",
+    answer:
+      "We align cloud infrastructure with ISO 27001, HIPAA, PCI DSS, and local regulatory requirements, ensuring your systems meet industry best practices.",
+  },
+  {
+    question: "What types of security tests are performed?",
+    answer:
+      "Tests include internal/external network penetration testing, application security assessments, endpoint security testing, firewall and VPN reviews, and configuration analysis.",
+  },
+  {
+    question: "How long does a Cloud Security Assessment take?",
+    answer:
+      "Depending on the size and complexity of your cloud infrastructure, assessments typically take between 2 to 6 weeks.",
+  },
+  {
+    question: "Will my data be safe during assessment?",
+    answer:
+      "Yes. All assessments are conducted under strict confidentiality agreements, ensuring your data and systems remain secure.",
+  },
+  {
+    question: "Do you provide remediation guidance?",
+    answer:
+      "Yes. After identifying gaps and vulnerabilities, we provide actionable remediation recommendations and support to fix the issues.",
+  },
+  {
+    question: "How do you handle multi-cloud environments?",
+    answer:
+      "We assess each cloud platform independently while also reviewing integrations and data flow between different cloud providers.",
+  },
+  {
+    question: "Can this assessment be used for regulatory audits?",
+    answer:
+      "Yes. The assessment report is structured to assist in regulatory audits and compliance verification.",
+  },
+  {
+    question: "Why choose ISECURION for Cloud Security Assessment?",
+    answer:
+      "ISECURION is a CERT-IN empanelled, ISO 27001 certified company with expert consultants providing comprehensive, end-to-end cloud security assessments and actionable remediation guidance.",
   },
 ];
 
@@ -201,7 +254,7 @@ function CloudSecurity() {
               </div>
             </Animation>
           </div>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {cloudSecurityAssessment.map((item, index) => (
               <AnimatedCard
                 delay={index * 0.15}
@@ -214,7 +267,7 @@ function CloudSecurity() {
                 >
                   <Icon icon={item.Icon} className="text-xl text-[#FFFFFF]" />
                 </div>
-                <div className="space-y-3 mt-8">
+                <div className="space-y-3 mt-12">
                   <h3 className="text-base sm:text-lg font-semibold text-[#FEFEFE]">
                     {item.title}
                   </h3>
@@ -314,6 +367,17 @@ function CloudSecurity() {
           </div>
         </div>
       </section>
+      <FAQSection
+        title={
+          <>
+            Frequently Asked Questions -
+            <br className="hidden sm:block" />
+            Cloud Security Assessment
+          </>
+        }
+        description="Clear answers about our cloud security assessment approach, coverage, and deliverables."
+        faqs={cloudAssessmentFAQs}
+      />
     </div>
   );
 }

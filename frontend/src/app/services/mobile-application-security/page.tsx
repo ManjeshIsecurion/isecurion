@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import FAQSection from "../../../components/sections/FAQSection";
 import methodologySettings from "../../../assets/services/methodologySettings.png";
-import { Animation } from "../../../components/ui/Animation";
+import { Animation, AnimatedCard } from "../../../components/ui/Animation";
 
 const mobileAssessmentCards = [
   {
@@ -171,16 +171,16 @@ function page() {
     <main className="bg-black">
       <section>
         <div
-          className="relative min-h-[500px]  overflow-hidden bg-cover  bg-no-repeat"
+          className="relative h-auto sm:h-[80vh] 2xl:h-[60vh] bg-cover bg-center"
           style={{
             backgroundImage: `url(${mobileHeroBackground.src})`,
           }}
         >
           {/* Hero Content */}
           <Animation>
-            <div className="relative  mx-auto max-w-7xl z-10 flex min-h-[500px] items-center px-6 py-16 sm:px-10 lg:px-12">
+            <div className="relative  mx-auto max-w-7xl z-10 flex min-h-[424px] items-center px-6 py-16 sm:px-10 lg:px-12 text-center md:text-left">
               <div className="w-full lg:w-[58%]">
-                <h1 className="max-w-[750px] text-2xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[42px]">
+                <h1 className="max-w-[750px] font-semibold leading-[1.2] text-white ">
                   Mobile Application Security
                 </h1>
 
@@ -211,7 +211,7 @@ function page() {
         <div className="mx-auto max-w-7xl px-6 py-14 sm:px-10 lg:px-12 lg:py-16">
           {/* Section Content */}
           <Animation>
-            <div className="">
+            <div className="text-center md:text-left">
               <h2 className="text-3xl font-normal leading-tight text-white sm:text-4xl lg:text-[40px]">
                 What Is Mobile Application Security Assessment?
               </h2>
@@ -320,7 +320,7 @@ function page() {
         </div>
       </section>
 
-      <Animation>
+    
         <section>
           <div className="relative  overflow-hidden bg-[linear-gradient(110deg,#050B18_0%,#071321_48%,#06383C_100%)]">
             <div className="pointer-events-none absolute right-0 top-0">
@@ -330,6 +330,7 @@ function page() {
             <div className="pointer-events-none absolute right-[-100px] top-[-100px] h-[400px] w-[400px] rounded-full bg-[#159A9C]/10 blur-[100px]" />
 
             {/* Methodology Header */}
+            <Animation>
             <div className="relative mx-auto max-w-7xl px-6 pb-8 pt-16 text-center sm:px-10 lg:px-12 lg:pt-20">
               <h2 className="text-3xl font-normal leading-tight text-white sm:text-4xl lg:text-[36px]">
                 Our Mobile Security Methodology
@@ -340,6 +341,7 @@ function page() {
                 targeted automation to deliver depth and accuracy.
               </p>
             </div>
+            </Animation>
 
             <Animation>
               <div className="relative hidden px-6 pb-16 pt-5 lg:block lg:px-12">
@@ -357,7 +359,8 @@ function page() {
                 {/* Methodology Steps */}
                 <div className="relative grid grid-cols-5">
                   {mobileMethodology.map((step, index) => (
-                    <div
+                    <AnimatedCard
+                      delay={index * 0.2}
                       key={step.number}
                       className="relative flex flex-col items-center text-center"
                     >
@@ -394,17 +397,17 @@ function page() {
                       {index !== mobileMethodology.length - 1 && (
                         <div className="absolute right-0 top-[205px] h-[165px] w-px bg-[#14283D]" />
                       )}
-                    </div>
+                    </AnimatedCard>
                   ))}
                 </div>
               </div>
             </Animation>
 
             <div className="px-6 pb-14 pt-5 sm:px-10 lg:hidden">
-              <Animation>
+             
                 <div className="space-y-10">
                   {mobileMethodology.map((step, index) => (
-                    <div key={step.number} className="relative flex gap-4">
+                    <AnimatedCard key={step.number} delay={index * 0.1} className="relative flex gap-4">
                       {/* Vertical Line */}
                       {index !== mobileMethodology.length - 1 && (
                         <div className="absolute left-[23px] top-[55px] h-[calc(100%+20px)] w-px bg-[#39457D]" />
@@ -440,16 +443,16 @@ function page() {
                           {step.description}
                         </p>
                       </div>
-                    </div>
+                    </AnimatedCard>
                   ))}
                 </div>
-              </Animation>
+           
             </div>
           </div>
         </section>
-      </Animation>
+      
 
-      <Animation>
+     
         <FAQSection
           title={
             <>
@@ -461,7 +464,7 @@ function page() {
           description="Everything you need to know about our mobile application security assessment."
           faqs={mobileApplicationFAQs}
         />
-      </Animation>
+
     </main>
   );
 }

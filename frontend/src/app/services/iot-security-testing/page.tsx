@@ -1,8 +1,7 @@
 import React from "react";
-import { Animation } from "../../../components/ui/Animation";
+import { Animation, AnimatedCard } from "../../../components/ui/Animation";
 import IOTsecutityBg from "../../../assets/services/iot-security-bg.png";
 import { Icon } from "@iconify/react";
-import ellipseBackground from "../../../assets/services/EllipseBackground.png";
 
 const testingSteps = [
   {
@@ -80,48 +79,50 @@ const cards = [
 function page() {
   return (
     <main className="bg-[black]">
+     
       <section className="relative overflow-hidden bg-[#07101D]">
         <div
-          className="absolute inset-0 bg-cover bg-no-repeat bg-[position:center_center] lg:bg-[position:center_center]"
+          className="absolute inset-0 bg-cover bg-no-repeat min-h-[560px] bg-[position:center_center] lg:bg-[position:center_center]"
           style={{
             backgroundImage: `url(${IOTsecutityBg.src})`,
           }}
         />
 
         <div className="absolute inset-0 bg-[#07101D]/10" />
-
+        
         <div
-          className="relative z-10 mx-auto flex min-h-[610px] max-w-7xl items-center px-6 py-16 sm:px-8 md:min-h-[600px] md:px-10
-                    lg:min-h-[610px] lg:px-[26px] lg:py-[58px]"
+          className="relative z-10 mx-auto flex min-h-[610px] max-w-7xl items-center px-6 py-16 sm:px-8 md:min-h-[560px] md:px-10
+                    lg:min-h-[560px] lg:px-[26px] lg:py-[50px]"
         >
-          <div className="w-full max-w-[590px] md:max-w-[560px] lg:max-w-[570px]">
+          <Animation>
+          <div className="w-full max-w-[590px] md:max-w-[560px] lg:max-w-[570px] text-center md:text-left">
             {/* EYEBROW */}
             <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
               IOT SECURITY TESTING
             </p>
 
             {/* HEADING */}
-            <h1 className="mt-[18px] max-w-[570px] text-[38px] font-medium leading-[1.25] tracking-[-0.02em] text-white sm:text-[38px] md:text-[46px] lg:mt-[22px] lg:text-[40px] lg:leading-[1.4]">
+            <h1 className="mt-[18px] max-w-[570px]  font-semibold leading-[1.25] tracking-[-0.02em] text-white lg:mt-[22px] lg:leading-[1.4]">
               Protect Your
               <br />
               Connected Ecosystem
             </h1>
 
             {/* FIRST DESCRIPTION */}
-            <p className="mt-[24px] max-w-[550px] text-[16px] font-normal leading-[1.75] text-[#D1D1D1] sm:text-[17px] lg:mt-[26px] lg:max-w-[450px] lg:text-[17px] lg:leading-[1.72]">
+            <p className="mt-[24px] max-w-[550px] text-[15px] font-normal leading-[1.75] text-[#D1D1D1] sm:text-[17px] lg:mt-[26px] lg:max-w-[450px] lg:text-[17px] lg:leading-[1.72]">
               Identify vulnerabilities across your connected devices, networks,
               and IoT infrastructure, before attackers do.
             </p>
 
             {/* SECOND DESCRIPTION */}
-            <p className="mt-[18px] max-w-[550px] text-[16px] font-normal leading-[1.75] text-[#D1D1D1] sm:text-[17px] lg:mt-[18px] lg:max-w-[450px] lg:text-[17px] lg:leading-[1.72]">
+            <p className="mt-[18px] max-w-[550px] text-[15px] font-normal leading-[1.75] text-[#D1D1D1] sm:text-[17px] lg:mt-[18px] lg:max-w-[450px] lg:text-[17px] lg:leading-[1.72]">
               ISECURION helps you secure your IoT environment with comprehensive
               testing, risk analysis, and actionable insights for stronger,
               safer operations.
             </p>
 
             <div className="mt-[30px] sm:mt-[34px]">
-              <button className="inline-flex h-[54px] items-center justify-center rounded-[9px] bg-white px-[20px] py-[14px] text-[15px] font-medium text-[#31435C] transition-all duration-200 hover:bg-[#F3F5F8] sm:min-h-[54px] sm:px-[21px] lg:px-[20px]">
+              <button className="inline-flex h-[54px] items-center justify-center rounded-[9px] bg-white px-[20px] py-[14px] text-[13px] sm:text-[15px] font-medium text-[#31435C] transition-all duration-200 hover:bg-[#F3F5F8] sm:min-h-[54px] sm:px-[21px] lg:px-[20px]">
                 <span>Schedule My IoT Security Consultation</span>
 
                 <span className="ml-[8px] text-[20px]">
@@ -130,25 +131,29 @@ function page() {
               </button>
             </div>
           </div>
+          </Animation>
         </div>
+       
       </section>
+      
 
       {/* OVERVIEW & HOW WE TEST SECTION */}
       <section className="relative border-t border-white/5 bg-[#07101D] pt-16 text-white sm:pt-18 lg:pt-20">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 lg:px-[26px]">
           {/* TOP GRID: OVERVIEW (LEFT) & TIMELINE (RIGHT) */}
+          <Animation>
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-24">
             {/* LEFT COLUMN: OVERVIEW */}
             <div className="lg:col-span-7">
-              <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
+              <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px] text-center md:text-left">
                 OVERVIEW
               </p>
 
-              <h2 className="mt-[16px] text-[32px] font-medium leading-[1.25] tracking-[-0.02em] text-white sm:text-[38px] lg:text-[40px]">
+              <h2 className="mt-[16px] text-[32px] font-medium leading-[1.25] tracking-[-0.02em] text-white sm:text-[38px] lg:text-[40px] text-center md:text-left">
                 What Is IoT Security Testing?
               </h2>
 
-              <div className="mt-[22px] max-w-[530px] space-y-5 text-[16px] font-normal leading-[1.72] text-[#D1D1D1] sm:text-[17px]">
+              <div className="mt-[22px] max-w-[530px] space-y-5 text-[16px] font-normal leading-[1.72] text-[#D1D1D1] sm:text-[17px] text-center md:text-left">
                 <p>
                   IoT Security Testing is a structured assessment of connected
                   devices, communication protocols, applications, APIs,
@@ -166,7 +171,7 @@ function page() {
 
             {/* RIGHT COLUMN: HOW WE TEST THE IOT ATTACK SURFACE */}
             <div className="lg:col-span-5">
-              <p className="mb-8 text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
+              <p className="mb-8 text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px] text-center md:text-left">
                 HOW WE TEST THE IOT ATTACK SURFACE
               </p>
 
@@ -176,8 +181,10 @@ function page() {
                 <div className="absolute top-[10px] bottom-[2px] left-[66px] sm:left-[74px] w-[1.5px] -translate-x-1/2 bg-[#626877]" />
 
                 {testingSteps.map((step, index) => (
-                  <div
+                  
+                  <AnimatedCard
                     key={index}
+                    delay={index * 0.15}
                     className="relative z-10 flex items-start gap-4 sm:gap-6 pb-7 last:pb-0"
                   >
                     {/* 1. CIRCULAR ICON BADGE */}
@@ -202,13 +209,15 @@ function page() {
                         {step.description}
                       </p>
                     </div>
-                  </div>
+                  </AnimatedCard>
                 ))}
               </div>
             </div>
           </div>
+          </Animation>
 
           {/* BOTTOM CARDS GRID */}
+         
           <div className="mt-12 grid grid-cols-1 gap-5 py-12 sm:grid-cols-2 lg:grid-cols-3 sm:py-16">
             {cards.map((card, index) => (
               <Animation key={card.title} delay={index * 0.12}>
@@ -235,6 +244,7 @@ function page() {
               </Animation>
             ))}
           </div>
+          
         </div>
       </section>
 
@@ -244,11 +254,11 @@ function page() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 ">
           {/* SECTION HEADER */}
           <div className="max-w-4xl">
-            <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
+            <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px] text-center md:text-left">
               OUR METHODOLOGY
             </p>
 
-            <h2 className="mt-[16px] text-[32px] font-medium leading-[1.3] tracking-[-0.02em] text-white sm:text-[38px] lg:text-[42px]">
+            <h2 className="mt-[16px] text-[32px] font-medium leading-[1.3] tracking-[-0.02em] text-white sm:text-[38px] lg:text-[42px] text-center md:text-left">
               From Discovery to IoT <br />
               Resilience.
             </h2>
@@ -261,6 +271,7 @@ function page() {
           </div>
 
           {/* 5-STEP METHODOLOGY GRID */}
+          <Animation>
           <div className="mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-6">
             {/* STEP 01 */}
             <div className="flex flex-col justify-between h-full">
@@ -453,6 +464,7 @@ function page() {
               </div>
             </div>
           </div>
+          </Animation>
         </div>
       </section>
     </main>

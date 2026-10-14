@@ -1,13 +1,10 @@
+"use client"
 import React from "react";
 import { Icon } from "@iconify/react";
-import Image from "next/image";
-import titik from "../../../assets/contact/titik.png";
-import contactbackground from "../../../assets/contact/contactbackground.png";
-import global from "../../../assets/contact/global.png";
 import LocationMap from "../../../components/ui/LocationMap";
 import leftBackground from "../../../assets/contact/left_background.png";
 import contactBg from "../../../assets/contact/Section.svg";
-import { AnimatedCard, Animation } from "../../../components/ui/Animation";
+import { Animation } from "../../../components/ui/Animation";
 
 const enquiredata = [
   {
@@ -127,7 +124,7 @@ function page() {
                           icon="material-symbols:contact-support-rounded"
                           className="text-[#0F66EA] w-[25px] h-[25px]"
                         />
-                      </span>
+                      </span>{''}
                       CONTACT US
                     </p>
                   </div>
@@ -258,10 +255,7 @@ function page() {
                 </div>
                 <div className="flex">
                   <div className="flex flex-col gap-2 w-full">
-                    <label
-                      htmlFor=""
-                      className="text-sm font-medium text-white"
-                    >
+                    <label htmlFor="service-intrested" className="text-sm font-medium text-white">
                       Service Interested In
                     </label>
                     <select className="text-sm font-normal px-4 py-4 w-full rounded-[10px] outline-none border-[1.14px] border-[#262D3D] text-[#D1D1D1]">

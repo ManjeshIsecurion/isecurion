@@ -32,7 +32,7 @@ import mobile from "../assets/home/auditorcertifications/mobile.svg";
 import cism from "../assets/home/auditorcertifications/cism.png";
 import cissp from "../assets/home/auditorcertifications/cissp.svg";
 import cisa from "../assets/home/auditorcertifications/cisa.svg";
-import { Animation, AnimatedHeading } from "../components/ui/Animation";
+import { Animation,LeftAnimation, RightAnimation} from "../components/ui/Animation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import healthcare from "../assets/home/health-care.png";
@@ -286,7 +286,7 @@ export default function Home() {
       <div>
         <div
           style={{ backgroundImage: `url(${herobackground.src})` }}
-          className="bg-center bg-no-repeat "
+          className="bg-center bg-cover bg-no-repeat "
         >
           <div className="max-w-7xl mx-auto px-10 flex flex-col 2xl:min-h-[60vh] py-15 ">
             <div className="flex-1 flex items-center  justify-between">
@@ -312,7 +312,7 @@ export default function Home() {
                     </span>
                   </button>
                   <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer text-white rounded-lg border border-[#FFFFFF29]">
-                    <span></span>
+                    
                     Explore services ›
                   </button>
                 </div>
@@ -464,28 +464,33 @@ export default function Home() {
       {/* WHY ORGANIZATIONS CHOOSE ISECURION */}
       <div className="bg-[#070D1A]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A]  py-10">
-          <Animation>
+          <LeftAnimation>
             <p className="flex items-center gap-2">
               <span className="block h-6 w-[2px] bg-[#0F66EA]"></span>
 
-              <span className="text-sm sm:text-base font-semibold uppercase text-[#0F66EA] sectionheading tracking-[2px]">
+              <span className="text-sm sm:text-base font-semibold uppercase text-[#0F66EA] sectionheading tracking-[2px] text-center lg:text-left">
                 WHY ORGANIZATIONS CHOOSE ISECURION
               </span>
             </p>
+             </LeftAnimation>
             <div className="flex flex-col lg:flex-row items-center justify-between mt-6 gap-5">
+              <LeftAnimation>
               <h2 className="text-2xl sm:text-[38px] text-center lg:text-left font-medium  text-white">
                 Security is more than <br />
                 protection. <br /> It's the foundation of <br />
                 <span className="text-[#0F66EA]">confident business.</span>
               </h2>
+              </LeftAnimation>
+              <RightAnimation>
               <p className="text-base font-medium  lg:max-w-lg text-center lg:text-left text-[#D1D1D1] leading-7">
                 Organizations rely on applications, cloud infrastructure,
                 digital identities, and connected systems to operate. ISECURION
                 helps validate security continuously, reduce risk proactively,
                 and build long-term cyber resilience.
               </p>
+              </RightAnimation>
             </div>
-          </Animation>
+         
           <div>
             <Animation>
               <div className="flex flex-col lg:flex-row gap-5 mt-10">
@@ -494,7 +499,7 @@ export default function Home() {
                     <Image
                       src={indentifyrisk}
                       alt="indentifyrisk"
-                      className="h-full  object-cover transition-transform duration-800 ease-in-out group-hover:scale-115 "
+                      className="h-full w-full object-cover transition-transform duration-800 ease-in-out group-hover:scale-115 "
                     />
                   </div>
                   <div className="relative z-10 flex max-w-[360px] rounded-[5px] bg-linear-to-r from-[#002A69] to-[#000000] p-4 ">
@@ -528,7 +533,7 @@ export default function Home() {
                     <Image
                       src={continuousvalidation}
                       alt="continuousvalidation"
-                      className="h-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
+                      className="h-full w-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
                     />
                   </div>
                   <div className="relative z-10 flex max-w-md rounded-[5px] bg-linear-to-r from-[#002A69] to-[#000000] p-4 ">
@@ -566,7 +571,7 @@ export default function Home() {
                     <Image
                       src={defence}
                       alt="defence"
-                      className="h-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
+                      className="h-full w-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
                     />
                   </div>
                   <div className="relative z-10 flex max-w-md rounded-md bg-linear-to-r from-[#002A69] to-[#000000] p-4 ">
@@ -600,7 +605,7 @@ export default function Home() {
                     <Image
                       src={buildtrust}
                       alt="buildtrust"
-                      className="h-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
+                      className="h-full w-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
                     />
                   </div>
                   <div className="relative z-10 flex max-w-[370px] rounded-md bg-linear-to-l to-[#002A69] from-[#000000] p-4 ">
@@ -641,13 +646,16 @@ export default function Home() {
           <Animation>
             <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
               <div>
+                <LeftAnimation>
                 <h2 className="text-2xl sm:text-4xl font-medium lg:max-w-md text-center lg:text-left text-white sm:leading-11">
                   Capabilities that strengthen{" "}
                   <span className="text-[#0F66EA]">every layer</span> of your
                   organization.
                 </h2>
+                </LeftAnimation>
               </div>
               <div className="lg:max-w-[550px] space-y-2">
+                <RightAnimation>
                 <p className="hidden lg:block  text-base font-semibold text-[#0F66EA] sectionheading tracking-[0.5px]">
                   OUR EXPERTISE
                 </p>
@@ -655,6 +663,7 @@ export default function Home() {
                   A comprehensive portfolio of services and platforms built to
                   reduce risk, improve resilience, and enable secure growth.
                 </p>
+                </RightAnimation>
               </div>
             </div>
           </Animation>
@@ -725,7 +734,7 @@ export default function Home() {
                 </div>
 
                 <button className="relative z-10 mt-5 flex cursor-pointer items-center text-[15px] font-medium text-[#0F66EA] transition-colors duration-300 group-hover:text-white">
-                  View Services
+                  View Services{''}
                   <span className="ml-1">
                     <Icon icon="solar:arrow-right-bold" />
                   </span>
@@ -774,11 +783,11 @@ export default function Home() {
                     </h3>
                     <span className="mt-2 bg-[#818181] w-15 h-0.5"></span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-center lg:text-left lg:max-w-md  text-white py-2">
+                  <h3 className="text-2xl sm:text-3xl font-semibold lg:max-w-md  text-white py-2">
                     Continuous Vulnerability{" "}
                     <span className="text-[#4ADE80]">Intelligence.</span>
                   </h3>
-                  <p className="font-medium max-w-[408px] text-center lg:text-left leading-[25px] tracking-[-0.34px] text-[#8F90AB]">
+                  <p className="font-medium max-w-[408px]  leading-[25px] tracking-[-0.34px] text-[#8F90AB]">
                     Discover, prioritize, and remediate vulnerabilities across
                     your digital assets with actionable insights and real-time
                     visibility.
