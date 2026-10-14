@@ -159,7 +159,7 @@ function CloudSecurity() {
     <div>
       {/* hero section  */}
       <section
-        className="bg-cover bg-center h-auto sm:h-[80vh] 2xl:h-[60vh] py-14 flex items-center justify-center"
+        className="bg-cover bg-center h-auto xl:h-[80vh] 2xl:h-[70vh] py-14 flex items-center justify-center"
         style={{ backgroundImage: `url(${cloudsecurity.src})` }}
       >
         <div className="max-w-7xl w-full mx-auto px-6 sm:px-10 space-y-7 flex flex-col items-center lg:items-start text-center lg:text-left">

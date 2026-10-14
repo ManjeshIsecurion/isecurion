@@ -72,7 +72,7 @@ function AnimatedCard({
     <motion.div
       initial={{
         opacity: 0,
-        y: 60,
+        y: 90,
       }}
       whileInView={{
         opacity: 1,
@@ -99,19 +99,18 @@ interface LeftAnimationProps {
   delay?: number;
 }
 
-function LeftAnimation({ children, delay = 0 }: LeftAnimationProps) {
+function LeftAnimation({ children }: LeftAnimationProps) {
   return (
     <motion.div
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{
-        duration: 0.8,
-        delay,
+        duration: 0.9,
         ease: "easeOut",
       }}
       viewport={{
         once: true,
-        amount: 0.2,
+        amount: 0.3,
       }}
     >
       {children}
@@ -119,15 +118,15 @@ function LeftAnimation({ children, delay = 0 }: LeftAnimationProps) {
   );
 }
 
-interface LeftAnimationProps {
+interface RightAnimationProps {
   children: React.ReactNode;
   delay?: number;
 }
 
-function RightAnimation({ children, delay = 0 }: LeftAnimationProps) {
+function RightAnimation({ children, delay = 0 }: RightAnimationProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 100 }}
+      initial={{ opacity: 0, x: 120 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{
         duration: 0.8,
