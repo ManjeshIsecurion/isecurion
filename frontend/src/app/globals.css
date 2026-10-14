@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Inter:wght@400;500;600&family=Lato:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;500&family=Inter:wght@400;500;600&family=Lato:wght@400;500;700&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Inter&family=Lato&display=swap'); */
 @import "tailwindcss";
 
@@ -13,11 +13,11 @@
     }
 
     h1 {
-        @apply text-2xl md:text-3xl lg:text-4xl xl:text-[40px];
+        @apply text-2xl md:text-3xl lg:text-4xl xl:text-[40px] font-semibold leading-[35px] sm:leading-[40px] md:leading-[50px] lg:leading-[55px];
     }
 
     h2 {
-        @apply text-2xl md:text-3xl lg:text-4xl xl:text-[38px];
+        @apply text-2xl md:text-3xl lg:text-4xl xl:text-[38px] font-medium leading-[35px] sm:leading-[40px] md:leading-[48px] lg:leading-[53px];
     }
 }
 
@@ -53,7 +53,52 @@ html {
     }
 }
 
+
 svg[style*="--icon-stroke"] *,
 svg[style*="--icon-stroke"] {
     stroke: var(--icon-stroke);
+}
+
+
+@keyframes hero-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@layer utilities {
+    .animate-hero-reveal {
+        animation: hero-reveal 0.7s ease-out both;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-hero-reveal {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+
+@keyframes tcar03-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-tcar03-scroll {
+    animation: tcar03-scroll 24s linear infinite;
 }

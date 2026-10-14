@@ -32,7 +32,12 @@ import mobile from "../assets/home/auditorcertifications/mobile.svg";
 import cism from "../assets/home/auditorcertifications/cism.png";
 import cissp from "../assets/home/auditorcertifications/cissp.svg";
 import cisa from "../assets/home/auditorcertifications/cisa.svg";
-import { Animation, AnimatedHeading } from "../components/ui/Animation";
+import {
+  AnimatedCard,
+  Animation,
+  LeftAnimation,
+  RightAnimation,
+} from "../components/ui/Animation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import healthcare from "../assets/home/health-care.png";
@@ -281,9 +286,54 @@ const impactCards = [
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-[#01070E]">
+    <div className="w-full bg-[#01070E]">
+      {/* this is the hero section  */}
+      <section
+        className="w-full xl:h-[80vh] 2xl:h-[70vh] flex items-center py-14 bg-cover bg-center"
+        style={{ backgroundImage: `url(${herobackground.src})` }}
+      >
+        <div className="max-w-7xl w-full mx-auto px-6 sm:px-10">
+          <div className="space-y-5 text-center lg:text-left">
+            <p
+              className="text-sm sm:text-base font-semibold text-[#0F66EA] opacity-0 animate-hero-reveal"
+              style={{ animationDelay: "150ms" }}
+            >
+              SECURING MODERN ENTERPRISES
+            </p>
+            <h1
+              className="text-transparent bg-clip-text bg-linear-to-r from-[#E5ECF7] via-[#8FB1F4] to-[#86D7E2] opacity-0 animate-hero-reveal"
+              style={{ animationDelay: "300ms" }}
+            >
+              Build for Trust <br /> Designed for Cyber Resilience.
+            </h1>
+            <p
+              className="text-base sm:text-lg font-normal  lg:max-w-lg leading-[27px] sm:leading-[30px] md:leading-[32px] text-[#ACAFEE] opacity-0 animate-hero-reveal"
+              style={{ animationDelay: "450ms" }}
+            >
+              Helping organizations anticipate threats, reduce cyber risk, and
+              build lasting resilience through expert cybersecurity consulting,
+              continuous validation, and intelligent security platforms.
+            </p>
+          </div>
+          <div
+            className="flex flex-col justify-center lg:justify-start sm:flex-row gap-3 py-4 opacity-0 animate-hero-reveal"
+            style={{ animationDelay: "600ms" }}
+          >
+            <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer rounded-[10px] text-[#FFFFFF] bg-linear-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70] border-2 border-[#3263B1]">
+              Schedule a Consultation{" "}
+              <span>
+                <Icon icon="mdi:arrow-right" width={20} />
+              </span>
+            </button>
+            <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer text-white rounded-lg border border-[#FFFFFF29]">
+              <span></span>
+              Explore services ›
+            </button>
+          </div>
+        </div>
+      </section>
       {/* hero section  */}
-      <div>
+      {/* <div>
         <div
           style={{ backgroundImage: `url(${herobackground.src})` }}
           className="bg-center bg-no-repeat "
@@ -294,7 +344,7 @@ export default function Home() {
                 <p className="font-medium text-[#0F66EA] text-[11px] sm:text-[12px] tracking-[1px]">
                   SECURING MODERN ENTERPRISES
                 </p>
-                <h1 className="font-medium text-[26px] md:text-[36px] text-[white] md:leading-[45px]">
+                <h1 className="text-transparent bg-clip-text bg-linear-to-r from-[#E5ECF7] via-[#8FB1F4] to-[#86D7E2]">
                   Build for Trust <br />
                   Designed for Cyber Resilience.
                 </h1>
@@ -320,38 +370,38 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* STATS SECTION */}
-      <section className="w-full bg-[#01060E]">
+      <section className="w-full  bg-[#01060E] shadow-[0_0_45px_rgba(15,102,234,0.20)]">
         {/* 7XL Stats Box */}
-        <div className="mx-auto max-w-7xl bg-[#01060E] shadow-[0_0_45px_rgba(15,102,234,0.20)]">
-          <div className="px-6 py-10 sm:px-8 lg:px-10">
+        <div className="max-w-7xl mx-auto ">
+          <div className="px-6 py-10 sm:px-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
               {/* Stat 1 */}
               <div className="relative px-0 py-6 md:px-8 lg:px-10 lg:py-0">
                 <div>
-                  <p className="text-[24px] font-semibold leading-[45px] text-[#0F66EA]">
+                  <p className="text-base sm:text-xl lg:text-2xl font-semibold  text-[#0F66EA]">
                     1K+
                   </p>
 
-                  <p className="mt-1 text-[18px] font-medium leading-[30px] text-[#999999]">
+                  <p className="mt-1 text-base sm:text-lg font-medium leading-[28px] text-[#8E8E8E]">
                     Security Engagements
                   </p>
 
-                  <p className="mt-2 text-[16px] font-medium leading-[27px] text-white">
+                  <p className="mt-2 text-sm sm:text-[16px] font-medium leading-[27px] text-[#FFFFFF]">
                     Across industries worldwide
                   </p>
                 </div>
               </div>
 
               {/* Stat 2 */}
-              <div className="relative border-t border-white/20 px-0 py-6 md:px-8 sm:border-t-0 lg:px-12 lg:py-0">
+              <div className="relative border-t border-[#4F5051] px-0 py-6 md:px-8 sm:border-t-0 lg:px-12 lg:py-0">
                 {/* Desktop Divider */}
                 <div className="absolute left-0 top-1/2 hidden h-[106px] w-px -translate-y-1/2 bg-[#4F5051] lg:block" />
 
                 <div>
-                  <p className="text-[24px] font-semibold leading-[45px] text-[#0F66EA]">
+                  <p className="text-base sm:text-xl lg:text-2xl font-semibold  text-[#0F66EA]">
                     20+
                   </p>
 
@@ -366,12 +416,12 @@ export default function Home() {
               </div>
 
               {/* Stat 3 */}
-              <div className="relative border-t border-white/20 px-0 py-6 md:px-8 sm:border-t-0 lg:px-12 lg:py-0">
+              <div className="relative border-t border-[#4F5051]  px-0 py-6 md:px-8 sm:border-t-0 lg:px-12 lg:py-0">
                 {/* Desktop Divider */}
                 <div className="absolute left-0 top-1/2 hidden h-[106px] w-px -translate-y-1/2 bg-[#4F5051] lg:block" />
 
                 <div>
-                  <p className="text-[24px] font-semibold leading-[45px] text-[#0F66EA]">
+                  <p className="text-base sm:text-xl lg:text-2xl font-semibold  text-[#0F66EA]">
                     15+
                   </p>
 
@@ -386,12 +436,12 @@ export default function Home() {
               </div>
 
               {/* Stat 4 */}
-              <div className="relative border-t border-white/20 px-0 py-6 md:border-t-0 md:px-8 lg:px-12 lg:py-0">
+              <div className="relative border-t border-[#4F5051]  px-0 py-6 md:border-t-0 md:px-8 lg:px-12 lg:py-0">
                 {/* Desktop Divider */}
                 <div className="absolute left-0 top-1/2 hidden h-[106px] w-px -translate-y-1/2 bg-[#4F5051] lg:block" />
 
                 <div>
-                  <p className="text-[24px] font-semibold leading-[45px] text-[#0F66EA]">
+                  <p className="text-base sm:text-xl lg:text-2xl font-semibold  text-[#0F66EA]">
                     99%
                   </p>
 
@@ -412,7 +462,7 @@ export default function Home() {
       </section>
 
       {/* TRUSTED BY LEADING ORGANIZATIONS */}
-      <div className="bg-[#070D1A]">
+      <div className="bg-[#060D1B]">
         <div className="mx-auto max-w-7xl  py-14">
           {/* Heading */}
           <div className="px-6 sm:px-10 ">
@@ -425,7 +475,7 @@ export default function Home() {
         </div>
         {/*logos */}
         <div className="pb-10 overflow-hidden">
-          <div className="flex w-max animate-[marquee_25s_linear_infinite]">
+          <div className="flex  animate-tcar03-scroll">
             {/* First set */}
             <div className="flex shrink-0 items-center gap-16 pr-16">
               {trustedCompanies.map((company, index) => (
@@ -443,7 +493,10 @@ export default function Home() {
             </div>
 
             {/* Duplicate set */}
-            <div className="flex shrink-0 items-center gap-16 pr-16">
+            <div
+              className="flex shrink-0 items-center gap-16 pr-16"
+              aria-hidden="true"
+            >
               {trustedCompanies.map((company, index) => (
                 <div
                   key={`duplicate-${index}`}
@@ -451,7 +504,7 @@ export default function Home() {
                 >
                   <img
                     src={company.src}
-                    alt={company.alt}
+                    alt=""
                     className={`${company.className} object-contain brightness-0 invert opacity-80 transition-all duration-500 hover:brightness-100 hover:invert-0 hover:opacity-100`}
                   />
                 </div>
@@ -465,20 +518,20 @@ export default function Home() {
       <div className="bg-[#070D1A]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A]  py-10">
           <Animation>
-            <p className="flex items-center gap-2">
+            <p className="flex items-center justify-center lg:justify-start gap-2">
               <span className="block h-6 w-[2px] bg-[#0F66EA]"></span>
 
-              <span className="text-sm sm:text-base font-semibold uppercase text-[#0F66EA] sectionheading tracking-[2px]">
+              <span className="text-sm sm:text-base font-semibold text-center uppercase text-[#0F66EA] sectionheading tracking-[2px]">
                 WHY ORGANIZATIONS CHOOSE ISECURION
               </span>
             </p>
             <div className="flex flex-col lg:flex-row items-center justify-between mt-6 gap-5">
-              <h2 className="text-2xl sm:text-[38px] text-center lg:text-left font-medium  text-white">
+              <h2 className="text-center lg:text-left font-medium  text-white">
                 Security is more than <br />
                 protection. <br /> It's the foundation of <br />
                 <span className="text-[#0F66EA]">confident business.</span>
               </h2>
-              <p className="text-base font-medium  lg:max-w-lg text-center lg:text-left text-[#D1D1D1] leading-7">
+              <p className="text-base sm:text-lg font-medium  lg:max-w-lg text-center lg:text-left leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1]">
                 Organizations rely on applications, cloud infrastructure,
                 digital identities, and connected systems to operate. ISECURION
                 helps validate security continuously, reduce risk proactively,
@@ -489,7 +542,7 @@ export default function Home() {
           <div>
             <Animation>
               <div className="flex flex-col lg:flex-row gap-5 mt-10">
-                <div className="relative group bg-cover flex-2 min-h-[350px] flex flex-col justify-end rounded-xl p-4 cursor-pointer overflow-hidden transition-all duration-500">
+                <div className="relative group bg-cover w-full lg:flex-2 min-h-[350px] flex flex-col justify-end rounded-xl p-4 cursor-pointer overflow-hidden transition-all duration-500">
                   <div className="absolute inset-0  w-full rounded-2xl ">
                     <Image
                       src={indentifyrisk}
@@ -509,7 +562,7 @@ export default function Home() {
                           business disruptions.
                         </p>
 
-                        <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
+                        <button className="ml-auto flex w-[40px] shrink-0 lg:shrink items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
                           <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
                             Explore Risk Identification
                           </span>
@@ -523,12 +576,12 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="relative bg-cover flex-1 min-h-[350px] flex flex-col justify-end rounded-xl p-4 cursor-pointer group overflow-hidden">
+                <div className="relative bg-cover w-full lg:flex-1   min-h-[350px] flex flex-col justify-end rounded-xl p-4 cursor-pointer group overflow-hidden">
                   <div className="absolute inset-0 rounded-2xl w-full">
                     <Image
                       src={continuousvalidation}
                       alt="continuousvalidation"
-                      className="h-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
+                      className="h-full w-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
                     />
                   </div>
                   <div className="relative z-10 flex max-w-md rounded-[5px] bg-linear-to-r from-[#002A69] to-[#000000] p-4 ">
@@ -543,7 +596,7 @@ export default function Home() {
                           identities and infrastructure.
                         </p>
 
-                        <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
+                        <button className="ml-auto flex w-[40px] shrink-0 lg:shrink  items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
                           <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
                             Explore Continuous Validation
                           </span>
@@ -566,7 +619,7 @@ export default function Home() {
                     <Image
                       src={defence}
                       alt="defence"
-                      className="h-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
+                      className="h-full w-full object-cover group-hover:scale-115 transition-all duration-500 ease-in-out"
                     />
                   </div>
                   <div className="relative z-10 flex max-w-md rounded-md bg-linear-to-r from-[#002A69] to-[#000000] p-4 ">
@@ -615,7 +668,7 @@ export default function Home() {
                           customer trust and confidence.
                         </p>
 
-                        <button className="ml-auto flex w-[40px] items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
+                        <button className="ml-auto flex w-[40px] shrink-0 lg:shrink items-center justify-center rounded-lg bg-[#0F66EA] px-3 py-3 text-white overflow-hidden transition-[width] duration-1000 ease-in-out group-hover:w-full group-hover:justify-between">
                           <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 text-[12px] transition-all duration-200 ease-out group-hover:max-w-[250px] group-hover:opacity-100">
                             Explore Compliance & Trust
                           </span>
@@ -637,21 +690,21 @@ export default function Home() {
 
       {/* Capabilities  */}
       <div className="bg-[#070D1A]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A] py-10">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A] py-14">
           <Animation>
             <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
               <div>
-                <h2 className="text-2xl sm:text-4xl font-medium lg:max-w-md text-center lg:text-left text-white sm:leading-11">
+                <h2 className="font-medium lg:max-w-md text-center lg:text-left text-[#FEFEFE] ">
                   Capabilities that strengthen{" "}
                   <span className="text-[#0F66EA]">every layer</span> of your
                   organization.
                 </h2>
               </div>
               <div className="lg:max-w-[550px] space-y-2">
-                <p className="hidden lg:block  text-base font-semibold text-[#0F66EA] sectionheading tracking-[0.5px]">
+                <p className="text-sm sm:text-base font-semibold text-center lg:text-left text-[#0F66EA] ">
                   OUR EXPERTISE
                 </p>
-                <p className="text-center lg:text-left font-medium leading-7 text-white">
+                <p className="text-base sm:text-lg  text-center lg:text-left font-medium leading-[26px] sm:leading-[29px] md:leading-[31px] text-white">
                   A comprehensive portfolio of services and platforms built to
                   reduce risk, improve resilience, and enable secure growth.
                 </p>
@@ -667,70 +720,72 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
           >
             {ourExpertise.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                className="relative z-10 overflow-hidden flex flex-col justify-between rounded-[14px] p-5 cursor-pointer group transition-all duration-500"
-                style={{ backgroundColor: item.bgColor }}
-              >
+              <AnimatedCard key={index} delay={index * 0.12}>
                 <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{
-                    background: `linear-gradient(to bottom, ${item.hoverFrom}, ${item.hoverTo})`,
-                  }}
-                />
-                <Icon
-                  icon={item.Icon}
-                  className="absolute -right-8 top-1/2 h-40 w-40 -translate-y-1/2 text-[#62748E1C] group-hover:top-1/3 group-hover:right-[20%] group-hover:text-[#FFFFFF2B] transition-all duration-500"
-                />
+                  key={index}
+                  // variants={cardVariants}
+                  className="relative z-10 overflow-hidden flex flex-col justify-between rounded-[14px] p-5 cursor-pointer group transition-all duration-500"
+                  style={{ backgroundColor: item.bgColor }}
+                >
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: `linear-gradient(to bottom, ${item.hoverFrom}, ${item.hoverTo})`,
+                    }}
+                  />
+                  <Icon
+                    icon={item.Icon}
+                    className="absolute -right-8 top-1/2 h-40 w-40 -translate-y-1/2 text-[#62748E1C] group-hover:top-1/3 group-hover:right-[20%] group-hover:text-[#FFFFFF2B] transition-all duration-500"
+                  />
 
-                <div className="relative z-10">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
-                    <Icon
-                      icon={item.Icon}
-                      className={`h-8 w-8 ${item.iconColor} group-hover:text-white transition-colors duration-300`}
-                    />
+                  <div className="relative z-10">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
+                      <Icon
+                        icon={item.Icon}
+                        className={`h-8 w-8 ${item.iconColor} group-hover:text-white transition-colors duration-300`}
+                      />
+                    </div>
+
+                    <h3
+                      className={`mb-3 ${item.headingColor} text-xl font-semibold group-hover:text-white transition-colors duration-300`}
+                    >
+                      {item.title}
+                    </h3>
+
+                    <p
+                      className={`text-sm font-medium leading-6 ${item.descriptionColor} group-hover:text-white transition-colors duration-300 max-w-[237px]`}
+                    >
+                      {item.description}
+                    </p>
                   </div>
 
-                  <h3
-                    className={`mb-3 ${item.headingColor} text-xl font-semibold group-hover:text-white transition-colors duration-300`}
-                  >
-                    {item.title}
-                  </h3>
-
-                  <p
-                    className={`text-sm font-medium leading-6 ${item.descriptionColor} group-hover:text-white transition-colors duration-300 max-w-[237px]`}
-                  >
-                    {item.description}
-                  </p>
-                </div>
-
-                <div className="relative z-10 mt-4">
-                  <ul className="space-y-2">
-                    {item.services.map((service, serviceIndex) => (
-                      <li
-                        key={serviceIndex}
-                        className={`flex items-center gap-1 text-sm font-medium ${item.listColor} group-hover:text-white transition-colors duration-300`}
-                      >
-                        <span
-                          className={` group-hover:text-white ${item.iconColor}`}
+                  <div className="relative z-10 mt-4">
+                    <ul className="space-y-2">
+                      {item.services.map((service, serviceIndex) => (
+                        <li
+                          key={serviceIndex}
+                          className={`flex items-center gap-1 text-sm font-medium ${item.listColor} group-hover:text-white transition-colors duration-300`}
                         >
-                          <Icon icon="mingcute:right-fill" />
-                        </span>
+                          <span
+                            className={` group-hover:text-white ${item.iconColor}`}
+                          >
+                            <Icon icon="mingcute:right-fill" />
+                          </span>
 
-                        {service}
-                      </li>
-                    ))}
-                  </ul>
+                          {service}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <button className="relative z-10 mt-5 flex cursor-pointer items-center text-[15px] font-medium text-[#0F66EA] transition-colors duration-300 group-hover:text-white">
+                    View Services
+                    <span className="ml-1">
+                      <Icon icon="solar:arrow-right-bold" />
+                    </span>
+                  </button>
                 </div>
-
-                <button className="relative z-10 mt-5 flex cursor-pointer items-center text-[15px] font-medium text-[#0F66EA] transition-colors duration-300 group-hover:text-white">
-                  View Services
-                  <span className="ml-1">
-                    <Icon icon="solar:arrow-right-bold" />
-                  </span>
-                </button>
-              </motion.div>
+              </AnimatedCard>
             ))}
           </motion.div>
         </div>
@@ -738,25 +793,25 @@ export default function Home() {
 
       {/* Our platform  */}
       <div className="bg-[#070D1A]">
-        <div className="container px-6 sm:px-10 bg-[#070D1A] py-14">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A] py-14">
           <div className="space-y-3 lg:max-w-xl flex flex-col items-center lg:items-start text-center lg:text-left">
             <Animation>
               <p className="flex items-center gap-2 sectionheading">
                 <span className="block h-6 w-[2px] bg-[#0F66EA]"></span>
 
-                <span className="text-base font-semibold uppercase text-[#0F66EA] tracking-[1px]">
+                <span className="text-sm sm:text-base font-semibold uppercase text-[#0F66EA] tracking-[1px]">
                   OUR PLATFORMS
                 </span>
               </p>
             </Animation>
             <Animation>
-              <h2 className="text-2xl sm:text-4xl font-medium text-white mt-2">
+              <h2 className=" text-white ">
                 Intelligent platforms for{" "}
                 <span className="text-[#0F66EA]">continuous</span> security.
               </h2>
             </Animation>
             <Animation>
-              <p className="text-[16px] font-medium leading-7 text-[#D1D1D1] ">
+              <p className="text-base sm:text-lg font-medium  leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1] ">
                 Purpose-built platforms that help organizations validate
                 security continuously, strengthen cyber resilience, and make
                 informed decisions.
@@ -764,8 +819,8 @@ export default function Home() {
             </Animation>
           </div>
 
-          <div className="space-y-14 mt-10">
-            <Animation>
+          <div className="relative mt-10">
+            <div className="sticky top-20 z-10 py-8 bg-[#060D1B]">
               <div className="flex flex-col lg:flex-row items-center gap-10">
                 <div className="flex-1 space-y-4">
                   <div className="flex flex-col">
@@ -830,9 +885,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </Animation>
-
-            <Animation>
+            </div>
+            <div className="sticky top-24 z-20 py-8 bg-[#060D1B]">
               <div className="flex flex-col lg:flex-row items-center gap-10">
                 <div className="flex-1 space-y-4">
                   <div className="flex flex-col">
@@ -898,9 +952,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </Animation>
-
-            <Animation>
+            </div>
+            <div className="sticky top-28 z-30 py-8 bg-[#060D1B]">
               <div className="flex flex-col lg:flex-row items-center gap-10">
                 <div className="flex-1 space-y-5">
                   <div className="flex flex-col">
@@ -964,7 +1017,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </Animation>
+            </div>
           </div>
         </div>
       </div>
@@ -1017,8 +1070,9 @@ export default function Home() {
                 { value: "5", label: "of the Top 10 Global Tech Companies" },
                 { value: "40+", label: "Fintech & Healthcare Companies" },
               ].map((item, index) => (
-                <div
+                <AnimatedCard
                   key={index}
+                  delay={index * 0.1}
                   className={`mx-auto px-14 text-center ${
                     index !== 4 ? "lg:border-r lg:border-[#888888]" : ""
                   }`}
@@ -1030,7 +1084,7 @@ export default function Home() {
                   <p className="mt-3 max-w-[130px] text-[14px] font-medium leading-6 text-[#C5C5C5]">
                     {item.label}
                   </p>
-                </div>
+                </AnimatedCard>
               ))}
             </div>
           </Animation>
@@ -1043,20 +1097,23 @@ export default function Home() {
       <div className="w-full bg-[#070F20]">
         <div className="mx-auto max-w-7xl">
           {/* Proven Impact */}
-          <section className="bg-[#070F20] px-6 py-14 sm:px-10">
-            <Animation>
-              <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
-                {/* Left Content */}
-                <div className="w-full lg:w-1/2">
-                  <h2 className="text-center text-2xl sm:text-3xl font-medium leading-[1.3] text-white sm:text-4xl lg:text-left">
+          <section className="bg-[#070F20] px-6 py-14 sm:px-10 overflow-hidden">
+            <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
+              {/* Left Content */}
+
+              <div className="w-full lg:w-1/2">
+                <LeftAnimation>
+                  <h2 className="text-center  font-medium  text-white  lg:text-left">
                     Proven Impact. Trusted by Enterprises{" "}
                     <span className="text-[#0F66EA]">Worldwide.</span>
                   </h2>
 
                   <div className="mx-auto mt-5 h-[3px] w-[100px] bg-[#1A56DB] lg:mx-0" />
-                </div>
+                </LeftAnimation>
+              </div>
 
-                {/* ISO Certifications */}
+              {/* ISO Certifications */}
+              <RightAnimation>
                 <div className="relative flex w-full items-center justify-center lg:w-1/2">
                   <img
                     src={iso27001.src}
@@ -1075,8 +1132,8 @@ export default function Home() {
                     className="relative z-10 ml-10 w-[120px] sm:ml-16 sm:w-[150px]"
                   />
                 </div>
-              </div>
-            </Animation>
+              </RightAnimation>
+            </div>
           </section>
         </div>
       </div>
@@ -1091,12 +1148,13 @@ export default function Home() {
 
             <div className="mt-8 grid grid-cols-2 items-center justify-items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
               {auditorCertificates.map((item, index) => (
-                <img
-                  key={index}
-                  src={item.img.src}
-                  alt=""
-                  className="h-[80px] w-[80px] object-contain"
-                />
+                <AnimatedCard key={index} delay={index * 0.15}>
+                  <img
+                    src={item.img.src}
+                    alt=""
+                    className="h-[80px] w-[80px] object-contain"
+                  />
+                </AnimatedCard>
               ))}
             </div>
           </div>
@@ -1109,7 +1167,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-16 ">
             {/* Left heading */}
             <div className="flex-1">
-              <h2 className="text-3xl sm:text-[30px] font-medium leading-[1.3] text-white tracking-[0.3px]">
+              <h2 className=" text-white ">
                 Security outcomes that <br />
                 <span className="text-[#0F66EA]">speak</span> for themselves.
               </h2>
@@ -1119,11 +1177,11 @@ export default function Home() {
 
             {/* Right description */}
             <div className="flex-1 lg:max-w-[505px]">
-              <p className="text-[14px] font-medium text-[#0F66EA] tracking-[0.2px]">
+              <p className="text-sm sm:text-base font-semibold text-[#0F66EA] tracking-[0.2px]">
                 REAL-WORLD IMPACT
               </p>
 
-              <p className="mt-2 text-sm font-medium leading-6 text-[#D1D1D1] max-w-[500px]">
+              <p className="mt-2 text-base sm:text-lg font-medium leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1] max-w-[500px]">
                 Explore how organizations strengthened cyber resilience,
                 mitigated critical risks, and achieved measurable security
                 outcomes with ISECURION.
@@ -1146,7 +1204,7 @@ export default function Home() {
               </h3>
 
               {/* Description */}
-              <p className="mt-2 text-[11px] sm:text-xs font-medium leading-5 text-[#D1D1D1] tracking-[0.2px]">
+              <p className="mt-2 text-sm  font-medium leading-5 text-[#D1D1D1] tracking-[0.2px]">
                 Rapid-response and digital forensics enabled critical systems
                 recovery while restoring operations with minimal disruption.
               </p>

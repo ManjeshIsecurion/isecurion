@@ -109,56 +109,61 @@ const webApplicationFAQs = [
   },
 ];
 
-function page() {
+function WebApplicationSecurityAssessment() {
   return (
-    <main className="bg-black">
+    <main className="">
       {/* Hero Section */}
 
       <section className="px-0">
         <div
-          className="relative mx-auto min-h-[495px]overflow-hidden bg-cover bg-center bg-no-repeat"
+          className="relative mx-auto min-h-[495px] overflow-hidden bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${webHeroBackground.src})`,
           }}
         >
           <div className="relative mx-auto z-10  max-w-7xl flex min-h-[495px] items-center px-6 py-16 sm:px-10 lg:px-12">
-            <div className="w-full lg:w-[58%]">
-              <Animation>
-                <h1 className="max-w-[700px] text-3xl sm:text-4xl font-medium leading-[1.3] text-white sm:text-5xl lg:text-[48px]">
-                  Web Application Security Assessment
-                </h1>
+            <div className="w-full lg:w-[58%] text-center lg:text-left">
+              <h1
+                className="max-w-[700px] font-semibold text-white opacity-0 animate-hero-reveal"
+                style={{ animationDelay: "150ms" }}
+              >
+                Web Application Security Assessment
+              </h1>
 
-                <p className="mt-4 max-w-[620px] text-base text-[#D9D9D9] sm:leading-8 sm:text-lg ">
-                  Identify vulnerabilities, uncover real-world attack risks, and
-                  protect your web applications with expert-led security
-                  assessments.
-                </p>
+              <p
+                className="mt-4 text-base sm:text-lg   max-w-[620px] text-[#D9D9D9] opacity-0 animate-hero-reveal"
+                style={{ animationDelay: "300ms" }}
+              >
+                Identify vulnerabilities, uncover real-world attack risks, and
+                protect your web applications with expert-led security
+                assessments.
+              </p>
 
-                <button
-                  type="button"
-                  className="mt-8 inline-flex h-[54px] items-center justify-center rounded-[10px] bg-white px-7 text-sm sm:text-[16px] font-medium text-[#31435C] transition hover:bg-gray-100"
-                >
-                  Schedule a Consultation{""}
-                  <span className="ml-2">
-                    <Icon icon="mdi:arrow-right" width={20} />
-                  </span>
-                </button>
-              </Animation>
+              <button
+                type="button"
+                style={{ animationDelay: "450ms" }}
+                className="mt-8 inline-flex h-[54px] items-center justify-center rounded-[10px] bg-white px-7 text-sm sm:text-[16px] font-medium text-[#31435C] transition hover:bg-gray-100 opacity-0 animate-hero-reveal"
+              >
+                Schedule a Consultation{""}
+                <span className="ml-2">
+                  <Icon icon="mdi:arrow-right" width={20} />
+                </span>
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      <Animation>
-        <section className="bg-[#050C1A]">
-          <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-12 lg:py-20">
+      <section className="bg-[#050C1A]">
+        <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-12 lg:py-20 text-center lg:text-left">
+          <Animation>
             {/* Heading */}
             <h2 className="text-2xl font-normal leading-8 sm:leading-12 text-white sm:text-4xl lg:text-[42px]">
               What is Web Application Security Assessment?
             </h2>
 
             {/* Introduction */}
-            <p className="mt-7 max-w-[540px] text:sm leading-6 text-[#D1D1D1] sm:text-base ">
+            <p className="mt-7 max-w-[540px] text-base leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1] sm:text-lg ">
               Web Application Security Assessment is a systematic evaluation of
               a web application to identify, validate, and assess security
               vulnerabilities that attackers could exploit.
@@ -173,7 +178,7 @@ function page() {
                   className="mt-0.5 shrink-0 text-[15px] text-[#0F66EA]"
                 />
 
-                <p className="text-xs leading-5.5 text-[#D1D1D1] sm:text-sm max-w-[480px]">
+                <p className="text-sm sm:text-base leading-[25px] text-[#D1D1D1]  max-w-[480px]">
                   At ISECURION, we combine automated testing with expert-led
                   manual assessment to uncover security weaknesses that could be
                   exploited to gain unauthorized access, expose sensitive data,
@@ -189,56 +194,53 @@ function page() {
                   className="mt-0.5 shrink-0 text-[15px] text-[#0F66EA]"
                 />
 
-                <p className="text-xs leading-5.5 text-white/70 sm:text-sm max-w-[470px]">
+                <p className="text-sm sm:text-base  leading-[25px] text-[#D1D1D1] max-w-[470px]">
                   Our assessments help organizations identify exploitable risks,
                   strengthen application security, and build resilience against
                   evolving web-based threats.
                 </p>
               </div>
             </div>
+          </Animation>
 
-            <Animation>
-              <div className="mt-10 flex justify-center sm:mt-12 lg:mt-14">
-                <Image
-                  src={webAssessment}
-                  alt="Web application security assessment process"
-                  priority
-                  className="h-auto w-full max-w-[1050px]"
-                />
-              </div>
-            </Animation>
-
-            <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4">
-              {assessmentCards.map((card, index) => (
-                <Animation key={card.title} delay={index * 0.12}>
-                  <motion.div className="min-h-[155px] rounded-[15px] border border-[#002C8C] bg-gradient-to-b from-[#0A1119] to-[#17366E] p-4 sm:min-h-[235px] sm:p-5">
-                    {/* Icon */}
-                    <div
-                      className="flex h-12 w-12 items-center justify-center rounded-full"
-                      style={{ backgroundColor: card.iconBg }}
-                    >
-                      <Icon
-                        icon={card.icon}
-                        className="text-[20px] text-white"
-                      />
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="mt-8 text-[14px] font-semibold text-white lg:text-[15px] xl:text-[18px]">
-                      {card.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="mt-3 max-w-[299px] text-sm leading-6 text-[#D1D1D1] sm:text-[14px] sm:leading-[23px]">
-                      {card.description}
-                    </p>
-                  </motion.div>
-                </Animation>
-              ))}
+          <Animation>
+            <div className="mt-10 flex justify-center sm:mt-12 lg:mt-14">
+              <Image
+                src={webAssessment}
+                alt="Web application security assessment process"
+                priority
+                className="h-auto w-full max-w-[1050px]"
+              />
             </div>
+          </Animation>
+
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4">
+            {assessmentCards.map((card, index) => (
+              <Animation key={card.title} delay={index * 0.12}>
+                <motion.div className="min-h-[155px] rounded-[15px] border border-[#002C8C] bg-gradient-to-b from-[#0A1119] to-[#17366E] p-4 sm:min-h-[235px] sm:p-5">
+                  {/* Icon */}
+                  <div
+                    className="flex h-12 w-12 items-center justify-center rounded-full"
+                    style={{ backgroundColor: card.iconBg }}
+                  >
+                    <Icon icon={card.icon} className="text-[20px] text-white" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="mt-8 text-[14px] font-semibold text-white lg:text-[15px] xl:text-[18px]">
+                    {card.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-3 max-w-[299px] text-sm leading-6 text-[#D1D1D1] sm:text-[14px] sm:leading-[23px]">
+                    {card.description}
+                  </p>
+                </motion.div>
+              </Animation>
+            ))}
           </div>
-        </section>
-      </Animation>
+        </div>
+      </section>
 
       <Animation>
         <section className="">
@@ -426,4 +428,4 @@ function page() {
   );
 }
 
-export default page;
+export default WebApplicationSecurityAssessment;

@@ -110,8 +110,8 @@ function SecureCode() {
   return (
     <div>
       {/* hero section  */}
-      <section className="relative  w-full h-auto 2xl:h-[60vh] py-14 flex items-center overflow-visible bg-[#000000]">
-        <div className="absolute w-[200px] h-[400px] md:w-[500px] md:h-[600px] left-10 md:left-20 2xl:left-70 rounded-full blur-[150px]  z-20 pointer-events-none bg-[#0FEADB47] "></div>
+      <section className="relative  w-full h-auto xl:h-[80vh] 2xl:h-[70vh] py-14 flex items-center overflow-visible bg-[#000000]">
+        <div className="absolute w-[200px] h-[400px] md:w-[500px] md:h-[600px] left-10 md:left-20 2xl:left-70 rounded-full blur-[150px] z-20 pointer-events-none bg-[#0FEADB47] "></div>
         <div className="max-w-7xl w-full mx-auto px-6 sm:px-10 flex flex-col lg:flex-row items-center gap-10 justify-between">
           <div className="space-y-4 flex-1 text-center lg:text-left  flex flex-col items-center lg:items-start">
             <p className="text-sm sm:text-base font-semibold text-[#0F66EA]">
