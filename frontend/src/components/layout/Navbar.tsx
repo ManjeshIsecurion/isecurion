@@ -138,11 +138,11 @@ const serviceDetails = {
           },
           {
             label: "Industrial Control System Security Assessment",
-            href: "industrial-control-systems-security-assessment",
+            href: "/services/industrial-control-systems-security-assessment",
           },
           {
             label: "Automotive Cybersecurity",
-            href: "/services/crypto-currency-exchange",
+            href: "/services/automotive-cybersecurity",
           },
         ],
       },
@@ -157,7 +157,7 @@ const serviceDetails = {
         links: [
           {
             label: "DPO Services",
-            href: "/services/dpo",
+            href: "/services/dpo-services",
           },
           {
             label: "Data Localization Audit",

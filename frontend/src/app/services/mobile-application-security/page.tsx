@@ -171,7 +171,7 @@ function page() {
     <main className="bg-black">
       <section>
         <div
-          className="relative h-auto sm:h-[80vh] 2xl:h-[60vh] bg-cover bg-center"
+          className="relative h-auto bg-cover bg-center"
           style={{
             backgroundImage: `url(${mobileHeroBackground.src})`,
           }}

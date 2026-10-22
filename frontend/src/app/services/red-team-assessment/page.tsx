@@ -89,26 +89,24 @@ export default function RedTeamAssessmentPage() {
             <Animation>
               <div className="flex flex-col justify-center lg:py-2 text-center md:text-left">
                 {/* Eyebrow */}
-                <p className="text-[13px] font-semibold uppercase leading-none text-[#E24B4A] sm:text-sm">
+                <p className="text-[13px] sm:text-base font-semibold uppercase leading-none text-[#E24B4A] sm:text-sm text-center lg:text-left">
                   Red Team Assessment
                 </p>
 
                 {/* Heading */}
-                <h1 className="mt-5 max-w-[430px] font-semibold leading-[1.4] tracking-[-0.02em] text-white ">
-                  Red Team
-                  <br />
-                  Assessment Services
+                <h1 className="mt-5 lg:max-w-[430px] font-semibold leading-[1.4] tracking-[-0.02em] text-white text-center lg:text-left">
+                  Red Team Assessment Services
                 </h1>
 
                 {/* Description */}
-                <p className="mt-4 max-w-[390px] text-[15px] leading-[1.8] text-[#D9D9D9] sm:text-[16px]">
+                <p className="mt-4 lg:max-w-[390px] text-[15px] leading-[1.8] text-[#D9D9D9] sm:text-[16px] text-center lg:text-left">
                   Test your defenses against sophisticated attackers. ISECURION
                   helps identify gaps, simulate attacks, and improve security
                   posture across people, processes, and technology.
                 </p>
 
                 {/* CTA */}
-                <div className="mt-6">
+                <div className="mt-6 text-center lg:text-left">
                   <button
                     type="button"
                     className="inline-flex h-[45px] items-center justify-center rounded-lg bg-white px-5 text-[13px] font-semibold text-[#31435C] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f3f3f3]"
@@ -121,7 +119,7 @@ export default function RedTeamAssessmentPage() {
                 </div>
 
                 {/* ==================== STATS ==================== */}
-                <div className="mt-9 grid max-w-[380px] grid-cols-2 gap-x-10 gap-y-6">
+                <div className="mt-9 grid lg:max-w-[380px] grid-cols-3 lg:grid-cols-2 gap-x-10 gap-y-6 text-center">
                   {/* 150+ */}
                   <div>
                     <p className="text-[21px] font-semibold leading-none text-[#E24B4A] sm:text-[22px]">
@@ -517,7 +515,7 @@ export default function RedTeamAssessmentPage() {
             <div className="mx-auto max-w-7xl overflow-hidden relative z-10 flex min-h-[385px] items-center px-7 py-14 sm:min-h-[410px] sm:px-10 sm:py-16 lg:min-h-[385px] lg:px-7 lg:py-12 xl:px-7">
               <div className="max-w-[430px] text-center md:text-left">
                 {/* Eyebrow */}
-                <p className="text-[13px] font-medium uppercase text-[#E24B4A] sm:text-[15px]">
+                <p className="text-[13px] sm:text-base font-semibold uppercase text-[#E24B4A] sm:text-[15px]">
                   What We Assess
                 </p>
 
@@ -681,7 +679,7 @@ export default function RedTeamAssessmentPage() {
                 {/* Left content */}
                 <Animation>
                   <div className="absolute left-0 top-0 w-[500px]">
-                    <p className="text-[15px] font-medium leading-[18px] text-[#E24B4A]">
+                    <p className="text-[15px] sm:text-base font-semibold leading-[18px] text-[#E24B4A]">
                       OUR APPROACH
                     </p>
 
@@ -1072,7 +1070,7 @@ export default function RedTeamAssessmentPage() {
           <Animation>
             <div className="px-6 pb-0 pt-[52px] sm:px-10 lg:px-[25px] lg:pt-[51px]">
               <div className="text-center">
-                <p className="text-[13px] font-medium uppercase  text-[#E24B4A]">
+                <p className="text-[13px] sm:text-base font-semibold uppercase  text-[#E24B4A]">
                   WHY ISECURION?
                 </p>
 
@@ -1158,7 +1156,7 @@ export default function RedTeamAssessmentPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr]">
             <div className="pb-[50px] lg:pr-[70px] lg:pb-0 text-center md:text-left">
               <LeftAnimation>
-                <p className="text-[13px] font-medium uppercase leading-[0.2px] text-[#E24B4A]">
+                <p className="text-[13px] sm:text-base font-semibold uppercase leading-[0.2px] text-[#E24B4A]">
                   WHY CHOOSE US?
                 </p>
 
@@ -1267,7 +1265,7 @@ export default function RedTeamAssessmentPage() {
         <div className="mx-auto max-w-7xl px-6 sm:px-9 lg:px-[33px]">
           {/* Header */}
           <div className="text-center">
-            <p className="text-[14px] font-medium tracking-wide text-[#E24B4A] sm:text-[16px]">
+            <p className="text-[14px] sm:text-base font-semibold tracking-wide text-[#E24B4A] sm:text-[16px]">
               DELIVERABLES
             </p>
 

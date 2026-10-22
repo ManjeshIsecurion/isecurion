@@ -98,22 +98,21 @@ function page() {
             {/* LEFT COLUMN: HERO CONTENT */}
             <div className="lg:col-span-6 text-center md:text-left">
               {/* EYEBROW */}
-              <p className="text-sm sm:text-[14px] tracking-[0.02em] uppercase text-[#E24B4A]">
+              <p className="text-sm sm:text-base font-semibold tracking-[0.02em] uppercase text-[#E24B4A]">
                 CONTINUOUS BREACH ATTACK SIMULATION
               </p>
 
               {/* HEADING */}
               <Animation>
-                <h1 className="mt-4 font-semibold leading-[1.4] tracking-[-0.02em] text-white">
-                  Continuously <br></br>validate your <br />
-                  defenses against <br />
-                  real-world attacks.
+                <h1 className="mt-4 font-semibold leading-[1.4] tracking-[-0.02em] text-white lg:max-w-[400px]">
+                  Continuously validate your defenses against real-world
+                  attacks.
                 </h1>
               </Animation>
 
               {/* DESCRIPTION */}
               <Animation>
-                <p className="mt-5 text-[14px] sm:text-[16px] leading-[1.7] text-[#D1D1D1] max-w-[380px]">
+                <p className="mt-5 text-[14px] sm:text-[16px] leading-[1.7] text-[#D1D1D1] lg:max-w-[380px]">
                   ISECURION&apos;s CBAS continuously simulates real-world
                   attacks to identify gaps, validate defenses, and improve your
                   cybersecurity posture proactively.
@@ -131,7 +130,7 @@ function page() {
               </Animation>
 
               {/* FOOTER TAGLINE */}
-              <p className="mt-10 text-[13px] sm:text-[14px] lg:text-[16px] font-medium leading-7 text-[#0F66EA] max-w-[360px]">
+              <p className="mt-10 text-[13px] sm:text-[14px] lg:text-[16px] font-medium leading-7 text-[#0F66EA] lg:max-w-[360px]">
                 Continuous Validation · Adversary Simulation · MITRE ATT&amp;CK
                 · Security Resilience
               </p>
@@ -313,7 +312,7 @@ function page() {
               <div className="lg:col-span-6 flex flex-col justify-between space-y-6 text-center md:text-left">
                 <Animation>
                   <div>
-                    <p className="text-[14px] sm:text-[15px] font-medium leading-[18px] text-[#E24B4A]">
+                    <p className="text-[14px] sm:text-base font-semibold leading-[18px] text-[#E24B4A]">
                       OUR APPROACH
                     </p>
 
@@ -444,7 +443,7 @@ function page() {
           <Animation>
             <div className="px-6 pb-0 pt-[52px] sm:px-10 lg:px-[25px] lg:pt-[51px]">
               <div className="text-center">
-                <p className="text-[13px] font-medium uppercase  text-[#E24B4A]">
+                <p className="text-[13px] sm:text-base font-semibold uppercase  text-[#E24B4A]">
                   WHAT SETS US APART
                 </p>
 
@@ -532,7 +531,7 @@ function page() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr]">
             <div className="pb-[50px] lg:pr-[70px] lg:pb-0 text-center md:text-left">
               <LeftAnimation>
-                <p className="text-[13px] font-medium uppercase leading-[0.2px] text-[#E24B4A]">
+                <p className="text-[13px] sm:text-base font-semibold uppercase leading-[0.2px] text-[#E24B4A]">
                   WHY CHOOSE US?
                 </p>
 
@@ -620,7 +619,7 @@ function page() {
         <div className="max-w-7xl mx-auto pt-4 pb-18 px-6 sm:px-10">
           <div className="px-6">
             <div className="text-center">
-              <p className="text-[13px] font-medium uppercase  text-[#E24B4A]">
+              <p className="text-[13px] sm:text-base font-semibold uppercase  text-[#E24B4A]">
                 DELIVERABLES
               </p>
 
