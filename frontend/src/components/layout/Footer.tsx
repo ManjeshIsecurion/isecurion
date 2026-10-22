@@ -85,9 +85,9 @@ function Footer() {
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
               {/* Company */}
               <div>
-                <h3 className="mb-5 text-sm font-semibold text-white">
+                <h4 className="mb-5 text-sm text-white">
                   Company
-                </h3>
+                </h4>
 
                 <ul className="space-y-3 text-sm text-[#BFBFBF]">
                   <li>About</li>
@@ -100,9 +100,9 @@ function Footer() {
 
               {/* Capabilities */}
               <div>
-                <h3 className="mb-5 text-sm font-semibold text-white">
+                <h4 className="mb-5 text-sm text-white">
                   Capabilities
-                </h3>
+                </h4>
 
                 <ul className="space-y-3 text-sm text-[#BFBFBF]">
                   <li>VAPT</li>
@@ -119,9 +119,9 @@ function Footer() {
 
               {/* Platforms */}
               <div>
-                <h3 className="mb-5 text-sm font-semibold text-white">
+                <h4 className="mb-5 text-sm text-white">
                   Platforms
-                </h3>
+                </h4>
 
                 <ul className="space-y-3 text-sm text-[#BFBFBF]">
                   <li>Vulnytics</li>
@@ -167,9 +167,9 @@ function Footer() {
 
           {/* RIGHT - GLOBAL PRESENCE */}
           <div className="w-full lg:flex-1">
-            <h3 className="mb-5 text-sm font-semibold text-white">
+            <h4 className="mb-5 text-sm text-white">
               Global Presence
-            </h3>
+            </h4>
 
             <div className="space-y-3 text-sm text-[#BFBFBF]">
               {locations.map((location) => {

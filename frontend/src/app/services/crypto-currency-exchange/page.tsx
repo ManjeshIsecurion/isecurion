@@ -167,7 +167,7 @@ function CryptoCurrencyExchange() {
   return (
     <div>
       {/* hero section */}
-      <section className="relative w-full h-auto xl:h-[80vh] 2xl:h-[70vh]  py-14 flex items-center">
+      <section className="relative w-full h-auto min-h-[560px] py-14 flex items-center">
         <div className="absolute inset-0">
           <Image
             src={cryptocurrencyexchange}
@@ -177,14 +177,16 @@ function CryptoCurrencyExchange() {
           />
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 flex">
+           <Animation>
           <div className="flex-1 space-y-4 text-center lg:text-left">
+           
             <p className="text-sm sm:text-base uppercase font-semibold text-[#0F66EA]">
               Crypto Currency Exchange Security Assessment
             </p>
-            <h1 className=" text-[#FFFFFF]">
+            <h1 className=" text-[#FFFFFF] max-w-[610px]">
               Secure your crypto exchange against evolving cyber threats.
             </h1>
-            <p className="text-base sm:text-lg font-medium leading-[27px] sm:leading-[30px] md:leading-[32px] text-[#D9D9D9]">
+            <p className="text-base sm:text-lg font-medium leading-[27px] sm:leading-[30px] md:leading-[32px] text-[#D9D9D9] max-w-[510px]">
               ISECURION assesses cryptocurrency exchanges across applications,
               APIs, infrastructure, wallets, and business logic to identify
               vulnerabilities before they can impact users, assets, or
@@ -196,7 +198,9 @@ function CryptoCurrencyExchange() {
                 <Icon icon="akar-icons:arrow-right" />
               </span>{" "}
             </button>
+            
           </div>
+          </Animation>
           <div className="hidden lg:block flex-1"></div>
         </div>
       </section>

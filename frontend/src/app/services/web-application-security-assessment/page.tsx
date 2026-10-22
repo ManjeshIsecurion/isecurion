@@ -148,7 +148,7 @@ function page() {
 
       <section className="px-0">
         <div
-          className="relative mx-auto h-auto sm:h-[80vh] 2xl:h-[60vh] bg-cover bg-center bg-no-repeat"
+          className="relative mx-auto h-auto bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${webHeroBackground.src})`,
           }}

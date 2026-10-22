@@ -22,7 +22,7 @@ const serviceDetails = {
         links: [
           {
             label: "Breach Attack Simulation",
-            href: "/services/breach-attack-simulation",
+            href: "/services/continuous-breach-attack-simulation",
           },
           {
             label: "Red Team Assessment",
@@ -109,11 +109,11 @@ const serviceDetails = {
         links: [
           {
             label: "Crypto Currency Exchange Pentest",
-            href: "/services/ai-augmented-red-team",
+            href: "/services/crypto-currency-exchange",
           },
           {
             label: "Smart Contract Security Audit",
-            href: "/services/adversary-simulation",
+            href: "/services/smart-contract-security",
           },
           {
             label: "MCP Pentesting Services",
@@ -129,8 +129,12 @@ const serviceDetails = {
             href: "iot-security-testing",
           },
           {
-            label: "Crypto Exchange Assessment",
-            href: "/services/crypto-currency-exchange",
+            label: "Industrial Control System Security Assessment",
+            href: "/services/industrial-control-systems-security-assessment",
+          },
+          {
+            label: "Automotive Cybersecurity",
+            href: "/services/automotive-cybersecurity",
           },
         ],
       },
@@ -145,7 +149,7 @@ const serviceDetails = {
         links: [
           {
             label: "DPO Services",
-            href: "/services/dpo",
+            href: "/services/dpo-services",
           },
           {
             label: "Data Localization Audit",

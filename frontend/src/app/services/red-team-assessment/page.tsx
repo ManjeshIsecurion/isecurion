@@ -75,9 +75,9 @@ export default function RedTeamAssessmentPage() {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* RED TEAM SECTION */}
-             
+
       <section className="mx-auto max-w-7xl bg-black">
-               
+
         <div className="relative overflow-hidden px-7 py-10 sm:px-10 lg:px-8 lg:py-10 xl:px-10">
           <img
             src={redTeamHeroBackground.src}
@@ -87,262 +87,260 @@ export default function RedTeamAssessmentPage() {
           />
 
           <div className="relative z-10 grid grid-cols-1 gap-12 lg:grid-cols-[500px_minmax(0,0.9fr)] lg:items-center lg:gap-8">
-                        <Animation>
-            <div className="flex flex-col justify-center lg:py-2 text-center md:text-left">
-              {/* Eyebrow */}
-              <p className="text-[13px] font-semibold uppercase leading-none text-[#E24B4A] sm:text-sm">
-                Red Team Assessment
-              </p>
-
-              {/* Heading */}
-              <h1 className="mt-5 max-w-[430px] font-semibold leading-[1.4] tracking-[-0.02em] text-white ">
-                Red Team
-                <br />
-                Assessment Services
-              </h1>
-
-              {/* Description */}
-              <p className="mt-4 max-w-[390px] text-[15px] leading-[1.8] text-[#D9D9D9] sm:text-[16px]">
-                Test your defenses against sophisticated attackers. ISECURION
-                helps identify gaps, simulate attacks, and improve security
-                posture across people, processes, and technology.
-              </p>
-
-              {/* CTA */}
-              <div className="mt-6">
-                <button
-                  type="button"
-                  className="inline-flex h-[45px] items-center justify-center rounded-lg bg-white px-5 text-[13px] font-semibold text-[#31435C] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f3f3f3]"
-                >
-                  Request Assessment{""}
-                  <span className="ml-1.5 text-[17px] leading-none text-[#31435C]">
-                    <Icon icon="mdi:arrow-right"></Icon>
-                  </span>
-                </button>
-              </div>
-
-              {/* ==================== STATS ==================== */}
-              <div className="mt-9 grid max-w-[380px] grid-cols-2 gap-x-10 gap-y-6">
-                {/* 150+ */}
-                <div>
-                  <p className="text-[21px] font-semibold leading-none text-[#E24B4A] sm:text-[22px]">
-                    150+
-                  </p>
-
-                  <p className="mt-2 text-[13px] leading-5 text-[#D1D1D1] sm:text-[14px]">
-                    Red Team Engagements
-                  </p>
-                </div>
-
-                {/* 30+ */}
-                <div>
-                  <p className="text-[21px] font-semibold leading-none text-[#E24B4A] sm:text-[22px]">
-                    30+
-                  </p>
-
-                  <p className="mt-2 text-[13px] leading-5 text-[#D1D1D1] sm:text-[14px]">
-                    Industries Served
-                  </p>
-                </div>
-
-                {/* 100% */}
-                <div>
-                  <p className="text-[21px] font-semibold leading-none text-[#E24B4A] sm:text-[22px]">
-                    100%
-                  </p>
-
-                  <p className="mt-2 text-[13px] leading-5 text-[#D1D1D1] sm:text-[14px]">
-                    Customer Satisfaction
-                  </p>
-                </div>
-              </div>
-            </div>
-                        </Animation>
-
-                        <Animation>
-            <div className="w-full rounded-[20px] bg-[#202123] p-[30px] shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-[32px] lg:h-[600px] lg:p-[30px] xl:p-[40px]">
-              <div>
-                <h2 className="text-[18px] font-medium leading-[1.3] text-white sm:text-[19px]">
-                  Request a Red Team Quote
-                </h2>
-
-                <p className="mt-3 text-[14px] leading-[1.5] text-[#D9D9D9]">
-                  Get a customized assessment plan and timeline.
+            <Animation>
+              <div className="flex flex-col justify-center lg:py-2 text-center md:text-left">
+                {/* Eyebrow */}
+                <p className="text-[13px] sm:text-base font-semibold uppercase leading-none text-[#E24B4A] sm:text-sm text-center lg:text-left">
+                  Red Team Assessment
                 </p>
+
+                {/* Heading */}
+                <h1 className="mt-5 lg:max-w-[430px] font-semibold leading-[1.4] tracking-[-0.02em] text-white text-center lg:text-left">
+                  Red Team Assessment Services
+                </h1>
+
+                {/* Description */}
+                <p className="mt-4 lg:max-w-[390px] text-[15px] leading-[1.8] text-[#D9D9D9] sm:text-[16px] text-center lg:text-left">
+                  Test your defenses against sophisticated attackers. ISECURION
+                  helps identify gaps, simulate attacks, and improve security
+                  posture across people, processes, and technology.
+                </p>
+
+                {/* CTA */}
+                <div className="mt-6 text-center lg:text-left">
+                  <button
+                    type="button"
+                    className="inline-flex h-[45px] items-center justify-center rounded-lg bg-white px-5 text-[13px] font-semibold text-[#31435C] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f3f3f3]"
+                  >
+                    Request Assessment{""}
+                    <span className="ml-1.5 text-[17px] leading-none text-[#31435C]">
+                      <Icon icon="mdi:arrow-right"></Icon>
+                    </span>
+                  </button>
+                </div>
+
+                {/* ==================== STATS ==================== */}
+                <div className="mt-9 grid lg:max-w-[380px] grid-cols-3 lg:grid-cols-2 gap-x-10 gap-y-6 text-center">
+                  {/* 150+ */}
+                  <div>
+                    <p className="text-[21px] font-semibold leading-none text-[#E24B4A] sm:text-[22px]">
+                      150+
+                    </p>
+
+                    <p className="mt-2 text-[13px] leading-5 text-[#D1D1D1] sm:text-[14px]">
+                      Red Team Engagements
+                    </p>
+                  </div>
+
+                  {/* 30+ */}
+                  <div>
+                    <p className="text-[21px] font-semibold leading-none text-[#E24B4A] sm:text-[22px]">
+                      30+
+                    </p>
+
+                    <p className="mt-2 text-[13px] leading-5 text-[#D1D1D1] sm:text-[14px]">
+                      Industries Served
+                    </p>
+                  </div>
+
+                  {/* 100% */}
+                  <div>
+                    <p className="text-[21px] font-semibold leading-none text-[#E24B4A] sm:text-[22px]">
+                      100%
+                    </p>
+
+                    <p className="mt-2 text-[13px] leading-5 text-[#D1D1D1] sm:text-[14px]">
+                      Customer Satisfaction
+                    </p>
+                  </div>
+                </div>
               </div>
+            </Animation>
 
-              {/* Form*/}
-              <form className="mt-8">
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                  <div>
-                    <label
-                      htmlFor="workEmail"
-                      className="mb-2 block text-[13px] font-medium leading-5 text-[#E7E7E7]"
-                    >
-                      Work Email <span className="text-[#E42F23]">*</span>
-                    </label>
+            <Animation>
+              <div className="w-full rounded-[20px] bg-[#202123] p-[30px] shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-[32px] lg:h-[600px] lg:p-[30px] xl:p-[40px]">
+                <div>
+                  <h2 className="text-[18px] font-medium leading-[1.3] text-white sm:text-[19px]">
+                    Request a Red Team Quote
+                  </h2>
 
-                    <input
-                      id="workEmail"
-                      name="workEmail"
-                      type="email"
-                      placeholder="youremail@gmail.com"
-                      required
-                      className="h-[43px] w-full rounded-[7px] border border-[#29292C] bg-[#090304] px-3 text-[13px] text-white outline-none placeholder:text-[#858585] focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
-                    />
+                  <p className="mt-3 text-[14px] leading-[1.5] text-[#D9D9D9]">
+                    Get a customized assessment plan and timeline.
+                  </p>
+                </div>
+
+                {/* Form*/}
+                <form className="mt-8">
+                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div>
+                      <label
+                        htmlFor="workEmail"
+                        className="mb-2 block text-[13px] font-medium leading-5 text-[#E7E7E7]"
+                      >
+                        Work Email <span className="text-[#E42F23]">*</span>
+                      </label>
+
+                      <input
+                        id="workEmail"
+                        name="workEmail"
+                        type="email"
+                        placeholder="youremail@gmail.com"
+                        required
+                        className="h-[43px] w-full rounded-[7px] border border-[#29292C] bg-[#090304] px-3 text-[13px] text-white outline-none placeholder:text-[#858585] focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="companyName"
+                        className="mb-2 block text-[13px] font-medium leading-5 text-[#E7E7E7]"
+                      >
+                        Company Name
+                      </label>
+
+                      <input
+                        id="companyName"
+                        name="companyName"
+                        type="text"
+                        placeholder="Company name"
+                        className="h-[43px] w-full rounded-[7px] border border-[#29292C] bg-[#090304] px-3 text-[13px] text-white outline-none placeholder:text-[#858585] focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
+                      />
+                    </div>
                   </div>
 
-                  <div>
+                  <div className="mt-5">
                     <label
-                      htmlFor="companyName"
+                      htmlFor="assessmentType"
                       className="mb-2 block text-[13px] font-medium leading-5 text-[#E7E7E7]"
                     >
-                      Company Name
+                      Assessment Type <span className="text-[#F04444]">*</span>
                     </label>
 
+                    <div className="relative">
+                      <select
+                        id="assessmentType"
+                        name="assessmentType"
+                        defaultValue=""
+                        required
+                        className="h-[43px] w-full appearance-none rounded-[7px] border border-[#29292C] bg-[#090304] px-3 pr-10 text-[13px] text-[#858585] outline-none focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
+                      >
+                        <option value="" disabled>
+                          Select Assessment Type
+                        </option>
+
+                        <option value="external">
+                          External Red Team Assessment
+                        </option>
+
+                        <option value="internal">
+                          Internal Red Team Assessment
+                        </option>
+
+                        <option value="web">
+                          Web Application Red Team Assessment
+                        </option>
+
+                        <option value="mobile">
+                          Mobile Application Red Team Assessment
+                        </option>
+                      </select>
+
+                      <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#777]">
+                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                          <path
+                            d="M1 1L7 7L13 1"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Captcha */}
+                  <div className="mt-7">
+                    <div className="flex items-center gap-3">
+                      <span className="text-[13px] leading-5 text-[#E7E7E7]">
+                        Captcha
+                      </span>
+
+                      <span className="flex h-[32px] min-w-[127px] items-center justify-center rounded-[5px] bg-[#E24B4A78] px-5 text-[13px] font-medium tracking-wide text-white">
+                        ZRLD9Y
+                      </span>
+                    </div>
+
                     <input
-                      id="companyName"
-                      name="companyName"
+                      id="captcha"
+                      name="captcha"
                       type="text"
-                      placeholder="Company name"
-                      className="h-[43px] w-full rounded-[7px] border border-[#29292C] bg-[#090304] px-3 text-[13px] text-white outline-none placeholder:text-[#858585] focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
+                      placeholder="Enter the text shown above"
+                      required
+                      className="mt-3 h-[43px] w-full rounded-[7px] border border-[#29292C] bg-[#090304] px-3 text-[13px] text-white outline-none placeholder:text-[#858585] focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
                     />
                   </div>
-                </div>
 
-                <div className="mt-5">
-                  <label
-                    htmlFor="assessmentType"
-                    className="mb-2 block text-[13px] font-medium leading-5 text-[#E7E7E7]"
-                  >
-                    Assessment Type <span className="text-[#F04444]">*</span>
-                  </label>
-
-                  <div className="relative">
-                    <select
-                      id="assessmentType"
-                      name="assessmentType"
-                      defaultValue=""
+                  {/* Consent */}
+                  <div className="mt-5 flex items-start gap-2.5">
+                    <input
+                      id="consent"
+                      name="consent"
+                      type="checkbox"
                       required
-                      className="h-[43px] w-full appearance-none rounded-[7px] border border-[#29292C] bg-[#090304] px-3 pr-10 text-[13px] text-[#858585] outline-none focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
+                      className="mt-[2px] h-[14px] w-[14px] shrink-0 rounded-[2px] border border-[#A8A8A8] "
+                    />
+
+                    <label
+                      htmlFor="consent"
+                      className="text-[10px] leading-[1.7] text-[#BDBDBD] sm:text-[11px]"
                     >
-                      <option value="" disabled>
-                        Select Assessment Type
-                      </option>
-
-                      <option value="external">
-                        External Red Team Assessment
-                      </option>
-
-                      <option value="internal">
-                        Internal Red Team Assessment
-                      </option>
-
-                      <option value="web">
-                        Web Application Red Team Assessment
-                      </option>
-
-                      <option value="mobile">
-                        Mobile Application Red Team Assessment
-                      </option>
-                    </select>
-
-                    <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#777]">
-                      <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
-                        <path
-                          d="M1 1L7 7L13 1"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-
-                {/* Captcha */}
-                <div className="mt-7">
-                  <div className="flex items-center gap-3">
-                    <span className="text-[13px] leading-5 text-[#E7E7E7]">
-                      Captcha
-                    </span>
-
-                    <span className="flex h-[32px] min-w-[127px] items-center justify-center rounded-[5px] bg-[#E24B4A78] px-5 text-[13px] font-medium tracking-wide text-white">
-                      ZRLD9Y
-                    </span>
+                      By clicking submit below, you agree to our Terms of Use and
+                      Privacy Policy. Additionally, you consent to allow ISECURION
+                      Technology & Consulting Pvt. Ltd. to store and process the
+                      personal information submitted above to provide you the
+                      content requested.
+                    </label>
                   </div>
 
-                  <input
-                    id="captcha"
-                    name="captcha"
-                    type="text"
-                    placeholder="Enter the text shown above"
-                    required
-                    className="mt-3 h-[43px] w-full rounded-[7px] border border-[#29292C] bg-[#090304] px-3 text-[13px] text-white outline-none placeholder:text-[#858585] focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
-                  />
-                </div>
-
-                {/* Consent */}
-                <div className="mt-5 flex items-start gap-2.5">
-                  <input
-                    id="consent"
-                    name="consent"
-                    type="checkbox"
-                    required
-                    className="mt-[2px] h-[14px] w-[14px] shrink-0 rounded-[2px] border border-[#A8A8A8] "
-                  />
-
-                  <label
-                    htmlFor="consent"
-                    className="text-[10px] leading-[1.7] text-[#BDBDBD] sm:text-[11px]"
+                  {/* Submit */}
+                  <button
+                    type="submit"
+                    className="mt-8 flex h-[51px] w-full items-center justify-center rounded-[7px] border border-[#4D78C4] bg-gradient-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70] text-[15px] font-semibold text-white shadow-[0_8px_20px_rgba(39,84,148,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:from-[#5282D3] hover:to-[#2B5CA0] active:translate-y-0"
                   >
-                    By clicking submit below, you agree to our Terms of Use and
-                    Privacy Policy. Additionally, you consent to allow ISECURION
-                    Technology & Consulting Pvt. Ltd. to store and process the
-                    personal information submitted above to provide you the
-                    content requested.
-                  </label>
-                </div>
-
-                {/* Submit */}
-                <button
-                  type="submit"
-                  className="mt-8 flex h-[51px] w-full items-center justify-center rounded-[7px] border border-[#4D78C4] bg-gradient-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70] text-[15px] font-semibold text-white shadow-[0_8px_20px_rgba(39,84,148,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:from-[#5282D3] hover:to-[#2B5CA0] active:translate-y-0"
-                >
-                  Get Quote{""}
-                  <span className="ml-1.5 text-[18px] leading-none">
-                    <Icon icon="mdi:arrow-right" />
-                  </span>
-                </button>
-              </form>
-            </div>
-                        </Animation>
+                    Get Quote{""}
+                    <span className="ml-1.5 text-[18px] leading-none">
+                      <Icon icon="mdi:arrow-right" />
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </Animation>
           </div>
         </div>
-                
+
       </section>
-           
-            
+
+
       <section className="bg-[#050B1A]">
-                <Animation>
-        <div className="mx-auto max-w-7xl px-7 py-10 sm:px-10 lg:px-8 lg:py-14 xl:px-10 text-center md:text-left">
-          <h2 className="text-[30px] font-normal leading-[1.2]  text-white sm:text-[38px] lg:text-[40px]">
-            What is Red Team Assessment?
-          </h2>
-          <p className="mt-7 text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px] lg:text-[18px] max-w-[700px]">
-            Red Team assessments are goal-oriented attack simulations designed
-            to test how well your people, processes, and technology can
-            withstand a targeted attack.
-          </p>
-          <p className="mt-10 text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px] lg:text-[18px] max-w-[700px]">
-            Unlike traditional penetration testing, Red Team exercises mirror
-            real adversary tactics to achieve objectives such as data
-            exfiltration, system compromise, or physical access.
-          </p>
-        </div>
-                </Animation>      </section>
-            
+        <Animation>
+          <div className="mx-auto max-w-7xl px-7 py-10 sm:px-10 lg:px-8 lg:py-14 xl:px-10 text-center md:text-left">
+            <h2 className="text-[30px] font-normal leading-[1.2]  text-white sm:text-[38px] lg:text-[40px]">
+              What is Red Team Assessment?
+            </h2>
+            <p className="mt-7 text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px] lg:text-[18px] max-w-[700px]">
+              Red Team assessments are goal-oriented attack simulations designed
+              to test how well your people, processes, and technology can
+              withstand a targeted attack.
+            </p>
+            <p className="mt-10 text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px] lg:text-[18px] max-w-[700px]">
+              Unlike traditional penetration testing, Red Team exercises mirror
+              real adversary tactics to achieve objectives such as data
+              exfiltration, system compromise, or physical access.
+            </p>
+          </div>
+        </Animation>      </section>
+
 
       {/* RED TEAM ASSESSMENT OBJECTIVES */}
       <section className="mx-auto max-w-7xl overflow-hidden bg-black">
@@ -366,138 +364,138 @@ export default function RedTeamAssessmentPage() {
           </div>
 
           {/* ==================== OBJECTIVES ==================== */}
-                    <Animation>
-          <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:mt-[78px] lg:grid-cols-4">
-            {/* ==================== OBJECTIVE 01 ==================== */}
-            <div className="relative px-6 py-2 sm:px-7 lg:min-h-[188px] lg:px-6 xl:px-6">
-              {/* Vertical Divider */}
-              <div className="absolute left-0 top-0 hidden  w-[1.03px] bg-[#E24B4A2B] h-[167px] sm:block" />
+          <Animation>
+            <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:mt-[78px] lg:grid-cols-4">
+              {/* ==================== OBJECTIVE 01 ==================== */}
+              <div className="relative px-6 py-2 sm:px-7 lg:min-h-[188px] lg:px-6 xl:px-6">
+                {/* Vertical Divider */}
+                <div className="absolute left-0 top-0 hidden  w-[1.03px] bg-[#E24B4A2B] h-[167px] sm:block" />
 
-              {/* Icon */}
-              <div className="relative z-10">
-                <Icon
-                  icon="fa-solid:shield-alt"
-                  className="text-[20px] text-[#D83C43]"
-                />
+                {/* Icon */}
+                <div className="relative z-10">
+                  <Icon
+                    icon="fa-solid:shield-alt"
+                    className="text-[20px] text-[#D83C43]"
+                  />
+                </div>
+
+                {/* Title */}
+                <h3 className="relative z-10 mt-4 text-[17px] leading-[1.4] text-[#F5F0E8]">
+                  Threat Actors
+                </h3>
+
+                {/* Description */}
+                <p className="relative z-10 mt-3 max-w-[275px] text-[14px] leading-[1.8] text-[#AFAFB4]">
+                  Evaluate your environment against realistic adversary tactics
+                  and attack vectors.
+                </p>
+
+                {/* Number */}
+                {/* Number */}
+                <span className="px-5 pointer-events-none absolute bottom-[-8px] right-1 select-none font-black text-[70px] leading-[98.92px] tracking-[-3.96px] text-transparent [-webkit-text-stroke:1.03px_rgba(245,240,232,0.07)]">
+                  01
+                </span>
               </div>
 
-              {/* Title */}
-              <h3 className="relative z-10 mt-4 text-[17px] leading-[1.4] text-[#F5F0E8]">
-                Threat Actors
-              </h3>
+              {/* ==================== OBJECTIVE 02 ==================== */}
+              <div className="relative px-6 py-2 sm:px-7 lg:min-h-[188px] lg:px-6 xl:px-6">
+                {/* Vertical Divider */}
+                <div className="absolute left-0 top-0 hidden w-[1.03px] bg-[#E24B4A2B] h-[167px] sm:block" />
 
-              {/* Description */}
-              <p className="relative z-10 mt-3 max-w-[275px] text-[14px] leading-[1.8] text-[#AFAFB4]">
-                Evaluate your environment against realistic adversary tactics
-                and attack vectors.
-              </p>
+                {/* Icon */}
+                <div className="relative z-10">
+                  <Icon
+                    icon="fluent:panel-left-key-24-filled"
+                    className="text-[20px] text-[#D83C43]"
+                  />
+                </div>
 
-              {/* Number */}
-              {/* Number */}
-              <span className="px-5 pointer-events-none absolute bottom-[-8px] right-1 select-none font-black text-[70px] leading-[98.92px] tracking-[-3.96px] text-transparent [-webkit-text-stroke:1.03px_rgba(245,240,232,0.07)]">
-                01
-              </span>
-            </div>
+                {/* Title */}
+                <h3 className="relative z-10 mt-4 text-[16px]  leading-[1.4] text-[#F5F0E8]">
+                  Security Controls
+                </h3>
 
-            {/* ==================== OBJECTIVE 02 ==================== */}
-            <div className="relative px-6 py-2 sm:px-7 lg:min-h-[188px] lg:px-6 xl:px-6">
-              {/* Vertical Divider */}
-              <div className="absolute left-0 top-0 hidden w-[1.03px] bg-[#E24B4A2B] h-[167px] sm:block" />
+                {/* Description */}
+                <p className="relative z-10 mt-3 max-w-[275px] text-[13px] leading-[1.8] text-[#D1D1D1D9]">
+                  Test physical, human, and digital controls for weaknesses and
+                  bypass opportunities.
+                </p>
 
-              {/* Icon */}
-              <div className="relative z-10">
-                <Icon
-                  icon="fluent:panel-left-key-24-filled"
-                  className="text-[20px] text-[#D83C43]"
-                />
+                {/* Number */}
+                {/* Number */}
+                <span className="px-5 pointer-events-none absolute bottom-[-8px] right-1 select-none font-black text-[70px] leading-[98.92px] tracking-[-3.96px] text-transparent [-webkit-text-stroke:1.03px_rgba(245,240,232,0.07)]">
+                  02
+                </span>
               </div>
 
-              {/* Title */}
-              <h3 className="relative z-10 mt-4 text-[16px]  leading-[1.4] text-[#F5F0E8]">
-                Security Controls
-              </h3>
+              {/* ==================== OBJECTIVE 03 ==================== */}
+              <div className="relative px-6 py-2 sm:px-7 lg:min-h-[188px] lg:px-6 xl:px-6">
+                {/* Vertical Divider */}
+                <div className="absolute left-0 top-0 hidden w-[1.03px] bg-[#E24B4A2B] h-[167px] sm:block" />
 
-              {/* Description */}
-              <p className="relative z-10 mt-3 max-w-[275px] text-[13px] leading-[1.8] text-[#D1D1D1D9]">
-                Test physical, human, and digital controls for weaknesses and
-                bypass opportunities.
-              </p>
+                {/* Icon */}
+                <div className="relative z-10">
+                  <Icon
+                    icon="iconmind:step-back-prompt-duotone-bold"
+                    className="text-[23px] text-[#D83C43]"
+                  />
+                </div>
 
-              {/* Number */}
-              {/* Number */}
-              <span className="px-5 pointer-events-none absolute bottom-[-8px] right-1 select-none font-black text-[70px] leading-[98.92px] tracking-[-3.96px] text-transparent [-webkit-text-stroke:1.03px_rgba(245,240,232,0.07)]">
-                02
-              </span>
-            </div>
+                {/* Title */}
+                <h3 className="relative z-10 mt-4 text-[16px]  leading-[1.4] text-[#F5F0E8]">
+                  Detection and Response
+                </h3>
 
-            {/* ==================== OBJECTIVE 03 ==================== */}
-            <div className="relative px-6 py-2 sm:px-7 lg:min-h-[188px] lg:px-6 xl:px-6">
-              {/* Vertical Divider */}
-              <div className="absolute left-0 top-0 hidden w-[1.03px] bg-[#E24B4A2B] h-[167px] sm:block" />
+                {/* Description */}
+                <p className="relative z-10 mt-3 max-w-[275px] text-[13px] leading-[1.8] text-[#AFAFB4]">
+                  Determine whether your security teams can detect, investigate,
+                  and respond to an active attack.
+                </p>
 
-              {/* Icon */}
-              <div className="relative z-10">
-                <Icon
-                  icon="iconmind:step-back-prompt-duotone-bold"
-                  className="text-[23px] text-[#D83C43]"
-                />
+                {/* Number */}
+                {/* Number */}
+                <span className="px-5 pointer-events-none absolute bottom-[-8px] right-1 select-none font-black text-[70px] leading-[98.92px] tracking-[-3.96px] text-transparent [-webkit-text-stroke:1.03px_rgba(245,240,232,0.07)]">
+                  03
+                </span>
               </div>
 
-              {/* Title */}
-              <h3 className="relative z-10 mt-4 text-[16px]  leading-[1.4] text-[#F5F0E8]">
-                Detection and Response
-              </h3>
+              {/* ==================== OBJECTIVE 04 ==================== */}
+              <div className="relative px-6 py-2 sm:px-7 lg:min-h-[188px] lg:px-6 xl:px-6">
+                {/* Vertical Divider */}
+                <div className="absolute left-0 top-0 hidden w-[1.03px] bg-[#E24B4A2B] h-[167px] sm:block" />
 
-              {/* Description */}
-              <p className="relative z-10 mt-3 max-w-[275px] text-[13px] leading-[1.8] text-[#AFAFB4]">
-                Determine whether your security teams can detect, investigate,
-                and respond to an active attack.
-              </p>
+                {/* Icon */}
+                <div className="relative z-10">
+                  <Icon
+                    icon="ic:baseline-business-center"
+                    className="text-[23px] text-[#D83C43]"
+                  />
+                </div>
 
-              {/* Number */}
-              {/* Number */}
-              <span className="px-5 pointer-events-none absolute bottom-[-8px] right-1 select-none font-black text-[70px] leading-[98.92px] tracking-[-3.96px] text-transparent [-webkit-text-stroke:1.03px_rgba(245,240,232,0.07)]">
-                03
-              </span>
-            </div>
+                {/* Title */}
+                <h4 className="relative z-10 mt-4 text-[16px]  leading-[1.4] text-[#F5F0E8]">
+                  Business Impact
+                </h4>
 
-            {/* ==================== OBJECTIVE 04 ==================== */}
-            <div className="relative px-6 py-2 sm:px-7 lg:min-h-[188px] lg:px-6 xl:px-6">
-              {/* Vertical Divider */}
-              <div className="absolute left-0 top-0 hidden w-[1.03px] bg-[#E24B4A2B] h-[167px] sm:block" />
+                {/* Description */}
+                <p className="relative z-10 mt-3 max-w-[275px] text-[13px] leading-[1.8] text-[#AFAFB4]">
+                  Understand potential attack paths to critical systems,
+                  privileged access, and sensitive information.
+                </p>
 
-              {/* Icon */}
-              <div className="relative z-10">
-                <Icon
-                  icon="ic:baseline-business-center"
-                  className="text-[23px] text-[#D83C43]"
-                />
+                {/* Number */}
+                {/* Number */}
+                <span className="px-5 pointer-events-none absolute bottom-[-8px] right-1 select-none font-black text-[70px] leading-[98.92px] tracking-[-3.96px] text-transparent [-webkit-text-stroke:1.03px_rgba(245,240,232,0.07)]">
+                  04
+                </span>
               </div>
-
-              {/* Title */}
-              <h4 className="relative z-10 mt-4 text-[16px]  leading-[1.4] text-[#F5F0E8]">
-                Business Impact
-              </h4>
-
-              {/* Description */}
-              <p className="relative z-10 mt-3 max-w-[275px] text-[13px] leading-[1.8] text-[#AFAFB4]">
-                Understand potential attack paths to critical systems,
-                privileged access, and sensitive information.
-              </p>
-
-              {/* Number */}
-              {/* Number */}
-              <span className="px-5 pointer-events-none absolute bottom-[-8px] right-1 select-none font-black text-[70px] leading-[98.92px] tracking-[-3.96px] text-transparent [-webkit-text-stroke:1.03px_rgba(245,240,232,0.07)]">
-                04
-              </span>
             </div>
-          </div>
-                    </Animation>
+          </Animation>
         </div>
       </section>
 
       {/* WHAT WE ASSESS */}
-            
+
       <section className="bg-[#050D1D]">
         {/* ==================== ATTACK SURFACE ==================== */}
         <div
@@ -511,155 +509,155 @@ export default function RedTeamAssessmentPage() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,10,19,0.88)_0%,rgba(3,10,19,0.62)_55%,rgba(3,10,19,0.8)_100%)] lg:hidden" />
 
           {/* Content */}
-                    <Animation>
-          <div className="mx-auto max-w-7xl overflow-hidden relative z-10 flex min-h-[385px] items-center px-7 py-14 sm:min-h-[410px] sm:px-10 sm:py-16 lg:min-h-[385px] lg:px-7 lg:py-12 xl:px-7">
-            <div className="max-w-[430px] text-center md:text-left">
-              {/* Eyebrow */}
-              <p className="text-[13px] font-medium uppercase text-[#E24B4A] sm:text-[15px]">
-                What We Assess
-              </p>
-
-              {/* Heading */}
-              <h2 className="mt-4 text-[32px] font-normal leading-[1.5] tracking-[-0.02em] text-white sm:text-[40px] lg:text-[38px] xl:text-[40px]">
-                The Attack Surface,{""}
-                <span className="block text-[#E24B4A]">Fully Tested.</span>
-              </h2>
-
-              {/* Description */}
-              <div className="mt-6 space-y-4 text-[15px] leading-[1.8] text-[#D1D1D1] sm:text-[17px] lg:text-[16px]">
-                <p>
-                  Key activities carried out during the Red Team Assessment to
-                  evaluate your security posture.
+          <Animation>
+            <div className="mx-auto max-w-7xl overflow-hidden relative z-10 flex min-h-[385px] items-center px-7 py-14 sm:min-h-[410px] sm:px-10 sm:py-16 lg:min-h-[385px] lg:px-7 lg:py-12 xl:px-7">
+              <div className="max-w-[430px] text-center md:text-left">
+                {/* Eyebrow */}
+                <p className="text-[13px] sm:text-base font-semibold uppercase text-[#E24B4A] sm:text-[15px]">
+                  What We Assess
                 </p>
 
-                <p>
-                  From technical systems to people, wireless, and physical
-                  environments.
-                  <br className="hidden sm:block" />
-                  Our approach identifies entry points, attack paths, and
-                  opportunities to bypass defenses.
-                </p>
+                {/* Heading */}
+                <h2 className="mt-4 text-[32px] font-normal leading-[1.5] tracking-[-0.02em] text-white sm:text-[40px] lg:text-[38px] xl:text-[40px]">
+                  The Attack Surface,{""}
+                  <span className="block text-[#E24B4A]">Fully Tested.</span>
+                </h2>
+
+                {/* Description */}
+                <div className="mt-6 space-y-4 text-[15px] leading-[1.8] text-[#D1D1D1] sm:text-[17px] lg:text-[16px]">
+                  <p>
+                    Key activities carried out during the Red Team Assessment to
+                    evaluate your security posture.
+                  </p>
+
+                  <p>
+                    From technical systems to people, wireless, and physical
+                    environments.
+                    <br className="hidden sm:block" />
+                    Our approach identifies entry points, attack paths, and
+                    opportunities to bypass defenses.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-                    </Animation>
+          </Animation>
         </div>
 
         {/* ==================== ASSESSMENT AREAS ==================== */}
-                <Animation>
-        <div className="relative mx-auto max-w-7xl px-7 py-14 sm:px-10 sm:py-16 lg:px-7 lg:py-[76px] xl:px-8 items-center ">
-          <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-5 lg:gap-x-14 ">
-            {/* ==================== OPEN SOURCE INTELLIGENCE ==================== */}
-            <div className="min-w-0">
-              <div className="relative h-[30px] w-[30px]">
-                <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
-                <img
-                  src={bookIcon.src}
-                  alt=""
-                  className="relative z-10 h-[22px] w-[22px]"
-                />
+        <Animation>
+          <div className="relative mx-auto max-w-7xl px-7 py-14 sm:px-10 sm:py-16 lg:px-7 lg:py-[76px] xl:px-8 items-center ">
+            <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-5 lg:gap-x-14 ">
+              {/* ==================== OPEN SOURCE INTELLIGENCE ==================== */}
+              <div className="min-w-0">
+                <div className="relative h-[30px] w-[30px]">
+                  <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
+                  <img
+                    src={bookIcon.src}
+                    alt=""
+                    className="relative z-10 h-[22px] w-[22px]"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-[14px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
+                  Open Source Intelligence
+                </h3>
+
+                <p className="mt-3 max-w-[170px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
+                  Gather intelligence from publicly available sources to map your
+                  exposure.
+                </p>
               </div>
 
-              <h3 className="mt-5 text-[14px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
-                Open Source Intelligence
-              </h3>
+              {/* ==================== NETWORK ATTACKS ==================== */}
+              <div className="min-w-0">
+                <div className="relative h-[30px] w-[30px]">
+                  <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
+                  <img
+                    src={networkIcon.src}
+                    alt=""
+                    className="relative z-10 h-[22px] w-[22px]"
+                  />
+                </div>
 
-              <p className="mt-3 max-w-[170px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
-                Gather intelligence from publicly available sources to map your
-                exposure.
-              </p>
-            </div>
+                <h3 className="mt-5 text-[15px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
+                  Network Attacks
+                </h3>
 
-            {/* ==================== NETWORK ATTACKS ==================== */}
-            <div className="min-w-0">
-              <div className="relative h-[30px] w-[30px]">
-                <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
-                <img
-                  src={networkIcon.src}
-                  alt=""
-                  className="relative z-10 h-[22px] w-[22px]"
-                />
+                <p className="mt-3 max-w-[190px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
+                  Simulated external and internal attacks to uncover weaknesses in
+                  your infrastructure.
+                </p>
               </div>
 
-              <h3 className="mt-5 text-[15px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
-                Network Attacks
-              </h3>
+              {/* ==================== WIRELESS & ENDPOINT ==================== */}
+              <div className="min-w-0">
+                <div className="relative h-[30px] w-[30px]">
+                  <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
+                  <img
+                    src={wifiIcon.src}
+                    alt=""
+                    className="relative z-10 h-[22px] w-[22px]"
+                  />
+                </div>
 
-              <p className="mt-3 max-w-[190px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
-                Simulated external and internal attacks to uncover weaknesses in
-                your infrastructure.
-              </p>
-            </div>
+                <h3 className="mt-5 text-[15px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
+                  Wireless & Endpoint
+                </h3>
 
-            {/* ==================== WIRELESS & ENDPOINT ==================== */}
-            <div className="min-w-0">
-              <div className="relative h-[30px] w-[30px]">
-                <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
-                <img
-                  src={wifiIcon.src}
-                  alt=""
-                  className="relative z-10 h-[22px] w-[22px]"
-                />
+                <p className="mt-3 max-w-[160px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
+                  Assess Wi-Fi, removable media, & endpoint security for bypass
+                  opportunities.
+                </p>
               </div>
 
-              <h3 className="mt-5 text-[15px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
-                Wireless & Endpoint
-              </h3>
+              {/* ==================== COVERT TECHNIQUES ==================== */}
+              <div className="min-w-0">
+                <div className="relative h-[30px] w-[30px]">
+                  <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
+                  <img
+                    src={solidShield.src}
+                    alt=""
+                    className="relative z-10 h-[22px] w-[22px]"
+                  />
+                </div>
 
-              <p className="mt-3 max-w-[160px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
-                Assess Wi-Fi, removable media, & endpoint security for bypass
-                opportunities.
-              </p>
-            </div>
+                <h3 className="mt-5 text-[15px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
+                  Covert Techniques
+                </h3>
 
-            {/* ==================== COVERT TECHNIQUES ==================== */}
-            <div className="min-w-0">
-              <div className="relative h-[30px] w-[30px]">
-                <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
-                <img
-                  src={solidShield.src}
-                  alt=""
-                  className="relative z-10 h-[22px] w-[22px]"
-                />
+                <p className="mt-3 max-w-[180px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
+                  Use stealth methods to simulate insider and persistent threats.
+                </p>
               </div>
 
-              <h3 className="mt-5 text-[15px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
-                Covert Techniques
-              </h3>
+              {/* ==================== PHYSICAL SECURITY ==================== */}
+              <div className="min-w-0">
+                <div className="relative h-[30px] w-[30px]">
+                  <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
+                  <img
+                    src={guardIcon.src}
+                    alt=""
+                    className="relative z-10 h-[22px] w-[22px]"
+                  />
+                </div>
 
-              <p className="mt-3 max-w-[180px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
-                Use stealth methods to simulate insider and persistent threats.
-              </p>
-            </div>
+                <h3 className="mt-5 text-[15px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
+                  Physical Security
+                </h3>
 
-            {/* ==================== PHYSICAL SECURITY ==================== */}
-            <div className="min-w-0">
-              <div className="relative h-[30px] w-[30px]">
-                <span className="absolute bottom-0 right-1 h-[18px] w-[18px] rounded-full bg-[#232930]" />
-                <img
-                  src={guardIcon.src}
-                  alt=""
-                  className="relative z-10 h-[22px] w-[22px]"
-                />
+                <p className="mt-3 max-w-[160px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
+                  Test resilience of on-site controls like tailgating and rogue
+                  device detection.
+                </p>
               </div>
-
-              <h3 className="mt-5 text-[15px] font-medium leading-[1.4] text-[#F5F0E8] sm:text-[16px]">
-                Physical Security
-              </h3>
-
-              <p className="mt-3 max-w-[160px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
-                Test resilience of on-site controls like tailgating and rogue
-                device detection.
-              </p>
             </div>
+
+            {/* Divider */}
+            <div className="mt-14 h-[1.2px] w-full bg-[#DADADA45] sm:mt-16 lg:mt-[72px]" />
           </div>
-
-          {/* Divider */}
-          <div className="mt-14 h-[1.2px] w-full bg-[#DADADA45] sm:mt-16 lg:mt-[72px]" />
-        </div>
-                </Animation>
+        </Animation>
       </section>
-           
+
 
       <section className="bg-black px-0">
         <div className="relative min-h-[671px] overflow-hidden">
@@ -677,136 +675,136 @@ export default function RedTeamAssessmentPage() {
             <div className="hidden lg:block">
               <div className="relative min-h-[555px]">
                 {/* Left content */}
-                                <Animation>
-                <div className="absolute left-0 top-0 w-[500px]">
-                  <p className="text-[15px] font-medium leading-[18px] text-[#E24B4A]">
-                    OUR APPROACH
-                  </p>
+                <Animation>
+                  <div className="absolute left-0 top-0 w-[500px]">
+                    <p className="text-[15px] sm:text-base font-semibold leading-[18px] text-[#E24B4A]">
+                      OUR APPROACH
+                    </p>
 
-                  <h2 className="mt-[12px] max-w-[500px] text-[40px] font-normal leading-[1.5] text-white">
-                    From Intelligence to
-                    <br />
-                    Objective
-                    <br />
-                    Achievement
-                  </h2>
+                    <h2 className="mt-[12px] max-w-[500px] text-[40px] font-normal leading-[1.5] text-white">
+                      From Intelligence to
+                      <br />
+                      Objective
+                      <br />
+                      Achievement
+                    </h2>
 
-                  <p className="absolute left-0 top-[392px] max-w-[382px] text-[16px] font-normal leading-[1.72] text-[#D1D1D1]">
-                    A structured, adversary-driven methodology designed to
-                    simulate real-world attacks, uncover attack paths, and
-                    strengthen your organizations ability to detect, respond,
-                    and withstand them.
-                  </p>
-                </div>
-                                </Animation>
+                    <p className="absolute left-0 top-[392px] max-w-[382px] text-[16px] font-normal leading-[1.72] text-[#D1D1D1]">
+                      A structured, adversary-driven methodology designed to
+                      simulate real-world attacks, uncover attack paths, and
+                      strengthen your organizations ability to detect, respond,
+                      and withstand them.
+                    </p>
+                  </div>
+                </Animation>
 
                 {/* Card 01 */}
-                                <Animation>
-                <div className="absolute left-[690px] top-[60px] h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[51%] px-[20px] py-[20px]">
-                  <div className="flex items-start justify-between">
-                    <Icon
-                      icon="fa6-regular:handshake"
-                      className="text-[25px] text-white"
-                    />
+                <Animation>
+                  <div className="absolute left-[690px] top-[60px] h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[51%] px-[20px] py-[20px]">
+                    <div className="flex items-start justify-between">
+                      <Icon
+                        icon="fa6-regular:handshake"
+                        className="text-[25px] text-white"
+                      />
 
-                    <span className="text-[38px] font-normal leading-none text-[#E24B4A85]">
-                      01
-                    </span>
+                      <span className="text-[38px] font-normal leading-none text-[#E24B4A85]">
+                        01
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-[23px] left-[20px] right-[20px]">
+                      <h3 className="text-[14px] font-medium leading-[1.45] text-[#F5F0E8]">
+                        Step 1: Pre-Engagement
+                      </h3>
+
+                      <p className="mt-[11px] text-[13px] leading-[1.6] text-[#D1D1D1]">
+                        Define scope, objectives, and rules of engagement with
+                        stakeholders.
+                      </p>
+                    </div>
                   </div>
-
-                  <div className="absolute bottom-[23px] left-[20px] right-[20px]">
-                    <h3 className="text-[14px] font-medium leading-[1.45] text-[#F5F0E8]">
-                      Step 1: Pre-Engagement
-                    </h3>
-
-                    <p className="mt-[11px] text-[13px] leading-[1.6] text-[#D1D1D1]">
-                      Define scope, objectives, and rules of engagement with
-                      stakeholders.
-                    </p>
-                  </div>
-                </div>
-                                </Animation>
+                </Animation>
 
                 {/* Card 02 */}
-                                <Animation>
-                <div className="absolute left-[947px] top-0 h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[51%] px-[20px] py-[20px]">
-                  <div className="flex items-start justify-between">
-                    <Icon
-                      icon="iconmind:click-and-collect-outline-regular"
-                      className="text-[25px] text-white"
-                    />
+                <Animation>
+                  <div className="absolute left-[947px] top-0 h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[51%] px-[20px] py-[20px]">
+                    <div className="flex items-start justify-between">
+                      <Icon
+                        icon="iconmind:click-and-collect-outline-regular"
+                        className="text-[25px] text-white"
+                      />
 
-                    <span className="text-[38px] font-normal leading-none text-[#E24B4A85]">
-                      02
-                    </span>
+                      <span className="text-[38px] font-normal leading-none text-[#E24B4A85]">
+                        02
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-[23px] left-[20px] right-[20px]">
+                      <h3 className="text-[14px] font-medium leading-[1.45] text-[#F5F0E8]">
+                        Step 2: Reconnaissance
+                      </h3>
+
+                      <p className="mt-[11px] text-[13px] leading-[1.6] text-[#D1D1D1]">
+                        Gather OSINT, scan networks, and profile employees for attack planning.
+                      </p>
+                    </div>
+
                   </div>
-
-                  <div className="absolute bottom-[23px] left-[20px] right-[20px]">
-                    <h3 className="text-[14px] font-medium leading-[1.45] text-[#F5F0E8]">
-                      Step 2: Reconnaissance
-                    </h3>
-
-                                        <p className="mt-[11px] text-[13px] leading-[1.6] text-[#D1D1D1]">
-                                            Gather OSINT, scan networks, and profile employees for attack planning.
-                                        </p>
-                                    </div>
-
-                                </div>
-                                </Animation>
+                </Animation>
 
                 {/* Card 03 */}
-                                <Animation>
-                <div className="absolute left-[690px] top-[315px] h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[50%] px-[20px] py-[20px]">
-                  <div className="flex items-start justify-between">
-                    <Icon
-                      icon="iconmind:goal-outline-bold"
-                      className="text-[25px] text-white"
-                    />
+                <Animation>
+                  <div className="absolute left-[690px] top-[315px] h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[50%] px-[20px] py-[20px]">
+                    <div className="flex items-start justify-between">
+                      <Icon
+                        icon="iconmind:goal-outline-bold"
+                        className="text-[25px] text-white"
+                      />
 
-                    <span className="text-[38px] font-normal leading-none text-[#E24B4A85]">
-                      03
-                    </span>
+                      <span className="text-[38px] font-normal leading-none text-[#E24B4A85]">
+                        03
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-[23px] left-[20px] right-[20px]">
+                      <h3 className="text-[14px] font-medium leading-[1.45] text-[#F5F0E8]">
+                        Step 3: Attack Execution
+                      </h3>
+
+                      <p className="mt-[11px] text-[13px] leading-[1.6] text-[#D1D1D1]">
+                        Perform phishing, exploitation, lateral movement, and
+                        privilege escalation.
+                      </p>
+                    </div>
                   </div>
-
-                  <div className="absolute bottom-[23px] left-[20px] right-[20px]">
-                    <h3 className="text-[14px] font-medium leading-[1.45] text-[#F5F0E8]">
-                      Step 3: Attack Execution
-                    </h3>
-
-                    <p className="mt-[11px] text-[13px] leading-[1.6] text-[#D1D1D1]">
-                      Perform phishing, exploitation, lateral movement, and
-                      privilege escalation.
-                    </p>
-                  </div>
-                </div>
-                                </Animation>
+                </Animation>
 
                 {/* Card 04 */}
-                                <Animation>
-                <div className="absolute left-[947px] top-[250px] h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[51%] px-[20px] py-[20px]">
-                  <div className="flex items-start justify-between">
-                    <Icon
-                      icon="iconmind:growth-chart-outline-bold"
-                      className="text-[25px] text-white"
-                    />
+                <Animation>
+                  <div className="absolute left-[947px] top-[250px] h-[240px] w-[242px] rounded-[7px] border-[0.9px] border-white/[9%] bg-black/[51%] px-[20px] py-[20px]">
+                    <div className="flex items-start justify-between">
+                      <Icon
+                        icon="iconmind:growth-chart-outline-bold"
+                        className="text-[25px] text-white"
+                      />
 
-                    <span className="text-[38px] font-normal leading-none text-[#E24B4A85]">
-                      04
-                    </span>
+                      <span className="text-[38px] font-normal leading-none text-[#E24B4A85]">
+                        04
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-[23px] left-[20px] right-[20px]">
+                      <h3 className="text-[14px] font-medium leading-[1.45] text-[#F5F0E8]">
+                        Step 4: Analysis & Reporting
+                      </h3>
+
+                      <p className="mt-[11px] text-[13px] leading-[1.6] text-[#D1D1D1]">
+                        Document findings, attack paths, and provide remediation
+                        guidance.
+                      </p>
+                    </div>
                   </div>
-
-                  <div className="absolute bottom-[23px] left-[20px] right-[20px]">
-                    <h3 className="text-[14px] font-medium leading-[1.45] text-[#F5F0E8]">
-                      Step 4: Analysis & Reporting
-                    </h3>
-
-                    <p className="mt-[11px] text-[13px] leading-[1.6] text-[#D1D1D1]">
-                      Document findings, attack paths, and provide remediation
-                      guidance.
-                    </p>
-                  </div>
-                </div>
-                                </Animation>
+                </Animation>
               </div>
             </div>
 
@@ -1067,87 +1065,87 @@ export default function RedTeamAssessmentPage() {
 
       <section className="bg-[#050B18] px-0">
         <div className="mx-auto max-w-7xl overflow-hidden ">
-                    <Animation>
-          <div className="px-6 pb-0 pt-[52px] sm:px-10 lg:px-[25px] lg:pt-[51px]">
-            <div className="text-center">
-              <p className="text-[13px] font-medium uppercase  text-[#E24B4A]">
-                WHY ISECURION?
-              </p>
+          <Animation>
+            <div className="px-6 pb-0 pt-[52px] sm:px-10 lg:px-[25px] lg:pt-[51px]">
+              <div className="text-center">
+                <p className="text-[13px] sm:text-base font-semibold uppercase  text-[#E24B4A]">
+                  WHY ISECURION?
+                </p>
 
-              <h2 className="mt-[10px] text-[30px] font-normal leading-[1.25] text-white sm:text-[36px] lg:text-[34px]">
-                Built around the{" "}
-                <span className="text-[#E24B4A]">Real Adversary</span>
-              </h2>
+                <h2 className="mt-[10px] text-[30px] font-normal leading-[1.25] text-white sm:text-[36px] lg:text-[34px]">
+                  Built around the{" "}
+                  <span className="text-[#E24B4A]">Real Adversary</span>
+                </h2>
 
-              <p className="mx-auto mt-[18px] max-w-[700px] text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px]">
-                Beyond identifying vulnerabilities, we provide the intelligence,
-                validation, and guidance needed to strengthen your defenses
-                against real-world attack scenarios.
-              </p>
-            </div>
-          </div>
-                    </Animation>
-
-                    <Animation> 
-          <div className="mt-[46px] grid grid-cols-1 sm:grid-cols-3 px-16 pb-16">
-            <div className="relative min-h-[309px] bg-[#050B18] px-[25px] pb-[42px] pt-[31px] sm:px-[25px] lg:px-[30px]">
-              <div className="text-white">
-                <Icon icon="boxicons:vector-square" className="text-[36px]" />
-              </div>
-
-              <div className="absolute bottom-[62px] left-[25px] right-[30px]">
-                <h3 className="max-w-[180px] text-[16px] font-medium leading-[1.55] text-white">
-                  Latest Threat <br /> Vectors
-                </h3>
-
-                <p className="mt-[8px] max-w-[255px] text-[13px] font-normal leading-[1.6] text-[#B9BDC5]">
-                  Insights into the newest adversary tactics, techniques, and
-                  procedures (TTPs).
+                <p className="mx-auto mt-[18px] max-w-[700px] text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px]">
+                  Beyond identifying vulnerabilities, we provide the intelligence,
+                  validation, and guidance needed to strengthen your defenses
+                  against real-world attack scenarios.
                 </p>
               </div>
             </div>
+          </Animation>
 
-            <div className="relative min-h-[309px] bg-[#08142D] px-[25px] pb-[42px] pt-[31px] sm:px-[25px] lg:px-[25px]">
-              <div className="text-white">
-                <Icon
-                  icon="majesticons:lightbulb-shine-line"
-                  className="text-[36px]"
-                />
+          <Animation>
+            <div className="mt-[46px] grid grid-cols-1 sm:grid-cols-3 px-16 pb-16">
+              <div className="relative min-h-[309px] bg-[#050B18] px-[25px] pb-[42px] pt-[31px] sm:px-[25px] lg:px-[30px]">
+                <div className="text-white">
+                  <Icon icon="boxicons:vector-square" className="text-[36px]" />
+                </div>
+
+                <div className="absolute bottom-[62px] left-[25px] right-[30px]">
+                  <h3 className="max-w-[180px] text-[16px] font-medium leading-[1.55] text-white">
+                    Latest Threat <br /> Vectors
+                  </h3>
+
+                  <p className="mt-[8px] max-w-[255px] text-[13px] font-normal leading-[1.6] text-[#B9BDC5]">
+                    Insights into the newest adversary tactics, techniques, and
+                    procedures (TTPs).
+                  </p>
+                </div>
               </div>
 
-              <div className="absolute bottom-[62px] left-[25px] right-[30px]">
-                <h3 className="max-w-[180px] text-[16px] font-medium leading-[1.55] text-white">
-                  Attack-Driven <br /> Insight
-                </h3>
+              <div className="relative min-h-[309px] bg-[#08142D] px-[25px] pb-[42px] pt-[31px] sm:px-[25px] lg:px-[25px]">
+                <div className="text-white">
+                  <Icon
+                    icon="majesticons:lightbulb-shine-line"
+                    className="text-[36px]"
+                  />
+                </div>
 
-                <p className="mt-[8px] max-w-[255px] text-[13px] font-normal leading-[1.6] text-[#B9BDC5]">
-                  Turn observed attack paths and weaknesses into clear,
-                  prioritized security improvements.
-                </p>
+                <div className="absolute bottom-[62px] left-[25px] right-[30px]">
+                  <h3 className="max-w-[180px] text-[16px] font-medium leading-[1.55] text-white">
+                    Attack-Driven <br /> Insight
+                  </h3>
+
+                  <p className="mt-[8px] max-w-[255px] text-[13px] font-normal leading-[1.6] text-[#B9BDC5]">
+                    Turn observed attack paths and weaknesses into clear,
+                    prioritized security improvements.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative min-h-[309px] bg-[#170404] px-[25px] pb-[42px] pt-[31px] sm:px-[25px] lg:px-[28px]">
+                <div className="text-white">
+                  <Icon
+                    icon="iconmind:session-fixation-guard-outline-regular"
+                    className="text-[36px]"
+                  />
+                </div>
+
+                <div className="absolute bottom-[62px] left-[25px] right-[25px]">
+                  <h3 className="max-w-[180px] text-[16px] font-medium leading-[1.55] text-white">
+                    Defense <br /> Validation
+                  </h3>
+
+                  <p className="mt-[8px] max-w-[255px] text-[13px] font-normal leading-[1.6] text-[#B9BDC5]">
+                    Measure how effectively your people, processes, and technology
+                    detect and withstand realistic attacks.
+                  </p>
+                </div>
               </div>
             </div>
-
-            <div className="relative min-h-[309px] bg-[#170404] px-[25px] pb-[42px] pt-[31px] sm:px-[25px] lg:px-[28px]">
-              <div className="text-white">
-                <Icon
-                  icon="iconmind:session-fixation-guard-outline-regular"
-                  className="text-[36px]"
-                />
-              </div>
-
-              <div className="absolute bottom-[62px] left-[25px] right-[25px]">
-                <h3 className="max-w-[180px] text-[16px] font-medium leading-[1.55] text-white">
-                  Defense <br /> Validation
-                </h3>
-
-                <p className="mt-[8px] max-w-[255px] text-[13px] font-normal leading-[1.6] text-[#B9BDC5]">
-                  Measure how effectively your people, processes, and technology
-                  detect and withstand realistic attacks.
-                </p>
-              </div>
-            </div>
-          </div>
-                    </Animation>
+          </Animation>
         </div>
       </section>
 
@@ -1155,106 +1153,106 @@ export default function RedTeamAssessmentPage() {
         <div className="mx-auto max-w-7xl  px-6 py-[60px] sm:px-10 sm:py-[70px] lg:px-[26px] lg:py-[77px]">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr]">
             <div className="pb-[50px] lg:pr-[70px] lg:pb-0 text-center md:text-left">
-                            <LeftAnimation>
-              <p className="text-[13px] font-medium uppercase leading-[0.2px] text-[#E24B4A]">
-                WHY CHOOSE US?
-              </p>
+              <LeftAnimation>
+                <p className="text-[13px] sm:text-base font-semibold uppercase leading-[0.2px] text-[#E24B4A]">
+                  WHY CHOOSE US?
+                </p>
 
-              <h2 className="mt-[17px] max-w-[400px] text-[32px] font-normal leading-[1.42] text-white sm:text-[36px] lg:text-[34px]">
-                Trusted <span className="text-[#E24B4A]">Red Team Experts</span>
-              </h2>
+                <h2 className="mt-[17px] max-w-[400px] text-[32px] font-normal leading-[1.42] text-white sm:text-[36px] lg:text-[34px]">
+                  Trusted <span className="text-[#E24B4A]">Red Team Experts</span>
+                </h2>
 
-              <p className="mt-[18px] max-w-[420px] text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px]">
-                ISECURION is a trusted partner for organizations looking to
-                strengthen their defenses through real-world adversary
-                simulations.
-              </p>
-                            </LeftAnimation>
+                <p className="mt-[18px] max-w-[420px] text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px]">
+                  ISECURION is a trusted partner for organizations looking to
+                  strengthen their defenses through real-world adversary
+                  simulations.
+                </p>
+              </LeftAnimation>
             </div>
 
-                        <Animation>
-            <div className="border-t border-[#B1B1B114] pt-[45px] lg:border-l lg:border-t-0 lg:pl-[32px] lg:pt-0">
-              <div className="space-y-[20px]">
-                <div className="grid grid-cols-[35px_1fr] gap-[14px]">
-                  <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
-                    01
-                  </span>
-                  <div>
-                    <h3 className="text-[15px] font-medium leading-[1.5] text-white">
-                      Certified Experts
-                    </h3>
-                    <p className="mt-[6px] max-w-[400px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
-                      Our team holds industry-recognized certifications like
-                      OSCP, OSCE, CEH, and CISSP, ensuring top-quality
-                      assessments.
-                    </p>
+            <Animation>
+              <div className="border-t border-[#B1B1B114] pt-[45px] lg:border-l lg:border-t-0 lg:pl-[32px] lg:pt-0">
+                <div className="space-y-[20px]">
+                  <div className="grid grid-cols-[35px_1fr] gap-[14px]">
+                    <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
+                      01
+                    </span>
+                    <div>
+                      <h3 className="text-[15px] font-medium leading-[1.5] text-white">
+                        Certified Experts
+                      </h3>
+                      <p className="mt-[6px] max-w-[400px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
+                        Our team holds industry-recognized certifications like
+                        OSCP, OSCE, CEH, and CISSP, ensuring top-quality
+                        assessments.
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[35px_1fr] gap-[14px]">
-                  <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
-                    02
-                  </span>
-                  <div>
-                    <h3 className="text-[15px] font-medium leading-[1.5] text-white">
-                      Proven Experience
-                    </h3>
-                    <p className="mt-[6px] max-w-[420px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
-                      Years of experience conducting Red Team operations across
-                      industries including finance, healthcare, and critical
-                      infrastructure.
-                    </p>
+                  <div className="grid grid-cols-[35px_1fr] gap-[14px]">
+                    <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
+                      02
+                    </span>
+                    <div>
+                      <h3 className="text-[15px] font-medium leading-[1.5] text-white">
+                        Proven Experience
+                      </h3>
+                      <p className="mt-[6px] max-w-[420px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
+                        Years of experience conducting Red Team operations across
+                        industries including finance, healthcare, and critical
+                        infrastructure.
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[35px_1fr] gap-[14px]">
-                  <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
-                    03
-                  </span>
-                  <div>
-                    <h3 className="text-[15px] font-medium leading-[1.5] text-white">
-                      Trusted Partnership
-                    </h3>
-                    <p className="mt-[6px] max-w-[400px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
-                      We prioritize long-term client relationships by providing
-                      guidance, remediation support, and continuous improvement.
-                    </p>
+                  <div className="grid grid-cols-[35px_1fr] gap-[14px]">
+                    <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
+                      03
+                    </span>
+                    <div>
+                      <h3 className="text-[15px] font-medium leading-[1.5] text-white">
+                        Trusted Partnership
+                      </h3>
+                      <p className="mt-[6px] max-w-[400px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
+                        We prioritize long-term client relationships by providing
+                        guidance, remediation support, and continuous improvement.
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[35px_1fr] gap-[14px]">
-                  <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
-                    04
-                  </span>
-                  <div>
-                    <h3 className="text-[15px] font-medium leading-[1.5] text-white">
-                      Global Standards
-                    </h3>
-                    <p className="mt-[6px] max-w-[380px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
-                      Our methodology aligns with MITRE ATT&CK, NIST, and global
-                      security frameworks for comprehensive coverage.
-                    </p>
+                  <div className="grid grid-cols-[35px_1fr] gap-[14px]">
+                    <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
+                      04
+                    </span>
+                    <div>
+                      <h3 className="text-[15px] font-medium leading-[1.5] text-white">
+                        Global Standards
+                      </h3>
+                      <p className="mt-[6px] max-w-[380px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
+                        Our methodology aligns with MITRE ATT&CK, NIST, and global
+                        security frameworks for comprehensive coverage.
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid grid-cols-[35px_1fr] gap-[14px]">
-                  <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
-                    05
-                  </span>
-                  <div>
-                    <h3 className="text-[15px] font-medium leading-[1.5] text-white">
-                      Client-Centric Approach
-                    </h3>
-                    <p className="mt-[6px] max-w-[350px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
-                      Every engagement is tailored to your unique threat
-                      landscape and business objectives, ensuring actionable
-                      outcomes.
-                    </p>
+                  <div className="grid grid-cols-[35px_1fr] gap-[14px]">
+                    <span className="text-[13px] font-medium leading-[1.5] text-[#E24B4A]">
+                      05
+                    </span>
+                    <div>
+                      <h3 className="text-[15px] font-medium leading-[1.5] text-white">
+                        Client-Centric Approach
+                      </h3>
+                      <p className="mt-[6px] max-w-[350px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
+                        Every engagement is tailored to your unique threat
+                        landscape and business objectives, ensuring actionable
+                        outcomes.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-                        </Animation>
+            </Animation>
           </div>
         </div>
       </section>
@@ -1263,7 +1261,7 @@ export default function RedTeamAssessmentPage() {
         <div className="mx-auto max-w-7xl px-6 sm:px-9 lg:px-[33px]">
           {/* Header */}
           <div className="text-center">
-            <p className="text-[14px] font-medium tracking-wide text-[#E24B4A] sm:text-[16px]">
+            <p className="text-[14px] sm:text-base font-semibold tracking-wide text-[#E24B4A] sm:text-[16px]">
               DELIVERABLES
             </p>
 
@@ -1280,135 +1278,135 @@ export default function RedTeamAssessmentPage() {
           </div>
 
           {/* ================= DESKTOP ================= */}
-                    <Animation>
-          <div className="relative mt-[88px] hidden lg:block">
-            {/* Connecting line */}
-            <div className="absolute left-[8%] right-[8%] top-[68px] z-0 h-[5px] bg-[#8997BA4F]" />
+          <Animation>
+            <div className="relative mt-[88px] hidden lg:block">
+              {/* Connecting line */}
+              <div className="absolute left-[8%] right-[8%] top-[68px] z-0 h-[5px] bg-[#8997BA4F]" />
 
-            <div className="relative z-10 grid grid-cols-5">
-              {/* 1. Executive Summary */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative flex h-[136px] w-[136px] items-center justify-center">
-                  {/* Hide connector behind the transparent center */}
-                  <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18] " />
+              <div className="relative z-10 grid grid-cols-5">
+                {/* 1. Executive Summary */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative flex h-[136px] w-[136px] items-center justify-center">
+                    {/* Hide connector behind the transparent center */}
+                    <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18] " />
 
-                  {/* Frame */}
-                  <img
-                    src={frame1.src}
-                    alt=""
-                    className="relative z-20 h-[136px] w-[136px]"
-                  />
+                    {/* Frame */}
+                    <img
+                      src={frame1.src}
+                      alt=""
+                      className="relative z-20 h-[136px] w-[136px]"
+                    />
+                  </div>
+
+                  <div className="mt-[48px] px-2">
+                    <h3 className="text-[18px] font-medium leading-[1.3] text-white">
+                      Executive Summary
+                    </h3>
+
+                    <p className="mx-auto mt-5 max-w-[220px] text-[16px] leading-[1.9] text-[#D1D1D1]">
+                      High-level findings for leadership with risk overview and
+                      strategic recommendations.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-[48px] px-2">
-                  <h3 className="text-[18px] font-medium leading-[1.3] text-white">
-                    Executive Summary
-                  </h3>
+                {/* 2. Technical Report */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative flex h-[136px] w-[136px] items-center justify-center">
+                    <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18]" />
 
-                  <p className="mx-auto mt-5 max-w-[220px] text-[16px] leading-[1.9] text-[#D1D1D1]">
-                    High-level findings for leadership with risk overview and
-                    strategic recommendations.
-                  </p>
-                </div>
-              </div>
+                    <img
+                      src={frame2.src}
+                      alt=""
+                      className="relative z-20 h-[136px] w-[136px]"
+                    />
+                  </div>
 
-              {/* 2. Technical Report */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative flex h-[136px] w-[136px] items-center justify-center">
-                  <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18]" />
+                  <div className="mt-[48px] px-2">
+                    <h3 className="text-[18px] font-medium leading-[1.3] text-white">
+                      Technical Report
+                    </h3>
 
-                  <img
-                    src={frame2.src}
-                    alt=""
-                    className="relative z-20 h-[136px] w-[136px]"
-                  />
-                </div>
-
-                <div className="mt-[48px] px-2">
-                  <h3 className="text-[18px] font-medium leading-[1.3] text-white">
-                    Technical Report
-                  </h3>
-
-                  <p className="mx-auto mt-5 max-w-[180px] text-[16px] leading-[1.9] text-[#D1D1D1]">
-                    Detailed attack paths, vulnerabilities discovered,
-                    exploitation steps, and evidence.
-                  </p>
-                </div>
-              </div>
-
-              {/* 3. Remediation Guidance */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative flex h-[136px] w-[136px] items-center justify-center">
-                  <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18]" />
-
-                  <img
-                    src={frame3.src}
-                    alt=""
-                    className="relative z-20 h-[136px] w-[136px]"
-                  />
+                    <p className="mx-auto mt-5 max-w-[180px] text-[16px] leading-[1.9] text-[#D1D1D1]">
+                      Detailed attack paths, vulnerabilities discovered,
+                      exploitation steps, and evidence.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-[48px] px-2">
-                  <h3 className="text-[18px] font-medium leading-[1.3] text-white">
-                    Remediation Guidance
-                  </h3>
+                {/* 3. Remediation Guidance */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative flex h-[136px] w-[136px] items-center justify-center">
+                    <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18]" />
 
-                  <p className="mx-auto mt-5 max-w-[200px] text-[16px] leading-[1.9] text-[#D1D1D1]">
-                    Actionable steps to mitigate risks, strengthen defenses,
-                    &amp; improve security posture.
-                  </p>
-                </div>
-              </div>
+                    <img
+                      src={frame3.src}
+                      alt=""
+                      className="relative z-20 h-[136px] w-[136px]"
+                    />
+                  </div>
 
-              {/* 4. Defense Evaluation */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative flex h-[136px] w-[206px] items-center justify-center">
-                  <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18]" />
+                  <div className="mt-[48px] px-2">
+                    <h3 className="text-[18px] font-medium leading-[1.3] text-white">
+                      Remediation Guidance
+                    </h3>
 
-                  <img
-                    src={frame4.src}
-                    alt=""
-                    className="relative z-20 h-[136px] w-[136px]"
-                  />
-                </div>
-
-                <div className="mt-[48px] px-2">
-                  <h3 className="text-[18px] font-medium leading-[1.3] text-white">
-                    Defense Evaluation
-                  </h3>
-
-                  <p className="mx-auto mt-5 max-w-[170px] text-[16px] leading-[1.9] text-[#D1D1D1]">
-                    Assessment of SOC, detection, and response capabilities.
-                  </p>
-                </div>
-              </div>
-
-              {/* 5. Team Debrief */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative flex h-[136px] w-[136px] items-center justify-center">
-                  <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18]" />
-
-                  <img
-                    src={frame5.src}
-                    alt=""
-                    className="relative z-20 h-[136px] w-[136px]"
-                  />
+                    <p className="mx-auto mt-5 max-w-[200px] text-[16px] leading-[1.9] text-[#D1D1D1]">
+                      Actionable steps to mitigate risks, strengthen defenses,
+                      &amp; improve security posture.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-[48px] px-2">
-                  <h3 className="text-[18px] font-medium leading-[1.3] text-white">
-                    Team Debrief
-                  </h3>
+                {/* 4. Defense Evaluation */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative flex h-[136px] w-[206px] items-center justify-center">
+                    <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18]" />
 
-                  <p className="mx-auto mt-5 max-w-[200px] text-[17px] leading-[1.9] text-[#D1D1D1]">
-                    Interactive session with your security and IT teams to
-                    review findings and recommendations.
-                  </p>
+                    <img
+                      src={frame4.src}
+                      alt=""
+                      className="relative z-20 h-[136px] w-[136px]"
+                    />
+                  </div>
+
+                  <div className="mt-[48px] px-2">
+                    <h3 className="text-[18px] font-medium leading-[1.3] text-white">
+                      Defense Evaluation
+                    </h3>
+
+                    <p className="mx-auto mt-5 max-w-[170px] text-[16px] leading-[1.9] text-[#D1D1D1]">
+                      Assessment of SOC, detection, and response capabilities.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 5. Team Debrief */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative flex h-[136px] w-[136px] items-center justify-center">
+                    <div className="absolute z-10 h-[75px] w-[75px] rotate-45 bg-[#050B18]" />
+
+                    <img
+                      src={frame5.src}
+                      alt=""
+                      className="relative z-20 h-[136px] w-[136px]"
+                    />
+                  </div>
+
+                  <div className="mt-[48px] px-2">
+                    <h3 className="text-[18px] font-medium leading-[1.3] text-white">
+                      Team Debrief
+                    </h3>
+
+                    <p className="mx-auto mt-5 max-w-[200px] text-[17px] leading-[1.9] text-[#D1D1D1]">
+                      Interactive session with your security and IT teams to
+                      review findings and recommendations.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-                    </Animation>
+          </Animation>
 
           {/* ================= TABLET / MOBILE ================= */}
           <div className="mt-14 lg:hidden">

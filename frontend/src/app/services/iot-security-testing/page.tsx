@@ -97,7 +97,7 @@ function page() {
           <Animation>
           <div className="w-full max-w-[590px] md:max-w-[560px] lg:max-w-[570px] text-center md:text-left">
             {/* EYEBROW */}
-            <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
+            <p className="text-[14px] sm:text-base font-semibold uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
               IOT SECURITY TESTING
             </p>
 
@@ -145,7 +145,7 @@ function page() {
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-24">
             {/* LEFT COLUMN: OVERVIEW */}
             <div className="lg:col-span-7">
-              <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px] text-center md:text-left">
+              <p className="text-[14px] sm:text-base font-semibold uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px] text-center md:text-left">
                 OVERVIEW
               </p>
 
@@ -254,7 +254,7 @@ function page() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 ">
           {/* SECTION HEADER */}
           <div className="max-w-4xl">
-            <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px] text-center md:text-left">
+            <p className="text-[14px] sm:text-base font-semibold uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px] text-center md:text-left">
               OUR METHODOLOGY
             </p>
 

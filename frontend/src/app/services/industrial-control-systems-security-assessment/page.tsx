@@ -146,7 +146,7 @@ function page() {
           >
             <div className="w-full max-w-[590px] md:max-w-[560px] lg:max-w-[570px] text-center md:text-left">
               {/* EYEBROW */}
-              <p className="text-[12px] font-medium uppercase leading-[18px] text-[#0F66EA] sm:text-[14px]">
+              <p className="text-[12px] sm:text-base font-semibold uppercase leading-[18px] text-[#0F66EA] sm:text-[14px]">
                 Industrial Control System Security Assessment
               </p>
 
@@ -182,7 +182,7 @@ function page() {
           {/* SECTION HEADER & OVERVIEW */}
           <Animation>
             <div className="mt-14 text-center md:text-left">
-              <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
+              <p className="text-[14px] sm:text-base font-semibold uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
                 OVERVIEW
               </p>
 
@@ -311,7 +311,7 @@ function page() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 lg:px-[26px]">
           {/* SECTION HEADER */}
           <div className="max-w-4xl text-center md:text-left">
-            <p className="text-[14px] font-medium uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
+            <p className="text-[14px] sm:text-base font-semibold uppercase leading-[18px] tracking-[0.2px] text-[#0F66EA] sm:text-[15px]">
               OUR METHODOLOGY
             </p>
 
