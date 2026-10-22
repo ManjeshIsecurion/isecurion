@@ -7,6 +7,14 @@ import { Icon } from "@iconify/react";
 
 import isecurionLogo from "../../assets/home/isecurion_logo.png";
 
+type ServiceId = "detection" | "application" | "data" | "grc";
+type Service = {
+  id: ServiceId;
+  icon: string;
+  title: string;
+  description: string;
+};
+
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
@@ -22,7 +30,7 @@ const serviceDetails = {
         links: [
           {
             label: "Breach Attack Simulation",
-            href: "/services/breach-attack-simulation",
+            href: "/services/continuous-breach-attack-simulation",
           },
           {
             label: "Red Team Assessment",
@@ -109,11 +117,11 @@ const serviceDetails = {
         links: [
           {
             label: "Crypto Currency Exchange Pentest",
-            href: "/services/ai-augmented-red-team",
+            href: "/services/crypto-currency-exchange",
           },
           {
             label: "Smart Contract Security Audit",
-            href: "/services/adversary-simulation",
+            href: "/services/smart-contract-security",
           },
           {
             label: "MCP Pentesting Services",
@@ -129,7 +137,11 @@ const serviceDetails = {
             href: "iot-security-testing",
           },
           {
-            label: "Crypto Exchange Assessment",
+            label: "Industrial Control System Security Assessment",
+            href: "industrial-control-systems-security-assessment",
+          },
+          {
+            label: "Automotive Cybersecurity",
             href: "/services/crypto-currency-exchange",
           },
         ],
@@ -238,7 +250,7 @@ const serviceDetails = {
   },
 } as const;
 
-const serviceCategories = [
+const serviceCategories: Service[] = [
   {
     id: "detection",
     icon: "bx:check-shield",
@@ -332,10 +344,12 @@ function Navbar() {
     setIsOpen(false);
   };
 
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
   return (
     <header className="sticky top-0 z-50 w-full bg-[#000C1C]">
-      <div className="mx-auto max-w-7xl ">
-        <div className="relative max-w-7xl mx-auto flex h-[65px]  items-center justify-between px-6 sm:px-8 lg:px-10">
+      <div className="">
+        <div className="relative mx-auto w-full max-w-7xl flex h-[65px]  items-center justify-between px-6 sm:px-8 lg:px-10">
           {/* Logo */}
           <Link href="/" onClick={closeMenu} className="shrink-0">
             <Image
@@ -371,7 +385,7 @@ function Navbar() {
                     />
                   </span>
                 </Link>
-                <div className="flex flex-col items-center invisible absolute left-1/2 top-full z-50 mt-5 w-sm px-6 py-4 -translate-x-1/2 translate-y-2 rounded-xl bg-gradient-to-b from-[#F5F9FD] to-[#FFFFFF] opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="flex flex-col items-center invisible absolute left-1/2 top-full z-50 mt-5 w-sm px-6 py-4 -translate-x-1/2 translate-y-2 rounded-xl bg-gradient-to-b from-[#F5F9FD] to-[#FFFFFF] opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ">
                   <span className="invisible group-hover:visible absolute  -top-0.5   w-[100px] h-[5px] rounded-xl transition-all duration-200 bg-[#0F66EA] "></span>
                   <div>
                     <h3 className="text-sm font-medium pb-2 border-b border-[#D8E3EF] text-[#29559D]">
@@ -397,9 +411,9 @@ function Navbar() {
                 </div>
               </li>
               {/* this is the service link  */}
-              <li className="relative list-none group">
+              <li className="list-none group">
                 <Link
-                  href="/services"
+                  href=""
                   className="flex items-center gap-1 text-[15px] font-medium text-white"
                 >
                   Services
@@ -411,8 +425,8 @@ function Navbar() {
                   </span>
                 </Link>
 
-                <div className="flex flex-col invisible absolute left-1/2 top-full z-50 mt-5 w-6xl  -translate-x-1/2 translate-y-2 rounded-xl bg-gradient-to-b from-[#F5F9FD] to-[#FFFFFF] opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                  <span className="invisible group-hover:visible absolute left-134  -top-0.5   w-[100px] h-[5px] rounded-xl transition-all duration-200 bg-[#0F66EA] "></span>
+                <div className="flex flex-col invisible fixed top-full z-50 mt-5 w-[calc(100vw-2rem)] max-w-6xl -translate-x-1/2 translate-y-2 rounded-xl bg-gradient-to-b from-[#F5F9FD] to-[#FFFFFF] opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  <span className="invisible group-hover:visible absolute left-140  -top-0.5   w-[100px] h-[5px] rounded-xl transition-all duration-200 bg-[#0F66EA] "></span>
                   <div className="flex gap-5">
                     {/* LEFT */}
                     <div className="flex-1 space-y-2 border-r border-[#E0E8F1] py-6 pr-4">
@@ -572,7 +586,7 @@ function Navbar() {
                                 key={section.heading}
                                 className="border-r border-[#D8E3EF] pr-5 last:border-r-0"
                               >
-                                <h3 className="relative mb-4 h-[40px] border-b border-[#E0E7EF] pb-3 text-sm font-medium text-[#6885B2]">
+                                <h3 className="relative mb-4 h-[40px] border-b border-[#E0E7EF] pb-3 text-sm font-medium uppercase text-[#6885B2]">
                                   {section.heading}
                                   <span className="absolute bottom-0 left-0 h-[2px] w-10 bg-[#05B9EE]" />
                                 </h3>
@@ -582,7 +596,7 @@ function Navbar() {
                                     <li key={service.href}>
                                       <Link
                                         href={service.href}
-                                        className="group/link flex items-center justify-between gap-2 rounded-md py-1 text-sm text-[#415675]"
+                                        className=" flex items-center justify-between gap-2 rounded-md py-1 text-sm text-[#415675]"
                                       >
                                         <span>{service.label}</span>
                                         <Icon
@@ -660,7 +674,7 @@ function Navbar() {
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((prev) => !prev)}
-            className="flex h-11 w-11 items-center justify-center rounded-lg text-white lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-lg cursor-pointer text-white lg:hidden"
           >
             <Icon
               icon={
@@ -675,23 +689,125 @@ function Navbar() {
 
         {/* Mobile Navigation */}
         <div
-          className={`overflow-hidden bg-[#020E1C] transition-all duration-300 lg:hidden ${
+          className={`absolute left-0 right-0 top-[65px] z-50 overflow-hidden bg-[#020E1C] transition-all duration-300 lg:hidden ${
             isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <nav className="border-t border-white/10 px-6 py-6 sm:px-8">
-            <ul className="flex flex-col gap-5">
-              {navItems.map((item) => (
+            <ul className="flex flex-col gap-2 text-[15px] font-medium text-[#FFFFFF]">
+              <Link href="/" onClick={closeMenu}>
+                Home
+              </Link>
+              <div className="relative">
+                <button
+                  type="button"
+                  className="flex items-center gap-1"
+                  onClick={() =>
+                    setOpenDropdown(
+                      openDropdown === "product" ? null : "product",
+                    )
+                  }
+                >
+                  Product
+                  <Icon
+                    icon="ant-design:caret-down-filled"
+                    className={`h-[14px] w-[14px] transition-transform duration-300 ${
+                      openDropdown === "product" ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* Product Dropdown */}
+                <div
+                  className={`grid transition-all duration-300 ${
+                    openDropdown === "product"
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="flex flex-col gap-3 py-1 pl-4">
+                      <Link href="/" onClick={closeMenu} className="space-y-1">
+                        <h3 className="text-sm font-semibold">Vulnytics</h3>
+                        <p className="text-[11px] font-medium">
+                          Vulnerability intelligence and security risk
+                          visibility
+                        </p>
+                      </Link>
+                      <Link href="/" onClick={closeMenu} className="space-y-1">
+                        <h3 className="text-sm font-semibold">Drosera</h3>
+                        <p className="text-[11px] font-medium">
+                          Phishing simulations and human risk management
+                        </p>
+                      </Link>
+                      <Link href="/" onClick={closeMenu} className="space-y-1">
+                        <h3 className="text-sm font-semibold">LMS</h3>
+                        <p className="text-[11px] font-medium">
+                          Security awareness training and employee learning
+                        </p>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <button
+                  type="button"
+                  className="flex items-center gap-1"
+                  onClick={() =>
+                    setOpenDropdown(
+                      openDropdown === "services" ? null : "services",
+                    )
+                  }
+                >
+                  Services
+                  <Icon
+                    icon="ant-design:caret-down-filled"
+                    className={`h-[14px] w-[14px] transition-transform duration-300 ${
+                      openDropdown === "services" ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <div
+                  className={`grid transition-all duration-300 ${
+                    openDropdown === "services"
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="flex flex-col items-start py-1 pl-14 space-y-1 ">
+                      {serviceCategories.map((item, index) => (
+                        <button key={index}>
+                          <h4>{item.title}</h4>
+                          <p>{item.description}</p>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Link href="" className="flex items-center gap-1">
+                Company{" "}
+                <span className="transition-transform duration-300 group-hover:rotate-180">
+                  <Icon
+                    icon="ant-design:caret-down-filled"
+                    className="h-[14px] w-[14px]"
+                  />
+                </span>{" "}
+              </Link>
+              {/* {navItems.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
                     onClick={closeMenu}
-                    className="block py-1 text-[16px] font-medium text-white transition-opacity hover:opacity-75"
+                    className="block py-1 text-[15px] font-medium text-white transition-opacity hover:opacity-75"
                   >
                     {item.label}
                   </Link>
                 </li>
-              ))}
+              ))} */}
 
               <li className="pt-2">
                 <Link

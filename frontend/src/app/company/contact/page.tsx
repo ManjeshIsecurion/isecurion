@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { Icon } from "@iconify/react";
 import LocationMap from "../../../components/ui/LocationMap";
@@ -41,7 +41,7 @@ const locations = [
   {
     id: 1,
     city: "Bangalore",
-    area: "#2, 6th Main Road, JP Nagar, Bengaluru, Karnataka 560078, India ",
+    area: "45, Kanakapura Main Rd, Paramount Gardens, Talaghattapura, Bengaluru, Karnataka 560109",
     icon: "material-symbols:star-rounded",
   },
   {
@@ -88,7 +88,7 @@ const contactDots = [
   { left: "30%", top: "5%" },
 ];
 
-function page() {
+function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#131331] to-[#0C2023]">
       <section
@@ -124,7 +124,8 @@ function page() {
                           icon="material-symbols:contact-support-rounded"
                           className="text-[#0F66EA] w-[25px] h-[25px]"
                         />
-                      </span>{''}
+                      </span>
+                      {""}
                       CONTACT US
                     </p>
                   </div>
@@ -184,8 +185,8 @@ function page() {
                         Head Office
                       </p>
                       <p className="text-sm font-medium text-[#D1D1D1] max-w-[323px]">
-                        6th Main Road, Opp. Elita Promenade, RBI Layout, JP
-                        Nagar 7th Phase, Bengaluru, Karnataka 560078
+                        45, Kanakapura Main Rd, Paramount Gardens,
+                        Talaghattapura, Bengaluru, Karnataka 560109
                       </p>
                     </div>
                   </div>
@@ -255,7 +256,10 @@ function page() {
                 </div>
                 <div className="flex">
                   <div className="flex flex-col gap-2 w-full">
-                    <label htmlFor="service-intrested" className="text-sm font-medium text-white">
+                    <label
+                      htmlFor="service-intrested"
+                      className="text-sm font-medium text-white"
+                    >
                       Service Interested In
                     </label>
                     <select className="text-sm font-normal px-4 py-4 w-full rounded-[10px] outline-none border-[1.14px] border-[#262D3D] text-[#D1D1D1]">
@@ -446,4 +450,4 @@ function page() {
   );
 }
 
-export default page;
+export default Contact;
