@@ -68,7 +68,7 @@ const globalCards = [
     },
 ];
 
-const whoNeedsCiso = [
+const whoNeedsDpo = [
     {
         Icon: "boxicons:bank",
         heading: "Regulated Organizations",
@@ -659,7 +659,7 @@ function page() {
                 </div>
             </section>
 
-            {/* WHO NEEDS A vCISO?  */}
+            {/* WHO NEEDS A DPO?  */}
             <section className="relative w-full py-14 overflow-hidden bg-[#060D1B]">
                 <div className="absolute inset-0 pointer-events-none">
                     <div className="absolute top-0 -right-20 w-[300px] h-[300px] rounded-full blur-[100px] bg-[#FFFFFF33]" />
@@ -678,7 +678,7 @@ function page() {
                     </div>
                     <div className="mt-10">
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {whoNeedsCiso.map((item, index) => (
+                            {whoNeedsDpo.map((item, index) => (
                                 <AnimatedCard
                                     delay={index * 0.15}
                                     key={index}

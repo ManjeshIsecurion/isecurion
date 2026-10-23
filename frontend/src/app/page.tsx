@@ -332,46 +332,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* hero section  */}
-      {/* <div>
-        <div
-          style={{ backgroundImage: `url(${herobackground.src})` }}
-          className="bg-center bg-cover bg-no-repeat "
-        >
-          <div className="max-w-7xl mx-auto px-10 flex flex-col 2xl:min-h-[60vh] py-15 ">
-            <div className="flex-1 flex items-center  justify-between">
-              <div className="space-y-5">
-                <p className="font-medium text-[#0F66EA] text-[11px] sm:text-[12px] tracking-[1px]">
-                  SECURING MODERN ENTERPRISES
-                </p>
-                <h1 className="text-transparent bg-clip-text bg-linear-to-r from-[#E5ECF7] via-[#8FB1F4] to-[#86D7E2]">
-                  Build for Trust <br />
-                  Designed for Cyber Resilience.
-                </h1>
-                <p className="text-[14px] sm:text-[18px] font-medium text-[#ACAFEE] max-w-[435px] sm:leading-[32px]">
-                  Helping organizations anticipate threats, reduce cyber risk,
-                  and build lasting resilience through expert cybersecurity
-                  consulting, continuous validation, and intelligent security
-                  platforms.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 py-4">
-                  <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer rounded-[10px] text-[#FFFFFF] bg-linear-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70]">
-                    Schedule a Consultation{" "}
-                    <span>
-                      <Icon icon="mdi:arrow-right" width={20} />
-                    </span>
-                  </button>
-                  <button className="flex items-center justify-center gap-3 py-3 px-5 text-base font-medium cursor-pointer text-white rounded-lg border border-[#FFFFFF29]">
-                    
-                    Explore services ›
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
+      
       {/* STATS SECTION */}
       <section className="w-full  bg-[#01060E] shadow-[0_0_45px_rgba(15,102,234,0.20)]">
         {/* 7XL Stats Box */}
