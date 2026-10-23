@@ -307,7 +307,7 @@ export default function Home() {
               Build for Trust <br /> Designed for Cyber Resilience.
             </h1>
             <p
-              className="text-base sm:text-lg font-normal  lg:max-w-lg leading-[27px] sm:leading-[30px] md:leading-[32px] text-[#ACAFEE] opacity-0 animate-hero-reveal"
+              className="text-base sm:text-lg font-medium  lg:max-w-lg leading-[27px] sm:leading-[30px] md:leading-[32px] text-[#ACAFEE] opacity-0 animate-hero-reveal"
               style={{ animationDelay: "450ms" }}
             >
               Helping organizations anticipate threats, reduce cyber risk, and
@@ -476,7 +476,7 @@ export default function Home() {
       </div>
 
       {/* WHY ORGANIZATIONS CHOOSE ISECURION */}
-      <div className="bg-[#070D1A]">
+      <div className="bg-[#070D1A]  overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A]  py-10">
           <LeftAnimation>
             <p className="flex items-center justify-center lg:justify-start gap-2">
@@ -655,28 +655,28 @@ export default function Home() {
       </div>
 
       {/* Capabilities  */}
-      <div className="bg-[#070D1A]">
+      <div className="bg-[#070D1A] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 bg-[#070D1A] py-10">
           <Animation>
             <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
               <div>
                 <LeftAnimation>
-                <h2 className="text-2xl sm:text-4xl font-medium lg:max-w-md text-center lg:text-left text-white sm:leading-11">
-                  Capabilities that strengthen{" "}
-                  <span className="text-[#0F66EA]">every layer</span> of your
-                  organization.
-                </h2>
+                  <h2 className="text-2xl sm:text-4xl font-medium lg:max-w-md text-center lg:text-left text-white sm:leading-11">
+                    Capabilities that strengthen{" "}
+                    <span className="text-[#0F66EA]">every layer</span> of your
+                    organization.
+                  </h2>
                 </LeftAnimation>
               </div>
               <div className="lg:max-w-[550px] space-y-2">
                 <RightAnimation>
-                <p className="hidden lg:block  text-base font-semibold text-[#0F66EA] sectionheading tracking-[0.5px]">
-                  OUR EXPERTISE
-                </p>
-                <p className="text-center lg:text-left font-medium leading-7 text-white">
-                  A comprehensive portfolio of services and platforms built to
-                  reduce risk, improve resilience, and enable secure growth.
-                </p>
+                  <p className="hidden lg:block  text-base font-semibold text-[#0F66EA] sectionheading tracking-[0.5px]">
+                    OUR EXPERTISE
+                  </p>
+                  <p className="text-center lg:text-left font-medium leading-7 text-white">
+                    A comprehensive portfolio of services and platforms built to
+                    reduce risk, improve resilience, and enable secure growth.
+                  </p>
                 </RightAnimation>
               </div>
             </div>
@@ -690,75 +690,76 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
           >
             {ourExpertise.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                className="relative z-10 overflow-hidden flex flex-col justify-between rounded-[14px] p-5 cursor-pointer group transition-all duration-500"
-                style={{ backgroundColor: item.bgColor }}
-              >
+              <AnimatedCard key={index} delay={index * 0.12}>
                 <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{
-                    background: `linear-gradient(to bottom, ${item.hoverFrom}, ${item.hoverTo})`,
-                  }}
-                />
-                <Icon
-                  icon={item.Icon}
-                  className="absolute -right-8 top-1/2 h-40 w-40 -translate-y-1/2 text-[#62748E1C] group-hover:top-1/3 group-hover:right-[20%] group-hover:text-[#FFFFFF2B] transition-all duration-500"
-                />
+                  key={index}
+                  // variants={cardVariants}
+                  className="relative z-10 overflow-hidden flex flex-col justify-between rounded-[14px] p-5 cursor-pointer group transition-all duration-500"
+                  style={{ backgroundColor: item.bgColor }}
+                >
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: `linear-gradient(to bottom, ${item.hoverFrom}, ${item.hoverTo})`,
+                    }}
+                  />
+                  <Icon
+                    icon={item.Icon}
+                    className="absolute -right-8 top-1/2 h-40 w-40 -translate-y-1/2 text-[#62748E1C] group-hover:top-1/3 group-hover:right-[20%] group-hover:text-[#FFFFFF2B] transition-all duration-500"
+                  />
 
-                <div className="relative z-10">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
-                    <Icon
-                      icon={item.Icon}
-                      className={`h-8 w-8 ${item.iconColor} group-hover:text-white transition-colors duration-300`}
-                    />
+                  <div className="relative z-10">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
+                      <Icon
+                        icon={item.Icon}
+                        className={`h-8 w-8 ${item.iconColor} group-hover:text-white transition-colors duration-300`}
+                      />
+                    </div>
+
+                    <h3
+                      className={`mb-3 ${item.headingColor} text-xl font-semibold group-hover:text-white transition-colors duration-300`}
+                    >
+                      {item.title}
+                    </h3>
+
+                    <p
+                      className={`text-sm font-medium leading-6 ${item.descriptionColor} group-hover:text-white transition-colors duration-300 max-w-[237px]`}
+                    >
+                      {item.description}
+                    </p>
                   </div>
 
-                  <h3
-                    className={`mb-3 ${item.headingColor} text-xl font-semibold group-hover:text-white transition-colors duration-300`}
-                  >
-                    {item.title}
-                  </h3>
-
-                  <p
-                    className={`text-sm font-medium leading-6 ${item.descriptionColor} group-hover:text-white transition-colors duration-300 max-w-[237px]`}
-                  >
-                    {item.description}
-                  </p>
-                </div>
-
-                <div className="relative z-10 mt-4">
-                  <ul className="space-y-2">
-                    {item.services.map((service, serviceIndex) => (
-                      <li
-                        key={serviceIndex}
-                        className={`flex items-center gap-1 text-sm font-medium ${item.listColor} group-hover:text-white transition-colors duration-300`}
-                      >
-                        <span
-                          className={` group-hover:text-white ${item.iconColor}`}
+                  <div className="relative z-10 mt-4">
+                    <ul className="space-y-2">
+                      {item.services.map((service, serviceIndex) => (
+                        <li
+                          key={serviceIndex}
+                          className={`flex items-center gap-1 text-sm font-medium ${item.listColor} group-hover:text-white transition-colors duration-300`}
                         >
-                          <Icon icon="mingcute:right-fill" />
-                        </span>
+                          <span
+                            className={` group-hover:text-white ${item.iconColor}`}
+                          >
+                            <Icon icon="mingcute:right-fill" />
+                          </span>
 
-                        {service}
-                      </li>
-                    ))}
-                  </ul>
+                          {service}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <button className="relative z-10 mt-5 flex cursor-pointer items-center text-[15px] font-medium text-[#0F66EA] transition-colors duration-300 group-hover:text-white">
+                    View Services{""}
+                    <span className="ml-1">
+                      <Icon icon="solar:arrow-right-bold" />
+                    </span>
+                  </button>
                 </div>
-
-                <button className="relative z-10 mt-5 flex cursor-pointer items-center text-[15px] font-medium text-[#0F66EA] transition-colors duration-300 group-hover:text-white">
-                  View Services{''}
-                  <span className="ml-1">
-                    <Icon icon="solar:arrow-right-bold" />
-                  </span>
-                </button>
-              </motion.div>
+              </AnimatedCard>
             ))}
           </motion.div>
         </div>
       </div>
-
 
       {/* Our platform  */}
       <div className="bg-[#070D1A]">
@@ -1042,8 +1043,9 @@ export default function Home() {
                 <AnimatedCard
                   key={index}
                   delay={index * 0.1}
-                  className={`mx-auto px-14 text-center ${index !== 4 ? "lg:border-r lg:border-[#888888]" : ""
-                    }`}
+                  className={`mx-auto px-14 text-center ${
+                    index !== 4 ? "lg:border-r lg:border-[#888888]" : ""
+                  }`}
                 >
                   <h3 className="text-[16px] font-normal text-white sm:text-3xl">
                     {item.value}
@@ -1261,16 +1263,18 @@ export default function Home() {
 
                   {/* Title */}
                   <h3
-                    className={`mt-4 max-w-[280px] text-[20px] font-medium leading-7 sm:text-[22px] sm:leading-8 lg:text-[24px] ${index === 0 ? "text-[#29263D]" : "text-white"
-                      }`}
+                    className={`mt-4 max-w-[280px] text-[20px] font-medium leading-7 sm:text-[22px] sm:leading-8 lg:text-[24px] ${
+                      index === 0 ? "text-[#29263D]" : "text-white"
+                    }`}
                   >
                     {card.title}
                   </h3>
 
                   {/* Description */}
                   <p
-                    className={`mt-5 max-w-[320px] pb-4 text-[14px] font-medium leading-6 sm:mt-6 sm:text-[15px] ${index === 0 ? "text-white" : "text-[#D1D1D1]"
-                      }`}
+                    className={`mt-5 max-w-[320px] pb-4 text-[14px] font-medium leading-6 sm:mt-6 sm:text-[15px] ${
+                      index === 0 ? "text-white" : "text-[#D1D1D1]"
+                    }`}
                   >
                     {card.description}
                   </p>

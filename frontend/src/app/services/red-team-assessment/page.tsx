@@ -77,7 +77,6 @@ export default function RedTeamAssessmentPage() {
       {/* RED TEAM SECTION */}
 
       <section className="mx-auto max-w-7xl bg-black">
-
         <div className="relative overflow-hidden px-7 py-10 sm:px-10 lg:px-8 lg:py-10 xl:px-10">
           <img
             src={redTeamHeroBackground.src}
@@ -246,7 +245,12 @@ export default function RedTeamAssessmentPage() {
                       </select>
 
                       <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#777]">
-                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                        <svg
+                          width="14"
+                          height="8"
+                          viewBox="0 0 14 8"
+                          fill="none"
+                        >
                           <path
                             d="M1 1L7 7L13 1"
                             stroke="currentColor"
@@ -295,11 +299,11 @@ export default function RedTeamAssessmentPage() {
                       htmlFor="consent"
                       className="text-[10px] leading-[1.7] text-[#BDBDBD] sm:text-[11px]"
                     >
-                      By clicking submit below, you agree to our Terms of Use and
-                      Privacy Policy. Additionally, you consent to allow ISECURION
-                      Technology & Consulting Pvt. Ltd. to store and process the
-                      personal information submitted above to provide you the
-                      content requested.
+                      By clicking submit below, you agree to our Terms of Use
+                      and Privacy Policy. Additionally, you consent to allow
+                      ISECURION Technology & Consulting Pvt. Ltd. to store and
+                      process the personal information submitted above to
+                      provide you the content requested.
                     </label>
                   </div>
 
@@ -318,9 +322,7 @@ export default function RedTeamAssessmentPage() {
             </Animation>
           </div>
         </div>
-
       </section>
-
 
       <section className="bg-[#050B1A]">
         <Animation>
@@ -339,8 +341,8 @@ export default function RedTeamAssessmentPage() {
               exfiltration, system compromise, or physical access.
             </p>
           </div>
-        </Animation>      </section>
-
+        </Animation>{" "}
+      </section>
 
       {/* RED TEAM ASSESSMENT OBJECTIVES */}
       <section className="mx-auto max-w-7xl overflow-hidden bg-black">
@@ -563,8 +565,8 @@ export default function RedTeamAssessmentPage() {
                 </h3>
 
                 <p className="mt-3 max-w-[170px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
-                  Gather intelligence from publicly available sources to map your
-                  exposure.
+                  Gather intelligence from publicly available sources to map
+                  your exposure.
                 </p>
               </div>
 
@@ -584,8 +586,8 @@ export default function RedTeamAssessmentPage() {
                 </h3>
 
                 <p className="mt-3 max-w-[190px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
-                  Simulated external and internal attacks to uncover weaknesses in
-                  your infrastructure.
+                  Simulated external and internal attacks to uncover weaknesses
+                  in your infrastructure.
                 </p>
               </div>
 
@@ -626,7 +628,8 @@ export default function RedTeamAssessmentPage() {
                 </h3>
 
                 <p className="mt-3 max-w-[180px] text-[12px] leading-[1.8] text-[#D1D1D1D6] ">
-                  Use stealth methods to simulate insider and persistent threats.
+                  Use stealth methods to simulate insider and persistent
+                  threats.
                 </p>
               </div>
 
@@ -657,7 +660,6 @@ export default function RedTeamAssessmentPage() {
           </div>
         </Animation>
       </section>
-
 
       <section className="bg-black px-0">
         <div className="relative min-h-[671px] overflow-hidden">
@@ -745,10 +747,10 @@ export default function RedTeamAssessmentPage() {
                       </h3>
 
                       <p className="mt-[11px] text-[13px] leading-[1.6] text-[#D1D1D1]">
-                        Gather OSINT, scan networks, and profile employees for attack planning.
+                        Gather OSINT, scan networks, and profile employees for
+                        attack planning.
                       </p>
                     </div>
-
                   </div>
                 </Animation>
 
@@ -1078,9 +1080,9 @@ export default function RedTeamAssessmentPage() {
                 </h2>
 
                 <p className="mx-auto mt-[18px] max-w-[700px] text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px]">
-                  Beyond identifying vulnerabilities, we provide the intelligence,
-                  validation, and guidance needed to strengthen your defenses
-                  against real-world attack scenarios.
+                  Beyond identifying vulnerabilities, we provide the
+                  intelligence, validation, and guidance needed to strengthen
+                  your defenses against real-world attack scenarios.
                 </p>
               </div>
             </div>
@@ -1139,8 +1141,8 @@ export default function RedTeamAssessmentPage() {
                   </h3>
 
                   <p className="mt-[8px] max-w-[255px] text-[13px] font-normal leading-[1.6] text-[#B9BDC5]">
-                    Measure how effectively your people, processes, and technology
-                    detect and withstand realistic attacks.
+                    Measure how effectively your people, processes, and
+                    technology detect and withstand realistic attacks.
                   </p>
                 </div>
               </div>
@@ -1159,7 +1161,8 @@ export default function RedTeamAssessmentPage() {
                 </p>
 
                 <h2 className="mt-[17px] max-w-[400px] text-[32px] font-normal leading-[1.42] text-white sm:text-[36px] lg:text-[34px]">
-                  Trusted <span className="text-[#E24B4A]">Red Team Experts</span>
+                  Trusted{" "}
+                  <span className="text-[#E24B4A]">Red Team Experts</span>
                 </h2>
 
                 <p className="mt-[18px] max-w-[420px] text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px]">
@@ -1198,9 +1201,9 @@ export default function RedTeamAssessmentPage() {
                         Proven Experience
                       </h3>
                       <p className="mt-[6px] max-w-[420px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
-                        Years of experience conducting Red Team operations across
-                        industries including finance, healthcare, and critical
-                        infrastructure.
+                        Years of experience conducting Red Team operations
+                        across industries including finance, healthcare, and
+                        critical infrastructure.
                       </p>
                     </div>
                   </div>
@@ -1214,8 +1217,9 @@ export default function RedTeamAssessmentPage() {
                         Trusted Partnership
                       </h3>
                       <p className="mt-[6px] max-w-[400px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
-                        We prioritize long-term client relationships by providing
-                        guidance, remediation support, and continuous improvement.
+                        We prioritize long-term client relationships by
+                        providing guidance, remediation support, and continuous
+                        improvement.
                       </p>
                     </div>
                   </div>
@@ -1229,8 +1233,8 @@ export default function RedTeamAssessmentPage() {
                         Global Standards
                       </h3>
                       <p className="mt-[6px] max-w-[380px] text-[13px] font-normal leading-[1.8] text-[#D1D1D1]">
-                        Our methodology aligns with MITRE ATT&CK, NIST, and global
-                        security frameworks for comprehensive coverage.
+                        Our methodology aligns with MITRE ATT&CK, NIST, and
+                        global security frameworks for comprehensive coverage.
                       </p>
                     </div>
                   </div>

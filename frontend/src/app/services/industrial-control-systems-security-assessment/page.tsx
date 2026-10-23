@@ -96,40 +96,45 @@ const governanceCards = [
 const industrialSystemSteps = [
   {
     title: "Reconnaissance",
-    description: "Identify remote and local entry points across the ICS/SCADA environment.",
-    icon: <Icon icon="fluent:search-16-filled" />
+    description:
+      "Identify remote and local entry points across the ICS/SCADA environment.",
+    icon: <Icon icon="fluent:search-16-filled" />,
   },
   {
     title: "Network Mapping",
-    description: "Map ICS networks, exposed services, protocols, communication paths, and connected systems.",
-    icon: <Icon icon="akar-icons:network" />
+    description:
+      "Map ICS networks, exposed services, protocols, communication paths, and connected systems.",
+    icon: <Icon icon="akar-icons:network" />,
   },
   {
     title: "System Enumeration",
-    description: "Assess PLCs, RTUs, HMIs, historians, SCADA applications, databases, credentials, and wireless connections.",
-    icon: <Icon icon="iconmind:session-fixation-guard-outline-regular" />
+    description:
+      "Assess PLCs, RTUs, HMIs, historians, SCADA applications, databases, credentials, and wireless connections.",
+    icon: <Icon icon="iconmind:session-fixation-guard-outline-regular" />,
   },
   {
     title: "Vulnerability Analysis",
-    description: "Identify weaknesses across network protocols, systems, applications, configurations, and access mechanisms.",
-    icon: <Icon icon="fe:target" />
+    description:
+      "Identify weaknesses across network protocols, systems, applications, configurations, and access mechanisms.",
+    icon: <Icon icon="fe:target" />,
   },
   {
     title: "Controlled Exploitation",
-    description: "Safely validate exploitable weaknesses, remote-access paths, and diagnostic mechanisms within agreed rules of engagement.",
-    icon: <Icon icon="bx:layer" />
+    description:
+      "Safely validate exploitable weaknesses, remote-access paths, and diagnostic mechanisms within agreed rules of engagement.",
+    icon: <Icon icon="bx:layer" />,
   },
   {
     title: "Reporting & Deliverables",
-    description: "Correlate findings with potential operational impact, prioritize vulnerabilities, and deliver evidence-based recommendations & corrective actions.",
-    icon: <Icon icon="pajamas:review-checkmark" />
+    description:
+      "Correlate findings with potential operational impact, prioritize vulnerabilities, and deliver evidence-based recommendations & corrective actions.",
+    icon: <Icon icon="pajamas:review-checkmark" />,
   },
 ];
 
 function page() {
   return (
     <main className="bg-black">
-
       <section className="relative bg-[#07101D]">
         <div
           className="absolute inset-0 min-h-[560px] bg-cover bg-no-repeat bg-[position:center_center] lg:bg-[position:center_center]"
@@ -175,7 +180,6 @@ function page() {
           </div>
         </Animation>
       </section>
-
 
       <section className="bg-[#07101D] text-white">
         <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16">
@@ -344,7 +348,11 @@ function page() {
             <Animation>
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 {governanceCards.map((card, index) => (
-                  <AnimatedCard key={index} delay={index * 0.2} className="border-l border-[#0F66EA29] p-6 ">
+                  <AnimatedCard
+                    key={index}
+                    delay={index * 0.2}
+                    className="border-l border-[#0F66EA29] p-6 "
+                  >
                     {/* ICON BADGE */}
                     <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-[#8D8D8D57] text-gray-300">
                       <Icon icon={card.icon} className="h-4 w-4" />
