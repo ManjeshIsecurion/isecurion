@@ -165,7 +165,7 @@ const serviceDetails = {
           },
           {
             label: "GDPR",
-            href: "/services/gdpr",
+            href: "/services/GDPR",
           },
           {
             label: "DPDP Compliance",

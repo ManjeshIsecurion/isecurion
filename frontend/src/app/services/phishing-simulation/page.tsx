@@ -406,7 +406,7 @@ function page() {
               </div>
             </Animation>
             <Animation>
-              <ul className="mt-4 space-y-2 ">
+              <ul className="mt-4 space-y-2">
                 <li className="flex items-center justify-center lg:justify-start gap-2 text-xs text-[#D1D1D1] sm:text-[14px]">
                   <Icon
                     icon="boxicons:seal-check"
@@ -415,7 +415,7 @@ function page() {
                   AI-Powered Phishing Campaigns
                 </li>
 
-                <div className='flex flex-row gap-4'>
+                <div className='flex flex-col lg:flex-row  gap-4'>
                   <li className="flex items-center justify-center lg:justify-start gap-2 text-xs text-[#D1D1D1] sm:text-[14px]">
                     <Icon
                       icon="boxicons:seal-check"
@@ -444,17 +444,14 @@ function page() {
               </ul>
             </Animation>
             <Animation>
-              <div className="flex flex-col-2 gap-4 mt-8">
-                <div className="mt-8 text-center">
-                  <button className="flex items-center h-[54px] justify-center gap-2 rounded-[10px] bg-white px-6 py-3.5 text-[15px] font-medium text-[#31435C] transition-all duration-200 hover:bg-gray-100 shadow-lg">
-                    <span>Request Simulation</span>
-                    <Icon icon="lucide:arrow-right" className="h-4 w-4" />
-                  </button>
+              <div className="mt-8 flex flex-col items-center gap-4 lg:flex-row lg:items-start lg:justify-start">
+                <button className="flex h-[54px] items-center justify-center gap-2 rounded-[10px] bg-white px-6 py-3.5 text-[15px] font-medium text-[#31435C] shadow-lg transition-all duration-200 hover:bg-gray-100">
+                  <span>Request Simulation</span>
+                  <Icon icon="lucide:arrow-right" className="h-4 w-4" />
+                </button>
 
-                </div>
-                <button className="mt-8 flex h-[54px] items-center gap-2.5 px-6 py-3.5 rounded-lg cursor-pointer text-base font-semibold text-white border-2 border-[#3263B1] bg-gradient-to-r from-[#29559D] to-[#1C3D70]">
+                <button className="flex h-[54px] items-center justify-center gap-2.5 rounded-lg border-2 border-[#3263B1] bg-gradient-to-r from-[#29559D] to-[#1C3D70] px-6 py-3.5 text-base font-semibold text-white">
                   Explore Drosera
-
                 </button>
               </div>
             </Animation>
@@ -463,111 +460,111 @@ function page() {
           {/* right  */}
           <div className="w-full flex-1 rounded-3xl  px-8 py-10 bg-[#202123]">
             <Animation>
-            <div className="space-y-1">
-              <h3 className="text-[22px] font-semibold text-[#FFFFFF]">
-                Request a Phishing Simulation Quote
-              </h3>
-              <p className="mt-2 text-base sm:text-[16px] text-[#D9D9D9]">
-                Get a Tailored Phishing Simulation Plan for Your Organisation.
-              </p>
-            </div>
+              <div className="space-y-1">
+                <h3 className="text-[22px] font-semibold text-[#FFFFFF]">
+                  Request a Phishing Simulation Quote
+                </h3>
+                <p className="mt-2 text-base sm:text-[16px] text-[#D9D9D9]">
+                  Get a Tailored Phishing Simulation Plan for Your Organisation.
+                </p>
+              </div>
             </Animation>
             <div className="">
               <Animation>
-              <form className="mt-6 space-y-4.5" >
+                <form className="mt-6 space-y-4.5" >
 
-                {/* WORK EMAIL & COMPANY NAME */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="email" className="block text-[13px] text-[#FEFEFE] mb-1.5">
-                      Work Email <span className="text-[#E24B4A]">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      placeholder="youremail@gmail.com"
-                      className="w-full h-[46px] rounded-[8px] bg-[#110404] border border-[#262D3D] px-3.5 text-[14px] text-[#D1D1D1] placeholder-gray-500 "
-                      required
-                    />
+                  {/* WORK EMAIL & COMPANY NAME */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="email" className="block text-[13px] text-[#FEFEFE] mb-1.5">
+                        Work Email <span className="text-[#E24B4A]">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        placeholder="youremail@gmail.com"
+                        className="w-full h-[46px] rounded-[8px] bg-[#110404] border border-[#262D3D] px-3.5 text-[14px] text-[#D1D1D1] placeholder-gray-500 "
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="company-name" className="block text-[13px] text-[#FEFEFE] mb-1.5">
+                        Company Name
+                      </label>
+                      <input
+                        id='company-name'
+                        type="text"
+                        placeholder="Company name"
+                        className="w-full h-[46px] rounded-[8px] bg-[#110404] border border-[#262D3D] px-3.5 text-[14px] text-[#D1D1D1] placeholder-gray-500 "
+                      />
+                    </div>
                   </div>
 
+                  {/* SIMULATION TYPE DROPDOWN */}
                   <div>
-                    <label htmlFor="company-name" className="block text-[13px] text-[#FEFEFE] mb-1.5">
-                      Company Name
+                    <label htmlFor="simulation-type" className="block text-[13px] text-[#FEFEFE] mb-1.5">
+                      Simulation Type <span className="text-[#E24B4A]">*</span>
                     </label>
+                    <div className="relative">
+                      <select
+                        className="w-full h-[46px] appearance-none rounded-[8px] bg-[#110404] border border-[#262D3D] px-3.5 text-[13px] text-[#D1D1D1]"
+                        required
+                      >
+                        <option value="" >Select Simulation Type</option>
+                        <option value="external">Standard Phishing Simulation</option>
+                        <option value="internal">Targeted Spear-Phishing</option>
+                        <option value="cloud">Vishing & Smishing Add-on</option>
+                        <option value="full">Continuous Phishing Program</option>
+                      </select>
+                      <Icon icon="lucide:chevron-down" className="absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
+                    </div>
+                  </div>
+
+                  {/* CAPTCHA */}
+                  <div className="mt-7">
+                    <div className="flex items-center gap-3">
+                      <span className="text-[13px] leading-5 text-[#E7E7E7]">
+                        Captcha
+                      </span>
+
+                      <span className="flex h-[32px] min-w-[127px] items-center justify-center rounded-[5px] bg-[#7D70F0BF] px-5 text-[13px] font-medium tracking-wide text-white">
+                        ZRLD9Y
+                      </span>
+                    </div>
+
                     <input
-                      id='company-name'
+                      id="captcha"
+                      name="captcha"
                       type="text"
-                      placeholder="Company name"
-                      className="w-full h-[46px] rounded-[8px] bg-[#110404] border border-[#262D3D] px-3.5 text-[14px] text-[#D1D1D1] placeholder-gray-500 "
+                      placeholder="Enter the text shown above"
+                      required
+                      className="mt-3 h-[43px] w-full rounded-[7px] border border-[#29292C] bg-[#090304] px-3 text-[13px] text-white outline-none placeholder:text-[#858585] focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
                     />
                   </div>
-                </div>
 
-                {/* SIMULATION TYPE DROPDOWN */}
-                <div>
-                  <label htmlFor="simulation-type" className="block text-[13px] text-[#FEFEFE] mb-1.5">
-                    Simulation Type <span className="text-[#E24B4A]">*</span>
-                  </label>
-                  <div className="relative">
-                    <select
-                      className="w-full h-[46px] appearance-none rounded-[8px] bg-[#110404] border border-[#262D3D] px-3.5 text-[13px] text-[#D1D1D1]"
+                  {/* TERMS & PRIVACY CHECKBOX */}
+                  <div className="flex items-start gap-2.5 pt-1">
+                    <input
+                      id="consent"
+                      name="consent"
+                      type="checkbox"
                       required
-                    >
-                      <option value="" >Select Simulation Type</option>
-                      <option value="external">Standard Phishing Simulation</option>
-                      <option value="internal">Targeted Spear-Phishing</option>
-                      <option value="cloud">Vishing & Smishing Add-on</option>
-                      <option value="full">Continuous Phishing Program</option>
-                    </select>
-                    <Icon icon="lucide:chevron-down" className="absolute right-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
-                  </div>
-                </div>
-
-                {/* CAPTCHA */}
-                <div className="mt-7">
-                  <div className="flex items-center gap-3">
-                    <span className="text-[13px] leading-5 text-[#E7E7E7]">
-                      Captcha
-                    </span>
-
-                    <span className="flex h-[32px] min-w-[127px] items-center justify-center rounded-[5px] bg-[#7D70F0BF] px-5 text-[13px] font-medium tracking-wide text-white">
-                      ZRLD9Y
-                    </span>
+                      className="mt-[2px] h-[14px] w-[14px] shrink-0 rounded-[2px] border border-[#A8A8A8] "
+                    />
+                    <label htmlFor="terms" className="text-[11px] leading-relaxed text-[#D1D1D1] max-w-[490px]">
+                      By clicking submit below, you agree to our Terms of Use and Privacy Policy. Additionally, you consent to allow ISECURION Technology &amp; Consulting Pvt. Ltd. to store and process the personal information submitted above to provide you the content requested.
+                    </label>
                   </div>
 
-                  <input
-                    id="captcha"
-                    name="captcha"
-                    type="text"
-                    placeholder="Enter the text shown above"
-                    required
-                    className="mt-3 h-[43px] w-full rounded-[7px] border border-[#29292C] bg-[#090304] px-3 text-[13px] text-white outline-none placeholder:text-[#858585] focus:border-[#4A6EAD] focus:ring-1 focus:ring-[#4A6EAD]"
-                  />
-                </div>
-
-                {/* TERMS & PRIVACY CHECKBOX */}
-                <div className="flex items-start gap-2.5 pt-1">
-                  <input
-                    id="consent"
-                    name="consent"
-                    type="checkbox"
-                    required
-                    className="mt-[2px] h-[14px] w-[14px] shrink-0 rounded-[2px] border border-[#A8A8A8] "
-                  />
-                  <label htmlFor="terms" className="text-[11px] leading-relaxed text-[#D1D1D1] max-w-[490px]">
-                    By clicking submit below, you agree to our Terms of Use and Privacy Policy. Additionally, you consent to allow ISECURION Technology &amp; Consulting Pvt. Ltd. to store and process the personal information submitted above to provide you the content requested.
-                  </label>
-                </div>
-
-                {/* SUBMIT BUTTON */}
-                <button
-                  type="submit"
-                  className="w-full h-[48px] mt-2 inline-flex items-center justify-center gap-2 rounded-[8px] bg-gradient-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70] text-[15px] font-medium text-white border-[1.5px] border-[#00000000] transition-all duration-200 shadow-md shadow-[#0F66EA]/20"
-                >
-                  <span>Get Quote</span>
-                  <Icon icon="lucide:arrow-right" className="h-4 w-4" />
-                </button>
-              </form>
+                  {/* SUBMIT BUTTON */}
+                  <button
+                    type="submit"
+                    className="w-full h-[48px] mt-2 inline-flex items-center justify-center gap-2 rounded-[8px] bg-gradient-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70] text-[15px] font-medium text-white border-[1.5px] border-[#00000000] transition-all duration-200 shadow-md shadow-[#0F66EA]/20"
+                  >
+                    <span>Get Quote</span>
+                    <Icon icon="lucide:arrow-right" className="h-4 w-4" />
+                  </button>
+                </form>
               </Animation>
             </div>
           </div>
@@ -622,22 +619,22 @@ function page() {
       <section className="w-full py-14 bg-[#060D1B]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10">
           <Animation>
-          <div className="mx-auto lg:mx-0 space-y-4 text-center lg:text-left">
-            <p className="text-sm sm:text-base font-semibold uppercase text-[#7D70F0]">
-              UNDERSTANDING PHISHING SIMULATION
-            </p>
-            <h2 className="text-[#FEFEFE] max-w-[720px]">
-              Turn Employee Awareness into Measurable Security.
-            </h2>
-            <p className="text-base sm:text-lg leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1] max-w-[550px]">
-              Phishing simulation is a controlled exercise that replicates real-world social engineering techniques to assess employee behaviour,
-              reporting habits, and security awareness.
-            </p>
-            <p className="text-base sm:text-lg leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1] max-w-[590px]">
-              ISECURION combines realistic attack scenarios with behavioural insights and targeted training to identify
-              weaknesses and strengthen your organisation's human security layer.
-            </p>
-          </div>
+            <div className="mx-auto lg:mx-0 space-y-4 text-center lg:text-left">
+              <p className="text-sm sm:text-base font-semibold uppercase text-[#7D70F0]">
+                UNDERSTANDING PHISHING SIMULATION
+              </p>
+              <h2 className="text-[#FEFEFE] lg:max-w-[720px]">
+                Turn Employee Awareness into Measurable Security.
+              </h2>
+              <p className="text-base sm:text-lg leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1] lg:max-w-[550px]">
+                Phishing simulation is a controlled exercise that replicates real-world social engineering techniques to assess employee behaviour,
+                reporting habits, and security awareness.
+              </p>
+              <p className="text-base sm:text-lg leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1] lg:max-w-[590px]">
+                ISECURION combines realistic attack scenarios with behavioural insights and targeted training to identify
+                weaknesses and strengthen your organisation's human security layer.
+              </p>
+            </div>
           </Animation>
           <div className="mt-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -687,77 +684,79 @@ function page() {
 
             {/* ---------- LEFT CONTENT ---------- */}
             <LeftAnimation>
-            <div className="relative z-10 min-w-0">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.2px] text-[#7D70F0] sm:text-[13px]">
-                OUR TECHNOLOGY
-              </p>
+              <div className="relative z-10 text-center lg:text-left ">
+                <p className="text-[12px] sm:text-base font-semibold uppercase tracking-[0.2px] text-[#7D70F0] text-center lg:text-left">
+                  OUR TECHNOLOGY
+                </p>
 
-              <h2 className="mt-3 max-w-[470px] leading-[1.48] tracking-[-0.45px] text-[#F7F7FB] sm:leading-[1.4]">
-                AI-Powered Simulations. Actionable Human Risk Insights.
-              </h2>
+                <h2 className="mt-3 lg:max-w-[470px] leading-[1.48] tracking-[-0.45px] text-[#F7F7FB] sm:leading-[1.4] text-center lg:text-left">
+                  AI-Powered Simulations. Actionable Human Risk Insights.
+                </h2>
 
-              <p className="mt-4 max-w-[380px] text-[14px] leading-[25px] text-[#C7C9D3] sm:text-[15px] sm:leading-[25.5px]">
-                Drosera is ISECURION&apos;s in-house phishing simulation and
-                human risk management platform, designed to help organisations
-                run campaigns, analyse employee behaviour, and deliver targeted
-                security awareness training.
-              </p>
+                <p className="mt-4 lg:max-w-[380px] text-[14px] leading-[25px] text-[#C7C9D3] sm:text-[15px] sm:leading-[25.5px] text-center lg:text-left">
+                  Drosera is ISECURION&apos;s in-house phishing simulation and
+                  human risk management platform, designed to help organisations
+                  run campaigns, analyse employee behaviour, and deliver targeted
+                  security awareness training.
+                </p>
 
-              <ul className="mt-5 space-y-3">
-                {simulationFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5">
-                    <Icon
-                      icon="lucide:badge-check"
-                      className="mt-[2px] h-[16px] w-[16px] shrink-0 text-[#7D70F0]"
-                      aria-hidden="true"
-                    />
-                    <span className="max-w-[374px] text-[13px] font-medium leading-[21px] text-[#D5D6DF] sm:text-[14px] sm:leading-[22px]">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="mt-5 space-y-3 text-center lg:text-left">
+                  {simulationFeatures.map((feature) => (
+                    <li key={feature} className="flex items-center gap-2.5 ">
+                      <Icon
+                        icon="lucide:badge-check"
+                        className="mt-[2px] h-[16px] w-[16px] shrink-0 text-[#7D70F0]"
+                        aria-hidden="true"
+                      />
+                      <span className="lg:max-w-[374px] text-[13px] font-medium leading-[21px] text-[#D5D6DF] sm:text-[14px] sm:leading-[22px]">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
 
-              <Link
-                href="#"
-                className="mt-7 inline-flex min-h-[45px] items-center justify-center gap-2 rounded-[8px] border border-[#568CE0]/60 bg-gradient-to-b from-[#386CC0] to-[#20477E] px-5 py-3 text-[13px] font-medium text-white shadow-[0_4px_16px_rgba(15,102,234,0.15)] transition duration-300 hover:border-[#70A7FF] hover:from-[#437DD5] hover:to-[#285795] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F80FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080B19]"
-              >
-                Explore Drosera
-                <Icon icon="lucide:external-link" className="h-[15px] w-[15px]" aria-hidden="true" />
-              </Link>
-            </div>
+                <div className='text-center lg:text-left'>
+                  <Link
+                    href="#"
+                    className="mt-7 inline-flex min-h-[45px] items-center justify-center gap-2 rounded-[8px] border border-[#568CE0]/60 bg-gradient-to-b from-[#386CC0] to-[#20477E] px-5 py-3 text-[13px] font-medium text-white shadow-[0_4px_16px_rgba(15,102,234,0.15)] transition duration-300 hover:border-[#70A7FF] hover:from-[#437DD5] hover:to-[#285795] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F80FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080B19]"
+                  >
+                    Explore Drosera
+                    <Icon icon="lucide:external-link" className="h-[15px] w-[15px]" aria-hidden="true" />
+                  </Link>
+                </div>
+              </div>
             </LeftAnimation>
 
             {/* ---------- RIGHT: DEVICE FRAME + DASHBOARD ---------- */}
             <RightAnimation>
-            <div className="relative min-w-0 mx-auto w-full max-w-[680px] lg:mx-0 lg:max-w-none">
+              <div className="relative min-w-0 mx-auto w-full max-w-[680px] lg:mx-0 lg:max-w-none">
 
-              {/* Wider than the column on lg+, so it runs off the right edge of the screen */}
-              <div className="relative w-full lg:ml-auto lg:w-[min(50rem,calc(100%_+_2rem_+_max(0px,(10vw_-_80rem)/2)))]">
+                {/* Wider than the column on lg+, so it runs off the right edge of the screen */}
+                <div className="relative w-full lg:ml-auto lg:w-[min(50rem,calc(100%_+_2rem_+_max(0px,(10vw_-_80rem)/2)))]">
 
-                {/* 1) FRAME at the bottom. It sets the size and includes the bezel. */}
-                <Image
-                  src={dashboardFrame}
-                  alt=""
-                  width={721}
-                  height={539}
-                  priority
-                  sizes="(max-width: 1023px) 100vw, 60vw"
-                  className="pointer-events-none relative z-10 block h-auto w-full"
-                />
-
-                {/* 2) DARK DASHBOARD on top, covering the frame's white screen */}
-                <div className="absolute bottom-[6%] left-[5.2%] right-0 top-[7%] z-20 overflow-hidden rounded-[6px]">
+                  {/* 1) FRAME at the bottom. It sets the size and includes the bezel. */}
                   <Image
-                    src={dashboardImage}
-                    alt="Drosera phishing simulation and human risk dashboard"
-                    fill
+                    src={dashboardFrame}
+                    alt=""
+                    width={721}
+                    height={539}
+                    priority
                     sizes="(max-width: 1023px) 100vw, 60vw"
-                    className="object-fill"
+                    className="pointer-events-none relative z-10 block h-auto w-full"
                   />
+
+                  {/* 2) DARK DASHBOARD on top, covering the frame's white screen */}
+                  <div className="absolute bottom-[6%] left-[5.2%] right-0 top-[7%] z-20 overflow-hidden rounded-[6px]">
+                    <Image
+                      src={dashboardImage}
+                      alt="Drosera phishing simulation and human risk dashboard"
+                      fill
+                      sizes="(max-width: 1023px) 100vw, 60vw"
+                      className="object-fill"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
             </RightAnimation>
 
           </div>
@@ -769,46 +768,46 @@ function page() {
           <div className="absolute top-0 -right-20 w-[300px] h-[300px] rounded-full blur-[100px] bg-[#FFFFFF33]" />
         </div>
         <Animation>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10">
-          <div className="max-w-2xl space-y-3">
-            <p className="text-sm sm:text-base font-semibold text-[#7D70F0]">
-              SCOPE OF WORK
-            </p>
-            <h2 className="text-[#FFFFFF]">
-              Measure Your Human Attack Surface
-            </h2>
-            <p className="text-base sm:text-lg leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1] max-w-[647px]">
-              Simulate realistic social-engineering threats across people, roles, channels, and third parties to identify exposure and strengthen security awareness.
-            </p>
-          </div>
-          <div className="mt-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {scopeOfWork.map((item, index) => (
-                <AnimatedCard
-                  delay={index * 0.15}
-                  key={index}
-                  className="relative flex flex-col justify-between p-5 space-y-4 rounded-lg bg-[#66666614] border border-[#0B15301F]"
-                >
-                  <div className="absolute left-0 w-[2.5px] h-[23px] rounded-tr-2xl rounded-br-2xl bg-[#7D70F0]"></div>
-                  <div className="flex items-center justify-between gap-10">
-                    <h3 className="text-base sm:text-lg text-[#FFFFFF]">
-                      {item.heading}
-                    </h3>
-                    <span>
-                      <Icon
-                        icon={item.Icon}
-                        className="w-[25px] h-[25px] text-[#7D70F0]"
-                      />
-                    </span>
-                  </div>
-                  <p className="text-[15px] font-normal leading-[24px] text-[#D1D1D1] max-w-[338px]">
-                    {item.description}
-                  </p>
-                </AnimatedCard>
-              ))}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10">
+            <div className="max-w-2xl space-y-3 text-center lg:text-left">
+              <p className="text-sm sm:text-base font-semibold text-[#7D70F0]">
+                SCOPE OF WORK
+              </p>
+              <h2 className="text-[#FFFFFF]">
+                Measure Your Human Attack Surface
+              </h2>
+              <p className="text-base sm:text-lg leading-[26px] sm:leading-[29px] md:leading-[31px] text-[#D1D1D1] max-w-[647px]">
+                Simulate realistic social-engineering threats across people, roles, channels, and third parties to identify exposure and strengthen security awareness.
+              </p>
+            </div>
+            <div className="mt-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {scopeOfWork.map((item, index) => (
+                  <AnimatedCard
+                    delay={index * 0.15}
+                    key={index}
+                    className="relative flex flex-col justify-between p-5 space-y-4 rounded-lg bg-[#66666614] border border-[#0B15301F]"
+                  >
+                    <div className="absolute left-0 w-[2.5px] h-[23px] rounded-tr-2xl rounded-br-2xl bg-[#7D70F0]"></div>
+                    <div className="flex items-center justify-between gap-10">
+                      <h3 className="text-base sm:text-lg text-[#FFFFFF]">
+                        {item.heading}
+                      </h3>
+                      <span>
+                        <Icon
+                          icon={item.Icon}
+                          className="w-[25px] h-[25px] text-[#7D70F0]"
+                        />
+                      </span>
+                    </div>
+                    <p className="text-[15px] font-normal leading-[24px] text-[#D1D1D1] max-w-[338px]">
+                      {item.description}
+                    </p>
+                  </AnimatedCard>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
         </Animation>
       </section>
 
@@ -817,11 +816,11 @@ function page() {
           {/* Section Heading */}
           <Animation>
             <div className="space-y-4 text-center lg:text-left">
-              <p className="text-[12px] font-medium uppercase tracking-wide text-[#7D70F0] sm:text-[16px]">
+              <p className="text-[12px] sm:text-base font-semibold uppercase tracking-wide text-[#7D70F0] sm:text-[16px]">
                 Methodology
               </p>
 
-              <h2 className="max-w-[630px] leading-[1.3] tracking-[-0.5px] text-white ">
+              <h2 className="lg:max-w-[630px] leading-[1.3] tracking-[-0.5px] text-white ">
                 A Structured Approach to Phishing Simulation
               </h2>
 
@@ -954,17 +953,17 @@ function page() {
       <section className="bg-[#050D1C] px-0">
         <div className="mx-auto max-w-7xl  px-6 py-[60px] sm:px-10 sm:py-[70px] lg:px-[26px] lg:py-[77px]">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr]">
-            <div className="pb-[50px] lg:pr-[70px] lg:pb-0 text-center md:text-left">
+            <div className="pb-[50px] lg:pr-[70px] lg:pb-0 text-center lg:text-left">
               <LeftAnimation>
                 <p className="text-[13px] sm:text-base font-semibold uppercase leading-[0.2px] text-[#7D70F0]">
                   WHY CHOOSE US?
                 </p>
 
-                <h2 className="mt-[17px] max-w-[400px] leading-[1.42] text-white">
+                <h2 className="mt-[17px] lg:max-w-[400px] leading-[1.42] text-white">
                   Why organisations trust ISECURION?
                 </h2>
 
-                <p className="mt-[18px] max-w-[420px] text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px]">
+                <p className="mt-[18px] lg:max-w-[420px] text-[14px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[15px]">
                   Combine proven expertise, industry experience, and compliance-driven security services to strengthen your organisation’s cyber resilience.
                 </p>
               </LeftAnimation>
@@ -1038,19 +1037,19 @@ function page() {
 
       <section className="bg-[#050D1C] text-white">
         <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
-          <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-[0.8fr_1.2fr] md:gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12">
+          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12">
             {/* Left: Section introduction */}
             <LeftAnimation>
-              <div className="max-w-[470px] md:pt-1">
+              <div className="lg:max-w-[470px] md:pt-1 text-center lg:text-left">
                 <p className="text-[13px] sm:text-base font-semibold uppercase leading-5 text-[#7D70F0] sm:text-[14px]">
                   PHISHING SIMULATION DELIVERABLES
                 </p>
 
-                <h2 className="mt-3 max-w-[400px] leading-[1.28] tracking-[-0.5px] text-[#F8F9FC] sm:leading-[1.35]">
+                <h2 className="mt-3 lg:max-w-[400px] leading-[1.28] tracking-[-0.5px] text-[#F8F9FC] sm:leading-[1.35]">
                   What you will receive
                 </h2>
 
-                <p className="mt-5 max-w-[420px] text-[15px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[16px]">
+                <p className="mt-5 lg:max-w-[420px] text-[15px] font-normal leading-[1.8] text-[#D1D1D1] sm:text-[16px]">
                   Receive actionable reporting and remediation guidance to
                   improve awareness, strengthen detection, and reduce employee
                   susceptibility.
@@ -1107,26 +1106,26 @@ function page() {
         <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-[52px]">
           {/* Section heading */}
           <Animation>
-          <div className="max-w-[580px]">
-            <p className="text-[11px] font-semibold sm:text-base uppercase leading-5 text-[#8B80FF] ">
-              MEASURING HUMAN RISK
-            </p>
+            <div className="lg:max-w-[580px] text-center lg:text-left">
+              <p className="text-[13px] font-semibold sm:text-base uppercase leading-5 text-[#8B80FF] ">
+                MEASURING HUMAN RISK
+              </p>
 
-            <h2 className="mt-3 max-w-[520px] leading-[1.3] tracking-[-0.4px] ">
-              Six numbers that{" "}
-              <span className="text-[#0F66EA]">
-                explain <br />
-              </span>
-              <span className='text-transparent bg-clip-text bg-linear-to-r from-[#7D70F0] to-[#0F66EA]'>
-                your people.
-              </span>
-            </h2>
+              <h2 className="mt-3 lg:max-w-[520px] leading-[1.3] tracking-[-0.4px] ">
+                Six numbers that{" "}
+                <span className="text-[#0F66EA]">
+                  explain <br />
+                </span>
+                <span className='text-transparent bg-clip-text bg-linear-to-r from-[#7D70F0] to-[#0F66EA]'>
+                  your people.
+                </span>
+              </h2>
 
-            <p className="mt-3 text-[12px] leading-[21px] text-[#D1D1D1] sm:text-base sm:leading-[28px]">
-              Monitor key indicators to understand employee susceptibility and
-              evaluate the effectiveness of awareness initiatives.
-            </p>
-          </div>
+              <p className="mt-3 text-[12px] leading-[21px] text-[#D1D1D1] sm:text-base sm:leading-[28px]">
+                Monitor key indicators to understand employee susceptibility and
+                evaluate the effectiveness of awareness initiatives.
+              </p>
+            </div>
           </Animation>
 
           {/* Six metric cards */}
@@ -1175,21 +1174,21 @@ function page() {
 
           {/* Guidance strip */}
           <Animation>
-          <div className="mt-5 lg:h-[68px] flex items-start gap-3 rounded-[16px] border border-[#1F2C6B] bg-gradient-to-r from-[#121C5A00] to-[#080E34E5] px-4 py-4 sm:items-center sm:px-[19px] sm:py-[15px]">
-            <Icon
-              icon="lucide:info"
-              className="mt-0.5 h-[21px] w-[21px] shrink-0 text-[#8292FF] sm:mt-0"
-              aria-hidden="true"
-            />
+            <div className="mt-5 lg:h-[68px] flex items-start gap-3 rounded-[16px] border border-[#1F2C6B] bg-gradient-to-r from-[#121C5A00] to-[#080E34E5] px-4 py-4 sm:items-center sm:px-[19px] sm:py-[15px]">
+              <Icon
+                icon="lucide:info"
+                className="mt-0.5 h-[21px] w-[21px] shrink-0 text-[#8292FF] sm:mt-0"
+                aria-hidden="true"
+              />
 
-            <div className="hidden h-6 w-px shrink-0 bg-[#28283D] sm:block" />
+              <div className="hidden h-6 w-px shrink-0 bg-[#28283D] sm:block" />
 
-            <p className="text-sm leading-[17px] text-[#D1D1D1] sm:text-[15px] sm:leading-[18px]">
-              Establish a baseline before setting targets. Success should be
-              measured through improvement over time, not a single universal
-              benchmark.
-            </p>
-          </div>
+              <p className="text-sm leading-[17px] text-[#D1D1D1] sm:text-[15px] sm:leading-[18px]">
+                Establish a baseline before setting targets. Success should be
+                measured through improvement over time, not a single universal
+                benchmark.
+              </p>
+            </div>
           </Animation>
         </div>
       </section>
@@ -1201,23 +1200,23 @@ function page() {
           {/* Section heading */}
           <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 md:items-start md:gap-10">
             <LeftAnimation>
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2px] text-[#7D70F0] sm:text-base">
-                IMPLEMENTATION ROADMAP
-              </p>
+              <div className='text-center sm:text-left'>
+                <p className="text-sm font-semibold uppercase tracking-[0.2px] text-[#7D70F0] sm:text-base">
+                  IMPLEMENTATION ROADMAP
+                </p>
 
-              <h2 className="mt-2 max-w-[510px] text-[27px] font-normal leading-[1.5] tracking-[-0.4px] text-[#D1D1D1] sm:text-[30px] lg:text-[32px]">
-                A Practical Path to better
-                <br /> phishing resilience.
-              </h2>
-            </div>
+                <h2 className="mt-2 max-w-[510px] text-[27px] font-normal leading-[1.5] tracking-[-0.4px] text-[#D1D1D1] sm:text-[30px] lg:text-[32px]">
+                  A Practical Path to better
+                  phishing resilience.
+                </h2>
+              </div>
             </LeftAnimation>
 
             <RightAnimation>
-            <p className="max-w-[400px] text-[15px] leading-[24px] text-[#C3C7D1] sm:text-[17px] sm:leading-[28px] md:ml-auto md:mt-5">
-              Typical timeline for enterprise engagements. Schedules are adjusted to
-              business cycles and regulatory windows.
-            </p>
+              <p className="max-w-[400px] text-[15px] leading-[24px] text-[#C3C7D1] sm:text-[17px] sm:leading-[28px] md:ml-auto md:mt-5 text-center sm:text-left">
+                Typical timeline for enterprise engagements. Schedules are adjusted to
+                business cycles and regulatory windows.
+              </p>
             </RightAnimation>
           </div>
 

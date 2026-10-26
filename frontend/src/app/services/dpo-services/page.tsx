@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from '@iconify/react'
-import { Animation, AnimatedCard } from "../../../components/ui/Animation"
+import { Animation, AnimatedCard, GradientIcon, LeftAnimation, RightAnimation } from "../../../components/ui/Animation"
 import heroBackground from "../../../assets/services/backgroundPattern.png"
 import privacySectionBackground from "../../../assets/services/your-privacyBackground.png"
 import FAQSection from "../../../components/sections/FAQSection";
@@ -210,20 +210,22 @@ const regulatoryCoverage = [
 ];
 
 const dpoLocations = [
-    { name: "Bangalore", icon: "reicon:city" },
-    { name: "Mumbai", icon: "game-icons:tower-bridge" },
-    { name: "Hyderabad", icon: "fluent:building-mosque-12-regular" },
-    { name: "Noida", icon: "icon-park-outline:city-one" },
-    { name: "Pune", icon: "icon-park-outline:city-gate" },
-    { name: "Delhi NCR", icon: "hugeicons:india-gate" },
-    { name: "Kolkata", icon: "game-icons:arch-bridge" },
-    { name: "Ahmedabad", icon: "streamline-plump:government-building-1" },
+    { name: "Bangalore",
+      Icon: "reicon:city" 
+    },
+    { name: "Mumbai", Icon: "game-icons:tower-bridge" },
+    { name: "Hyderabad", Icon: "fluent:building-mosque-12-regular" },
+    { name: "Noida", Icon: "icon-park-outline:city-one" },
+    { name: "Pune", Icon: "icon-park-outline:city-gate" },
+    { name: "Delhi NCR", Icon: "hugeicons:india-gate" },
+    { name: "Kolkata", Icon: "game-icons:arch-bridge" },
+    { name: "Ahmedabad", Icon: "streamline-plump:government-building-1" },
 ];
 
 const globalDpoRegions = [
     { code: "US", name: "United States", icon: "mingcute:statue-of-liberty-line" },
     { code: "SG", name: "Singapore", icon: "hugeicons:twin-tower" },
-    { code: "AE", name: "UAE / Dubai", icon: "lucide:building-2" },
+    { code: "AE", name: "UAE / Dubai", icon: "hugeicons:cayan-tower" },
     { code: "AU", name: "Australia", icon: "mingcute:sydney-opera-house-line" },
     { code: "EU", name: "Europe", icon: "icon-park-outline:eiffel-tower" },
 ];
@@ -454,6 +456,7 @@ function page() {
                     </div>
                     
                     <div className="flex-1 px-8 py-5 rounded-3xl space-y-5 bg-linear-to-r from-[#7B6FE860] to-[#7B6FE839] min-h-[800px]">
+                        <Animation>
                         <div className="flex flex-col sm:flex-row gap-6">
                             <div className="flex flex-col w-full gap-3">
                                 <label
@@ -482,6 +485,8 @@ function page() {
                                 />
                             </div>
                         </div>
+                         </Animation>
+                         <Animation>
                         <div className="flex flex-col sm:flex-row gap-6">
                             <div className="flex flex-col w-full gap-3">
                                 <label
@@ -510,6 +515,8 @@ function page() {
                                 />
                             </div>
                         </div>
+                        </Animation>
+                        <Animation>
                         <div className="flex flex-col sm:flex-row gap-6">
                             <div className="flex flex-col w-full gap-3">
                                 <label
@@ -553,6 +560,8 @@ function page() {
                                 </select>
                             </div>
                         </div>
+                        </Animation>
+                        <Animation>
                         <div className="flex flex-col gap-2">
                             <label
                                 htmlFor=""
@@ -568,6 +577,8 @@ function page() {
                                 rows={5}
                             ></textarea>
                         </div>
+                        </Animation>
+                        <Animation>
                         <div className="">
                             <div className="flex items-center gap-3">
                                 <span className="text-sm leading-5 text-[#E7E7E7]">
@@ -588,6 +599,8 @@ function page() {
                                 className="mt-3 px-3 py-3 w-full rounded-[10px] border border-[#262D3D] bg-[#000C1C]   text-[#D1D1D1] outline-none placeholder:text-[#858585] "
                             />
                         </div>
+                        </Animation>
+                        <Animation>
                         <div className="flex gap-3">
                             <input
                                 type="checkbox"
@@ -601,12 +614,16 @@ function page() {
                                 requested.
                             </p>
                         </div>
+                        </Animation>
+                        <Animation>
                         <button className="text-base sm:text-lg font-medium flex items-center justify-center py-3 w-full rounded-[10px] cursor-pointer text-[#FFFFFF] bg-linear-to-r from-[#3263B1] via-[#29559D] to-[#1C3D70] border-2 border-[#577bbd] h-[54px]">
                             Request Consultation{" "}
                             <span>
                                 <Icon icon="akar-icons:arrow-right" className="text-lg" />
                             </span>{" "}
                         </button>
+                        </Animation>
+                       
                     </div>
                   
                 </div>
@@ -616,6 +633,7 @@ function page() {
             {/* Understanding DPO  */}
             <section className="w-full py-14 bg-[#060D1B]">
                 <div className="max-w-7xl mx-auto px-6 sm:px-10">
+                    <Animation>
                     <div className="mx-auto lg:mx-0 space-y-4 text-center lg:text-left">
                         <p className="text-sm sm:text-base font-semibold uppercase text-[#0F66EA]">
                             UNDERSTANDING OUTSOURCED DPO
@@ -632,6 +650,7 @@ function page() {
                             documented processes, and ongoing advisory support.
                         </p>
                     </div>
+                    </Animation>
                     <div className="mt-10">
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                             {services.map((item, index) => (
@@ -664,9 +683,10 @@ function page() {
                 <div className="absolute inset-0 pointer-events-none">
                     <div className="absolute top-0 -right-20 w-[300px] h-[300px] rounded-full blur-[100px] bg-[#FFFFFF33]" />
                 </div>
+                <Animation>
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10">
-                    <div className="max-w-2xl space-y-4">
-                        <p className="text-sm sm:text-base font-semibold text-[#0F66EA]">
+                    <div className="max-w-2xl space-y-4 text-center lg:text-left">
+                        <p className="text-sm sm:text-base font-semibold text-[#0F66EA] ">
                             WHO NEEDS AN OUTSOURCED DPO?
                         </p>
                         <h2 className="text-[#FFFFFF]">
@@ -704,13 +724,16 @@ function page() {
                         </div>
                     </div>
                 </div>
+                </Animation>
             </section>
 
             {/* ISECURION OUTSOURCED DPO TEAM */}
             <section className="bg-[#060D1B] py-8 sm:py-10 lg:py-12">
                 <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <LeftAnimation>
                     <div className="grid grid-cols-1 overflow-hidden lg:grid-cols-[44%_56%]">
                         {/* LEFT: STATISTICS */}
+                      
                         <div className="relative flex flex-col justify-center gap-8 border-l border-[#FFFFFF1A] bg-[#030707] px-7 py-10 sm:gap-10 sm:px-10 sm:py-12 lg:gap-8 lg:px-10 lg:py-10 xl:px-14">
                             {/* Vertical divider */}
                             <div className="absolute bottom-0 left-0 top-0 w-px bg-[#FFFFFF12]" />
@@ -760,14 +783,16 @@ function page() {
                                 </p>
                             </div>
                         </div>
+                        
 
                         {/* RIGHT: DPO TEAM CONTENT */}
+                        <RightAnimation>
                         <div className="flex flex-col justify-center bg-[#003833] px-6 py-9 sm:px-9 sm:py-11 md:px-10 lg:px-8 lg:py-10 xl:px-8 2xl:px-10">
-                            <p className="text-[12px] font-medium uppercase leading-5 text-[#0F66EA] sm:text-[13px]">
+                            <p className="text-[12px] sm:text-base font-semibold uppercase leading-5 text-[#0F66EA] ">
                                 ISECURION PRIVACY PRACTICE
                             </p>
 
-                            <h2 className="mt-2 max-w-[520px] text-[28px] font-normal leading-[1.5] tracking-[-0.5px] text-white sm:text-[32px] md:text-[34px] lg:text-[30px] xl:text-[32px]">
+                            <h2 className="mt-2 max-w-[520px] text-[24px] font-normal leading-[1.5] tracking-[-0.5px] text-white sm:text-[32px] md:text-[34px] lg:text-[30px] xl:text-[32px]">
                                 Meet the ISECURION Outsourced DPO Team
                             </h2>
 
@@ -804,7 +829,9 @@ function page() {
                                 </span>
                             </div>
                         </div>
+                        </RightAnimation>
                     </div>
+                    </LeftAnimation>
                 </div>
             </section>
 
@@ -814,21 +841,24 @@ function page() {
                     {/* Intro + Framework Cards */}
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,0.76fr)_minmax(0,1.24fr)] lg:items-start lg:gap-8 xl:gap-10">
                         {/* Left: Intro */}
-                        <div className="max-w-[480px]">
-                            <p className="text-[12px] font-medium uppercase leading-5 text-[#0F66EA] sm:text-[13px]">
+                        <LeftAnimation>
+                        <div className="lg:max-w-[480px] text-center lg:text-left">
+                            <p className="text-[12px] sm:text-base font-semibold uppercase leading-5 text-[#0F66EA] ">
                                 GLOBAL PRIVACY COVERAGE
                             </p>
 
-                            <p className="mt-2 text-[30px] leading-[1.5] tracking-[-0.5px] text-white sm:text-[32px] sm:leading-[1.35] lg:text-[34px] xl:text-[38px] max-w-[350px]">
+                            <h2 className="mt-2 leading-[1.5] tracking-[-0.5px] text-white sm:leading-[1.35] lg:max-w-[450px]">
                                 One Coordinated Privacy Programme across multiple jurisdictions.
-                            </p>
+                            </h2>
 
                             <p className="mt-4 text-[14px] font-normal leading-[23px] text-[#C6C9D0] sm:text-[15px] sm:leading-[25px]">
                                 Navigate evolving data protection requirements with a structured approach to privacy governance, risk assessment, documentation, and compliance monitoring.
                             </p>
                         </div>
+                        </LeftAnimation>
 
                         {/* Right: Regulatory Framework Cards */}
+                        <RightAnimation>
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-4 xl:gap-5">
                             {/* India Frameworks */}
                             <div className="flex min-w-0 flex-col rounded-[17px] border border-[#4C737029] bg-[#66666614] p-4 sm:p-[17px]">
@@ -904,6 +934,7 @@ function page() {
                                 </p>
                             </div>
                         </div>
+                        </RightAnimation>
                     </div>
 
                     {/* Privacy Programme Capabilities */}
@@ -1019,11 +1050,11 @@ function page() {
                     <div className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-2 lg:gap-5 xl:gap-6">
                         {/* LEFT PANEL: ENGAGEMENT MILESTONES */}
                         <Animation>
-                            <div className="h-full rounded-[9px] border border-[#FFFFFF0D] bg-[#0E1623] p-5 sm:p-6 lg:p-6 xl:p-[26px]">
+                            <div className="h-full rounded-[9px] border border-[#FFFFFF0D] bg-[#0E1623] p-5 sm:p-6 lg:p-6 xl:p-[26px] ">
                                 {/* Eyebrow */}
                                 <div className="flex items-center gap-3">
                                     <span className="h-[0.4px] w-8 shrink-0 bg-[#0F66EA]" />
-                                    <p className="text-[11px] font-medium uppercase tracking-[2.5px] text-[#0F66EA] sm:text-[12px]">
+                                    <p className="text-sm sm:text-base font-semibold uppercase tracking-[2.5px] text-[#0F66EA] sm:text-[12px] ">
                                         ENGAGEMENT MILESTONES
                                     </p>
                                 </div>
@@ -1038,8 +1069,9 @@ function page() {
                                     <div className="relative flex flex-col items-center">
                                         <div className="absolute bottom-[35px] top-[21px] w-px bg-[#17416B]" />
 
-                                        {engagementMilestones.map((item) => (
-                                            <div
+                                        {engagementMilestones.map((item, index) => (
+                                            <AnimatedCard
+                                                delay={index * 0.18}
                                                 key={item.number}
                                                 className="relative z-10 flex min-h-[75px] w-full flex-1 items-start justify-center"
                                             >
@@ -1048,14 +1080,15 @@ function page() {
                                                         {item.number}
                                                     </span>
                                                 </div>
-                                            </div>
+                                            </AnimatedCard>
                                         ))}
                                     </div>
 
                                     {/* Period and milestone content */}
                                     <div className="flex min-w-0 flex-col">
                                         {engagementMilestones.map((item, index) => (
-                                            <div
+                                            <AnimatedCard
+                                            delay={index * 0.1}
                                                 key={item.number}
                                                 className={`grid min-h-[75px] grid-cols-[84px_minmax(0,1fr)] gap-x-3 sm:grid-cols-[84px_minmax(0,1fr)] sm:gap-x-4 ${index !== engagementMilestones.length - 1
                                                     ? "border-b border-[#172338] pb-3"
@@ -1077,7 +1110,7 @@ function page() {
                                                         {item.description}
                                                     </p>
                                                 </div>
-                                            </div>
+                                            </AnimatedCard>
                                         ))}
                                     </div>
                                 </div>
@@ -1091,7 +1124,7 @@ function page() {
                                 {/* Eyebrow */}
                                 <div className="flex items-center gap-3">
                                     <span className="h-[0.4px] w-8 shrink-0 bg-[#0F66EA]" />
-                                    <p className="text-[11px] font-medium uppercase tracking-[2px] text-[#0F66EA] sm:text-[12px] sm:tracking-[2.3px]">
+                                    <p className="text-sm sm:text-base font-semibold uppercase tracking-[2px] text-[#0F66EA] sm:text-[12px] sm:tracking-[2.3px]">
                                         REGULATORY COVERAGE BY SECTOR &amp; REGION
                                     </p>
                                 </div>
@@ -1107,7 +1140,7 @@ function page() {
                                 {/* Sector Cards */}
                                 <div className="mt-6 flex flex-col gap-3.5">
                                     {regulatoryCoverage.map((item) => (
-                                        <div
+                                        <AnimatedCard
                                             key={item.title}
                                             className="grid grid-cols-1 gap-3 rounded-[6px] border border-[#FFFFFF05] bg-gradient-to-r from-[#19243A] via-[#152F59] to-[#101D32] p-3.5 sm:grid-cols-[42px_minmax(0,1fr)] sm:items-center sm:gap-3.5 sm:p-3.5 md:grid-cols-[42px_minmax(0,1fr)_minmax(0,0.95fr)] md:gap-3 lg:grid-cols-[42px_minmax(0,1fr)] xl:grid-cols-[42px_minmax(0,1fr)_minmax(0,0.95fr)] xl:gap-3.5"
                                         >
@@ -1135,7 +1168,7 @@ function page() {
                                                     {item.description}
                                                 </p>
                                             </div>
-                                        </div>
+                                        </AnimatedCard>
                                     ))}
                                 </div>
                             </div>
@@ -1147,14 +1180,14 @@ function page() {
             {/* OUTSOURCED DPO SERVICES ACROSS KEY MARKETS */}
             <section
                 className="relative isolate overflow-hidden bg-[#060D1B] bg-cover bg-center bg-no-repeat py-12 sm:py-14 lg:py-[72px]"
-                style={{ backgroundImage: `url(${heroBackground.src})` }}
-            >
+                style={{ backgroundImage: `url(${heroBackground.src})` }}>
 
                 <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                     {/* TOP: INDIAN MARKETS */}
                     <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-12">
                         {/* Intro */}
-                        <div className="max-w-[470px]">
+                        <LeftAnimation>
+                        <div className="lg:max-w-[470px] text-center lg:text-left">
                             <h2 className="text-[28px] font-normal leading-[1.4] tracking-[-0.4px] text-white sm:text-[32px] sm:leading-[1.45] lg:text-[32px] xl:text-[34px]">
                                 Outsourced DPO Services Across Key Markets
                             </h2>
@@ -1163,12 +1196,14 @@ function page() {
                                 ISECURION provides dedicated DPO services in every major Indian business hub, with remote, hybrid, and on-site engagement models available.
                             </p>
                         </div>
+                        </LeftAnimation>
 
                         {/* Indian Office Locations */}
                         <div className="rounded-[24px] border border-[#596173]/70 bg-[#DADADA0A] p-4 sm:p-5 lg:p-5 xl:p-6">
                             <div className="grid grid-cols-2 sm:grid-cols-4">
                                 {dpoLocations.map((location, index) => (
-                                    <div
+                                    <AnimatedCard
+                                    delay={index * 0.1}
                                         key={location.name}
                                         className={`flex min-w-0 flex-col items-center justify-center gap-3 px-2 py-5 sm:py-6 ${index < 4 ? "border-b border-[#FFFFFF0D] sm:border-b-0" : ""
                                             } ${index % 4 !== 3 ? "sm:border-r sm:border-[#FFFFFF05]" : ""
@@ -1176,16 +1211,12 @@ function page() {
                                             } ${index >= 4 ? "sm:border-t sm:border-[#FFFFFF0D]" : ""
                                             }`}
                                     >
-                                        <Icon
-                                            icon={location.icon}
-                                            className="h-[34px] w-[34px] text-[#00CFEF]"
-                                            aria-hidden="true"
-                                        />
+                                        <GradientIcon Icon={location.Icon}/>
 
                                         <span className="text-center text-[13px] font-normal leading-5 text-[#D1D3DB] sm:text-[15px]">
                                             {location.name}
                                         </span>
-                                    </div>
+                                    </AnimatedCard>
                                 ))}
                             </div>
                         </div>
@@ -1196,6 +1227,7 @@ function page() {
 
                         <div className="relative grid grid-cols-1 items-center gap-7 p-5 sm:p-6 lg:grid-cols-[minmax(230px,1.2fr)_minmax(0,3fr)] lg:gap-5 lg:p-6 xl:p-6">
                             {/* Global Coverage Intro */}
+                            <Animation>
                             <div className="min-w-0">
                                 <p className="text-[15px] font-medium uppercase tracking-wide text-[#1680FF] sm:text-[17px]">
                                     GLOBAL COVERAGE
@@ -1213,11 +1245,13 @@ function page() {
                                     Globally deployed. Locally compliant.
                                 </p>
                             </div>
+                            </Animation>
 
                             {/* Global Regions */}
                             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
                                 {globalDpoRegions.map((region, index) => (
-                                    <div
+                                    <AnimatedCard
+                                    delay={index * 0.1}
                                         key={region.code}
                                         className={`flex min-w-0 flex-col items-center justify-center px-2 py-5 text-center sm:px-3 lg:py-3 ${index % 2 === 0
                                             ? "border-r border-[#243849]"
@@ -1239,8 +1273,8 @@ function page() {
                                                 : ""
                                             }`}
                                     >
-                                        <Icon
-                                            icon={region.icon}
+                                        <GradientIcon
+                                            Icon={region.icon}
                                             className="h-[43px] w-[43px] text-[#00D6E9] sm:h-[46px] sm:w-[46px]"
                                             aria-hidden="true"
                                         />
@@ -1254,7 +1288,7 @@ function page() {
                                         <span className="mt-2 text-[12px] leading-5 text-[#C5C9D2] sm:text-[13px]">
                                             {region.name}
                                         </span>
-                                    </div>
+                                    </AnimatedCard>
                                 ))}
                             </div>
                         </div>
@@ -1280,6 +1314,7 @@ function page() {
 
                 <div className="relative mx-auto w-full max-w-7xl px-4 pt-12 sm:px-6 sm:pt-14 lg:px-8 lg:pt-[48px]">
                     {/* Intro */}
+                    <Animation>
                     <div className="max-w-[590px]">
                         <p className="text-[12px] font-medium uppercase leading-5 text-white sm:text-[13px]">
                             WHAT SETS ISECURION APART?
@@ -1295,18 +1330,19 @@ function page() {
                             data protection responsibilities.
                         </p>
                     </div>
+                    </Animation>
 
                     {/* Four feature cards */}
 
                     <div className="relative z-10 mt-7 rounded-[17px] border bg-gradient-to-b from-[#202123AD] to-[#090B21] px-5 py-7 shadow-[0_3px_0_rgba(15,102,234,0.16)] sm:mt-8 sm:px-7 sm:py-8 lg:mt-[26px] lg:px-[30px] lg:pb-[50px] lg:pt-[48px]">
 
                         <div className="grid grid-cols-1 gap-x-7 gap-y-8 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4 lg:gap-x-7 lg:gap-y-0">
-                            {privacyLeadershipFeatures.map((feature) => (
-                                <article key={feature.title} className="min-w-0">
+                            {privacyLeadershipFeatures.map((feature, index) => (
+                                <AnimatedCard delay={index * 0.13} key={feature.title} className="min-w-0">
                                     {/* Gradient-colored icon */}
                                     <div className="relative mb-7 flex h-[22px] w-[30px] items-center">
-                                        <Icon
-                                            icon={feature.icon}
+                                        <GradientIcon
+                                            Icon={feature.icon}
                                             className="relative z-10 h-[30px] w-[30px] text-[#00D9EF] drop-shadow-[1px_1px_0px_#0F66EA]"
                                             aria-hidden="true"
                                         />
@@ -1323,7 +1359,7 @@ function page() {
                                     <p className="mt-3 text-sm leading-[22px] text-[#D1D1D1D6] sm:text-[14px] sm:leading-[22px] max-w-[220px]">
                                         {feature.description}
                                     </p>
-                                </article>
+                                </AnimatedCard>
                             ))}
                         </div>
                     </div>
@@ -1333,21 +1369,25 @@ function page() {
             {/* OUTSOURCED DELIVERABLES  */}
             <section className="w-full py-14 bg-[#060D1B]">
                 <div className="max-w-7xl mx-auto flex flex-col lg:flex-row px-6 sm:px-10 gap-8 lg:gap-15">
-                    <div className="w-full lg:w-[40%] space-y-4">
+                    
+                    <div className="w-full lg:w-[50%] space-y-4 text-center lg:text-left">
+                        <LeftAnimation>
                         <p className="text-sm sm:text-base font-semibold text-[#0F66EA]">
                             OUTSOURCED DPO DELIVERABLES
                         </p>
-                        <h2 className="font-medium leading-[40px] md:leading-[55px] text-[#FFFFFF]">
+                        <h2 className="font-medium leading-[40px] md:leading-[55px] text-[#FFFFFF] lg:max-w-[490px]">
                             Clear Privacy Deliverables. Measurable Compliance Progress.
                         </h2>
-                        <p className="text-base sm:text-lg font-normal leading-[25px] md:leading-[31px] text-[#D1D1D1]">
+                        <p className="text-base sm:text-lg font-normal leading-[25px] md:leading-[31px] text-[#D1D1D1] lg:max-w-[509px]">
                             Get practical privacy documentation, structured workflows, and actionable reporting that help strengthen data protection and improve compliance readiness.
                         </p>
+                        </LeftAnimation>
                     </div>
+                    
                     <div className="flex-1">
                         <div className="relative mt-8">
                             <div className="absolute top-0 bottom-0 border-l-[3px] border-[#152329] shadow-[inset_3px_0_4px_0_#FFFFFFCF]"></div>
-                            <div className="space-y-8">
+                            <div className="space-y-8 ">
                                 {outsourcedDeliverables.map((item, index) => (
                                     <AnimatedCard
                                         key={index}
